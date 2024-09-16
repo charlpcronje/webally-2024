@@ -1,0 +1,33 @@
+{
+    "root_path": "/var/www/html/portfolio.webally.co.za",
+    "output_path": "/var/www/html/portfolio.webally.co.za/combined.md",
+    "gitignore_path": "",
+    "exclude_folders": [
+        ".history",
+        "docs",
+        "coverage",
+        ".git",
+        ".github",
+        "node_modules",
+        "backups",
+        ".svelte-kit"
+    ],
+    "exclude_files": [
+        "package-lock.json",
+        "combined.md",
+        "README.md",
+        "modules/console.js",
+        "generate_hashes.php"
+    ],
+    "file_types": [
+        ".js",
+        ".ts",
+        ".php",
+        ".env",
+        ".scss",
+        ".html",
+        ".json",
+        ".md",
+        ".svelte"
+    ]
+}

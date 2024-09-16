@@ -1,0 +1,121 @@
+import type { Asset } from '$lib/types';
+import { theme } from '$lib/stores/theme';
+import { base } from '$app/paths';
+
+const gh = (file: string) => `${base}/logos/${file}`;
+
+const a = (light: string, dark?: string): Asset =>
+	dark ? { dark: gh(dark), light: gh(light) } : gh(light);
+
+const Assets = {
+	AWS: gh('aws.svg'),
+	Bootstrap: gh('bootstrap.svg'),
+	C: gh('c.svg'),
+	Cpp: gh('cpp.svg'),
+	Celery: gh('celery.svg'),
+	Django: gh('django.svg'),
+	FastApi: gh('fastapi.svg'),
+	Flask: gh('flask.svg'),
+	Go: gh('go.svg'),
+	Kafka: gh('kafka.svg'),
+	Neo4j: gh('neo4j.svg'),
+	Nginx: gh('nginx.svg'),
+	Numpy: gh('numpy.svg'),
+	deep: gh('pandas.svg'),
+	RabbitMQ: gh('rabbitmq.svg'),
+	Rust: gh('rust.svg'),
+	Scrapy: gh('scrapy.png'),
+	Selenium: gh('selenium.svg'),
+	Docker: gh('docker.svg'),
+	Kubernetes: gh('kubernetes.svg'),
+	Csharp: gh('csharp.svg'),
+	Xamarin: gh('xamarin.svg'),
+	TypeScript: gh('ts.png'),
+	VueJs: gh('vue.png'),
+	ReactJs: gh('react.svg'),
+	Dart: gh('dart.png'),
+	Kotlin: gh('kotlin.png'),
+	Python: gh('python.png'),
+	NodeJs: gh('node.png'),
+	Deno: gh('deno.png'),
+	Svelte: gh('svelte.png'),
+	ExpressJs: gh('express.png'),
+	JavaScript: gh('js.png'),
+	Fastify: gh('fastify.svg'),
+	NestJs: gh('nest.svg'),
+	Quasar: gh('quasar.svg'),
+	SolidJs: gh('solid.svg'),
+	Electron: gh('electron.png'),
+	Flutter: gh('flutter.svg'),
+	Java: gh('java.png'),
+	AdonisJs: gh('adonis.png'),
+	Android: gh('android.png'),
+	Angular: gh('angular.png'),
+	PostgreSQL: gh('postgres.png'),
+	Firebase: gh('firebase.png'),
+	Sass: gh('sass.png'),
+	MongoDB: gh('mongodb.svg'),
+	Redis: gh('redis.svg'),
+	Tailwind: gh('tailwind.svg'),
+	HTML: gh('html.svg'),
+	Premiere: gh('premiere.svg'),
+	Photoshop: gh('photoshop.svg'),
+	CSS: gh('css.svg'),
+	AfterEffects: gh('after-effects.svg'),
+	Illustrator: gh('illustrator.svg'),
+	Nuxt: gh('nuxt.png'),
+	Vite: gh('vite.png'),
+	Vitest: gh('vitest.svg'),
+	Jest: gh('jest.png'),
+	Unocss: gh('unocss.svg'),
+	Ruvy: gh('ruvy.svg'),
+	Postcss: gh('postcss.svg'),
+	PHP: gh('php.svg'),
+	Laravel: gh('laravel.svg'),
+	Symfony: gh('symfony.svg'),
+	MSSQL: gh('mssql.svg'),
+	Oracle: gh('oracle.svg'),
+	Azure: gh('azure.svg'),
+	GCP: gh('gcp.svg'),
+	Git: gh('git.svg'),
+	Jenkins: gh('jenkins.svg'),
+	Travis: gh('travis.svg'),
+	CircleCI: gh('circleci.svg'),
+	IOS: gh('ios.svg'),
+	ReactNative: gh('react-native.svg'),
+	Unity: gh('unity.svg'),
+	Unreal: gh('unreal.svg'),
+	AI: gh('ai.svg'),
+	MachineLearning: gh('machine-learning.svg'),
+	DeepLearning: gh('deep-learning.svg'),
+	InDesign: gh('indesign.svg'),
+	MySQL: gh('mysql.svg'),
+	Unknown: gh('unknown.svg'),
+
+	ACSA: gh('unknown.svg'),
+	Tribake: gh('unknown.svg'),
+	AngloAmerican: gh('unknown.svg'),
+	APBCO: gh('unknown.svg'),
+	BrinantSecurity: gh('unknown.svg'),
+	CavalierAbattoirs: gh('unknown.svg'),
+	CityLodge: gh('unknown.svg'),
+	Exxaro: gh('unknown.svg'),
+	FNB: gh('unknown.svg'),
+	TheOrientHotel: gh('unknown.svg'),
+	LegacyUnderwriting: gh('unknown.svg'),
+	ImvulaICD: gh('unknown.svg'),
+	ImperialLogistics: gh('unknown.svg'),
+	TheCarShop: gh('unknown.svg'),
+	PrincipalSoftware: gh('unknown.svg'),
+	PNA: gh('unknown.svg')
+};
+
+export default Assets;
+
+let currentTheme: boolean;
+
+theme.subscribe((v) => (currentTheme = v));
+
+export const getAssetURL = (asset: Asset): string => {
+	return typeof asset === 'string' ? asset : currentTheme ? asset.dark : asset.light;
+};
