@@ -2,78 +2,78 @@
 
 This document contains an analysis of the project files.
 
-| No.   | File                                 | Lines    | Words    | AI Tokens |
-| ----- | ------------------------------------ | -------- | -------- | --------- |
-|  1    | ./package.json                       | 52       | 125      | 422       |
-|  2    | ./svelte.config.js                   | 33       | 79       | 161       |
-|  3    | ./tsconfig.json                      | 20       | 62       | 117       |
-|  4    | ./uno.config.ts                      | 44       | 90       | 191       |
-|  5    | ./vite.config.ts                     | 10       | 29       | 48        |
-|  6    | ./combine.json                       | 33       | 39       | 130       |
-|  7    | ./.env                               | 3        | 19       | 22        |
-|  8    | ./.vscode/settings.json              | 77       | 85       | 320       |
-|  9    | ./src/app.d.ts                       | 15       | 49       | 63        |
-|  10   | ./src/app.html                       | 13       | 25       | 84        |
-|  11   | ./src/lib/index.scss                 | 368      | 599      | 1609      |
-|  12   | ./src/lib/types.ts                   | 83       | 219      | 381       |
-|  13   | ./src/lib/components/CommonPage.svelte | 15       | 37       | 83        |
-|  14   | ./src/lib/components/Markdown.svelte | 32       | 72       | 145       |
-|  15   | ./src/lib/components/SearchPage.svelte | 59       | 139      | 305       |
-|  16   | ./src/lib/components/TabTitle.svelte | 11       | 23       | 60        |
-|  17   | ./src/lib/components/Banner/Banner.svelte | 28       | 70       | 183       |
-|  18   | ./src/lib/components/Card/Card.svelte | 114      | 324      | 724       |
-|  19   | ./src/lib/components/Card/CardDivider.svelte | 2        | 5        | 17        |
-|  20   | ./src/lib/components/Card/CardLink.svelte | 40       | 78       | 191       |
-|  21   | ./src/lib/components/Card/CardLogo.svelte | 10       | 35       | 74        |
-|  22   | ./src/lib/components/Card/CardTitle.svelte | 6        | 10       | 37        |
-|  23   | ./src/lib/components/Carrousel/Carrousel.svelte | 102      | 258      | 528       |
-|  24   | ./src/lib/components/Chip/Chip.svelte | 35       | 88       | 224       |
-|  25   | ./src/lib/components/Chip/ChipIcon.svelte | 61       | 145      | 312       |
-|  26   | ./src/lib/components/ExperienceCard/ExperienceCard.svelte | 84       | 240      | 604       |
-|  27   | ./src/lib/components/Icon/Icon.svelte | 23       | 45       | 101       |
-|  28   | ./src/lib/components/Icon/Icons.ts   | 10       | 47       | 79        |
-|  29   | ./src/lib/components/Icon/UIcon.svelte | 8        | 20       | 54        |
-|  30   | ./src/lib/components/Input/Input.svelte | 28       | 56       | 132       |
-|  31   | ./src/lib/components/MainTitle/MainTitle.svelte | 11       | 29       | 96        |
-|  32   | ./src/lib/components/NavMenu/NavMenu.svelte | 168      | 427      | 1052      |
-|  33   | ./src/lib/components/ProjectCard/ProjectCard.svelte | 74       | 233      | 601       |
-|  34   | ./src/lib/components/Screenshot/Screenshot.svelte | 56       | 136      | 344       |
-|  35   | ./src/lib/components/Footer/Footer.svelte | 69       | 177      | 411       |
-|  36   | ./src/lib/data/app.ts                | 2        | 8        | 10        |
-|  37   | ./src/lib/data/assets.ts             | 122      | 282      | 945       |
-|  38   | ./src/lib/data/education.ts          | 32       | 104      | 209       |
-|  39   | ./src/lib/data/experience.ts         | 149      | 1048     | 1742      |
-|  40   | ./src/lib/data/home.ts               | 35       | 186      | 353       |
-|  41   | ./src/lib/data/navbar.ts             | 17       | 118      | 242       |
-|  42   | ./src/lib/data/projects.ts           | 266      | 1439     | 2582      |
-|  43   | ./src/lib/data/resume.ts             | 4        | 10       | 13        |
-|  44   | ./src/lib/data/search.ts             | 2        | 5        | 7         |
-|  45   | ./src/lib/data/skills.ts             | 468      | 2225     | 3689      |
-|  46   | ./src/lib/data/documentation-sites.ts | 146      | 397      | 695       |
-|  47   | ./src/lib/data/tools.ts              | 271      | 1574     | 1980      |
-|  48   | ./src/lib/md/svelte.md               | 41       | 298      | 391       |
-|  49   | ./src/lib/stores/theme.ts            | 48       | 146      | 279       |
-|  50   | ./src/lib/utils/colors.ts            | 166      | 343      | 1101      |
-|  51   | ./src/lib/utils/helpers.ts           | 172      | 603      | 1153      |
-|  52   | ./src/lib/utils/index.ts             | 55       | 963      | 1039      |
-|  53   | ./src/routes/+layout.server.ts       | 2        | 5        | 6         |
-|  54   | ./src/routes/+layout.svelte          | 45       | 96       | 208       |
-|  55   | ./src/routes/+page.svelte            | 46       | 142      | 458       |
-|  56   | ./src/routes/education/+page.svelte  | 92       | 246      | 612       |
-|  57   | ./src/routes/experience/+page.svelte | 57       | 169      | 388       |
-|  58   | ./src/routes/experience/[slug]/+page.svelte | 93       | 246      | 637       |
-|  59   | ./src/routes/experience/[slug]/+page.ts | 12       | 37       | 61        |
-|  60   | ./src/routes/projects/+page.svelte   | 109      | 285      | 610       |
-|  61   | ./src/routes/projects/[slug]/+page.svelte | 140      | 353      | 899       |
-|  62   | ./src/routes/projects/[slug]/+page.ts | 12       | 37       | 61        |
-|  63   | ./src/routes/resume/+page.svelte     | 31       | 58       | 136       |
-|  64   | ./src/routes/search/+page.svelte     | 97       | 259      | 597       |
-|  65   | ./src/routes/skills/+page.svelte     | 52       | 143      | 401       |
-|  66   | ./src/routes/skills/[slug]/+page.svelte | 115      | 310      | 733       |
-|  67   | ./src/routes/skills/[slug]/+page.ts  | 12       | 37       | 61        |
-|  68   | ./src/routes/documentation/+page.svelte | 24       | 65       | 171       |
-|  69   | ./src/routes/tools/+page.svelte      | 35       | 81       | 226       |
-|       | Total                                | 4767     | 16432    | 32600     |
+| No. | File                                                      | Lines | Words | AI Tokens |
+| --- | --------------------------------------------------------- | ----- | ----- | --------- |
+| 1   | ./package.json                                            | 52    | 125   | 422       |
+| 2   | ./svelte.config.js                                        | 33    | 79    | 161       |
+| 3   | ./tsconfig.json                                           | 20    | 62    | 117       |
+| 4   | ./uno.config.ts                                           | 44    | 90    | 191       |
+| 5   | ./vite.config.ts                                          | 10    | 29    | 48        |
+| 6   | ./combine.json                                            | 33    | 39    | 130       |
+| 7   | ./.env                                                    | 3     | 19    | 22        |
+| 8   | ./.vscode/settings.json                                   | 77    | 85    | 320       |
+| 9   | ./src/app.d.ts                                            | 15    | 49    | 63        |
+| 10  | ./src/app.html                                            | 13    | 25    | 84        |
+| 11  | ./src/lib/index.scss                                      | 368   | 599   | 1609      |
+| 12  | ./src/lib/types.ts                                        | 83    | 219   | 381       |
+| 13  | ./src/lib/components/CommonPage.svelte                    | 15    | 37    | 83        |
+| 14  | ./src/lib/components/Markdown.svelte                      | 32    | 72    | 145       |
+| 15  | ./src/lib/components/SearchPage.svelte                    | 59    | 139   | 305       |
+| 16  | ./src/lib/components/TabTitle.svelte                      | 11    | 23    | 60        |
+| 17  | ./src/lib/components/Banner/Banner.svelte                 | 28    | 70    | 183       |
+| 18  | ./src/lib/components/Card/Card.svelte                     | 114   | 324   | 724       |
+| 19  | ./src/lib/components/Card/CardDivider.svelte              | 2     | 5     | 17        |
+| 20  | ./src/lib/components/Card/CardLink.svelte                 | 40    | 78    | 191       |
+| 21  | ./src/lib/components/Card/CardLogo.svelte                 | 10    | 35    | 74        |
+| 22  | ./src/lib/components/Card/CardTitle.svelte                | 6     | 10    | 37        |
+| 23  | ./src/lib/components/Carrousel/Carrousel.svelte           | 102   | 258   | 528       |
+| 24  | ./src/lib/components/Chip/Chip.svelte                     | 35    | 88    | 224       |
+| 25  | ./src/lib/components/Chip/ChipIcon.svelte                 | 61    | 145   | 312       |
+| 26  | ./src/lib/components/ExperienceCard/ExperienceCard.svelte | 84    | 240   | 604       |
+| 27  | ./src/lib/components/Icon/Icon.svelte                     | 23    | 45    | 101       |
+| 28  | ./src/lib/components/Icon/Icons.ts                        | 10    | 47    | 79        |
+| 29  | ./src/lib/components/Icon/UIcon.svelte                    | 8     | 20    | 54        |
+| 30  | ./src/lib/components/Input/Input.svelte                   | 28    | 56    | 132       |
+| 31  | ./src/lib/components/MainTitle/MainTitle.svelte           | 11    | 29    | 96        |
+| 32  | ./src/lib/components/NavMenu/NavMenu.svelte               | 168   | 427   | 1052      |
+| 33  | ./src/lib/components/ProjectCard/ProjectCard.svelte       | 74    | 233   | 601       |
+| 34  | ./src/lib/components/Screenshot/Screenshot.svelte         | 56    | 136   | 344       |
+| 35  | ./src/lib/components/Footer/Footer.svelte                 | 69    | 177   | 411       |
+| 36  | ./src/lib/data/app.ts                                     | 2     | 8     | 10        |
+| 37  | ./src/lib/data/assets.ts                                  | 122   | 282   | 945       |
+| 38  | ./src/lib/data/education.ts                               | 32    | 104   | 209       |
+| 39  | ./src/lib/data/experience.ts                              | 149   | 1048  | 1742      |
+| 40  | ./src/lib/data/home.ts                                    | 35    | 186   | 353       |
+| 41  | ./src/lib/data/navbar.ts                                  | 17    | 118   | 242       |
+| 42  | ./src/lib/data/projects.ts                                | 266   | 1439  | 2582      |
+| 43  | ./src/lib/data/resume.ts                                  | 4     | 10    | 13        |
+| 44  | ./src/lib/data/search.ts                                  | 2     | 5     | 7         |
+| 45  | ./src/lib/data/skills.ts                                  | 468   | 2225  | 3689      |
+| 46  | ./src/lib/data/documentation-sites.ts                     | 146   | 397   | 695       |
+| 47  | ./src/lib/data/tools.ts                                   | 271   | 1574  | 1980      |
+| 48  | ./src/lib/md/svelte.md                                    | 41    | 298   | 391       |
+| 49  | ./src/lib/stores/theme.ts                                 | 48    | 146   | 279       |
+| 50  | ./src/lib/utils/colors.ts                                 | 166   | 343   | 1101      |
+| 51  | ./src/lib/utils/helpers.ts                                | 172   | 603   | 1153      |
+| 52  | ./src/lib/utils/index.ts                                  | 55    | 963   | 1039      |
+| 53  | ./src/routes/+layout.server.ts                            | 2     | 5     | 6         |
+| 54  | ./src/routes/+layout.svelte                               | 45    | 96    | 208       |
+| 55  | ./src/routes/+page.svelte                                 | 46    | 142   | 458       |
+| 56  | ./src/routes/education/+page.svelte                       | 92    | 246   | 612       |
+| 57  | ./src/routes/experience/+page.svelte                      | 57    | 169   | 388       |
+| 58  | ./src/routes/experience/[slug]/+page.svelte               | 93    | 246   | 637       |
+| 59  | ./src/routes/experience/[slug]/+page.ts                   | 12    | 37    | 61        |
+| 60  | ./src/routes/projects/+page.svelte                        | 109   | 285   | 610       |
+| 61  | ./src/routes/projects/[slug]/+page.svelte                 | 140   | 353   | 899       |
+| 62  | ./src/routes/projects/[slug]/+page.ts                     | 12    | 37    | 61        |
+| 63  | ./src/routes/resume/+page.svelte                          | 31    | 58    | 136       |
+| 64  | ./src/routes/search/+page.svelte                          | 97    | 259   | 597       |
+| 65  | ./src/routes/skills/+page.svelte                          | 52    | 143   | 401       |
+| 66  | ./src/routes/skills/[slug]/+page.svelte                   | 115   | 310   | 733       |
+| 67  | ./src/routes/skills/[slug]/+page.ts                       | 12    | 37    | 61        |
+| 68  | ./src/routes/documentation/+page.svelte                   | 24    | 65    | 171       |
+| 69  | ./src/routes/tools/+page.svelte                           | 35    | 81    | 226       |
+|     | Total                                                     | 4767  | 16432 | 32600     |
 
 
 ## Total Counts Across All Files. Tokenizer Used: NLTK's Punkt Tokenizer
@@ -3159,7 +3159,7 @@ export const groupByCategory = (
 ```ts
 // src/lib/data/documentation-sites.ts
 
-export const title = 'Documentation Sites';
+export const title = 'Documentation';
 
 export const sites = [
     {

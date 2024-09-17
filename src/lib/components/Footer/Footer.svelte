@@ -39,14 +39,11 @@
 	</div>
 	{#if showLegal}
 		<div
-			class="bg-gray-800 py-4 transition-all duration-300 ease-in-out"
+			class="bg-back py-4 transition-all duration-300 ease-in-out"
 			class:opacity-0={!showLegal}
 			class:opacity-100={showLegal}
 		>
 			<div class="container mx-auto px-4">
-				<p class="text-center text-sm mb-2">
-					&copy; {currentYear} Charl Cronje. All rights reserved.
-				</p>
 				<ul class="flex justify-center">
 					{#each footerItems as item}
 						<li class="mx-2">
@@ -56,6 +53,9 @@
 						</li>
 					{/each}
 				</ul>
+				<p class="text-center text-xs mb-2">
+					&copy; {currentYear} Charl Cronje. All rights reserved.
+				</p>
 			</div>
 		</div>
 	{/if}

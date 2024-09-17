@@ -9,7 +9,7 @@ export const name = 'webAlly';
 
 export const lastName = '';
 
-export const description = 'Team Consisting of Senior Full-Stack Web / Mobile / AI / Desktop Developer with over 21 years of experience. Passionate about creating awesome tools and applications for developers and customers.';
+export const description = 'Team Consisting of Senior Full-Stack Web / Mobile / AI / Desktop Developers.  Passionate about creating awesome tools and applications for developers and customers.';
 
 export const links: Array<{ platform: Platform; link: string }> = [
 	{ platform: Platform.GitHub, link: 'https://github.com/charlpcronje' },

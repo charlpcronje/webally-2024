@@ -9,7 +9,7 @@ export const items: Array<Experience> = [
 		description: 'As the founder of webAlly, I have been providing a wide range of services including web development, custom software development, mobile app development, and graphic design. I have worked on numerous projects for various clients, delivering high-quality solutions tailored to their specific needs.',
 		contract: ContractType.SelfEmployed,
 		type: 'Software Development',
-		location: 'Johannesburg, South Africa',
+		location: 'Pretoria, South Africa',
 		period: { from: new Date(2006, 0, 1) },
 		skills: getSkills('js', 'ts', 'php', 'python', 'java', 'kotlin', 'react', 'vue', 'angular', 'nodejs', 'laravel', 'symfony', 'django', 'flask', 'mongodb', 'mysql', 'postgresql', 'docker', 'kubernetes', 'aws', 'azure', 'gcp', 'android', 'ios', 'react-native', 'flutter', 'ai', 'machine-learning'),
 		name: 'Senior Full-Stack Developer',
@@ -34,6 +34,23 @@ export const items: Array<Experience> = [
 		links: [],
 		logo: Assets.Unknown, // Replace with Vane Systems logo when available
 		shortDescription: 'Developed and maintained API services and various booking systems.'
+	},
+	{
+		slug: 'webally-self-employed',
+		company: 'webAlly',
+		description: 'As the founder of webAlly, I have been providing a wide range of services including web development, custom software development, mobile app development, and graphic design. I have worked on numerous projects for various clients, delivering high-quality solutions tailored to their specific needs.',
+		contract: ContractType.SelfEmployed,
+		type: 'Software Development',
+		location: 'Pretoria, South Africa',
+		period: { from: new Date(2006, 0, 1), to: new Date(2011, 11, 1) },
+		skills: getSkills('js', 'ts', 'php', 'python', 'java', 'kotlin', 'react', 'vue', 'angular', 'nodejs', 'laravel', 'symfony', 'django', 'flask', 'mongodb', 'mysql', 'postgresql', 'docker', 'kubernetes', 'aws', 'azure', 'gcp', 'android', 'ios', 'react-native', 'flutter', 'ai', 'machine-learning'),
+		name: 'Senior Full-Stack Developer',
+		color: 'blue',
+		links: [
+			{ to: 'https://webally.co.za', label: 'Company Website' }
+		],
+		logo: Assets.Unknown, // Replace with webAlly logo when available
+		shortDescription: 'Providing comprehensive software development services as a self-employed developer.'
 	},
 	{
 		slug: 'legacy-underwriting-managers',

@@ -1,4 +1,4 @@
-// src/lib/data/projects.ts
+// // src/lib/data/projects.ts
 
 import Assets from './assets';
 import { getSkills } from './skills';
@@ -15,7 +15,7 @@ export const items: Array<Project> = [
 		name: 'ACSA 3D Airport Explore',
 		period: {
 			from: new Date(2018, 0, 1),
-			to: new Date(2018, 6, 1)
+			to: new Date(2018, 1, 15)
 		},
 		skills: getSkills('unity', 'csharp', 'js', 'html', 'css'),
 		type: 'Interactive 3D Game',
@@ -31,7 +31,7 @@ export const items: Array<Project> = [
 		name: 'Anglo American Email Marketing',
 		period: {
 			from: new Date(2017, 0, 1),
-			to: new Date(2017, 11, 31)
+			to: new Date(2017, 1, 17)
 		},
 		skills: getSkills('html', 'css', 'js', 'php'),
 		type: 'Email Marketing',
@@ -46,8 +46,8 @@ export const items: Array<Project> = [
 		logo: Assets.APBCO,
 		name: 'APBCO Asset Management System',
 		period: {
-			from: new Date(2016, 6, 1),
-			to: new Date(2017, 5, 30)
+			from: new Date(2016, 5, 1),
+			to: new Date(2016, 10, 30)
 		},
 		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
 		type: 'Asset Management Software',
@@ -63,7 +63,7 @@ export const items: Array<Project> = [
 		name: 'Brinant Security Management System',
 		period: {
 			from: new Date(2015, 1, 1),
-			to: new Date(2015, 12, 31)
+			to: new Date(2015, 7, 12)
 		},
 		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
 		type: 'Staff Management Software',
@@ -78,8 +78,8 @@ export const items: Array<Project> = [
 		logo: Assets.CavalierAbattoirs,
 		name: 'Cavalier Abattoirs Integrated Systems',
 		period: {
-			from: new Date(2014, 0, 1),
-			to: new Date(2015, 11, 31)
+			from: new Date(2009, 0, 1),
+			to: new Date(2016, 11, 31)
 		},
 		skills: getSkills('php', 'mysql', 'js', 'html', 'css', 'laravel'),
 		type: 'Integrated Management Software',
@@ -94,8 +94,8 @@ export const items: Array<Project> = [
 		logo: Assets.CityLodge,
 		name: 'City Lodge Online Booking System',
 		period: {
-			from: new Date(2013, 6, 1),
-			to: new Date(2014, 5, 30)
+			from: new Date(2016, 6, 1),
+			to: new Date(2017, 1, 30)
 		},
 		skills: getSkills('php', 'mysql', 'js', 'html', 'css', 'laravel'),
 		type: 'Web Development & Booking System',
@@ -180,8 +180,7 @@ export const items: Array<Project> = [
 		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
 		type: 'Portfolio Management Software',
 		company: 'Legacy Underwriting Managers'
-	},
-	{
+	}, {
 		slug: 'pna',
 		color: '#e67e22',
 		description: 'Developed a Product Management System and E-Commerce platform for PNA. These systems allowed for efficient management of product inventory and enabled online sales, expanding PNA\'s market reach.',
@@ -198,13 +197,13 @@ export const items: Array<Project> = [
 		company: 'PNA'
 	},
 	{
-		slug: 'principal-software-version-control',
+		slug: 'principal-software',
 		color: '#1abc9c',
 		description: 'Developed a custom Version Control System for Principal Software. This system was tailored to the specific needs of the company, providing efficient code versioning, branching, and collaboration features.',
 		shortDescription: 'Custom version control system for Principal Software.',
 		links: [{ to: 'https://www.principalsoftware.co.za/', label: 'Principal Software Website' }],
 		logo: Assets.PrincipalSoftware,
-		name: 'Principal Software Version Control System',
+		name: 'Principal Software (Now D6)',
 		period: {
 			from: new Date(2006, 6, 1),
 			to: new Date(2006, 12, 31)
