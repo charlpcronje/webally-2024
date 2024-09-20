@@ -6,5 +6,5 @@
 </script>
 
 <svelte:head>
-	<title>{useTitle(title, titleSuffix)}</title>
+	<title>webAlly | {useTitle(title, titleSuffix)}</title>
 </svelte:head>

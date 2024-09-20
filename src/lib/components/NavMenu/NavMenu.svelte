@@ -1,4 +1,3 @@
-<!-- src/lib/components/NavMenu/NavMenu.svelte -->
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { theme, toggleTheme } from '$lib/stores/theme';
@@ -19,6 +18,13 @@
 			expanded = v;
 		}
 	};
+
+	function getHref(item:any) {
+		return item.external ? item.to : `${base}${item.to}`;
+	}
+
+	$: headerItems = items.filter((item) => item.position === 'header');
+	$: verticalItems = items.filter((item) => item.position === 'sidebar');
 </script>
 
 <div class="nav-menu">
@@ -30,16 +36,21 @@
 			<UIcon icon="i-carbon-code" classes="text-2em" />
 			<span
 				class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis"
-				>{HOME.name} {HOME.lastName}
-			</span>
+				>{HOME.name} {HOME.lastName}</span
+			>
 		</a>
 		<div class="flex-1 block overflow-hidden md:hidden whitespace-nowrap text-ellipsis text-center">
 			{HOME.name}
 			{HOME.lastName}
 		</div>
 		<div class="flex-row flex-1 self-center h-full justify-center hidden md:flex">
-			{#each items as item (item.title)}
-				<a href={`${base}${item.to}`} class="nav-menu-item !text-[var(--secondary-text)]">
+			{#each headerItems as item (item.title)}
+				<a 
+					href={getHref(item)} 
+					class="nav-menu-item !text-[var(--secondary-text)]"
+					target={item.external ? "_blank" : undefined}
+					rel={item.external ? "noopener noreferrer" : undefined}
+				>
 					<UIcon icon={item.icon} classes="text-1.3em" />
 					<span class="nav-menu-item-label">{item.title}</span>
 				</a>
@@ -55,6 +66,7 @@
 				>
 					<UIcon icon="i-carbon-search" />
 				</a>
+				<!--
 				<button
 					class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
 					on:click={() => toggleTheme()}
@@ -65,6 +77,7 @@
 						<UIcon icon="i-carbon-sun" />
 					{/if}
 				</button>
+				-->
 			</div>
 			<div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer">
 				<!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -79,12 +92,14 @@
 	</nav>
 	<div class={`nav-menu-mobile ${expanded ? 'nav-menu-mobile-open' : ''} md:hidden`}>
 		<div class="flex-col flex-1 self-center h-full justify-center m-t-7">
-			{#each items as item}
+			{#each headerItems as item}
 				<a
-					href={`${base}${item.to}`}
+					href={getHref(item)}
 					class="nav-menu-item !text-[var(--secondary-text)] gap-5"
+					target={item.external ? "_blank" : undefined}
+					rel={item.external ? "noopener noreferrer" : undefined}
 					on:click={() => toggleExpanded(false)}
-				>
+				>	
 					<UIcon icon={item.icon} classes="text-1.3em" />
 					<span class="">{item.title}</span>
 				</a>
@@ -93,12 +108,13 @@
 		<div class="col gap-2 m-t-7">
 			<a
 				href={`${base}/search`}
-				class="text-inherit decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"
+				class="text-inherit text-sm decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"
 				on:click={() => toggleExpanded(false)}
 			>
 				<UIcon icon="i-carbon-search" />
 				<span>Search</span>
 			</a>
+			<!--
 			<button
 				class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
 				on:click={() => toggleTheme()}
@@ -111,7 +127,21 @@
 					<span>Light Theme</span>
 				{/if}
 			</button>
+			-->
 		</div>
+	</div>
+	<div
+		class="vertical-nav hidden md:flex flex-col fixed right--1	 top-1/2 transform -translate-y-1/2"
+	>
+		{#each verticalItems as item}
+			<a
+				href={`${base}${item.to}`}
+				class="nav-menu-item vertical text-sm !text-[var(--secondary-text)] mb-2"
+			>
+				<UIcon icon={item.icon} classes="text-1.3em" />
+				<span class="nav-menu-item-label">{item.title}</span>
+			</a>
+		{/each}
 	</div>
 </div>
 
@@ -168,6 +198,27 @@
 		&-open {
 			opacity: 1;
 			transform: translateY(0vh);
+		}
+	}
+
+	.vertical-nav {
+		z-index: 20;
+	}
+
+	.nav-menu-item.vertical {
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
+		padding: 20px 10px;
+		background-color: var(--main);
+		border-radius: 10px 0 0 10px;
+		box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+
+		&:hover {
+			background-color: var(--main-hover);
+		}
+
+		.nav-menu-item-label {
+			margin-top: 10px;
 		}
 	}
 </style>

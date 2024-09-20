@@ -1,8 +1,9 @@
 <!-- src/lib/components/Footer/Footer.svelte -->
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { items, footerItems } from '@data/navbar';
-	import UIcon from '../Icon/UIcon.svelte';
+	import { items } from '@data/navbar';
+	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 
 	const currentYear = new Date().getFullYear();
@@ -23,46 +24,47 @@
 </script>
 
 <footer class="fixed bottom-0 left-0 right-0 bg-black text-white">
-	<div class="container mx-auto px-4">
-		<nav class="py-2">
-			<ul class="flex flex-wrap justify-center">
+	{#if showLegal}
+		<div
+			class="py-1 transition-all duration-300 ease-in-out"
+			class:opacity-0={!showLegal}
+			class:opacity-100={showLegal}
+		>
+			<div class="container mx-auto px-4">
+				<p class="text-center text-xs">
+					&copy; {currentYear} Charl Cronje. All rights reserved.
+				</p>
+			</div>
+		</div>
+	{/if}
+	<div class="container mx-auto px-0">
+		<nav class="h-12 flex items-end pb-0">
+			<!-- Increased height and aligned items to bottom -->
+			<ul class="flex justify-center items-center w-full list-none">
 				{#each footerNavItems as item}
-					<li class="mx-2 my-1">
-						<a href={`${base}${item.to}`} class="flex items-center hover:text-gray-300">
-							<UIcon icon={item.icon} classes="mr-2" />
-							<span>{item.title}</span>
+					<li class="mx-4">
+						<a
+							href={`${base}${item.to}`}
+							class="flex items-center no-underline text-white group"
+							class:active={$page.url.pathname === item.to}
+						>
+							<UIcon icon={item.icon} classes="mr-2 text-xl" />
+							<span class="group-hover:text-gray-300 transition-colors duration-200 text-sm">
+								{item.title}
+							</span>
 						</a>
 					</li>
 				{/each}
 			</ul>
 		</nav>
 	</div>
-	{#if showLegal}
-		<div
-			class="bg-back py-4 transition-all duration-300 ease-in-out"
-			class:opacity-0={!showLegal}
-			class:opacity-100={showLegal}
-		>
-			<div class="container mx-auto px-4">
-				<ul class="flex justify-center">
-					{#each footerItems as item}
-						<li class="mx-2">
-							<a href={`${base}${item.to}`} class="text-sm hover:text-gray-300">
-								{item.title}
-							</a>
-						</li>
-					{/each}
-				</ul>
-				<p class="text-center text-xs mb-2">
-					&copy; {currentYear} Charl Cronje. All rights reserved.
-				</p>
-			</div>
-		</div>
-	{/if}
 </footer>
 
 <style>
 	footer {
 		z-index: 10;
+	}
+	.active {
+		color: theme('colors.gray.300');
 	}
 </style>

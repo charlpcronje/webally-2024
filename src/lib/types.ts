@@ -1,5 +1,13 @@
 import type { Color } from './utils/colors';
 
+export interface Tool {
+	name: string;
+	description: string;
+	github: string;
+	details: string;
+	slug?: string;
+}
+
 export enum Platform {
 	GitHub = 'github',
 	StackOverflow = 'stackoverflow',
@@ -61,9 +69,11 @@ export interface Project<S extends string = string> extends Item<S> {
 		from: Date;
 		to?: Date;
 	};
+	periods?: Array<{ from: Date; to?: Date }>;
 	type: string;
 	skills: Array<Skill<S>>;
 	company: string;
+	screenshots?: Array<{ src: string; label: string }>;
 }
 
 export interface Experience<S extends string = string> extends Project<S> {

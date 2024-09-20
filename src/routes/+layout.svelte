@@ -2,7 +2,7 @@
 <script lang="ts">
 	import 'uno.css';
 	import NavMenu from '$lib/components/NavMenu/NavMenu.svelte';
-	import Footer from '$lib/components/Footer/Footer.svelte';
+	import Footer from '$lib/components/Chip/Footer/Footer.svelte';
 	import '$lib/index.scss';
 	import { onHydrated } from '$lib/stores/theme';
 	import { onMount } from 'svelte';

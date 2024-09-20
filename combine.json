@@ -17,7 +17,8 @@
         "combined.md",
         "README.md",
         "modules/console.js",
-        "generate_hashes.php"
+        "generate_hashes.php",
+        "src/lib/index.scss"
     ],
     "file_types": [
         ".js",

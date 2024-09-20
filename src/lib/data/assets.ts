@@ -94,7 +94,6 @@ const Assets = {
 	VueJs: gh('vue.png'),
 	Xamarin: gh('xamarin.svg'),
 
-
 	ACSA: gh('acsa.png'),
 	Tribake: gh('tribake.png'),
 	AngloAmerican: gh('angloAmerican.svg'),
@@ -106,11 +105,19 @@ const Assets = {
 	FNB: gh('fnb.png'),
 	TheOrientHotel: gh('theorient.png'),
 	LegacyUnderwriting: gh('legacy.png'),
-	ImvulaICD: gh('imvula.svg'),
+	ImvulaICD: gh('imvula.png'),
 	ImperialLogistics: gh('imperial.png'),
 	TheCarShop: gh('carshop.png'),
-	PrincipalSoftware: gh('d6.pna'),
-	PNA: gh('pna.png')
+	PrincipalSoftware: gh('d6.png'),
+	PNA: gh('pna.png'),
+
+	Webally: gh('webally.svg'),
+	VaneSystems: gh('vane.png'),
+	PCPalace: gh('pcpalace.jpg'),
+	RAM: gh('ram.png'),
+	CNN: gh('cnn.png'),
+	Nexus: gh('nexus.svg'),
+	Pageworks: gh('pageworks.png'),
 };
 
 export default Assets;

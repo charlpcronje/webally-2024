@@ -48,6 +48,8 @@ export const getPlatfromIcon = (platform: Platform): Icons => {
 			return Icons.Twitter;
 		case Platform.Youtube:
 			return Icons.Youtube;
+		default:
+			return Icons.Code
 	}
 };
 

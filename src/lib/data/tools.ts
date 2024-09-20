@@ -1,7 +1,9 @@
-// src/lib/data/ai-tools.ts
+// src/lib/data/tools.ts
 
 export const aiToolsTitle = 'AI Tools';
-export const playgroundTitle = 'Playground';
+export const codeToolsTitle = 'Code Tools';
+export const dataToolsTitle = 'Data Tools';
+
 
 export const aiTools = [
     {
@@ -17,7 +19,8 @@ export const aiTools = [
             - Providing a list of the last 20 run arguments
             - Prompting for Input Path and Output Path if a new run is selected
             - Creating an index.md file with the output of the tree command
-        `
+        `,
+        slug: 'ai-response-parser'
     },
     {
         name: 'Project Data Collector',
@@ -30,7 +33,8 @@ export const aiTools = [
             - Use of Git to collect commit and contributor information
             - Support for both Flask endpoints and terminal execution for data collection
             - Comprehensive logging to both terminal and file
-        `
+        `,
+        slug: 'project-data-collector'
     },
     {
         name: 'ChatGPT Chat Manager',
@@ -41,7 +45,8 @@ export const aiTools = [
             - Organize ChatGPT conversations using folders and tags
             - Manage folders, tags, and chats through a Flask API backend
             - Interact with the API and integrate with ChatGPT's user interface via a Chrome extension
-        `
+        `,
+        slug: "chatgpt-chat-manager"
     },
     {
         name: 'Synthiq - Multi-Embedded AI Smart Storage',
@@ -80,102 +85,6 @@ export const aiTools = [
             - Application of a unique numeric referencing system for frequent terms
             - Modular architecture for easy extension to more programming languages
         `
-    }
-];
-
-export const playgroundTools = [
-    {
-        name: 'Compare Files VS Code Extension',
-        description: 'A Visual Studio Code extension that allows you to compare two selected files.',
-        github: 'https://github.com/charlpcronje/Compare-Files-VS-Code-Extension',
-        details: `
-            This VS Code extension enables users to:
-            - Select two files from the explorer and compare them using the "Compare Files" command
-            - Access the "Compare Files" command from the context menu of the explorer
-        `
-    },
-    {
-        name: 'File Change RSS Feed',
-        description: 'This project generates an RSS feed that tracks changes to files in the /var/www/ directory.',
-        github: 'https://github.com/charlpcronje/File-Change-RSS-Feed',
-        details: `
-            The File Change RSS Feed project offers:
-            - Real-time updates to the RSS feed when files are created, modified, or deleted
-            - Detailed file information including name, path, change event, and timestamp
-            - Easy integration with various RSS readers and aggregators
-            - Customizable number of items in the feed
-            - Lightweight implementation using Bash and standard Unix utilities
-        `
-    },
-    {
-        name: 'Audit Log for MariaDB & MySQL Databases',
-        description: 'A stored procedure designed to automatically create database triggers for INSERT, UPDATE, and DELETE operations across all tables in a specified MariaDB database.',
-        github: 'https://github.com/charlpcronje/Audit-Log-for-MariaDB-MySQL-',
-        details: `
-            This tool provides:
-            - Automatic creation of triggers for all tables in a database
-            - Logging of changes to an audit_logs table in JSON format
-            - Safe rerunning without creating duplicate triggers
-            - Comprehensive auditing across all database tables
-        `
-    },
-    {
-        name: 'DataSingleton',
-        description: 'A Python package that provides a singleton class for managing data and plugins, offering a unified interface to access various functionalities.',
-        github: 'https://github.com/charlpcronje/Python-Data-Singleton',
-        details: `
-            DataSingleton offers features such as:
-            - Configuration management
-            - Request handling
-            - Environment variables management
-            - Logging
-            - Module loading
-            - Database querying
-            - API integration
-            - Data storage
-            - Bitwise operations
-        `
-    },
-    {
-        name: 'Image Sharpness Categorizer',
-        description: 'A Python script designed to analyze and categorize images in a folder based on their sharpness.',
-        github: 'https://github.com/charlpcronje/mage-Sharpness-Categorizer',
-        details: `
-            The Image Sharpness Categorizer offers:
-            - Automatic sharpness assessment using the Laplacian variance method
-            - Dynamic categorization based on configurable percentage thresholds
-            - Output of categorized images into "best", "better", and "med" folders
-            - Customizable configuration through a JSON file
-        `
-    },
-    {
-        name: 'WhatsApp Chat Analyzer',
-        description: 'A Python script that processes a WhatsApp chat export file to analyze messages between two specified individuals.',
-        github: 'https://github.com/charlpcronje/WhatsApp-Chat-Analyzer',
-        details: `
-            This tool provides:
-            - Separation of messages between two specified individuals
-            - Exclusion of messages containing specified phrases
-            - Calculation of total word count for each individual
-            - Determination of top 10 active days based on word count
-            - Calculation of average response time for each individual
-            - Output of results in Markdown files
-        `
-    },
-    {
-        name: 'File Groups for VS Code',
-        description: 'A Visual Studio Code extension that allows you to create, manage, and manipulate groups of files.',
-        github: 'https://github.com/charlpcronje/File-Groups-for-VSCode',
-        details: `
-            This VS Code extension provides functionalities to:
-            - Create and rename file groups
-            - Add files to groups
-            - Toggle the visibility of files in groups
-            - Duplicate groups
-            - Combine files in a group into a single markdown file
-            - Export and import file groups as JSON
-            - Delete file groups
-        `
     },
     {
         name: 'Add Relative Path to Files',
@@ -203,6 +112,17 @@ export const playgroundTools = [
             - Extraction of JavaScript and CSS links from HTML files
             - Categorization of links found in <head> and <body> tags
             - Output of extracted information in Markdown format
+        `
+    },
+    {
+        name: 'Combine Project Markdown Docs',
+        description: 'A Python application that recursively scans a specified directory and its sub-directories for Markdown (.md) files and combines them into a single file.',
+        github: 'https://github.com/charlpcronje/Combine-Markdown-Docs',
+        details: `
+            This tool offers:
+            - Recursive file scanning for Markdown files
+            - Exclusion configuration for specific files and folders
+            - Addition of custom headers with relative paths to each Markdown file in the combined output
         `
     },
     {
@@ -235,15 +155,43 @@ export const playgroundTools = [
         `
     },
     {
-        name: 'Ignite Builder - App Runner',
-        description: 'A Python application designed to manage and run multiple smaller Python scripts.',
-        github: 'https://github.com/charlpcronje/Ignite-Builder-App-Runner',
+        name: 'Image Sharpness Categorizer',
+        description: 'A Python script designed to analyze and categorize images in a folder based on their sharpness.',
+        github: 'https://github.com/charlpcronje/mage-Sharpness-Categorizer',
         details: `
-            The Ignite Builder - App Runner includes:
-            - Management of application configurations
-            - Execution of individual Python scripts
-            - Handling of file operations
-            - Configuration through a JSON file
+            The Image Sharpness Categorizer offers:
+            - Automatic sharpness assessment using the Laplacian variance method
+            - Dynamic categorization based on configurable percentage thresholds
+            - Output of categorized images into "best", "better", and "med" folders
+            - Customizable configuration through a JSON file
+        `
+    }
+];
+
+export const codeTools = [
+    {
+        name: 'Compare Files VS Code Extension',
+        description: 'A Visual Studio Code extension that allows you to compare two selected files.',
+        github: 'https://github.com/charlpcronje/Compare-Files-VS-Code-Extension',
+        details: `
+            This VS Code extension enables users to:
+            - Select two files from the explorer and compare them using the "Compare Files" command
+            - Access the "Compare Files" command from the context menu of the explorer
+        `
+    },
+    {
+        name: 'File Groups for VS Code',
+        description: 'A Visual Studio Code extension that allows you to create, manage, and manipulate groups of files.',
+        github: 'https://github.com/charlpcronje/File-Groups-for-VSCode',
+        details: `
+            This VS Code extension provides functionalities to:
+            - Create and rename file groups
+            - Add files to groups
+            - Toggle the visibility of files in groups
+            - Duplicate groups
+            - Combine files in a group into a single markdown file
+            - Export and import file groups as JSON
+            - Delete file groups
         `
     },
     {
@@ -258,14 +206,74 @@ export const playgroundTools = [
         `
     },
     {
-        name: 'Combine Project Markdown Docs',
-        description: 'A Python application that recursively scans a specified directory and its sub-directories for Markdown (.md) files and combines them into a single file.',
-        github: 'https://github.com/charlpcronje/Combine-Markdown-Docs',
+        name: 'Ignite Builder - App Runner',
+        description: 'A Python application designed to manage and run multiple smaller Python scripts.',
+        github: 'https://github.com/charlpcronje/Ignite-Builder-App-Runner',
         details: `
-            This tool offers:
-            - Recursive file scanning for Markdown files
-            - Exclusion configuration for specific files and folders
-            - Addition of custom headers with relative paths to each Markdown file in the combined output
+            The Ignite Builder - App Runner includes:
+            - Management of application configurations
+            - Execution of individual Python scripts
+            - Handling of file operations
+            - Configuration through a JSON file
+        `
+    }
+]
+
+export const dataTools = [
+    {
+        name: 'Audit Log for MariaDB & MySQL Databases',
+        description: 'A stored procedure designed to automatically create database triggers for INSERT, UPDATE, and DELETE operations across all tables in a specified MariaDB database.',
+        github: 'https://github.com/charlpcronje/Audit-Log-for-MariaDB-MySQL-',
+        details: `
+            This tool provides:
+            - Automatic creation of triggers for all tables in a database
+            - Logging of changes to an audit_logs table in JSON format
+            - Safe rerunning without creating duplicate triggers
+            - Comprehensive auditing across all database tables
+        `
+    },
+    {
+        name: 'WhatsApp Chat Analyzer',
+        description: 'A Python script that processes a WhatsApp chat export file to analyze messages between two specified individuals.',
+        github: 'https://github.com/charlpcronje/WhatsApp-Chat-Analyzer',
+        details: `
+            This tool provides:
+            - Separation of messages between two specified individuals
+            - Exclusion of messages containing specified phrases
+            - Calculation of total word count for each individual
+            - Determination of top 10 active days based on word count
+            - Calculation of average response time for each individual
+            - Output of results in Markdown files
+        `
+    },
+    {
+        name: 'File Change RSS Feed',
+        description: 'This project generates an RSS feed that tracks changes to files in the /var/www/ directory.',
+        github: 'https://github.com/charlpcronje/File-Change-RSS-Feed',
+        details: `
+            The File Change RSS Feed project offers:
+            - Real-time updates to the RSS feed when files are created, modified, or deleted
+            - Detailed file information including name, path, change event, and timestamp
+            - Easy integration with various RSS readers and aggregators
+            - Customizable number of items in the feed
+            - Lightweight implementation using Bash and standard Unix utilities
+        `
+    },
+    {
+        name: 'DataSingleton',
+        description: 'A Python package that provides a singleton class for managing data and plugins, offering a unified interface to access various functionalities.',
+        github: 'https://github.com/charlpcronje/Python-Data-Singleton',
+        details: `
+            DataSingleton offers features such as:
+            - Configuration management
+            - Request handling
+            - Environment variables management
+            - Logging
+            - Module loading
+            - Database querying
+            - API integration
+            - Data storage
+            - Bitwise operations
         `
     }
 ];

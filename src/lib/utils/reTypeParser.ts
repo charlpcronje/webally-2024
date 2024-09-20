@@ -50,7 +50,6 @@ export function parseReTypeMarkdown(markdown: string): string {
         gfm: true,
         breaks: true,
         sanitize: false,
-        smartLists: true,
         smartypants: false,
         xhtml: false
     });

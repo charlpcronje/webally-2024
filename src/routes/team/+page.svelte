@@ -1,4 +1,3 @@
-<!-- src/routes/tools/+page.svelte -->
 <script lang="ts">
     import { aiToolsTitle, aiTools, codeToolsTitle, codeTools, dataToolsTitle, dataTools } from '$lib/data/tools';
     import CommonPage from '$lib/components/CommonPage.svelte';
