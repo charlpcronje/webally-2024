@@ -3,7 +3,7 @@ import {
     vitePreprocess
 } from '@sveltejs/kit/vite';
 
-const base = '/wa';
+const base = '';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

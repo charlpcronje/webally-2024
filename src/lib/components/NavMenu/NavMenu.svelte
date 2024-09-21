@@ -136,7 +136,7 @@
 		{#each verticalItems as item}
 			<a
 				href={`${base}${item.to}`}
-				class="nav-menu-item vertical text-sm !text-[var(--secondary-text)] mb-2"
+				class="nav-menu-item vertical text-xs !text-[var(--secondary-text)] mb-3"
 			>
 				<UIcon icon={item.icon} classes="text-1.3em" />
 				<span class="nav-menu-item-label">{item.title}</span>

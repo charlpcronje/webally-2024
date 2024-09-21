@@ -18,7 +18,14 @@
         "README.md",
         "modules/console.js",
         "generate_hashes.php",
-        "src/lib/index.scss"
+        "src/lib/index.scss",
+        "src/lib/data/skills.ts",
+        "src/routes/privacy/+page.svelte",
+        "src/routes/team/+page.svelte",
+        "src/routes/tools/+page.server.ts",
+        "src/lib/data/projects.ts",
+        "src/lib/data/experience.ts"
+
     ],
     "file_types": [
         ".js",

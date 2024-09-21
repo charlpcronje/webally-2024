@@ -59,7 +59,8 @@ export const aiTools = [
             - Fast and efficient data access
             - Secure data control
             - Compatibility with various file types including text, markdown, PDF, powerpoint, CSV, word, audio, and video
-        `
+        `,
+        slug: "synthiq"
     },
     {
         name: 'GPT Crawler',
@@ -71,7 +72,8 @@ export const aiTools = [
             - Support for creating custom GPTs from multiple URLs
             - Configuration options for crawl depth and output customization
             - Integration with OpenAI's custom GPT creation process
-        `
+        `,
+        slug: "gpt-crawler"
     },
     {
         name: 'Code Context Parser and Indexer for AI',
@@ -84,7 +86,8 @@ export const aiTools = [
             - Generation of both human-readable and AI-optimized indexes
             - Application of a unique numeric referencing system for frequent terms
             - Modular architecture for easy extension to more programming languages
-        `
+        `,
+        slug: "code-context-parser-indexer-for-ai"
     },
     {
         name: 'Add Relative Path to Files',
@@ -101,7 +104,8 @@ export const aiTools = [
             - Directory exclusion
             - Flexible configuration through JSON files
             - Comprehensive logging
-        `
+        `,
+        slug: "add-relative-path-to-files"
     },
     {
         name: 'Script and CSS Extractor',
@@ -112,7 +116,8 @@ export const aiTools = [
             - Extraction of JavaScript and CSS links from HTML files
             - Categorization of links found in <head> and <body> tags
             - Output of extracted information in Markdown format
-        `
+        `,
+        slug: "script-and-css-extractor"
     },
     {
         name: 'Combine Project Markdown Docs',
@@ -123,7 +128,8 @@ export const aiTools = [
             - Recursive file scanning for Markdown files
             - Exclusion configuration for specific files and folders
             - Addition of custom headers with relative paths to each Markdown file in the combined output
-        `
+        `,
+        slug:"combine-project-markdown-docs"
     },
     {
         name: 'File System Analysis Tool for AI Embeddings',
@@ -136,7 +142,8 @@ export const aiTools = [
             - Content analysis (line, word, and token counting)
             - Error analysis and reporting
             - ASCII tree visualization of directory structures
-        `
+        `,
+        slug: "file-system-analysis-tool-for-ai-embeddings"
     },
     {
         name: 'Project Code Markdown Generator',
@@ -152,7 +159,8 @@ export const aiTools = [
             - Line, character, and page count for each file
             - Index generation with file details
             - Configurable file extensions
-        `
+        `,
+        slug: "project-code-markdown-generator"
     },
     {
         name: 'Image Sharpness Categorizer',
@@ -164,7 +172,8 @@ export const aiTools = [
             - Dynamic categorization based on configurable percentage thresholds
             - Output of categorized images into "best", "better", and "med" folders
             - Customizable configuration through a JSON file
-        `
+        `,
+        slug: "image-sharpness-categorizer"
     }
 ];
 
@@ -177,7 +186,8 @@ export const codeTools = [
             This VS Code extension enables users to:
             - Select two files from the explorer and compare them using the "Compare Files" command
             - Access the "Compare Files" command from the context menu of the explorer
-        `
+        `,
+        slug: "compare-files-vs-code-extension"
     },
     {
         name: 'File Groups for VS Code',
@@ -192,7 +202,8 @@ export const codeTools = [
             - Combine files in a group into a single markdown file
             - Export and import file groups as JSON
             - Delete file groups
-        `
+        `,
+        slug: "file-groups-for-vs-code"
     },
     {
         name: 'Java Class Component Endpoint Extractor',
@@ -203,7 +214,8 @@ export const codeTools = [
             - Automatic extraction of endpoint information from Java source files
             - Support for Spring annotations (GetMapping, PostMapping, PutMapping, DeleteMapping, RequestMapping)
             - Generation of a well-structured Markdown file summarizing all extracted endpoint information
-        `
+        `,
+        slug: "java-class-component-endpoint-extractor"
     },
     {
         name: 'Ignite Builder - App Runner',
@@ -215,7 +227,8 @@ export const codeTools = [
             - Execution of individual Python scripts
             - Handling of file operations
             - Configuration through a JSON file
-        `
+        `,
+        slug: "ignite-builder-app-runner"
     }
 ]
 
@@ -230,7 +243,8 @@ export const dataTools = [
             - Logging of changes to an audit_logs table in JSON format
             - Safe rerunning without creating duplicate triggers
             - Comprehensive auditing across all database tables
-        `
+        `,
+        slug:"audit-log-for-mariadb-mysql-databases"
     },
     {
         name: 'WhatsApp Chat Analyzer',
@@ -244,7 +258,8 @@ export const dataTools = [
             - Determination of top 10 active days based on word count
             - Calculation of average response time for each individual
             - Output of results in Markdown files
-        `
+        `,
+        slug: "whatsapp-chat-analyzer"
     },
     {
         name: 'File Change RSS Feed',
@@ -257,7 +272,8 @@ export const dataTools = [
             - Easy integration with various RSS readers and aggregators
             - Customizable number of items in the feed
             - Lightweight implementation using Bash and standard Unix utilities
-        `
+        `,
+        slug: "file-change-rss-feed"
     },
     {
         name: 'DataSingleton',
@@ -274,6 +290,7 @@ export const dataTools = [
             - API integration
             - Data storage
             - Bitwise operations
-        `
+        `,
+        slug: "data-singleton"
     }
 ];

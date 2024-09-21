@@ -1,33 +1,38 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { base } from '$app/paths';
-	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
-	import { parseReTypeMarkdown } from '$lib/utils/reTypeParser';
-	import DOMPurify from 'dompurify';
+    import { onMount } from 'svelte';
+    import { base } from '$app/paths';
+    import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
+    import { parseReTypeMarkdown } from '$lib/utils/reTypeParser';
+    import DOMPurify from 'dompurify';
 
-	export const data = {
-		name: 'John Doe',
-		email: 'john.doe@example.com',
-		message: ''
-	};
+    export let data;
 
-	let cvContent = '';
+    let cvContent = '';
 
-	onMount(async () => {
-		const response = await fetch(`${base}/cv-data.md`);
-		cvContent = await response.text();
-	});
+    onMount(async () => {
+        const response = await fetch(`${base}/cv-data.md`);
+        cvContent = await response.text();
+    });
 
-	$: parsedCV = DOMPurify.sanitize(parseReTypeMarkdown(cvContent));
+    $: parsedCV = DOMPurify.sanitize(parseReTypeMarkdown(cvContent));
 </script>
 
-<MainTitle>{data.name}</MainTitle>
+<MainTitle>{data.teamMember.name}</MainTitle>
+
+<div class="team-member-info">
+    <h2>{data.teamMember.role}</h2>
+    <p>{data.teamMember.bio}</p>
+</div>
 
 <div class="cv-content">
-	{@html parsedCV}
+    {@html parsedCV}
 </div>
 
 <style lang="scss">
+    .team-member-info {
+        margin-bottom: 2rem;
+    }
+
     :global(.cv-content) {
         margin-top: 2rem;
         line-height: 1.6;

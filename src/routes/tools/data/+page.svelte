@@ -4,6 +4,7 @@
 	import CommonPage from '$lib/components/CommonPage.svelte';
 	import Card from '$lib/components/Card/Card.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <CommonPage title={dataToolsTitle}>
@@ -11,7 +12,7 @@
 		{#each dataTools as tool}
 			<Card
 				classes={['cursor-pointer']}
-				href={`/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
 			>
 				<div class="flex flex-col h-full">
 					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
