@@ -292,5 +292,23 @@ export const dataTools = [
             - Bitwise operations
         `,
         slug: "data-singleton"
+    },
+    {
+        name: 'pwa-service-worker-creator',
+        description: 'A Python package that provides a singleton class for managing data and plugins, offering a unified interface to access various functionalities.',
+        github: 'https://github.com/charlpcronje/PWA-Service-Worker-Config-and-Generator',
+        details: `
+            This project provides a tool for generating and configuring service workers for Progressive Web Applications (PWAs). It allows for interactive configuration generation or loading from a JSON file, analyzes the file structure of your web application, and generates a service worker script based on the configuration.
+            
+            Features
+            - Interactive configuration generation
+            - Load configuration from JSON file
+            - File structure analysis
+            - Service worker script generation
+            - Logging to both file and terminal
+
+            The script will generate a 'service-worker.js' file in the current directory.
+        `,
+        slug: "pwa-service-worker-creator"
     }
 ];

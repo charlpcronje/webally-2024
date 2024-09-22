@@ -42,6 +42,9 @@ const config = {
                 }
                 throw new Error(message);
             }
+        },
+        files: {
+            assets: 'static'
         }
     }
 };

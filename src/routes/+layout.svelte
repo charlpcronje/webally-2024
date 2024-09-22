@@ -6,8 +6,12 @@
 	import '$lib/index.scss';
 	import { onHydrated } from '$lib/stores/theme';
 	import { onMount } from 'svelte';
-
-	onMount(() => onHydrated());
+	import { subscribeToPushNotifications } from '$lib/pushNotifications';
+	import InstallPrompt from '$lib/components/InstallPrompt.svelte';
+	onMount(() => {
+		onHydrated();
+		subscribeToPushNotifications();
+	});
 </script>
 
 <div class="body contents theme-dark flex flex-col min-h-screen">
@@ -16,6 +20,7 @@
 		<slot />
 	</div>
 	<Footer />
+	<InstallPrompt />
 </div>
 
 <style lang="scss">

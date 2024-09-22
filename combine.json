@@ -10,21 +10,12 @@
         ".github",
         "node_modules",
         "backups",
-        ".svelte-kit"
+        ".svelte-kit",
+        "build"
     ],
     "exclude_files": [
         "package-lock.json",
-        "combined.md",
-        "README.md",
-        "modules/console.js",
-        "generate_hashes.php",
-        "src/lib/index.scss",
-        "src/lib/data/skills.ts",
-        "src/routes/privacy/+page.svelte",
-        "src/routes/team/+page.svelte",
-        "src/routes/tools/+page.server.ts",
-        "src/lib/data/projects.ts",
-        "src/lib/data/experience.ts"
+        "combined.md"
 
     ],
     "file_types": [

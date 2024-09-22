@@ -4,90 +4,186 @@ This document contains an analysis of the project files.
 
 | No.   | File                                 | Lines    | Words    | AI Tokens |
 | ----- | ------------------------------------ | -------- | -------- | --------- |
-|  1    | ./package.json                       | 52       | 125      | 422       |
-|  2    | ./svelte.config.js                   | 49       | 106      | 223       |
-|  3    | ./tsconfig.json                      | 20       | 62       | 117       |
-|  4    | ./uno.config.ts                      | 44       | 90       | 191       |
-|  5    | ./vite.config.ts                     | 10       | 29       | 48        |
-|  6    | ./combine.json                       | 41       | 46       | 158       |
-|  7    | ./.env                               | 3        | 19       | 22        |
-|  8    | ./cspell.json                        | 60       | 66       | 247       |
-|  9    | ./.vscode/settings.json              | 189      | 197      | 768       |
-|  10   | ./src/app.d.ts                       | 15       | 49       | 63        |
-|  11   | ./src/app.html                       | 18       | 29       | 99        |
-|  12   | ./src/lib/types.ts                   | 95       | 254      | 450       |
-|  13   | ./src/lib/components/CommonPage.svelte | 15       | 37       | 83        |
-|  14   | ./src/lib/components/Markdown.svelte | 32       | 72       | 145       |
-|  15   | ./src/lib/components/SearchPage.svelte | 59       | 139      | 305       |
-|  16   | ./src/lib/components/TabTitle.svelte | 11       | 25       | 62        |
-|  17   | ./src/lib/components/Banner/Banner.svelte | 28       | 70       | 183       |
-|  18   | ./src/lib/components/Card/Card.svelte | 114      | 324      | 724       |
-|  19   | ./src/lib/components/Card/CardDivider.svelte | 2        | 5        | 17        |
-|  20   | ./src/lib/components/Card/CardLink.svelte | 40       | 78       | 191       |
-|  21   | ./src/lib/components/Card/CardLogo.svelte | 10       | 35       | 74        |
-|  22   | ./src/lib/components/Card/CardTitle.svelte | 6        | 10       | 37        |
-|  23   | ./src/lib/components/Carrousel/Carrousel.svelte | 102      | 258      | 528       |
-|  24   | ./src/lib/components/Chip/Chip.svelte | 35       | 88       | 224       |
-|  25   | ./src/lib/components/Chip/ChipIcon.svelte | 61       | 145      | 312       |
-|  26   | ./src/lib/components/Chip/Footer/Footer.svelte | 71       | 193      | 403       |
-|  27   | ./src/lib/components/ExperienceCard/ExperienceCard.svelte | 84       | 240      | 604       |
-|  28   | ./src/lib/components/Icon/Icon.svelte | 23       | 45       | 101       |
-|  29   | ./src/lib/components/Icon/Icons.ts   | 10       | 47       | 79        |
-|  30   | ./src/lib/components/Icon/UIcon.svelte | 8        | 20       | 54        |
-|  31   | ./src/lib/components/Input/Input.svelte | 28       | 56       | 132       |
-|  32   | ./src/lib/components/MainTitle/MainTitle.svelte | 11       | 29       | 96        |
-|  33   | ./src/lib/components/NavMenu/NavMenu.svelte | 225      | 556      | 1349      |
-|  34   | ./src/lib/components/ProjectCard/ProjectCard.svelte | 74       | 233      | 601       |
-|  35   | ./src/lib/components/Screenshot/Screenshot.svelte | 56       | 136      | 344       |
-|  36   | ./src/lib/data/app.ts                | 2        | 9        | 11        |
-|  37   | ./src/lib/data/assets.ts             | 132      | 300      | 1018      |
-|  38   | ./src/lib/data/education.ts          | 32       | 104      | 209       |
-|  39   | ./src/lib/data/home.ts               | 32       | 147      | 293       |
-|  40   | ./src/lib/data/navbar.ts             | 84       | 187      | 394       |
-|  41   | ./src/lib/data/resume.ts             | 4        | 10       | 13        |
-|  42   | ./src/lib/data/search.ts             | 2        | 5        | 7         |
-|  43   | ./src/lib/data/documentation-sites.ts | 146      | 397      | 695       |
-|  44   | ./src/lib/data/tools.ts              | 296      | 1625     | 2110      |
-|  45   | ./src/lib/md/svelte.md               | 41       | 298      | 391       |
-|  46   | ./src/lib/stores/theme.ts            | 48       | 146      | 279       |
-|  47   | ./src/lib/utils/colors.ts            | 166      | 343      | 1101      |
-|  48   | ./src/lib/utils/helpers.ts           | 172      | 603      | 1153      |
-|  49   | ./src/lib/utils/index.ts             | 57       | 966      | 1043      |
-|  50   | ./src/lib/utils/reTypeParser.ts      | 58       | 161      | 512       |
-|  51   | ./src/lib/utils/customMarkdownParser.ts | 30       | 97       | 206       |
-|  52   | ./src/routes/+layout.server.ts       | 2        | 5        | 6         |
-|  53   | ./src/routes/+layout.svelte          | 45       | 96       | 208       |
-|  54   | ./src/routes/+page.svelte            | 46       | 144      | 459       |
-|  55   | ./src/routes/education/+page.svelte  | 92       | 246      | 612       |
-|  56   | ./src/routes/experience/+page.svelte | 57       | 169      | 388       |
-|  57   | ./src/routes/experience/[slug]/+page.svelte | 93       | 246      | 637       |
-|  58   | ./src/routes/experience/[slug]/+page.ts | 12       | 37       | 61        |
-|  59   | ./src/routes/projects/+page.svelte   | 109      | 285      | 610       |
-|  60   | ./src/routes/projects/[slug]/+page.svelte | 140      | 353      | 899       |
-|  61   | ./src/routes/projects/[slug]/+page.ts | 12       | 37       | 61        |
-|  62   | ./src/routes/resume/+page.svelte     | 31       | 58       | 136       |
-|  63   | ./src/routes/search/+page.svelte     | 97       | 259      | 597       |
-|  64   | ./src/routes/skills/+page.svelte     | 52       | 143      | 401       |
-|  65   | ./src/routes/skills/[slug]/+page.svelte | 115      | 310      | 733       |
-|  66   | ./src/routes/skills/[slug]/+page.ts  | 12       | 37       | 61        |
-|  67   | ./src/routes/documentation/+page.svelte | 24       | 65       | 171       |
-|  68   | ./src/routes/tools/+page.svelte      | 91       | 214      | 635       |
-|  69   | ./src/routes/tools/ai/+page.svelte   | 35       | 81       | 226       |
-|  70   | ./src/routes/tools/[slug]/+page.svelte | 72       | 219      | 519       |
-|  71   | ./src/routes/tools/[slug]/+page.ts   | 21       | 74       | 129       |
-|  72   | ./src/routes/tools/data/+page.svelte | 35       | 81       | 226       |
-|  73   | ./src/routes/tools/code/+page.svelte | 35       | 81       | 226       |
-|  74   | ./src/routes/team/[slug]/+page.svelte | 146      | 278      | 616       |
-|  75   | ./src/routes/terms/+page.svelte      | 54       | 264      | 405       |
-|  76   | ./src/routes/contact/+page.svelte    | 110      | 252      | 798       |
-|  77   | ./scripts/cvFetcher.js               | 1        | 0        | 0         |
-|       | Total                                | 4542     | 13345    | 28711     |
+|  1    | ./README.md                          | 84       | 705      | 996       |
+|  2    | ./package.json                       | 52       | 126      | 424       |
+|  3    | ./svelte.config.js                   | 49       | 106      | 222       |
+|  4    | ./tsconfig.json                      | 20       | 62       | 117       |
+|  5    | ./uno.config.ts                      | 44       | 90       | 191       |
+|  6    | ./vite.config.ts                     | 10       | 29       | 48        |
+|  7    | ./combine.json                       | 32       | 37       | 122       |
+|  8    | ./.env                               | 3        | 19       | 22        |
+|  9    | ./cspell.json                        | 60       | 66       | 247       |
+|  10   | ./.vscode/settings.json              | 189      | 197      | 768       |
+|  11   | ./src/app.d.ts                       | 15       | 49       | 63        |
+|  12   | ./src/app.html                       | 18       | 29       | 99        |
+|  13   | ./src/lib/index.scss                 | 368      | 599      | 1609      |
+|  14   | ./src/lib/types.ts                   | 95       | 254      | 450       |
+|  15   | ./src/lib/components/CommonPage.svelte | 15       | 37       | 83        |
+|  16   | ./src/lib/components/Markdown.svelte | 32       | 72       | 145       |
+|  17   | ./src/lib/components/SearchPage.svelte | 59       | 139      | 305       |
+|  18   | ./src/lib/components/TabTitle.svelte | 11       | 25       | 62        |
+|  19   | ./src/lib/components/Banner/Banner.svelte | 28       | 70       | 183       |
+|  20   | ./src/lib/components/Card/Card.svelte | 114      | 324      | 724       |
+|  21   | ./src/lib/components/Card/CardDivider.svelte | 2        | 5        | 17        |
+|  22   | ./src/lib/components/Card/CardLink.svelte | 40       | 78       | 191       |
+|  23   | ./src/lib/components/Card/CardLogo.svelte | 10       | 35       | 74        |
+|  24   | ./src/lib/components/Card/CardTitle.svelte | 6        | 10       | 37        |
+|  25   | ./src/lib/components/Carrousel/Carrousel.svelte | 102      | 258      | 528       |
+|  26   | ./src/lib/components/Chip/Chip.svelte | 35       | 88       | 224       |
+|  27   | ./src/lib/components/Chip/ChipIcon.svelte | 61       | 145      | 312       |
+|  28   | ./src/lib/components/Chip/Footer/Footer.svelte | 71       | 193      | 403       |
+|  29   | ./src/lib/components/ExperienceCard/ExperienceCard.svelte | 84       | 240      | 604       |
+|  30   | ./src/lib/components/Icon/Icon.svelte | 23       | 45       | 101       |
+|  31   | ./src/lib/components/Icon/Icons.ts   | 10       | 47       | 79        |
+|  32   | ./src/lib/components/Icon/UIcon.svelte | 8        | 20       | 54        |
+|  33   | ./src/lib/components/Input/Input.svelte | 28       | 56       | 132       |
+|  34   | ./src/lib/components/MainTitle/MainTitle.svelte | 11       | 29       | 96        |
+|  35   | ./src/lib/components/NavMenu/NavMenu.svelte | 225      | 556      | 1349      |
+|  36   | ./src/lib/components/ProjectCard/ProjectCard.svelte | 74       | 233      | 601       |
+|  37   | ./src/lib/components/Screenshot/Screenshot.svelte | 56       | 136      | 344       |
+|  38   | ./src/lib/data/app.ts                | 2        | 9        | 11        |
+|  39   | ./src/lib/data/assets.ts             | 132      | 300      | 1018      |
+|  40   | ./src/lib/data/education.ts          | 32       | 104      | 209       |
+|  41   | ./src/lib/data/experience.ts         | 600      | 4038     | 5517      |
+|  42   | ./src/lib/data/home.ts               | 32       | 147      | 293       |
+|  43   | ./src/lib/data/navbar.ts             | 84       | 187      | 394       |
+|  44   | ./src/lib/data/projects.ts           | 266      | 3249     | 5765      |
+|  45   | ./src/lib/data/resume.ts             | 4        | 10       | 13        |
+|  46   | ./src/lib/data/search.ts             | 2        | 5        | 7         |
+|  47   | ./src/lib/data/skills.ts             | 1565     | 16711    | 26646     |
+|  48   | ./src/lib/data/documentation-sites.ts | 146      | 397      | 695       |
+|  49   | ./src/lib/data/tools.ts              | 296      | 1625     | 2110      |
+|  50   | ./src/lib/md/svelte.md               | 41       | 298      | 391       |
+|  51   | ./src/lib/stores/theme.ts            | 48       | 146      | 279       |
+|  52   | ./src/lib/utils/colors.ts            | 166      | 343      | 1101      |
+|  53   | ./src/lib/utils/helpers.ts           | 172      | 603      | 1153      |
+|  54   | ./src/lib/utils/index.ts             | 57       | 966      | 1043      |
+|  55   | ./src/lib/utils/reTypeParser.ts      | 58       | 161      | 512       |
+|  56   | ./src/lib/utils/customMarkdownParser.ts | 30       | 97       | 206       |
+|  57   | ./src/routes/+layout.server.ts       | 2        | 10       | 13        |
+|  58   | ./src/routes/+layout.svelte          | 45       | 96       | 208       |
+|  59   | ./src/routes/+page.svelte            | 46       | 144      | 459       |
+|  60   | ./src/routes/education/+page.svelte  | 92       | 246      | 612       |
+|  61   | ./src/routes/experience/+page.svelte | 57       | 169      | 388       |
+|  62   | ./src/routes/experience/[slug]/+page.svelte | 93       | 246      | 637       |
+|  63   | ./src/routes/experience/[slug]/+page.ts | 12       | 37       | 61        |
+|  64   | ./src/routes/projects/+page.svelte   | 109      | 285      | 610       |
+|  65   | ./src/routes/projects/[slug]/+page.svelte | 140      | 353      | 899       |
+|  66   | ./src/routes/projects/[slug]/+page.ts | 12       | 37       | 61        |
+|  67   | ./src/routes/resume/+page.svelte     | 31       | 58       | 136       |
+|  68   | ./src/routes/search/+page.svelte     | 97       | 259      | 597       |
+|  69   | ./src/routes/skills/+page.svelte     | 52       | 143      | 401       |
+|  70   | ./src/routes/skills/[slug]/+page.svelte | 115      | 310      | 733       |
+|  71   | ./src/routes/skills/[slug]/+page.ts  | 12       | 37       | 61        |
+|  72   | ./src/routes/documentation/+page.svelte | 24       | 65       | 171       |
+|  73   | ./src/routes/tools/+page.svelte      | 91       | 214      | 635       |
+|  74   | ./src/routes/tools/ai/+page.svelte   | 36       | 87       | 240       |
+|  75   | ./src/routes/tools/[slug]/+page.svelte | 72       | 219      | 519       |
+|  76   | ./src/routes/tools/[slug]/+page.ts   | 21       | 74       | 129       |
+|  77   | ./src/routes/tools/data/+page.svelte | 36       | 87       | 240       |
+|  78   | ./src/routes/tools/code/+page.svelte | 36       | 87       | 240       |
+|  79   | ./src/routes/team/+page.svelte       | 89       | 211      | 629       |
+|  80   | ./src/routes/team/[slug]/+page.svelte | 151      | 278      | 632       |
+|  81   | ./src/routes/team/[slug]/+page.ts    | 28       | 85       | 122       |
+|  82   | ./src/routes/terms/+page.svelte      | 54       | 264      | 405       |
+|  83   | ./src/routes/privacy/+page.svelte    | 46       | 194      | 327       |
+|  84   | ./src/routes/contact/+page.svelte    | 110      | 252      | 798       |
+|  85   | ./scripts/cvFetcher.js               | 1        | 0        | 0         |
+|       | Total                                | 7587     | 39152    | 70352     |
 
 
 ## Total Counts Across All Files. Tokenizer Used: NLTK's Punkt Tokenizer
-- Total Lines: 4542
-- Total Words: 13345
-- Total AI Tokens: 28711
+- Total Lines: 7587
+- Total Words: 39152
+- Total AI Tokens: 70352
+
+## File: README.md
+```md
+# Charl Cronje's Portfolio Website
+
+Welcome to the repository of my personal portfolio website. This site showcases my skills, experience, projects, and various tools I've developed throughout my career as a senior full-stack developer.
+
+## Pages
+
+1. **Home**: An introduction to who I am, featuring a brief bio and a carousel of my key skills.
+
+2. **Skills**: A comprehensive list of my technical skills, categorized and visualized for easy understanding.
+
+3. **Projects**: A showcase of my significant projects, complete with descriptions, technologies used, and links to live demos or repositories.
+
+4. **Experience**: A detailed timeline of my professional journey, highlighting key roles and achievements.
+
+5. **Education**: An overview of my educational background and certifications.
+
+6. **Resume**: A downloadable version of my professional resume.
+
+7. **Documentation**: A collection of documentation sites I've created for various technologies and projects.
+
+8. **AI Tools**: A showcase of AI-powered tools I've developed.
+
+9. **Playground**: A collection of experimental and fun projects I've worked on.
+
+## Highlights
+
+### AI Tools
+
+My portfolio features several cutting-edge AI tools that I've developed:
+
+1. **AI Response Parser**: A Python script that parses markdown files containing AI responses and extracts code blocks.
+2. **Project Data Collector**: A modular Python application designed to scan project directories and collect various pieces of information.
+3. **ChatGPT Chat Manager**: A Chrome extension and Flask API for managing ChatGPT conversations.
+4. **Synthiq**: A multi-embedded AI smart storage solution, similar to ChatGPT but trainable on custom data.
+5. **GPT Crawler**: A tool to crawl websites and generate knowledge files for custom GPTs.
+6. **Code Context Parser and Indexer for AI**: An advanced tool designed to analyze and index code from multiple programming languages.
+
+### Playground
+
+The Playground section features a variety of tools and projects:
+
+1. **Compare Files VS Code Extension**: A Visual Studio Code extension for comparing two selected files.
+2. **File Change RSS Feed**: Generates an RSS feed tracking changes to files in a specified directory.
+3. **Audit Log for MariaDB & MySQL Databases**: A stored procedure for creating database triggers to log changes.
+4. **DataSingleton**: A Python package providing a singleton class for managing data and plugins.
+5. **Image Sharpness Categorizer**: A Python script for analyzing and categorizing images based on sharpness.
+6. **WhatsApp Chat Analyzer**: Processes WhatsApp chat export files to analyze messages between two individuals.
+7. **File Groups for VS Code**: A Visual Studio Code extension for creating and managing file groups.
+8. **Project Code Markdown Generator**: Generates a Markdown document from a project's source code.
+9. **Ignite Builder - App Runner**: A Python application for managing and running multiple smaller Python scripts.
+
+### Experience and Skills
+
+My experience spans over two decades in the tech industry, with expertise in:
+
+- Full-stack web development
+- Mobile app development
+- AI and machine learning
+- Desktop application development
+- Database design and management
+- DevOps and cloud services
+
+Skills include proficiency in languages such as JavaScript, TypeScript, Python, PHP, Java, and more, as well as frameworks like React, Vue.js, Laravel, and Django.
+
+## Roadmap
+
+Future development plans for this portfolio website include:
+
+1. **Interactive Skill Tree**: Implement a visual, interactive representation of my skills.
+2. **Project Showcase Enhancements**: Add video demos and more detailed case studies for key projects.
+3. **Blog Integration**: Incorporate a technical blog to share insights and tutorials.
+4. **Live Demo Integration**: Embed live demos of smaller projects and tools directly into the website.
+5. **AI-Powered Chat Assistant**: Implement a chatbot that can answer questions about my experience and projects.
+6. **Collaborative Section**: Add a section for potential collaborations and open-source contributions.
+7. **Internationalization**: Make the website available in multiple languages.
+8. **Dark/Light Theme Toggle**: Implement a theme switcher for better user experience.
+9. **Performance Optimizations**: Continually improve load times and overall performance.
+10. **Accessibility Improvements**: Ensure the website is fully accessible to all users.
+
+## Conclusion
+
+This portfolio website is a testament to my passion for technology and continuous learning. It showcases not just my professional achievements, but also my commitment to innovation and problem-solving. I'm excited to continue expanding this platform and sharing my journey in the ever-evolving world of technology.
+
+Feel free to explore the code, and don't hesitate to reach out if you have any questions or potential collaboration ideas!
+```
 
 ## File: package.json
 ```json
@@ -98,7 +194,7 @@ This document contains an analysis of the project files.
     "scripts": {
         "dev": "vite dev --host",
         "build": "vite build",
-        "preview": "vite preview",
+        "preview": "vite preview --host",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
         "lint": "prettier --plugin-search-dir . --check . && eslint .",
@@ -152,7 +248,7 @@ import {
     vitePreprocess
 } from '@sveltejs/kit/vite';
 
-const base = '/wa';
+const base = '';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -298,21 +394,12 @@ export default config;
         ".github",
         "node_modules",
         "backups",
-        ".svelte-kit"
+        ".svelte-kit",
+        "build"
     ],
     "exclude_files": [
         "package-lock.json",
-        "combined.md",
-        "README.md",
-        "modules/console.js",
-        "generate_hashes.php",
-        "src/lib/index.scss",
-        "src/lib/data/skills.ts",
-        "src/routes/privacy/+page.svelte",
-        "src/routes/team/+page.svelte",
-        "src/routes/tools/+page.server.ts",
-        "src/lib/data/projects.ts",
-        "src/lib/data/experience.ts"
+        "combined.md"
 
     ],
     "file_types": [
@@ -632,6 +719,378 @@ declare module '*.md' {
 </body>
 
 </html>
+```
+
+## File: src/lib/index.scss
+```scss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+	--dark-0: #000;
+	--dark-00: #3b3b3b;
+	--dark-1: #1e1e1e;
+	--dark-2: #2e2e2e;
+	--dark-3: #3e3e3e;
+	--dark-4: #4e4e4e;
+	--dark-5: #5e5e5e;
+	--dark-6: #6e6e6e;
+	--dark-7: #7e7e7e;
+	--dark-8: #8e8e8e;
+
+	--light-0: #fff;
+	--light-00: #cacaca;
+	--light-1: #e1e1e1;
+	--light-2: #d1d1d1;
+	--light-3: #c1c1c1;
+	--light-4: #b1b1b1;
+	--light-5: #a1a1a1;
+	--light-6: #919191;
+	--light-7: #818181;
+	--light-8: #717171;
+
+	--code-keyword-light: #bd2864;
+	--code-keyword-dark: #bd2864;
+
+	--code-string-light: #297a3a;
+	--code-string-dark: #62c073;
+
+	--code-function-light: #0068d6;
+	--code-function-dark: #52a8ff;
+
+	--code-constant-dark: #f8c555;
+	--code-constant-light: #f08d49;
+
+	--code-operator-dark: #67cdcc;
+	--code-operator-light: #016464;
+
+	--link-dark: #2563eb;
+	--link-light: #3b82f6;
+
+	--dark-0-60: rgba(0, 0, 0, 0.6);
+	--light-0-60: rgba(255, 255, 255, 0.6);
+
+	// fonts
+	--text-f: 'Inter';
+	--title-f: 'Inter';
+
+	overflow-y: scroll;
+}
+
+body {
+	margin: 0px;
+}
+
+* {
+	transition-duration: 200ms;
+	transition-property: background, border-color, opacity, box-shadow, top, bottom, left, margin,
+		right;
+}
+
+:root[data-theme='dark'] {
+	color-scheme: dark;
+
+	--main: var(--dark-0);
+	--main-close: var(--dark-00);
+	--main-hover: var(--dark-1);
+	--secondary: var(--dark-1);
+	--secondary-hover: var(--dark-2);
+	--tertiary: var(--dark-2);
+	--tertiary-hover: var(--dark-3);
+	--accent: var(--dark-3);
+	--accent-hover: var(--dark-4);
+
+	--main-text: var(--light-0);
+	--main-text-hover: var(--light-1);
+	--secondary-text: var(--light-1);
+	--secondary-text-hover: var(--light-2);
+	--tertiary-text: var(--light-2);
+	--tertiary-text-hover: var(--light-3);
+	--accent-text: var(--light-3);
+	--accent-text-hover: var(--light-4);
+
+	--border: var(--dark-2);
+	--border-hover: var(--light-7);
+
+	--main-60: var(--dark-0-60);
+
+	--code-keyword: var(--code-keyword-dark);
+	--code-string: var(--code-string-dark);
+	--code-function: var(--code-function-dark);
+	--code-constant: var(--code-constant-dark);
+	--code-operator: var(--code-operator-dark);
+	--link: var(--link-light);
+}
+
+:root[data-theme='light'] {
+	color-scheme: light;
+
+	--main: var(--light-0);
+	--main-close: var(--light-00);
+	--main-hover: var(--light-1);
+	--secondary: var(--light-1);
+	--secondary-hover: var(--light-2);
+	--tertiary: var(--light-2);
+	--tertiary-hover: var(--light-3);
+	--accent: var(--light-3);
+	--accent-hover: var(--light-4);
+
+	--main-text: var(--dark-0);
+	--main-text-hover: var(--dark-1);
+	--secondary-text: var(--dark-1);
+	--secondary-text-hover: var(--dark-2);
+	--tertiary-text: var(--dark-2);
+	--tertiary-text-hover: var(--dark-3);
+	--accent-text: var(--dark-3);
+	--accent-text-hover: var(--dark-4);
+
+	--border: var(--light-1);
+	--border-hover: var(--dark-8);
+
+	--main-60: var(--light-0-60);
+
+	--code-keyword: var(--code-keyword-light);
+	--code-string: var(--code-string-light);
+	--code-function: var(--code-function-light);
+	--code-constant: var(--code-constant-light);
+	--code-operator: var(--code-operator-light);
+	--link: var(--link-dark);
+}
+
+.container {
+	max-width: 1200px;
+	min-width: 1200px;
+	margin: 0px auto;
+
+	@media (max-width: 1350px) {
+		& {
+			max-width: 1000px;
+			min-width: 1000px;
+		}
+	}
+
+	@media (max-width: 1075px) {
+		& {
+			max-width: -webkit-fill-available;
+			min-width: -webkit-fill-available;
+			max-width: -moz-available;
+			min-width: -moz-available;
+		}
+	}
+}
+
+.markdown-container {
+	--code-comment: var(--tertiary-text);
+	--code-punctuation: var(--main-text);
+	--code-builtin: var(--secondary-text);
+	--code-number: var(--secondary-text);
+	--code-interpolation: var(--code-keyword);
+	--code-class-name: var(--secondary-text);
+
+	font-family: 'Space Mono', monospace;
+	font-size: 14px;
+
+	color: var(--tertiary-text);
+	overflow-y: auto !important;
+
+	code[class*='language-'],
+	pre[class*='language-'] {
+		overflow-x: auto;
+		min-width: 0px;
+		color: var(--main-text-hover);
+	}
+
+	pre[class*='language-'] {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	& .token.selector,
+	.token.important,
+	.token.atrule,
+	.token.keyword {
+		color: var(--code-keyword);
+	}
+
+	& .token {
+		&.punctuation {
+			color: var(--code-punctuation);
+		}
+
+		&.string {
+			color: var(--code-string);
+		}
+
+		&.function {
+			color: var(--code-function);
+		}
+
+		&.comment {
+			color: var(--code-comment);
+		}
+
+		&.token.builtin {
+			color: var(--code-builtin);
+		}
+
+		&.token.number {
+			color: var(--code-number);
+		}
+
+		&.token.constant {
+			color: var(--code-constant);
+		}
+
+		&.token.operator {
+			color: var(--code-operator);
+		}
+		&.token.interpolation {
+			color: var(--code-interpolation);
+		}
+
+		&.token.class-name {
+			color: var(--code-function);
+		}
+	}
+
+	& h1,
+	& h2,
+	& h3 {
+		color: var(--text);
+		margin-bottom: 0.45em;
+	}
+
+	& h1 {
+		font-size: 2em;
+	}
+
+	& h2 {
+		font-size: 1.8em;
+	}
+
+	& h3 {
+		font-size: 1.6em;
+	}
+
+	& h4 {
+		font-size: 1.45em;
+	}
+
+	& h5 {
+		font-size: 1.3em;
+	}
+
+	& h6 {
+		font-size: 1.2em;
+	}
+
+	& p {
+		line-height: 1.75rem;
+	}
+
+	& ul {
+		margin: 0;
+		padding: 0 20px;
+	}
+
+	& li {
+		padding: 5px 0px;
+		line-height: 1.75rem;
+	}
+
+	& a {
+		color: var(--link);
+	}
+
+	& :is(code):not(pre code) {
+		color: var(--accent-text);
+		// font-size: 0.9em;
+		background-color: var(--tertiary);
+		padding: 1px 6px;
+		border-radius: 0.25em;
+	}
+
+	& :not(pre) > code[class*='language-'],
+	pre[class*='language-'] {
+		background-color: var(--main-hover);
+		border: 1px solid var(--border);
+		border-radius: 0.25em;
+		font-size: 0.9em;
+
+		&:hover {
+			background-color: var(--secondary-hover);
+			border-color: var(--border-hover);
+		}
+	}
+
+	& a :is(code):not(pre code) {
+		color: inherit;
+	}
+
+	& blockquote {
+		padding: 5px 20px;
+		background-color: var(--main-hover);
+		border: 1px solid var(--dividerLight);
+		margin-right: 0px;
+		margin-left: 0px;
+		border-radius: 0.25em;
+
+		strong {
+			font-style: normal;
+		}
+	}
+
+	& hr {
+		// border: none;
+		border-top: 0.5px solid var(--border-low);
+		color: var(--border-low);
+		margin: 30px 0px;
+	}
+}
+
+.nav-bar-mobile-btn {
+	width: 36px;
+	height: 36px;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		height: 1px;
+		width: 20px;
+		background-color: var(--secondary-text);
+		transition: transform 200ms ease;
+	}
+
+	&:hover {
+		&::before,
+		&::after {
+			background-color: auto;
+		}
+	}
+
+	&::before {
+		transform: translateY(-5px) rotate(0deg);
+	}
+
+	&::after {
+		transform: translateY(4px) rotate(0deg);
+	}
+
+	&-expanded {
+		&::before {
+			transform: translateY(2px) rotate(45deg);
+		}
+
+		&::after {
+			transform: translateY(0) rotate(-45deg);
+		}
+	}
+}
+
 ```
 
 ## File: src/lib/types.ts
@@ -2108,6 +2567,610 @@ export const title = 'Education';
 
 ```
 
+## File: src/lib/data/experience.ts
+```ts
+// src/lib/data/experience.ts
+import Assets from './assets';
+import { getSkills } from './skills';
+import { ContractType, type Experience } from '../types';
+
+export const items: Array<Experience> = [
+	{
+		slug: 'webally-self-employed',
+		company: 'webAlly',
+		description: `<b>webAlly is the company name under which I do all my freelance work, I established the company in 2006.</b> Over the years I've accepted print work, advertising work, video, graphic design, web-development, custom hardware development, embedded programming and Software Development.
+
+<b>Awarded Tenders:</b>
+Was awarded tenders from:
+- USAID on the PEPFAR project
+- Municipality of Ekurhuleni
+- Imperial Logistics
+
+<b>Some of my clients & Projects:</b>
+- ACSA - Airport Company South Africa
+- Airport Company South Africa - 3D Airport Explore
+- Airport Company South Africa - 3D Airport Game
+- Airport Company South Africa - Duty free Shopping
+- Alex May Inc - Case Management System
+- Alex May Inc - Document Encryption
+- Alex May Inc - Document Management Systems (DMS)
+- ANANZI - Online Marketing / Banners
+- Anglo American - E-Mail Marketing
+- Electronic Invitations
+- Anglo Gold - Electronic Invitations
+- Anglo Gold - Website
+- APBCO Insurance - Asset Management System
+- ATKV - Website and Print
+- Best4Kids - Website & Customer Portal
+- BKS Engineers - Website
+- BlueJam Photography - Website
+- Brandwag School - Promotional Video
+- Brinant Security - Shift and Staff Management System
+- Cavalier Abattoirs - Process Management System
+- Cavalier Abattoirs - Quote and Invoice System
+- Cavalier Abattoirs - Vehicle Maintenance System
+- Cavalier Abattoirs - Vehicle Tracking and  System
+- Cavalier Livestock - Website
+- CE @ UP - Multimedia Presentation
+- City Lodge - Bid2Stay Website
+- City Lodge - Online Booking System
+- City Lodge - System Integration
+- City Lodge - Website
+- City Lodge Hotel Group
+- Collect-a-Can - Website
+- Constantia Village Mall - Marketing System
+- Continuing Education At University of Pretoria
+- Die Poort School - Christmas Market Sales System
+- DIY Weddings - Website
+- DLC Group
+- DLC Group - Website
+- DOTCOM Trading - Data Capturing Software
+- DOTCOM Trading - Database Development
+- DOTCOM Trading - GIS (Geographical Information Systems)
+- Duoporta - Vehicle Valuations System
+- Emperors Palace - Event Promotions
+- Exxaro - Internal Communication System
+- Exxaro - IZone Staff Empowerment System
+- Exxaro - Online Quiz Game
+- Exxaro - Software for Real Life Quiz Game, Custom Hardware
+- Fear Factor Candy - Website
+- FGX Studios
+- FGX Studios - CMS Centred
+- FGX Studios - CMS Development
+- FGX Studios - CMS Ignition
+- FGX Studios - Mall Management System
+- FNB - Corporate Identity Development
+- Goldfield Logistics - Intranet
+- Imperial Distribution
+- Imperial Logistics
+- Imperial Logistics - Building Management System
+- Imperial Logistics - Document Management System
+- Imperial Logistics - HR Management System
+- Imvula ICD - Asset Management System
+- Imvula ICD - Server Monitoring System
+- Imvula ICD - Software License Management System
+- InGenius - Website
+- Inspectacar - Online Car Market System
+- IQ Recruitment - Candidate Management System
+- Kumba Iron Ore - Annual Report
+- Laerskool Die Poort
+- Legacy Underwriting Managers - Portfolio Management System
+- LURITS - Learner Performance Management System
+- Mac Mobile - Product Distribution System
+- McDonald's
+- Musofinder - Website
+- Nutella - Billboards and Posters
+- Ombudsman - Case Management System
+- One Red Marble - Website
+- OZ Pharmaceuticals - Website
+- PC Palace - Service and Product Repair
+- Nexus Online - Website
+- PC Palace - Website
+- Pencil Box - School Admin System
+- PNA - E-Commerce
+- PNA - Product Management System
+- Principal Software - Custom Online IDE
+- Principal Software - Custom Version Control System
+- Principal Software - School Admin System
+- Principle Software
+- Quick PC - Billboards
+- Restaurant Mosaic - Point of Sale System
+- Restaurant Mosaic - Website
+- Student Village - System Analysis
+- Super Soil - Brand Development
+- T-Systems - Website
+- The Car Shop - Website
+- The Orient Hotel - Hotel Management System
+- The Orient Hotel - Point of Sale System
+- The Orient Hotel - Website
+- The Orient Hotel - Website
+- TiciBox - Point Of Sale Systems
+- Tribake - Quote and Invoice System
+- Tshwane University of Technology - Website
+- TSMA - Website
+- TUT Heita Newsletter (Award Winner)
+- TUT Pharmaceuticals Department - Website
+- UNISA - Annual Report
+- UNISA Law Department - Website
+- UNISA Math Department - Game
+- University of Pretoria - Multimedia Presentation
+- Urban Crew - Website
+- USAID - NGO and Financial Management System
+- Vane Systems - Bus Ticket Booking System
+- Vane Systems - Event Ticketing System
+- Vane Systems - Indoor Venue Maps (SVG, XML)
+- Voortrekker Monument - Website
+- WebOnline - Website
+- Yara International - Website and Branding
+
+<b>Achievements:</b>
+- Won 1st prize for 2 years running for the best electronic publication in South Africa for TUT's monthly newsletter called HEITA
+- I believe webAlly was one of few web development companies that also did print work. I outsourced all the non electronic media and got help with some of the hardware development but - I've always tried to keep the development close and to learn as much as possible, programming is truly a my passion.
+- In 2019, for McDonalds I Created and Launched Tinbo Dash, a PC and Android Infinite Runner type game where players could win vouchers by playing the game. We had over a million game played in 4 weeks.
+
+<b>HeEPP - Hyper extensible Element Pre-Processor:</b>
+When I started doing freelance work I got a lot of the same kind of projects and I started creating modules I can re-use for different projects. These modules grew into a framework that I initially called \`webCore\`. Eventually after years the MVC framework I created was at the stage where it was the only tool I used for all my projects if the client had no particular preference. During this time I got a 2 year contract from Cavalier Abattoirs to create a complete process management system and invoice system. This gave me the chance to refine webCore and I renamed it HeEPP.
+
+I named it HeEPP or Hyper extensible Element Pre-Processor because of the way the system focused or creating re-usable elements. Elements can be used within elements and elements can be extended by others. This was years before Google Polymer started doing the same but only on the front-end. 
+
+In HeEPP you create custom HTML tags that is then called an element.
+Each element has a corresponding PHP class with the same name
+The attributes of the tag updates the properties of the PHP class and the PHP class will then render the element in various ways depending or those properties.
+Elements can be used in loops and they can be nested and grouped. Building a system that comprises of re-usable elements you only have to create once and test once and that you can then build bigger elements with is surprisingly efficient and very stable and easy to maintain and test. The past few years I haven't had the time I wanted to finish the docs but I'm busy with that now in 2022 and I hope to get this done before May 2022 and then putting it out there for the public to comment and help out if they would like to. I hope to compete with Laravel from 2024 for the top spot in PHP MVC Frameworks`,
+		contract: ContractType.SelfEmployed,
+		type: 'Software Development',
+		location: 'Pretoria, South Africa',
+		period: { from: new Date(2019, 0, 1) },
+		skills: getSkills('js', 'ts', 'php', 'python', 'java', 'kotlin', 'react', 'vue', 'angular', 'nodejs', 'laravel', 'symfony', 'django', 'flask', 'mongodb', 'mysql', 'postgresql', 'docker', 'kubernetes', 'aws', 'azure', 'gcp', 'android', 'ios', 'react-native', 'flutter', 'ai', 'machine-learning'),
+		name: 'Senior Full-Stack Developer',
+		color: 'blue',
+		links: [
+			{ to: 'https://webally.co.za', label: 'Company Website' },
+			{ to: 'https://cv.webally.co.za', label: 'Resume Website' },
+			{ to: 'https://blog.webally.co.za', label: 'webAlly Blog' },
+			{ to: 'https://docs.webally.co.za', label: 'webAlly Wiki' },
+			{ to: 'https://nav.webally.co.za', label: 'webAlly Dashboard' }
+		],
+		logo: Assets.Webally, // Replace with webAlly logo when available
+		shortDescription: 'Providing comprehensive software development services as a self-employed developer.'
+	},
+	{
+		slug: 'vane-systems',
+		company: 'Vane Systems',
+		description: `<b>Vane Systems creates and integrates with payment solutions as well as booking / Ticketing Systems.</b>
+
+During my time at Vane Systems I maintained the C# RestFull API SOAP Service and PHP GraphQL API.
+The company also does bus bookings and integrates with Greyhound and InterCape. They also do event booking systems point of sale systems and credit card machines.
+Like with most Senior developers I had a hand in most of what was going on. Security was of great concern with many of the systems as well as physical access control systems as well as document encryption.
+The development team worked on an Agile The company manages the developers with an agile methodology, test driven development, scrums, burndows, Kanban boards etc.
+
+<b>Reason for leaving:</b>
+I left because I broke my back and was out of action for months, but since then I've no problems at all.
+
+<b>Other Tasks:</b>
+- API Integration
+- Authentication including OAuth 2
+- Check and Apply Coding Standards
+- Database Development
+- Management Tools and Business Logic
+- Project Management
+- Project Planning
+- Server Management
+- System Analysis
+
+<b>PHP 5.6 and PHP 7:</b>
+- Custom MVC PHP Framework
+- Laravel
+- Laravel Lighthouse
+- Laravel Passport
+- Object Orientated
+- PHP
+- SaaS (Software as a Service)
+- Web Services (Restful & SOAP)
+
+<b>Database Management:</b>
+- MSSQL
+- Mysql
+- SQLite
+
+<b>Indoor Mapping:</b>
+- WSDL
+- XML DTD
+- XML Schema's
+- XPath
+- XML
+- SVG
+- XHTML
+- XSLT
+
+<b>GIS:</b>
+- Geographic Information Systems (GIS)
+- Mapping and Geo Reverse Tracking
+- Route Planning
+- SQL Integration
+
+<b>Server Administrator:</b>
+- Apache
+- CentOS 7
+- FreeBSD Mail Server
+- MariaDB
+- MySQL
+- NginX Reverse Proxy
+- PHP
+
+<b>Security:</b>
+- Biometrics
+- Digital Signatures
+- Document Encryption
+- Facial Recognition
+- Location Based Authentication Methods
+- Voice Recognition
+
+<b>Android App Development:</b>
+- Custom Hardware Development
+- Java
+- Point Of Sale Systems
+- SQLite
+- Teleric
+- XML
+
+<b>CSS Frameworks & Pre-processors:</b>
+- Bootstrap
+- Foundation
+- Material - SASS
+- Less CSS
+- Stylus
+
+<b>Version Systems Control:</b>
+- GIT
+- SVN`,
+		contract: ContractType.FullTime,
+		type: 'Software Development',
+		location: 'Johannesburg, South Africa',
+		period: { from: new Date(2018, 0, 1), to: new Date(2019, 1, 1) },
+		skills: getSkills('csharp', 'php', 'graphql', 'mysql', 'postgresql', 'docker', 'kubernetes'),
+		name: 'Senior Full-Stack Developer',
+		color: 'green',
+		links: [],
+		logo: Assets.VaneSystems, // Replace with Vane Systems logo when available
+		shortDescription: 'Developed and maintained API services and various booking systems.'
+	},
+	{
+		slug: 'webally-2015',
+		company: 'webAlly',
+		description: `<b>webAlly is the company name under which I do all my freelance work, I established the company in 2006.</b> Over the years I've accepted print work, advertising work, video, graphic design, web-development, custom hardware development, embedded programming and Software Development.<br>
+
+<b>Awarded Tenders:</b><br>
+Was awarded tenders from:<br>
+- USAID on the PEPFAR project<br>
+- Municipality of Ekurhuleni<br>
+- Imperial Logistics<br>`,
+		contract: ContractType.SelfEmployed,
+		type: 'Software Development',
+		location: 'Pretoria, South Africa',
+		period: { from: new Date(2015, 3, 1), to: new Date(2017, 11, 1) },
+		skills: getSkills('JavaScript', 'php', 'mysql', 'html', 'Flash','ActionScript', 'Database Management','XML'),
+		name: 'Founder & Senior Full-Stack Developer',
+		color: 'lime',
+		links: [
+			{ to: 'https://webally.co.za', label: 'Company Website' },
+			{ to: 'https://cv.webally.co.za', label: 'Resume Website' },
+			{ to: 'https://blog.webally.co.za', label: 'webAlly Blog' },
+			{ to: 'https://docs.webally.co.za', label: 'webAlly Wiki' },
+			{ to: 'https://nav.webally.co.za', label: 'webAlly Dashboard' }
+		],
+		logo: Assets.Webally, // Replace with webAlly logo when available
+		shortDescription: 'Providing comprehensive software development services as a self-employed developer.'
+	},
+	{
+		slug: 'legacy-underwriting-managers',
+		company: 'Legacy Underwriting Managers',
+		description: `<b>Legacy Insurance Underwriting Managers (LUM)</b>
+
+Software for general insurance underwriting, systems and processes will allow you as our client access to your portfolio in real time wherever you are and offers you improved communication with your client.
+
+Web: <a href="https://www.lum.co.za">www.lum.co.za</a>
+
+At LUM I worked as a senior PHP developer on a web-based system for insurance. My main responsibility was to maintain LUM's underwriting software. This web-based system is used by insurance brokers who sell insurance for multiple underwriters. The system integrates with Sanlam, Budget, APBCO, and a few more. The type of systems are really quite extensive and is of course mainly focused to make sure all the financial are done correctly and that there is a proper audit trail for all transactions. Once unique thing I've only encountered at this company was the Database technology the used for the system: Sybase, a Columnar Databases.
+
+- A columnar database is a database management system (DBMS) that stores data in columns instead of rows. 
+- Columnar databases store data in a way that greatly improves disk I/O performance. They are particularly helpful for data analytics and data warehousing.
+
+<b>Some of the system features:</b>
+- Policy administration and claims management
+- Claims Automation
+- Insurance Admin Systems
+- Insurance Policy Administration
+- Broker Policy
+
+<b>Reason for leaving:</b>
+Vane Systems offered me a R10 000 increase
+
+<b>Other Tasks:</b>
+- POS System for Mosaic Restaurant that is owned by the same person
+- Asset Management System for LUM, APBCO and The Orient Hotel
+- Website for The Orient Hotel
+- I built all of these side projects on HeEPP (My PHP MVC Framework)
+
+<b>PHP:</b>
+- Custom MVC PHP Framework
+- WebCore (HeEPP)
+- Object Orientated
+- SaaS (Software as a Service)
+- Web Services (Restful & SOAP)
+
+<b>Databases:</b>
+- Mysql
+- Sybase
+
+<b>Server Administrator:</b>
+- Apache
+- MySQL
+- PHP
+
+<b>Security:</b>
+- Digital Signatures
+- Document Encryption
+
+<b>CSS Frameworks & Pre-processors:</b>
+- Bootstrap
+- Foundation
+- Material Design
+
+<b>Version Control:</b>
+- GIT`,
+		contract: ContractType.FullTime,
+		type: 'Software Development',
+		location: 'Pretoria, South Africa',
+		period: { from: new Date(2014, 1, 1), to: new Date(2015, 2, 1) },
+		skills: getSkills('php', 'mysql', 'sybase', 'js', 'css', 'html'),
+		name: 'Senior PHP Developer',
+		color: 'red',
+		links: [
+			{ to: 'https://www.lum.co.za', label: 'Company Website' }
+		],
+		logo: Assets.LegacyUnderwriting, // Replace with LUM logo when available
+		shortDescription: 'Developed and maintained web-based insurance underwriting systems.'
+	},
+	{
+		slug: 'principal-software',
+		company: 'Principal Software (D6 Group)',
+		description: `<b>When I worked for d6 Group it was still known as Principal Software.</b> I believe the main focus of the company is still admin systems for schools. When I started they rolled out to 30 schools, each school on their own server and own code base. This presented many challenges:
+
+- New updates were a process of deploying the code and DB migrations on 30 servers.
+- It took an entire day and if there was a complication at just one school we did a rollback on all.
+
+The first update I proposed was to combine all code bases. This presented a bigger challenge than I thought for some strange reasons. The whole system was written in 1 very, very, very long PHP file. I believe it was a 12MB text file. What I found out later was that the original developer was in fact blind and coded the whole system with text to speech and knowing almost exactly what line of code did what. I was honestly impressed and shocked at the same time.
+
+- I took some time and I split the file into hundreds of smaller files
+- The first update I did was deploying the same code, but just split into smaller pieces, but just to one server and we created sub-domains for each school, the sub-domain also determined the DB name the system connected to. We decided to leave each school on their own database since none of the tables had a \`school_id\` or any unique identifier that would differentiate each school's data
+- During the time I was there the company grew from being 3 people to more than 40 with over 2000 schools using the system with almost a million users. Working for this company was a real adventure and I enjoyed every day. I loved the people and how the product evolved.
+
+Web: <a href="https://d6.co.za/education/products/d6-plus/">https://d6.co.za/education/products/d6-plus/</a>
+
+<b>Some of the system features:</b>
+- <b>Administration:</b>
+  - Task-Driven Workflow
+  - General School Admin
+  - Learner l Parent l Staff
+  - Code of Conduct
+  - Compliance
+  - Communication
+- <b>Finance:</b>
+  - General Ledger
+  - Budget
+  - Debtors
+  - Creditors
+  - Cash Book
+  - Projects
+- <b>Curriculum:</b>
+  - Curriculum Setup
+  - Promotion Criteria
+  - Marks Computing
+  - Report Cards
+  - Certificates
+  - Report Card Remarks
+
+<b>Reason for leaving:</b>
+For some reason it felt like my job was done and I needed to move on, we were a dev team of 6 people by then and I trusted that they would be fine without me.
+
+<b>Other Tasks:</b>
+- Project Management
+- Server Management
+- Department Manager
+- Lead Developer
+- Created online IDE where everyone worked, this prevented us from working on the same files at the same time. We were still using SVN, and I think that everyone who's worked with SVN knows how working on the same files can sometimes cause you to roll back an entire dev cycle.
+- Training
+- System Analysis
+- Maintenance
+
+<b>PHP:</b>
+- Custom MVC PHP Framework
+- WebCore (HeEPP)
+- Object Orientated
+- SaaS (Software as a Service)
+- Web Services (Restful & SOAP)
+
+<b>Databases:</b>
+- Mysql
+- Sybase
+
+<b>Server Administrator:</b>
+- Apache
+- MySQL
+- PHP
+
+<b>Security:</b>
+- Digital Signatures
+- Document Encryption
+
+<b>CSS Frameworks & Pre-processors:</b>
+- Bootstrap
+- Foundation
+- Material Design
+
+<b>Version Control:</b>
+- GIT`,
+		contract: ContractType.FullTime,
+		type: 'Software Development',
+		location: 'Pretoria, South Africa',
+		period: { from: new Date(2011, 11, 1), to: new Date(2014, 1, 1) },
+		skills: getSkills('php', 'mysql', 'js', 'css', 'html'),
+		name: 'Senior PHP Developer',
+		color: 'purple',
+		links: [
+			{ to: 'https://d6.co.za', label: 'Company Website' }
+		],
+		logo: Assets.PrincipalSoftware, // Replace with D6 Group logo when available
+		shortDescription: 'Led development of school administration systems used by thousands of schools.'
+	},
+	{
+		slug: 'webally-2006',
+		company: 'webAlly',
+		description: 'started webAlly in March 2006, I believe it was one of the first web development companies in Pretoria.',
+		contract: ContractType.SelfEmployed,
+		type: 'Software Development',
+		location: 'Pretoria, South Africa',
+		period: { from: new Date(2006, 0, 1), to: new Date(2011, 11, 1) },
+		skills: getSkills('JavaScript', 'php', 'mysql', 'html', 'Flash','ActionScript', 'Database Management','XML'),
+		name: 'Founder & Senior Full-Stack Developer',
+		color: 'lime',
+		links: [
+			{ to: 'https://webally.co.za', label: 'Company Website' },
+			{ to: 'https://cv.webally.co.za', label: 'Resume Website' },
+			{ to: 'https://blog.webally.co.za', label: 'webAlly Blog' },
+			{ to: 'https://docs.webally.co.za', label: 'webAlly Wiki' },
+			{ to: 'https://nav.webally.co.za', label: 'webAlly Dashboard' }
+		],
+		logo: Assets.Webally, // Replace with webAlly logo when available
+		shortDescription: 'Providing comprehensive software development services as a self-employed developer.'
+	},
+	{
+		slug: 'pageworks',
+		company: 'PageWorks',
+		description: `<b>PageWorks was a Advertising Agency, this was my first job where I was employed specifically for just web-development, but my title at the office was HEAD WEB DEVELOPER</b>, I guess that was only because I was the only one, and not because I was in change of anyone else. We did however employ two more people in the department during the course of the year it felt good doing my title justice.
+This was during the time of IE6, JQuery just started getting some traction and most websites were images cut up into tables. The web was very simplistic, you could only safely use 5 different fonts, I knew all the CSS rules, I honestly did not think JavaScript had any future, I treated it as a bad joke, I honestly believe that if Jquery did not come and save JavasScript then it might have been trashed together with Objective C, Turbo Pascal and AT&T Unix Operating System.
+
+<b>Tasks and Tech:</b>
+- Section manager
+- Web Developer
+- Web applications including e-commerce, content management, invoicing systems, resource management
+- Php , Asp .net, Visual Basic, MySql, MSSql, Delphi, Access, Flash
+- Graphic design
+- Video editing
+- Multi-Media
+- Customer support
+- Sales
+
+<b>Reason for leaving:</b>
+I got married and I decided to start working as a freelancer to have more time at home, little did I know that working for yourself is a lot more hours than working for someone else.`,
+		contract: ContractType.FullTime,
+		type: 'Web Development',
+		location: 'Pretoria, South Africa',
+		period: { from: new Date(2005, 11, 1), to: new Date(2006, 1, 1) },
+		skills: getSkills('php', 'asp', 'mysql', 'mssql', 'js', 'css', 'html'),
+		name: 'Head Web Developer',
+		color: 'orange',
+		links: [],
+		logo: Assets.Pageworks, // Replace with PageWorks logo when available
+		shortDescription: 'Led web development projects in an advertising agency setting.'
+	},
+	{
+		slug: 'pc-palace',
+		company: 'PC Palace',
+		description: `<b>I was studying to become a lawyer back then, but to pay for my studies I started working at PC Palace as a techie.</b> I've always had an interest in computers and I knew much o what I knew back then by just playing around at home, constantly reinstalling Windows 95 from 22 2.5" Disks that I bought on special from CNA's grand opening in Menlyn mall for R20. Before the days of owning a CD-ROM and before you could hope to download more than 10MB over an entire weekend.
+The technical department booked in repairs with an Access database running on the Windows Server 2003. The database constantly kicked people out and caused loads of frustration. That is when I decided to create my very first website, I did some research and decided on a LAMP Stack, I've got no idea how it happened that I chose Apache, PHP and Mysql. It took me about two months and many sleepless nights but I completed the new system for the technical department. After that they put me in charge of the company website. Then some of the company's clients also started paying them for development until PageWorks offered me the Lead Web Developer role for 6 times what I was earing at PC Palace.
+That was it, I never looked back.
+
+<b>Tasks & Tech:</b>
+- Customer support
+- Web Master
+- Web applications including e-commerce
+- PHP, Asp .net, Visual Basic, MySQL, MSSQL
+- Graphic design
+- Installing networks and maintaining networks
+- Server installations
+- Hardware Troubleshooting
+- Sales
+
+<b>Reason for leaving:</b>
+I got married and I decided to start working as a freelancer to have more time at home, little did I know that working for yourself is a lot more hours than working for someone else.`,
+		contract: ContractType.FullTime,
+		type: 'IT Support / Web Development',
+		location: 'Pretoria, South Africa',
+		period: { from: new Date(2004, 7, 1), to: new Date(2005, 11, 1) },
+		skills: getSkills('php', 'mysql', 'js', 'css', 'html'),
+		name: 'IT Technician / Web Developer',
+		color: 'cyan',
+		links: [],
+		logo: Assets.PCPalace, // Replace with PC Palace logo when available
+		shortDescription: 'Transitioned from IT support to web development, creating internal systems and client websites.'
+	},
+	{
+		slug: 'nexus-online',
+		company: 'Nexus Online',
+		description: `<b>Tasks & Tech:</b>
+One of my friends owned an internet cafe / Web-Hosting company, I helped out when I could while I was studying
+
+- Web / graphic design
+- Networking
+- Customer service
+- Support
+- Sales`,
+		contract: ContractType.PartTime,
+		type: 'Web Design / IT Support',
+		location: 'Pretoria, South Africa',
+		period: { from: new Date(2004, 1, 1), to: new Date(2004, 7, 1) },
+		skills: getSkills('html', 'css', 'js'),
+		name: 'Web Designer / IT Support',
+		color: 'teal',
+		links: [],
+		logo: Assets.Nexus, // Replace with Nexus Online logo when available
+		shortDescription: 'Provided web design and IT support services for an internet cafe and web hosting company.'
+	},
+	{
+		slug: 'ram-london',
+		company: 'RAM',
+		description: `<b>Technician:</b>
+- Technical support
+- Computer repair
+- Software installation
+- Computer building`,
+		contract: ContractType.FullTime,
+		type: 'IT Support',
+		location: 'London, England',
+		period: { from: new Date(2003, 7, 1), to: new Date(2004, 11, 1) },
+		skills: getSkills('hardware', 'software-installation'),
+		name: 'Technician',
+		color: 'indigo',
+		links: [],
+		logo: Assets.RAM, // Replace with RAM logo when available
+		shortDescription: 'Provided comprehensive IT support and computer services in London.'
+	},
+	{
+		slug: 'cnn-london',
+		company: 'CNN',
+		description: `<b>Equipment & Personal:</b>
+- Keep track of personal and equipment
+- SignIn Logs
+- Show visitors to interview rooms
+- Security`,
+		contract: ContractType.FullTime,
+		type: 'Equipment and Personnel Management',
+		location: 'London, England',
+		period: { from: new Date(2002, 7, 1), to: new Date(2003, 11, 1) },
+		skills: getSkills('equipment-management', 'security-protocols'),
+		name: 'Equipment and Personnel Manager',
+		color: 'red',
+		links: [],
+		logo: Assets.CNN, // Replace with CNN logo when available
+		shortDescription: 'Managed equipment and personnel logistics for CNN in London.'
+	}
+];
+
+export const title = 'Experience';
+```
+
 ## File: src/lib/data/home.ts
 ```ts
 // src/lib/data/home.ts
@@ -2232,6 +3295,276 @@ export const footerItems = [
 ] as const;
 ```
 
+## File: src/lib/data/projects.ts
+```ts
+// // src/lib/data/projects.ts
+
+import Assets from './assets';
+import { getSkills } from './skills';
+import type { Project } from '../types';
+
+export const items: Array<Project> = [
+	{
+		slug: "acsa-3d-airport-explore",
+		color: "#0077be",
+		description: "The ACSA 3D Airport Explore project was an innovative and engaging 3D game developed for Airport Company South Africa (ACSA). This interactive experience was designed to revolutionize the way users interact with and understand airport environments.<br><br><b>Key Features:</b><br>• Meticulously crafted virtual airport environment<br>• Gamified exploration of various airport areas<br>• Reward system for completing challenges<br>• Educational content balanced with entertainment value<br><br>The project successfully created a unique tool that served as both an innovative marketing asset for ACSA and an educational resource for travelers, potentially reducing anxiety and improving the overall airport experience for users.",
+		shortDescription: "Interactive 3D airport exploration game for ACSA, designed to familiarize users with airport layouts and enhance engagement through an immersive virtual experience.",
+		links: [{ to: "https://www.airports.co.za/", label: "ACSA Website" }],
+		logo: Assets.ACSA,
+		name: "ACSA 3D Airport Explore",
+		period: {
+			from: new Date(2018, 0, 1),
+			to: new Date(2018, 3, 15)
+		},
+		skills: getSkills('unity', 'csharp', 'js', 'html', 'css'),
+		type: "Interactive 3D Game",
+		company: "Airport Company South Africa"
+	},
+	{
+		slug: "anglo-american-email-marketing",
+		color: "#ff0000",
+		description: "The Anglo American Email Marketing project was a sophisticated digital communication initiative developed for Anglo American, a global leader in the mining industry. This comprehensive system managed and distributed personalized electronic communications to various stakeholders.<br><br><b>Key Components:</b><br>• Suite of responsive email templates<br>• Advanced personalized invitation system<br>• Robust tracking and analytics capabilities<br>• Stringent security measures for data protection<br><br>The result was a powerful, flexible, and secure email marketing solution that significantly enhanced Anglo American's digital communication capabilities, strengthening stakeholder relationships and reinforcing their position as a forward-thinking leader in the mining industry.",
+		shortDescription: "Email marketing and electronic invitation system for Anglo American, featuring responsive templates and personalized communication management for enhanced corporate outreach.",
+		links: [{ to: "https://www.angloamerican.com/", label: "Anglo American Website" }],
+		logo: Assets.AngloAmerican,
+		name: "Anglo American Email Marketing",
+		period: {
+			from: new Date(2017, 0, 1),
+			to: new Date(2017, 2, 17)
+		},
+		skills: getSkills('html', 'css', 'js', 'php'),
+		type: "Email Marketing",
+		company: "Anglo American"
+	},
+	{
+		slug: "apbco-asset-management",
+		color: "#4a90e2",
+		description: "The APBCO Asset Management System was a bespoke software solution developed for APBCO Insurance to revolutionize their approach to managing company assets. This project addressed complex challenges of asset tracking, maintenance scheduling, and comprehensive reporting.<br><br><b>Key Features:</b><br>• Centralized asset database with detailed information<br>• Real-time asset tracking using barcode and RFID technology<br>• Maintenance management module with automated alerts<br>• Comprehensive reporting suite for decision-making<br>• User-friendly interface for easy asset management<br><br>The implementation resulted in significant improvements in APBCO's operational efficiency, including real-time visibility into asset status, streamlined maintenance processes, improved budgeting accuracy, and enhanced resource allocation.",
+		shortDescription: "Asset Management System for APBCO Insurance, designed to streamline tracking and reporting of company assets while significantly enhancing efficiency and resource allocation.",
+		links: [{ to: "https://www.apbco.co.za/", label: "APBCO Website" }],
+		logo: Assets.APBCO,
+		name: "APBCO Asset Management System",
+		period: {
+			from: new Date(2016, 5, 1),
+			to: new Date(2016, 10, 30)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
+		type: "Asset Management Software",
+		company: "APBCO Insurance"
+	},
+	{
+		slug: "brinant-security-management",
+		color: "#2c3e50",
+		description: "The Brinant Security Management System was a comprehensive software solution developed to address the complex operational needs of Brinant Security, a prominent player in the security services industry. This system revolutionized the company's approach to shift management, staff scheduling, and overall operational efficiency.<br><br><b>Key Features:</b><br>• Advanced scheduling module with intelligent algorithms<br>• Time tracking with multiple clock-in methods<br>• Staff allocation based on skills and client preferences<br>• Robust reporting suite for operational insights<br>• Integrated messaging system for quick communication<br>• Mobile app for on-the-go access<br><br>• Mobile app development for staff access<br><br>The implementation resulted in significant improvements, including a reduction in scheduling time, decrease in overtime costs, and improvement in overall staff utilization. The system enhanced both employee and client satisfaction through fair shift distribution and consistent assignment of appropriately skilled personnel.",
+		shortDescription: "Shift and Staff Management System for Brinant Security, designed to optimize scheduling, enhance time tracking accuracy and improve staff allocation, resulting improved service delivery.",
+		links: [{ to: "https://www.brinantsecurity.co.za/", label: "Brinant Security Website" }],
+		logo: Assets.BrinantSecurity,
+		name: "Brinant Security Management System",
+		period: {
+			from: new Date(2015, 1, 1),
+			to: new Date(2015, 7, 12)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
+		type: "Staff Management Software",
+		company: "Brinant Security"
+	},
+	{
+		slug: "cavalier-abattoirs-systems",
+		color: "#8e44ad",
+		description: "The Cavalier Abattoirs Integrated Systems project was an ambitious and comprehensive initiative to revolutionize the operational infrastructure of Cavalier Abattoirs. This large-scale project involved the development and integration of multiple specialized systems, each addressing a critical aspect of the company's operations.<br><br><b>Key Components:</b><br>• Quote and Invoice System<br>• Vehicle Tracking System<br>• Vehicle Maintenance System<br>• Process Management System<br>• Stock Management System<br>• Document Management System<br><br>• Custom API development for system integration<br>• Implementation of message queue for smooth data flow<br><br>The implementation of this integrated system suite resulted in transformative benefits, including an 80% reduction in manual data entry, 60% reduction in processing errors, and significantly improved real-time visibility for agile decision-making. The enhanced tracking and documentation capabilities also strengthened the company's compliance posture and supported its commitment to quality assurance.",
+		shortDescription: "Suite of integrated management systems for Cavalier Abattoirs, quotes and invoices, vehicle tracking and maintenance, process management and documentation",
+		links: [{ to: "https://www.cavalier.co.za/", label: "Cavalier Abattoirs Website" }],
+		logo: Assets.CavalierAbattoirs,
+		name: "Cavalier Abattoirs Integrated Systems",
+		period: {
+			from: new Date(2009, 0, 1),
+			to: new Date(2016, 11, 31)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css', 'laravel'),
+		type: "Integrated Management Software",
+		company: "Cavalier Abattoirs"
+	},
+	{
+		slug: "city-lodge-booking-system",
+		color: "#e74c3c",
+		description: "The City Lodge Online Booking System project was a comprehensive digital transformation initiative for the City Lodge Hotel Group, one of South Africa's leading hotel chains. This project aimed to revolutionize the group's online presence and dramatically improve the customer booking experience.<br><br><b>Key Features:</b><br>• Modern, responsive website design<br>• Sophisticated online booking system<br>• Real-time integration with property management system<br>• Advanced yield management module<br>• User account feature for personalized experience<br>• Secure payment gateway<br><br>• Custom API development for system integration<br>• Implementation of security measures for data protection<br><br>The implementation resulted in significant improvements, including a 35% increase in online bookings within six months, 15% increase in average revenue per available room, and marked improvement in customer satisfaction scores for the booking process. The system not only modernized City Lodge's online presence but also provided a powerful tool for improving operational efficiency and driving revenue growth.",
+		shortDescription: "Website and online booking platform for City Lodge Hotel Group, offering seamless reservation experiences for customers while fully integrating with existing hotel management systems",
+		links: [{ to: "https://www.citylodge.co.za/", label: "City Lodge Website" }],
+		logo: Assets.CityLodge,
+		name: "City Lodge Online Booking System",
+		period: {
+			from: new Date(2016, 6, 1),
+			to: new Date(2017, 1, 30)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css', 'laravel'),
+		type: "Web Development & Booking System",
+		company: "City Lodge Hotel Group"
+	},
+	{
+		slug: "exxaro-systems",
+		color: "#3498db",
+		description: "The Exxaro Internal Systems project was a comprehensive initiative aimed at revolutionizing internal communication, employee engagement, and knowledge management within Exxaro, a leading South African resources company.<br><br><b>Key Components:</b><br>• Internal Communication System<br>• Online Quiz Game<br>• IZone Staff Empowerment System<br><br><b>Features:</b><br>• User-friendly intranet portal<br>• Gamified learning platform<br>• Idea submission and peer recognition system<br>• Annual quiz competition with live event<br><br>• Custom hardware development for live quiz event<br><br>The implementation had a transformative effect on Exxaro's corporate culture, with over 80% of staff actively participating in online quiz games and IZone activities. The systems dramatically improved information flow, boosted morale, and fostered a sense of camaraderie across departments. The IZone system also proved valuable in identifying and nurturing talent within the organization.",
+		shortDescription: "Advanced communication platform, an engaging online quiz game, and an innovative staff empowerment system (IZone), all designed to enhance employee engagement, knowledge sharing, and corporate culture.",
+		links: [{ to: "https://www.exxaro.com/", label: "Exxaro Website" }],
+		logo: Assets.Exxaro,
+		name: "Exxaro Internal Systems",
+		period: {
+			from: new Date(2012, 0, 1),
+			to: new Date(2013, 11, 31)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css', 'csharp', 'unity'),
+		type: "Internal Systems & Gamification",
+		company: "Exxaro"
+	},
+	{
+		slug: "fnb-corporate-identity",
+		color: "#f39c12",
+		description: "The FNB Corporate Identity Development project was a pivotal initiative aimed at revitalizing and standardizing the visual brand identity of First National Bank (FNB), one of South Africa's 'big four' banks.<br><br><b>Key Components:</b><br>• Refinement of FNB's iconic logo<br>• Comprehensive brand guideline document<br>• Custom typeface development<br>• Imagery and photography style guidelines<br>• Digital application of new identity<br>• Print media templates<br>• Environmental design guidelines<br><br>• Digital asset management system<br><br>The impact of the new corporate identity was significant, with brand recognition scores improving by 15% within the first year of implementation. Employee surveys indicated a stronger sense of pride in the FNB brand, while customer feedback highlighted a perception of FNB as more modern and innovative. The cohesive application of the new identity across all touchpoints strengthened FNB's market position and supported its messaging around being a forward-thinking, customer-centric bank.",
+		shortDescription: "Comprehensive corporate identity project for First National Bank (FNB), focusing on creating a cohesive and modern visual language across digital and print media",
+		links: [{ to: "https://www.fnb.co.za/", label: "FNB Website" }],
+		logo: Assets.FNB,
+		name: "FNB Corporate Identity Development",
+		period: {
+			from: new Date(2011, 6, 1),
+			to: new Date(2011, 12, 31)
+		},
+		skills: getSkills('photoshop', 'illustrator', 'indesign'),
+		type: "Corporate Identity Design",
+		company: "First National Bank"
+	},
+	{
+		slug: "imperial-logistics-systems",
+		color: "#27ae60",
+		description: "The Imperial Logistics Management Systems project was a large-scale initiative aimed at modernizing and optimizing two critical aspects of Imperial Logistics' operations: document management and human resources.<br><br><b>Key Components:</b><br>• Document Management System (DMS)<br>• HR Management System (HRMS)<br><br><b>DMS Features:</b><br>• Centralized digital repository<br>• Advanced search functionality<br>• Version control<br>• Role-based access control<br>• Workflow automation<br>• OCR capabilities<br><br><b>HRMS Features:</b><br>• Recruitment and onboarding module<br>• Employee database<br>• Performance management tools<br>• Training and development module<br>• Leave management system<br>• Payroll integration<br>• Employee self-service portal<br><br>• API development for system integration<br><br>The implementation brought significant improvements, including a 70% reduction in document search time, 50% reduction in HR administrative tasks, and improved accuracy of employee data. The systems also enhanced employee satisfaction and supported more informed decision-making in areas such as recruitment and talent development.",
+		shortDescription: "Comprehensive suite of management systems for Imperial Logistics, featuring an advanced Document Management System and a robust HR Management System, designed to streamline information handling, enhance human resource processes, and boost overall operational efficiency across the organization.",
+		links: [{ to: "https://www.imperiallogistics.com/", label: "Imperial Logistics Website" }],
+		logo: Assets.ImperialLogistics,
+		name: "Imperial Logistics Management Systems",
+		period: {
+			from: new Date(2010, 0, 1),
+			to: new Date(2011, 5, 30)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
+		type: "Document & HR Management Software",
+		company: "Imperial Logistics"
+	},
+	{
+		slug: "imvula-icd-server-monitoring",
+		color: "#9b59b6",
+		description: "The Imvula ICD Server Monitoring System was a sophisticated software solution developed to address the critical need for real-time monitoring and management of Imvula ICD's server infrastructure.<br><br><b>Key Features:</b><br>• Real-time Monitoring Dashboard<br>• Customizable Alerting System<br>• Predictive Analytics<br>• Automated Response Scripts<br>• Comprehensive Reporting<br>• Network Topology Mapping<br>• Log Analysis<br>• API Integration<br><br><br>The implementation resulted in significant improvements, including a reduction in server downtime, decrease in mean time to resolve (MTTR) for server issues, and reduction in unnecessary hardware expenditure. The system's comprehensive logging and reporting capabilities also supported Imvula ICD's compliance efforts with various industry regulations.",
+		shortDescription: "Advanced Server Monitoring System for Imvula ICD, providing real-time oversight of server infrastructure, comprehensive alerting capabilities, and detailed reporting functionalities to ensure optimal performance, rapid issue resolution, and proactive IT management across the organization.",
+		links: [{ to: "https://www.imvulaicd.co.za/", label: "Imvula ICD Website" }],
+		logo: Assets.ImvulaICD,
+		name: "Imvula ICD Server Monitoring System",
+		period: {
+			from: new Date(2009, 6, 1),
+			to: new Date(2009, 12, 31)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css', 'python'),
+		type: "Server Monitoring Software",
+		company: "Imvula ICD"
+	},
+	{
+		slug: "legacy-underwriting-portfolio-management",
+		color: "#34495e",
+		description: "The Legacy Underwriting Portfolio Management System was a bespoke software solution developed to revolutionize the underwriting process for Legacy Underwriting Managers, a prominent player in the insurance industry.<br><br><b>Key Features:</b><br>• Advanced risk assessment module<br>• Policy Administration<br>• Risk Scoring and Segmentation<br>• Portfolio Analysis Dashboard<br>• Predictive Modeling<br>• Reinsurance Management<br>• Regulatory Compliance Tracking<br>• Claims Analysis<br>• What-If Scenario Modeling<br>• Automated Underwriting<br><br>• API development for system integration<br>• Implementation of strong security measures<br><br>The implementation brought significant improvements, including a 60% reduction in quote generation time, 90% reduction in errors, 25% reduction in loss ratios, and a 15% improvement in overall portfolio performance. The system not only improved Legacy Underwriting Managers' operational efficiency but also positioned the company for sustained growth and competitiveness in the dynamic insurance market.",
+		shortDescription: "Sophisticated Portfolio Management System for Legacy Underwriting Managers, integrating advanced risk assessment tools, comprehensive reporting capabilities, and streamlined underwriting processes to enhance decision-making, improve portfolio performance, and optimize insurance operations.",
+		links: [{ to: "https://www.lum.co.za/", label: "Legacy Underwriting Managers Website" }],
+		logo: Assets.LegacyUnderwriting,
+		name: "Legacy Underwriting Portfolio Management",
+		period: {
+			from: new Date(2008, 0, 1),
+			to: new Date(2008, 11, 31)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
+		type: "Portfolio Management Software",
+		company: "Legacy Underwriting Managers"
+	},
+	{
+		slug: "pna",
+		color: "#e67e22",
+		description: "The PNA Management and E-Commerce Systems project was an ambitious initiative aimed at digitally transforming PNA, a well-known South African retailer specializing in stationery, books, and art supplies.<br><br><b>Product Management System Features:</b><br>• Centralized Product Catalog<br>• Inventory Tracking<br>• Supplier Management<br>• Barcode and SKU Management<br>• Product Performance Analytics<br>• Category and Attribute Management<br>• Price Management<br>• Integration with Point of Sale (POS) Systems<br><br><b>E-Commerce Platform Features:</b><br>• User-friendly Product Browsing<br>• Personalized User Accounts<br>• Secure Payment Gateway<br>• Order Management System<br>• Customer Service Integration<br>• Responsive Design<br>• Content Management System (CMS)<br>• Integration with Social Media<br>• Analytics and Reporting<br><br>• Implementation of security measures including PCI DSS compliance<br><br>The implementation resulted in significant improvements, including an 80% reduction in stock discrepancies, 50% reduction in inventory-related tasks, and online sales growing to represent 25% of total revenue within the first year. The project not only streamlined operations but also positioned PNA for sustained growth in an increasingly digital retail landscape.",
+		shortDescription: "Comprehensive digital solution for PNA, encompassing an advanced Product Management System and a user-friendly E-Commerce platform, designed to streamline inventory control, enhance online sales capabilities, and significantly expand PNA's market reach in the competitive retail sector.",
+		links: [{ to: "https://www.pna.co.za/", label: "PNA Website" }],
+		logo: Assets.PNA,
+		name: "PNA Management and E-Commerce Systems",
+		period: {
+			from: new Date(2007, 0, 1),
+			to: new Date(2007, 11, 31)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
+		type: "Product Management & E-Commerce",
+		company: "PNA"
+	},
+	{
+		slug: "principal-software",
+		color: "#1abc9c",
+		description: "The Principal Software Version Control System project was an innovative initiative to develop a bespoke version control solution tailored to the unique needs and workflows of Principal Software, a leading software development company.<br><br><b>Key Features:</b><br>• Advanced Branching and Merging<br>• Code Review Integration<br>• CI/CD Support<br>• Project Management Integration<br>• Custom Workflow Enforcement<br>• Intelligent Codebase Analysis<br>• Advanced Search and Navigation<br>• Visual Diff and Merge Tools<br>• Customizable Notifications and Alerts<br>• Audit Trail and Compliance Features<br>• Large File Handling<br>• Integration with Development Tools<br><br>• Strong security measures including encryption and multi-factor authentication<br><br>The implementation brought significant improvements, including a 40% increase in collaboration between team members, 30% reduction in code integration issues, 50% reduction in post-release bugs, and a 25% increase in developer productivity. The system not only improved code management but also boosted overall productivity, code quality, and team collaboration.",
+		shortDescription: "Customized Version Control System for Principal Software, featuring efficient code versioning, advanced branching capabilities, and collaborative tools tailored to the company's specific development workflow, enhancing team productivity and software quality management.",
+		links: [{ to: "https://www.principalsoftware.co.za/", label: "Principal Software Website" }],
+		logo: Assets.PrincipalSoftware,
+		name: "Principal Software (Now D6)",
+		period: {
+			from: new Date(2006, 6, 1),
+			to: new Date(2006, 12, 31)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
+		type: "Version Control Software",
+		company: "Principal Software"
+	},
+	{
+		slug: "the-car-shop-website",
+		color: "#d35400",
+		description: "The Car Shop Website project was a strategic initiative to establish a strong online presence for The Car Shop, a prominent automotive dealership.<br><br><b>Key Features:</b><br>• Advanced Vehicle Inventory System<br>• Detailed Vehicle Pages with 360-degree views<br>• Vehicle Comparison Tool<br>• Financing Calculator<br>• Service Scheduling System<br>• Trade-In Value Estimator<br>• Customer Reviews and Testimonials<br>• Blog and News Section<br>• Integration with Social Media<br>• Mobile Responsiveness<br>• Live Chat Support<br>• Analytics and Reporting<br><br>• Custom Content Management System (CMS)<br>• Implementation of lazy loading and image optimization<br>• HTTPS encryption and security measures<br><br>The launch of the new website brought significant improvements, including a 150% increase in organic search traffic, 75% increase in time spent on the website, 200% increase in online inquiries and test drive requests, and a 25% increase in overall sales. The project not only enhanced The Car Shop's online presence but also significantly contributed to its business growth and customer satisfaction.",
+		shortDescription: "Comprehensive website development project for The Car Shop, featuring an intuitive interface for showcasing vehicle inventory, integrated services information, and advanced customer engagement tools, designed to enhance online presence and streamline the car buying process for potential customers.",
+		links: [{ to: "https://www.thecarshop.co.za/", label: "The Car Shop Website" }],
+		logo: Assets.TheCarShop,
+		name: "The Car Shop Website",
+		period: {
+			from: new Date(2006, 0, 1),
+			to: new Date(2006, 5, 30)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
+		type: "Web Development",
+		company: "The Car Shop"
+	},
+	{
+		slug: "the-orient-hotel-website",
+		color: "#c0392b",
+		description: "The Orient Hotel Website project was an ambitious endeavor to create a digital showcase for The Orient Hotel, a luxury accommodation renowned for its exquisite blend of Eastern and Western aesthetics.<br><br><b>Key Features:</b><br>• Stunning Visual Gallery<br>• Detailed Room Descriptions with virtual tours<br>• Integrated Booking System<br>• Dynamic Pricing Display<br>• Dining and Spa Sections<br>• Events and Weddings Portal<br>• Interactive Map and Location Information<br>• Multilingual Support<br>• Blog and Newsletter<br>• Customer Reviews Integration<br>• Mobile Responsiveness<br>• Virtual Concierge<br><br>• Implementation of strong security measures and PCI DSS compliance<br><br>The launch of the new website resulted in a significant increase in direct bookings, increased in user engagement, improvement in booking conversion rate, and enhanced brand perception as a luxury destination. The project not only improved The Orient Hotel's digital presence but also contributed significantly to its business growth and guest satisfaction.",
+		shortDescription: "Sophisticated website development for The Orient Hotel, featuring elegant design, comprehensive amenity showcases, detailed room information, and an integrated booking system. This online platform enhances the hotel's digital presence, streamlines reservations, and offers an immersive preview of the luxury experience awaiting guests.",
+		links: [{ to: "https://www.theorient.co.za/", label: "The Orient Hotel Website" }],
+		logo: Assets.TheOrientHotel,
+		name: "The Orient Hotel Website",
+		period: {
+			from: new Date(2005, 6, 1),
+			to: new Date(2005, 12, 31)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
+		type: "Web Development",
+		company: "The Orient Hotel"
+	},
+	{
+		slug: "tribake-quote-invoice-system",
+		color: "#27ae60",
+		description: "The Tribake Quote and Invoice System project was a bespoke software development initiative aimed at revolutionizing the financial operations of Tribake, a leading bakery equipment supplier.<br><br><b>Key Features:</b><br>• Customer Relationship Management (CRM) Integration<br>• Dynamic Quote Generator<br>• Quote Versioning and Approval Workflow<br>• Automated Invoice Generation<br>• Flexible Pricing and Discounting<br>• Tax Calculation and Compliance<br>• Payment Tracking and Reminders<br>• Integration with Accounting Software<br>• Reporting and Analytics<br>• Document Management<br>• Multi-Currency Support<br>• Mobile Access<br><br>• API development for integration with existing systems<br>• Implementation of strong security measures<br><br>The implementation brought significant improvements, including a reduction in quote generation time, reduction in errors, reduction in average days sales outstanding (DSO), and the ability to handle a increase in sales volume without expanding administrative staff. The system not only improved Tribake's operational efficiency but also enhanced customer satisfaction and provided valuable business insights.",
+		shortDescription: "Comprehensive Quote and Invoice System for Tribake, integrating advanced customer information management, streamlined quote generation, automated invoicing processes, and robust payment tracking. This tailored solution enhances operational efficiency, improves cash flow management, and elevates the overall customer experience in Tribake's business operations.",
+		links: [{ to: "https://www.tribake.co.za/", label: "Tribake Website" }],
+		logo: Assets.Tribake,
+		name: "Tribake Quote and Invoice System",
+		period: {
+			from: new Date(2005, 0, 1),
+			to: new Date(2005, 5, 30)
+		},
+		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
+		type: "Quote and Invoice Software",
+		company: "Tribake"
+	}
+];
+
+export const title = 'Projects';
+```
+
 ## File: src/lib/data/resume.ts
 ```ts
 export const data = '';
@@ -2244,6 +3577,161 @@ export const title = 'Resumé';
 ```ts
 export const title = 'Search';
 
+```
+
+## File: src/lib/data/skills.ts
+```ts
+// src/lib/data/skills.ts
+
+import Assets from './assets';
+import type { Skill, SkillCategory } from '../types';
+import { omit, type StringWithAutoComplete } from '@riadh-adrani/utils';
+
+const defineSkillCategory = <S extends string>(data: SkillCategory<S>): SkillCategory<S> => data;
+
+function escapeHtml(unsafe: string): string {
+	return unsafe
+		.replace(/&/g, "&amp;")
+		.replace(/</g, "&lt;")
+		.replace(/>/g, "&gt;")
+		.replace(/"/g, "&quot;")
+		.replace(/'/g, "&#039;")
+		.replace(/&lt;br&gt;/g, "<br/>")
+		.replace(/&lt;b&gt;/g, "<b>")
+		.replace(/&lt;\/b&gt;/g, "</b>");
+}
+
+const categories = [
+	defineSkillCategory({ name: 'Programming Languages', slug: 'pro-lang' }),
+	defineSkillCategory({ name: 'Frameworks', slug: 'framework' }),
+	defineSkillCategory({ name: 'Libraries', slug: 'library' }),
+	defineSkillCategory({ name: 'Languages', slug: 'lang' }),
+	defineSkillCategory({ name: 'Databases', slug: 'db' }),
+	defineSkillCategory({ name: 'ORMs', slug: 'orm' }),
+	defineSkillCategory({ name: 'DevOps', slug: 'devops' }),
+	defineSkillCategory({ name: 'Testing', slug: 'test' }),
+	defineSkillCategory({ name: 'Dev Tools', slug: 'devtools' }),
+	defineSkillCategory({ name: 'Markup & Style', slug: 'markup-style' }),
+	defineSkillCategory({ name: 'Design', slug: 'design' }),
+	defineSkillCategory({ name: 'Soft Skills', slug: 'soft' }),
+	defineSkillCategory({ name: 'Mobile Development', slug: 'mobile' }),
+	defineSkillCategory({ name: 'Game Development', slug: 'game' }),
+	defineSkillCategory({ name: 'AI & Machine Learning', slug: 'ai-ml' })
+] as const;
+
+const defineSkill = <S extends string>(
+	skill: Omit<Skill<S>, 'category'> & {
+		category?: StringWithAutoComplete<(typeof categories)[number]['slug']>;
+	}
+): Skill<S> => {
+	const out: Skill<S> = omit(skill, 'category');
+
+	if (skill.category) {
+		out.category = categories.find((it) => it.slug === skill.category);
+	}
+
+	return out;
+};
+
+export const items = [
+	defineSkill({
+		slug: 'js',
+		color: 'yellow',
+		description: escapeHtml(`<b>JavaScript</b> is a versatile, high-level programming language that has become the backbone of modern web development.<br>
+Originally created by Brendan Eich in 1995, JavaScript has evolved from a simple scripting language for web browsers to a powerful tool for both front-end and back-end development.<br>
+Its ability to run on the client-side allows for dynamic, interactive web pages that can update content without requiring a page reload.<br>
+JavaScript's syntax is influenced by Java, but it uses prototype-based object-orientation, making it more flexible than class-based object-oriented languages.<br>
+With the advent of Node.js, JavaScript has also become a popular choice for server-side programming, enabling developers to use a single language across the entire web stack.<br>
+JavaScript's ecosystem is vast, with numerous libraries and frameworks like React, Angular, and Vue.js enhancing its capabilities for building complex web applications.<br>
+The language continues to evolve through ECMAScript specifications, introducing new features and improvements regularly.<br>
+JavaScript's asynchronous programming model, with features like Promises and async/await, makes it well-suited for handling I/O operations and API calls efficiently.<br>
+Its widespread adoption and the constant innovation in its ecosystem make JavaScript an essential skill for any web developer.<br>`),
+		logo: Assets.JavaScript,
+		name: 'JavaScript',
+		category: 'pro-lang'
+	}),
+	defineSkill({
+		slug: 'tailwind',
+		color: 'blue',
+		description: escapeHtml(`<b>Tailwind CSS</b> is a utility-first CSS framework for rapidly building custom user interfaces.<br><br>
+
+Key features include:<br>
+
+1) <b>Utility-First:</b> Compose designs directly in your markup.<br>
+2) <b>Responsive Design:</b> Built-in responsive modifiers.<br>
+3) <b>Hover and Focus States:</b> Easy styling for interactive elements.<br>
+4) <b>Customization:</b> Highly customizable through configuration.<br>
+5) <b>Dark Mode:</b> Built-in dark mode support.<br>
+6) <b>JIT Mode:</b> Just-in-Time mode for on-demand CSS generation.<br>
+7) <b>Plugins:</b> Extensible through a plugin system.<br><br>
+
+<b>Tailwind CSS</b> is particularly popular for its flexibility and the speed at which it allows developers to create custom designs without writing custom CSS.`),
+		logo: Assets.Tailwind,
+		name: 'Tailwind CSS',
+		category: 'markup-style'
+	}),
+	defineSkill({
+		slug: 'solid',
+		color: 'blue',
+		description: escapeHtml(`Solid is a declarative JavaScript library for creating user interfaces. It stands out for its performance and its unique approach to reactivity.<br><br>
+
+Key features include:<br>
+
+1) Fine-Grained Reactivity: Updates only what needs to be updated.<br>
+2) No Virtual DOM: Compiles templates to real DOM operations.<br>
+3) Small Size: Tiny core library with no dependencies.<br>
+4) JSX: Uses JSX for templating.<br>
+5) Server-Side Rendering: Built-in SSR support.<br>
+6) Suspense: For declarative data fetching.<br>
+7) Stores: Simple but powerful state management.<br><br>
+
+Solid is particularly suited for applications where performance is critical. Its approach to reactivity can lead to extremely efficient updates.`),
+		logo: Assets.Solid,
+		name: 'Solid.js',
+		category: 'framework'
+	})
+] as const;
+
+export const title = 'Skills';
+
+export const getSkills = (
+	...slugs: Array<StringWithAutoComplete<(typeof items)[number]['slug']>>
+): Array<Skill> => items.filter((it) => slugs.includes(it.slug));
+
+export const groupByCategory = (
+	query: string
+): Array<{ category: SkillCategory; items: Array<Skill> }> => {
+	const out: ReturnType<typeof groupByCategory> = [];
+
+	const others: Array<Skill> = [];
+
+	items.forEach((item) => {
+		if (query.trim() && !item.name.toLowerCase().includes(query.trim().toLowerCase())) return;
+
+		// push to others if item does not have a category
+		if (!item.category) {
+			others.push(item);
+			return;
+		}
+
+		// check if category exists
+		let category = out.find((it) => it.category.slug === item.category?.slug);
+
+		if (!category) {
+			category = { items: [], category: item.category };
+
+			out.push(category);
+		}
+
+		category.items.push(item);
+	});
+
+	if (others.length !== 0) {
+		out.push({ category: { name: 'Others', slug: 'others' }, items: others });
+	}
+
+	return out;
+};
 ```
 
 ## File: src/lib/data/documentation-sites.ts
@@ -3299,7 +4787,7 @@ export function parseReTypeMarkdown(markdown: string): string {
 ## File: src/routes/+layout.server.ts
 ```ts
 export const prerender = true;
-
+export const trailingSlash = 'always';
 ```
 
 ## File: src/routes/+layout.svelte
@@ -4402,6 +5890,7 @@ export function load({ params }: { params: Record<string, string> }) {
 	import CommonPage from '$lib/components/CommonPage.svelte';
 	import Card from '$lib/components/Card/Card.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <CommonPage title={aiToolsTitle}>
@@ -4409,7 +5898,7 @@ export function load({ params }: { params: Record<string, string> }) {
 		{#each aiTools as tool}
 			<Card
 				classes={['cursor-pointer']}
-				href={`/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
 			>
 				<div class="flex flex-col h-full">
 					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
@@ -4542,6 +6031,7 @@ export function load({ params }: { params: Record<string, string> }) {
 	import CommonPage from '$lib/components/CommonPage.svelte';
 	import Card from '$lib/components/Card/Card.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <CommonPage title={dataToolsTitle}>
@@ -4549,7 +6039,7 @@ export function load({ params }: { params: Record<string, string> }) {
 		{#each dataTools as tool}
 			<Card
 				classes={['cursor-pointer']}
-				href={`/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
 			>
 				<div class="flex flex-col h-full">
 					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
@@ -4581,6 +6071,7 @@ export function load({ params }: { params: Record<string, string> }) {
 	import CommonPage from '$lib/components/CommonPage.svelte';
 	import Card from '$lib/components/Card/Card.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <CommonPage title={codeToolsTitle}>
@@ -4588,7 +6079,7 @@ export function load({ params }: { params: Record<string, string> }) {
 		{#each codeTools as tool}
 			<Card
 				classes={['cursor-pointer']}
-				href={`/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
 			>
 				<div class="flex flex-col h-full">
 					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
@@ -4612,38 +6103,136 @@ export function load({ params }: { params: Record<string, string> }) {
 
 ```
 
+## File: src/routes/team/+page.svelte
+```svelte
+<script lang="ts">
+    import { aiToolsTitle, aiTools, codeToolsTitle, codeTools, dataToolsTitle, dataTools } from '$lib/data/tools';
+    import CommonPage from '$lib/components/CommonPage.svelte';
+    import Card from '$lib/components/Card/Card.svelte';
+    import UIcon from '$lib/components/Icon/UIcon.svelte';
+    import { base } from '$app/paths';
+
+    const title = 'Tools';
+</script>
+
+<CommonPage {title}>
+    <h2 class="text-2xl font-semibold mb-4">{aiToolsTitle}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        {#each aiTools as tool}
+            <Card
+                classes={['cursor-pointer']}
+                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+            >
+                <div class="flex flex-col h-full">
+                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
+                    <p class="text-sm flex-grow">{tool.description}</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <a
+                            href={tool.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-500 hover:text-blue-600"
+                        >
+                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
+                        </a>
+                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
+                    </div>
+                </div>
+            </Card>
+        {/each}
+    </div>
+
+    <h2 class="text-2xl font-semibold mb-4">{codeToolsTitle}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {#each codeTools as tool}
+            <Card
+                classes={['cursor-pointer']}
+                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+            >
+                <div class="flex flex-col h-full">
+                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
+                    <p class="text-sm flex-grow">{tool.description}</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <a
+                            href={tool.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-500 hover:text-blue-600"
+                        >
+                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
+                        </a>
+                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
+                    </div>
+                </div>
+            </Card>
+        {/each}
+    </div>
+
+    <h2 class="text-2xl font-semibold mb-4">{dataToolsTitle}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {#each dataTools as tool}
+            <Card
+                classes={['cursor-pointer']}
+                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+            >
+                <div class="flex flex-col h-full">
+                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
+                    <p class="text-sm flex-grow">{tool.description}</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <a
+                            href={tool.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-500 hover:text-blue-600"
+                        >
+                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
+                        </a>
+                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
+                    </div>
+                </div>
+            </Card>
+        {/each}
+    </div>
+</CommonPage>
+```
+
 ## File: src/routes/team/[slug]/+page.svelte
 ```svelte
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { base } from '$app/paths';
-	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
-	import { parseReTypeMarkdown } from '$lib/utils/reTypeParser';
-	import DOMPurify from 'dompurify';
+    import { onMount } from 'svelte';
+    import { base } from '$app/paths';
+    import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
+    import { parseReTypeMarkdown } from '$lib/utils/reTypeParser';
+    import DOMPurify from 'dompurify';
 
-	export const data = {
-		name: 'John Doe',
-		email: 'john.doe@example.com',
-		message: ''
-	};
+    export let data;
 
-	let cvContent = '';
+    let cvContent = '';
 
-	onMount(async () => {
-		const response = await fetch(`${base}/cv-data.md`);
-		cvContent = await response.text();
-	});
+    onMount(async () => {
+        const response = await fetch(`${base}/cv-data.md`);
+        cvContent = await response.text();
+    });
 
-	$: parsedCV = DOMPurify.sanitize(parseReTypeMarkdown(cvContent));
+    $: parsedCV = DOMPurify.sanitize(parseReTypeMarkdown(cvContent));
 </script>
 
-<MainTitle>{data.name}</MainTitle>
+<MainTitle>{data.teamMember.name}</MainTitle>
+
+<div class="team-member-info">
+    <h2>{data.teamMember.role}</h2>
+    <p>{data.teamMember.bio}</p>
+</div>
 
 <div class="cv-content">
-	{@html parsedCV}
+    {@html parsedCV}
 </div>
 
 <style lang="scss">
+    .team-member-info {
+        margin-bottom: 2rem;
+    }
+
     :global(.cv-content) {
         margin-top: 2rem;
         line-height: 1.6;
@@ -4762,6 +6351,38 @@ export function load({ params }: { params: Record<string, string> }) {
 </style>
 ```
 
+## File: src/routes/team/[slug]/+page.ts
+```ts
+import { error } from '@sveltejs/kit';
+
+export const prerender = false;
+
+export async function load({ params }) {
+    // Fetch team member data based on the slug
+    // This is a placeholder implementation
+    const teamMember = await fetchTeamMember(params.slug);
+
+    if (teamMember) {
+        return {
+            teamMember
+        };
+    }
+
+    throw error(404, 'Team member not found');
+}
+
+async function fetchTeamMember(slug: string) {
+    // Implement actual data fetching logic here
+    // For now, return a dummy object
+    return {
+        
+        name: 'John Doe',
+        role: 'Developer',
+        bio: 'A passionate developer.'
+    };
+}
+```
+
 ## File: src/routes/terms/+page.svelte
 ```svelte
 <!-- src/routes/terms/+page.svelte -->
@@ -4812,6 +6433,56 @@ export function load({ params }: { params: Record<string, string> }) {
 			photographic errors. webAlly does not warrant that any of the materials on its website are
 			accurate, complete or current. webAlly may make changes to the materials contained on its
 			website at any time without notice.
+		</p>
+
+		<!-- Add more sections as needed -->
+	</div>
+</CommonPage>
+
+```
+
+## File: src/routes/privacy/+page.svelte
+```svelte
+<!-- src/routes/privacy/+page.svelte -->
+<script lang="ts">
+	import CommonPage from '$lib/components/CommonPage.svelte';
+
+	const title = 'Privacy Policy';
+</script>
+
+<CommonPage {title}>
+	<div class="prose max-w-none">
+		<h1>{title}</h1>
+		<p>Last updated: {new Date().toLocaleDateString()}</p>
+
+		<h2>1. Information We Collect</h2>
+		<p>
+			We collect information you provide directly to us, such as when you create or modify your
+			account, request services, contact customer support, or otherwise communicate with us.
+		</p>
+
+		<h2>2. How We Use Your Information</h2>
+		<p>
+			We use the information we collect to provide, maintain, and improve our services, to develop
+			new ones, and to protect webAlly and our users.
+		</p>
+
+		<h2>3. Information Sharing and Disclosure</h2>
+		<p>
+			We may share the information we collect with third parties for various purposes, including to:
+			provide and improve our services, protect against fraud and abuse, and personalize content.
+		</p>
+
+		<h2>4. Data Retention</h2>
+		<p>
+			We retain the information we collect for as long as necessary to fulfill the purposes outlined
+			in this privacy policy, unless a longer retention period is required or permitted by law.
+		</p>
+
+		<h2>5. Security</h2>
+		<p>
+			We take reasonable measures to help protect your personal information from loss, theft,
+			misuse, unauthorized access, disclosure, alteration, and destruction.
 		</p>
 
 		<!-- Add more sections as needed -->

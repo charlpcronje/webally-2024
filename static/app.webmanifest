@@ -1,0 +1,20 @@
+{
+    "name": "webAlly | Your Ally in Online Efficiency",
+    "short_name": "webAlly",
+    "description": "A versatile freelancing service dedicated to enhancing online efficiency. webAlly provides expert solutions in web and software development, helping businesses optimize their digital presence and streamline their operations with a trusted ally by their side.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "icons": [{
+            "src": "icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

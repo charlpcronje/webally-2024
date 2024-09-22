@@ -1,0 +1,19 @@
+[Sat Sep 21 08:43:05.144134 2024] [proxy_fcgi:error] [pid 1114236:tid 1114286] [client 172.18.0.2:57978] AH01071: Got error 'Primary script unknown', referer: http://webally.co.za/wp-login.php
+[Sat Sep 21 12:12:58.896776 2024] [proxy_fcgi:error] [pid 991999:tid 992177] [client 172.18.0.2:35336] AH01071: Got error 'Primary script unknown'
+[Sat Sep 21 12:19:20.336888 2024] [proxy_fcgi:error] [pid 1114236:tid 1114301] [client 172.18.0.2:57928] AH01071: Got error 'Primary script unknown'
+[Sat Sep 21 12:19:20.337213 2024] [proxy_fcgi:error] [pid 991998:tid 992158] [client 172.18.0.2:57950] AH01071: Got error 'Primary script unknown'
+[Sat Sep 21 12:19:20.371793 2024] [proxy_fcgi:error] [pid 1114236:tid 1114292] [client 172.18.0.2:58152] AH01071: Got error 'Primary script unknown'
+[Sat Sep 21 20:51:57.959408 2024] [proxy_fcgi:error] [pid 582405:tid 582556] [client 172.18.0.2:43644] AH01071: Got error 'Primary script unknown'
+[Sun Sep 22 02:35:34.983789 2024] [proxy_fcgi:error] [pid 2505756:tid 2505924] [client 172.18.0.2:37744] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za/wp-login.php
+[Sun Sep 22 02:35:35.871241 2024] [proxy_fcgi:error] [pid 2505757:tid 2505876] [client 172.18.0.2:37760] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za/wp-login.php
+[Sun Sep 22 02:35:37.090974 2024] [proxy_fcgi:error] [pid 2505756:tid 2505938] [client 172.18.0.2:37778] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za/wp-login.php
+[Sun Sep 22 02:35:37.854505 2024] [proxy_fcgi:error] [pid 2505764:tid 2505948] [client 172.18.0.2:37800] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za/wp-login.php
+[Sun Sep 22 02:35:39.002334 2024] [proxy_fcgi:error] [pid 2505764:tid 2505952] [client 172.18.0.2:37804] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za/wp-login.php
+[Sun Sep 22 04:00:55.686261 2024] [proxy_fcgi:error] [pid 3431248:tid 3431295] [client 172.18.0.2:57054] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za
+[Sun Sep 22 04:00:55.906940 2024] [proxy_fcgi:error] [pid 3431248:tid 3431297] [client 172.18.0.2:57070] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za
+[Sun Sep 22 04:00:56.097470 2024] [proxy_fcgi:error] [pid 3431248:tid 3431299] [client 172.18.0.2:57084] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za
+[Sun Sep 22 06:07:09.285201 2024] [proxy_fcgi:error] [pid 2505764:tid 2505960] [client 172.18.0.2:42720] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za/wp-login.php
+[Sun Sep 22 06:07:10.991906 2024] [proxy_fcgi:error] [pid 3431248:tid 3431303] [client 172.18.0.2:42736] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za/wp-login.php
+[Sun Sep 22 06:07:15.663958 2024] [proxy_fcgi:error] [pid 2505764:tid 2505963] [client 172.18.0.2:46062] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za/wp-login.php
+[Sun Sep 22 08:56:26.100996 2024] [proxy_fcgi:error] [pid 3431248:tid 3431292] [client 172.18.0.2:54442] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za/wp-login.php
+[Sun Sep 22 08:56:26.690879 2024] [proxy_fcgi:error] [pid 2505764:tid 2505964] [client 172.18.0.2:54450] AH01071: Got error 'Primary script unknown', referer: https://webally.co.za/wp-login.php
