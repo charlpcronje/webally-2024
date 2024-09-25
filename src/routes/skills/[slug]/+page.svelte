@@ -77,7 +77,7 @@
 			<p class="font-300">Could not load skill data.</p>
 		</div>
 	{:else}
-		<div class="flex flex-col items-center overflow-x-hidden">
+		<div class="flex flex-col items-center overflow-x-hidden" style="margin-bottom:50px">
 			<Banner img={getAssetURL(data.skill.logo)}>
 				<MainTitle>{data.skill.name}</MainTitle>
 			</Banner>

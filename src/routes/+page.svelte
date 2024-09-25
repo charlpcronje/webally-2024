@@ -7,7 +7,7 @@
 	import { items as skillsItems } from '@data/skills';
 	import { useTitle } from '$lib/utils/helpers';
 	import { isBlank } from '@riadh-adrani/utils';
-	import { getPlatfromIcon } from '$lib/utils';
+	import { getPlatformIcon } from '$lib/utils';
 
 	const isEmail = (email: string): boolean => {
 		const reg =
@@ -21,10 +21,13 @@
 	<title>webAlly | {useTitle(title, titleSuffix)}</title>
 </svelte:head>
 <div
-	class="col self-center flex-1 md:flex-row md:slef-stretch justify-center lg:justify-between items-center p-y-0px p-x-10px"
+	class="col self-center pr-2 flex-1 md:flex-row md:slef-between justify-center lg:justify-between items-center p-y-0px p-x-10px"
 >
 	<div class="md:flex-1 gap-10px">
-		<MainTitle classes="md:text-left ">{name} {lastName}</MainTitle>
+		<MainTitle classes="md:text-left flex flex-col items-center md:items-baseline">
+			<span class="text-5xl md:text-6xl">{name}</span>
+			<span class="text-xl md:text-2xl whitespace-nowrap mt-1 md:mt-s">Charl&nbsp;Cronje</span>
+		  </MainTitle>
 		<p class="text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight">
 			{description}
 		</p>
@@ -36,7 +39,7 @@
 					target="_blank"
 					rel="noreferrer"
 				>
-					<Icon icon={getPlatfromIcon(link.platform)} color={'var(--accent-text)'} size={'20px'} />
+					<Icon icon={getPlatformIcon(link.platform)} color={'var(--accent-text)'} size={'20px'} />
 				</a>
 			{/each}
 		</div>

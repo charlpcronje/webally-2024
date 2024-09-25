@@ -23,7 +23,7 @@
 			<p class="font-300">Could not find anything...</p>
 		</div>
 	{:else}
-		<div class="col mt-5 gap-7">
+		<div class="col mt-5 gap-7" style="margin-bottom:50px">
 			{#each result as group (group.category.slug)}
 				<div class="col gap-5 mb-7">
 					<div class="row items-center gap-5">

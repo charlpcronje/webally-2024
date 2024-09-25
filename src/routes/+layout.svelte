@@ -6,11 +6,9 @@
 	import '$lib/index.scss';
 	import { onHydrated } from '$lib/stores/theme';
 	import { onMount } from 'svelte';
-	import { subscribeToPushNotifications } from '$lib/pushNotifications';
 	import InstallPrompt from '$lib/components/InstallPrompt.svelte';
 	onMount(() => {
 		onHydrated();
-		subscribeToPushNotifications();
 	});
 </script>
 

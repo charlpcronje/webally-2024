@@ -31,7 +31,7 @@
 
 <TabTitle title={computedTitle} />
 
-<div class="pb-10 overflow-x-hidden col flex-1">
+<div class="pb-10 overflow-x-hidden col flex-1" style="margin-bottom:50px">
 	{#if data.project === undefined}
 		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
 			<UIcon icon="i-carbon-cube" classes="text-3.5em" />
