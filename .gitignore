@@ -11,3 +11,7 @@ vite.config.ts.timestamp-*
 /.vscode
 .history
 **/cspell.json
+combined.md
+logs/*
+**/combine.json
+**/combined.md

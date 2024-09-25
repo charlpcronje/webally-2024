@@ -1,6 +1,6 @@
 {
-    "root_path": "/var/www/html/portfolio.webally.co.za",
-    "output_path": "/var/www/html/portfolio.webally.co.za/combined.md",
+    "root_path": "/var/www/html/webally.co.za",
+    "output_path": "/var/www/html/webally.co.za/combined.md",
     "gitignore_path": "",
     "exclude_folders": [
         ".history",
@@ -15,7 +15,10 @@
     ],
     "exclude_files": [
         "package-lock.json",
-        "combined.md"
+        "combined.md",
+        "src/lib/data/skills.ts",
+        "src/lib/data/tools.ts",
+        "src/lib/data/projects.ts"
 
     ],
     "file_types": [

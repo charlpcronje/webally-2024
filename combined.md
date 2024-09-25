@@ -5,97 +5,102 @@ This document contains an analysis of the project files.
 | No.   | File                                 | Lines    | Words    | AI Tokens |
 | ----- | ------------------------------------ | -------- | -------- | --------- |
 |  1    | ./README.md                          | 84       | 705      | 996       |
-|  2    | ./package.json                       | 52       | 126      | 424       |
-|  3    | ./svelte.config.js                   | 49       | 106      | 222       |
-|  4    | ./tsconfig.json                      | 20       | 62       | 117       |
-|  5    | ./uno.config.ts                      | 44       | 90       | 191       |
-|  6    | ./vite.config.ts                     | 10       | 29       | 48        |
-|  7    | ./combine.json                       | 32       | 37       | 122       |
-|  8    | ./.env                               | 3        | 19       | 22        |
-|  9    | ./cspell.json                        | 60       | 66       | 247       |
-|  10   | ./.vscode/settings.json              | 189      | 197      | 768       |
+|  2    | ./combine.json                       | 35       | 40       | 134       |
+|  3    | ./package.json                       | 55       | 130      | 441       |
+|  4    | ./svelte.config.js                   | 52       | 111      | 230       |
+|  5    | ./tsconfig.json                      | 20       | 62       | 117       |
+|  6    | ./uno.config.ts                      | 44       | 90       | 191       |
+|  7    | ./vite.config.ts                     | 13       | 33       | 50        |
+|  8    | ./.env                               | 5        | 20       | 23        |
+|  9    | ./sendPushNotification.js            | 28       | 91       | 151       |
+|  10   | ./scripts/cvFetcher.js               | 1        | 0        | 0         |
 |  11   | ./src/app.d.ts                       | 15       | 49       | 63        |
-|  12   | ./src/app.html                       | 18       | 29       | 99        |
-|  13   | ./src/lib/index.scss                 | 368      | 599      | 1609      |
-|  14   | ./src/lib/types.ts                   | 95       | 254      | 450       |
-|  15   | ./src/lib/components/CommonPage.svelte | 15       | 37       | 83        |
-|  16   | ./src/lib/components/Markdown.svelte | 32       | 72       | 145       |
-|  17   | ./src/lib/components/SearchPage.svelte | 59       | 139      | 305       |
-|  18   | ./src/lib/components/TabTitle.svelte | 11       | 25       | 62        |
-|  19   | ./src/lib/components/Banner/Banner.svelte | 28       | 70       | 183       |
-|  20   | ./src/lib/components/Card/Card.svelte | 114      | 324      | 724       |
-|  21   | ./src/lib/components/Card/CardDivider.svelte | 2        | 5        | 17        |
-|  22   | ./src/lib/components/Card/CardLink.svelte | 40       | 78       | 191       |
-|  23   | ./src/lib/components/Card/CardLogo.svelte | 10       | 35       | 74        |
-|  24   | ./src/lib/components/Card/CardTitle.svelte | 6        | 10       | 37        |
-|  25   | ./src/lib/components/Carrousel/Carrousel.svelte | 102      | 258      | 528       |
-|  26   | ./src/lib/components/Chip/Chip.svelte | 35       | 88       | 224       |
-|  27   | ./src/lib/components/Chip/ChipIcon.svelte | 61       | 145      | 312       |
-|  28   | ./src/lib/components/Chip/Footer/Footer.svelte | 71       | 193      | 403       |
-|  29   | ./src/lib/components/ExperienceCard/ExperienceCard.svelte | 84       | 240      | 604       |
-|  30   | ./src/lib/components/Icon/Icon.svelte | 23       | 45       | 101       |
-|  31   | ./src/lib/components/Icon/Icons.ts   | 10       | 47       | 79        |
-|  32   | ./src/lib/components/Icon/UIcon.svelte | 8        | 20       | 54        |
-|  33   | ./src/lib/components/Input/Input.svelte | 28       | 56       | 132       |
-|  34   | ./src/lib/components/MainTitle/MainTitle.svelte | 11       | 29       | 96        |
-|  35   | ./src/lib/components/NavMenu/NavMenu.svelte | 225      | 556      | 1349      |
-|  36   | ./src/lib/components/ProjectCard/ProjectCard.svelte | 74       | 233      | 601       |
-|  37   | ./src/lib/components/Screenshot/Screenshot.svelte | 56       | 136      | 344       |
-|  38   | ./src/lib/data/app.ts                | 2        | 9        | 11        |
-|  39   | ./src/lib/data/assets.ts             | 132      | 300      | 1018      |
-|  40   | ./src/lib/data/education.ts          | 32       | 104      | 209       |
-|  41   | ./src/lib/data/experience.ts         | 600      | 4038     | 5517      |
-|  42   | ./src/lib/data/home.ts               | 32       | 147      | 293       |
-|  43   | ./src/lib/data/navbar.ts             | 84       | 187      | 394       |
-|  44   | ./src/lib/data/projects.ts           | 266      | 3249     | 5765      |
-|  45   | ./src/lib/data/resume.ts             | 4        | 10       | 13        |
-|  46   | ./src/lib/data/search.ts             | 2        | 5        | 7         |
-|  47   | ./src/lib/data/skills.ts             | 1565     | 16711    | 26646     |
-|  48   | ./src/lib/data/documentation-sites.ts | 146      | 397      | 695       |
-|  49   | ./src/lib/data/tools.ts              | 296      | 1625     | 2110      |
+|  12   | ./src/app.html                       | 30       | 57       | 184       |
+|  13   | ./src/service-worker.js              | 84       | 270      | 438       |
+|  14   | ./src/lib/index.scss                 | 368      | 599      | 1609      |
+|  15   | ./src/lib/pushNotifications.ts       | 51       | 162      | 265       |
+|  16   | ./src/lib/types.ts                   | 96       | 257      | 455       |
+|  17   | ./src/lib/components/CommonPage.svelte | 15       | 37       | 83        |
+|  18   | ./src/lib/components/InstallPrompt.svelte | 69       | 175      | 325       |
+|  19   | ./src/lib/components/Markdown.svelte | 32       | 72       | 145       |
+|  20   | ./src/lib/components/SearchPage.svelte | 59       | 139      | 305       |
+|  21   | ./src/lib/components/TabTitle.svelte | 11       | 25       | 62        |
+|  22   | ./src/lib/components/Banner/Banner.svelte | 28       | 70       | 183       |
+|  23   | ./src/lib/components/Card/Card.svelte | 114      | 324      | 724       |
+|  24   | ./src/lib/components/Card/CardDivider.svelte | 2        | 5        | 17        |
+|  25   | ./src/lib/components/Card/CardLink.svelte | 40       | 78       | 191       |
+|  26   | ./src/lib/components/Card/CardLogo.svelte | 10       | 35       | 74        |
+|  27   | ./src/lib/components/Card/CardTitle.svelte | 6        | 10       | 37        |
+|  28   | ./src/lib/components/Carrousel/Carrousel.svelte | 102      | 258      | 528       |
+|  29   | ./src/lib/components/Chip/Chip.svelte | 35       | 88       | 224       |
+|  30   | ./src/lib/components/Chip/ChipIcon.svelte | 61       | 145      | 312       |
+|  31   | ./src/lib/components/Chip/Footer/Footer.svelte | 73       | 211      | 435       |
+|  32   | ./src/lib/components/ExperienceCard/ExperienceCard.svelte | 84       | 240      | 604       |
+|  33   | ./src/lib/components/Icon/Icon.svelte | 23       | 45       | 101       |
+|  34   | ./src/lib/components/Icon/Icons.ts   | 10       | 47       | 79        |
+|  35   | ./src/lib/components/Icon/UIcon.svelte | 8        | 20       | 54        |
+|  36   | ./src/lib/components/Input/Input.svelte | 28       | 56       | 132       |
+|  37   | ./src/lib/components/MainTitle/MainTitle.svelte | 11       | 29       | 96        |
+|  38   | ./src/lib/components/NavMenu/NavMenu.svelte | 240      | 582      | 1405      |
+|  39   | ./src/lib/components/ProjectCard/ProjectCard.svelte | 74       | 233      | 601       |
+|  40   | ./src/lib/components/Screenshot/Screenshot.svelte | 56       | 136      | 344       |
+|  41   | ./src/lib/data/app.ts                | 2        | 9        | 11        |
+|  42   | ./src/lib/data/assets.ts             | 133      | 302      | 1025      |
+|  43   | ./src/lib/data/documentation-sites.ts | 146      | 397      | 695       |
+|  44   | ./src/lib/data/education.ts          | 32       | 104      | 209       |
+|  45   | ./src/lib/data/experience.ts         | 600      | 4038     | 5517      |
+|  46   | ./src/lib/data/home.ts               | 33       | 151      | 303       |
+|  47   | ./src/lib/data/navbar.ts             | 84       | 187      | 394       |
+|  48   | ./src/lib/data/resume.ts             | 4        | 10       | 13        |
+|  49   | ./src/lib/data/search.ts             | 2        | 5        | 7         |
 |  50   | ./src/lib/md/svelte.md               | 41       | 298      | 391       |
 |  51   | ./src/lib/stores/theme.ts            | 48       | 146      | 279       |
 |  52   | ./src/lib/utils/colors.ts            | 166      | 343      | 1101      |
-|  53   | ./src/lib/utils/helpers.ts           | 172      | 603      | 1153      |
-|  54   | ./src/lib/utils/index.ts             | 57       | 966      | 1043      |
-|  55   | ./src/lib/utils/reTypeParser.ts      | 58       | 161      | 512       |
-|  56   | ./src/lib/utils/customMarkdownParser.ts | 30       | 97       | 206       |
+|  53   | ./src/lib/utils/customMarkdownParser.ts | 30       | 97       | 206       |
+|  54   | ./src/lib/utils/helpers.ts           | 172      | 603      | 1153      |
+|  55   | ./src/lib/utils/index.ts             | 60       | 1242     | 1323      |
+|  56   | ./src/lib/utils/reTypeParser.ts      | 58       | 161      | 512       |
 |  57   | ./src/routes/+layout.server.ts       | 2        | 10       | 13        |
-|  58   | ./src/routes/+layout.svelte          | 45       | 96       | 208       |
-|  59   | ./src/routes/+page.svelte            | 46       | 144      | 459       |
-|  60   | ./src/routes/education/+page.svelte  | 92       | 246      | 612       |
-|  61   | ./src/routes/experience/+page.svelte | 57       | 169      | 388       |
-|  62   | ./src/routes/experience/[slug]/+page.svelte | 93       | 246      | 637       |
-|  63   | ./src/routes/experience/[slug]/+page.ts | 12       | 37       | 61        |
-|  64   | ./src/routes/projects/+page.svelte   | 109      | 285      | 610       |
-|  65   | ./src/routes/projects/[slug]/+page.svelte | 140      | 353      | 899       |
-|  66   | ./src/routes/projects/[slug]/+page.ts | 12       | 37       | 61        |
-|  67   | ./src/routes/resume/+page.svelte     | 31       | 58       | 136       |
-|  68   | ./src/routes/search/+page.svelte     | 97       | 259      | 597       |
-|  69   | ./src/routes/skills/+page.svelte     | 52       | 143      | 401       |
-|  70   | ./src/routes/skills/[slug]/+page.svelte | 115      | 310      | 733       |
-|  71   | ./src/routes/skills/[slug]/+page.ts  | 12       | 37       | 61        |
-|  72   | ./src/routes/documentation/+page.svelte | 24       | 65       | 171       |
-|  73   | ./src/routes/tools/+page.svelte      | 91       | 214      | 635       |
-|  74   | ./src/routes/tools/ai/+page.svelte   | 36       | 87       | 240       |
-|  75   | ./src/routes/tools/[slug]/+page.svelte | 72       | 219      | 519       |
-|  76   | ./src/routes/tools/[slug]/+page.ts   | 21       | 74       | 129       |
-|  77   | ./src/routes/tools/data/+page.svelte | 36       | 87       | 240       |
-|  78   | ./src/routes/tools/code/+page.svelte | 36       | 87       | 240       |
-|  79   | ./src/routes/team/+page.svelte       | 89       | 211      | 629       |
-|  80   | ./src/routes/team/[slug]/+page.svelte | 151      | 278      | 632       |
-|  81   | ./src/routes/team/[slug]/+page.ts    | 28       | 85       | 122       |
-|  82   | ./src/routes/terms/+page.svelte      | 54       | 264      | 405       |
-|  83   | ./src/routes/privacy/+page.svelte    | 46       | 194      | 327       |
-|  84   | ./src/routes/contact/+page.svelte    | 110      | 252      | 798       |
-|  85   | ./scripts/cvFetcher.js               | 1        | 0        | 0         |
-|       | Total                                | 7587     | 39152    | 70352     |
+|  58   | ./src/routes/+layout.svelte          | 49       | 111      | 237       |
+|  59   | ./src/routes/+page.svelte            | 48       | 156      | 498       |
+|  60   | ./src/routes/documentation/+page.svelte | 24       | 65       | 171       |
+|  61   | ./src/routes/education/+page.svelte  | 92       | 246      | 612       |
+|  62   | ./src/routes/experience/+page.svelte | 57       | 169      | 388       |
+|  63   | ./src/routes/experience/[slug]/+page.svelte | 93       | 246      | 637       |
+|  64   | ./src/routes/experience/[slug]/+page.ts | 12       | 37       | 61        |
+|  65   | ./src/routes/privacy/+page.svelte    | 46       | 194      | 327       |
+|  66   | ./src/routes/projects/+page.svelte   | 109      | 285      | 610       |
+|  67   | ./src/routes/projects/[slug]/+page.svelte | 140      | 353      | 899       |
+|  68   | ./src/routes/projects/[slug]/+page.ts | 12       | 37       | 61        |
+|  69   | ./src/routes/resume/+page.svelte     | 31       | 58       | 136       |
+|  70   | ./src/routes/search/+page.svelte     | 97       | 259      | 597       |
+|  71   | ./src/routes/skills/+page.svelte     | 52       | 143      | 401       |
+|  72   | ./src/routes/skills/[slug]/+page.svelte | 115      | 310      | 733       |
+|  73   | ./src/routes/skills/[slug]/+page.ts  | 12       | 37       | 61        |
+|  74   | ./src/routes/team/+page.svelte       | 89       | 211      | 629       |
+|  75   | ./src/routes/team/[slug]/+page.svelte | 151      | 278      | 632       |
+|  76   | ./src/routes/team/[slug]/+page.ts    | 28       | 85       | 122       |
+|  77   | ./src/routes/terms/+page.svelte      | 54       | 264      | 405       |
+|  78   | ./src/routes/tools/+page.svelte      | 91       | 214      | 635       |
+|  79   | ./src/routes/tools/[slug]/+page.svelte | 72       | 219      | 519       |
+|  80   | ./src/routes/tools/[slug]/+page.ts   | 21       | 74       | 129       |
+|  81   | ./src/routes/tools/ai/+page.svelte   | 36       | 87       | 240       |
+|  82   | ./src/routes/tools/code/+page.svelte | 36       | 87       | 240       |
+|  83   | ./src/routes/tools/data/+page.svelte | 36       | 87       | 240       |
+|  84   | ./src/routes/api/vapid-key.ts        | 15       | 47       | 71        |
+|  85   | ./src/routes/api/push-subscription/+server.ts | 15       | 55       | 81        |
+|  86   | ./src/routes/api/vapid-key/+server.ts | 1        | 0        | 0         |
+|  87   | ./src/content/solutions.md           | 36       | 355      | 474       |
+|  88   | ./src/content/solutions/techDebt.md  | 176      | 1789     | 2156      |
+|  89   | ./static/offline.html                | 34       | 62       | 148       |
+|  90   | ./.vscode/settings.json              | 42       | 43       | 159       |
+|       | Total                                | 5707     | 20502    | 38869     |
 
 
 ## Total Counts Across All Files. Tokenizer Used: NLTK's Punkt Tokenizer
-- Total Lines: 7587
-- Total Words: 39152
-- Total AI Tokens: 70352
+- Total Lines: 5707
+- Total Words: 20502
+- Total AI Tokens: 38869
 
 ## File: README.md
 ```md
@@ -185,6 +190,45 @@ This portfolio website is a testament to my passion for technology and continuou
 Feel free to explore the code, and don't hesitate to reach out if you have any questions or potential collaboration ideas!
 ```
 
+## File: combine.json
+```json
+{
+    "root_path": "/var/www/html/webally.co.za",
+    "output_path": "/var/www/html/webally.co.za/combined.md",
+    "gitignore_path": "",
+    "exclude_folders": [
+        ".history",
+        "docs",
+        "coverage",
+        ".git",
+        ".github",
+        "node_modules",
+        "backups",
+        ".svelte-kit",
+        "build"
+    ],
+    "exclude_files": [
+        "package-lock.json",
+        "combined.md",
+        "src/lib/data/skills.ts",
+        "src/lib/data/tools.ts",
+        "src/lib/data/projects.ts"
+
+    ],
+    "file_types": [
+        ".js",
+        ".ts",
+        ".php",
+        ".env",
+        ".scss",
+        ".html",
+        ".json",
+        ".md",
+        ".svelte"
+    ]
+}
+```
+
 ## File: package.json
 ```json
 {
@@ -205,9 +249,10 @@ Feel free to explore the code, and don't hesitate to reach out if you have any q
         "@riadh-adrani/utils": "0.42.2",
         "@sveltejs/adapter-auto": "2.1.0",
         "@sveltejs/adapter-static": "2.0.3",
-        "@sveltejs/kit": "^1.27.3",
+        "@sveltejs/kit": "^1.30.4",
         "@types/dompurify": "^3.0.2",
         "@types/marked": "^5.0.0",
+        "@types/node": "^22.7.0",
         "@types/prismjs": "^1.26.0",
         "@typescript-eslint/eslint-plugin": "^6.9.0",
         "@typescript-eslint/parser": "^6.9.0",
@@ -230,15 +275,17 @@ Feel free to explore the code, and don't hesitate to reach out if you have any q
         "svelte": "^4.2.19",
         "svelte-check": "3.5.2",
         "tslib": "^2.4.1",
-        "typescript": "^5.2.2",
+        "typescript": "^5.6.2",
         "unocss": "^0.56.1",
         "vite": "^4.5.0"
     },
     "type": "module",
     "dependencies": {
-        "dayjs": "^1.11.10"
+        "dayjs": "^1.11.10",
+        "web-push": "^3.6.7"
     }
 }
+
 ```
 
 ## File: svelte.config.js
@@ -287,6 +334,9 @@ const config = {
                 }
                 throw new Error(message);
             }
+        },
+        files: {
+            assets: 'static'
         }
     }
 };
@@ -368,315 +418,64 @@ export default defineConfig({
 
 ## File: vite.config.ts
 ```ts
+// vite.config.ts
 import { sveltekit } from '@sveltejs/kit/vite';
 import type { UserConfig } from 'vite';
 import UnoCSS from 'unocss/vite';
 
 const config: UserConfig = {
-	plugins: [UnoCSS(), sveltekit()]
+	plugins: [
+		UnoCSS(),
+		sveltekit()
+	]
 };
 
 export default config;
-
-```
-
-## File: combine.json
-```json
-{
-    "root_path": "/var/www/html/portfolio.webally.co.za",
-    "output_path": "/var/www/html/portfolio.webally.co.za/combined.md",
-    "gitignore_path": "",
-    "exclude_folders": [
-        ".history",
-        "docs",
-        "coverage",
-        ".git",
-        ".github",
-        "node_modules",
-        "backups",
-        ".svelte-kit",
-        "build"
-    ],
-    "exclude_files": [
-        "package-lock.json",
-        "combined.md"
-
-    ],
-    "file_types": [
-        ".js",
-        ".ts",
-        ".php",
-        ".env",
-        ".scss",
-        ".html",
-        ".json",
-        ".md",
-        ".svelte"
-    ]
-}
 ```
 
 ## File: .env
 ```
 # .env
-VITE_THEME_MODE=dark_only
 # Set to 'dark_only' for dark mode only, or 'switchable' for both light and dark modes
-```
-
-## File: cspell.json
-```json
-{
-	"version": "0.2",
-	"ignorePaths": [],
-	"dictionaryDefinitions": [],
-	"dictionaries": [],
-	"words": [
-		"ANANZI",
-		"ATKV",
-		"Brandwag",
-		"burndows",
-		"CNA's",
-		"deallocation",
-		"deno",
-		"Deno",
-		"Donalds",
-		"Duoporta",
-		"Ekurhuleni",
-		"extralight",
-		"Feedforward",
-		"grayscale",
-		"Heita",
-		"HEITA",
-		"Inspectacar",
-		"instanceof",
-		"ISTIC",
-		"Kanban",
-		"keydown",
-		"keyof",
-		"keypress",
-		"keyup",
-		"Kumba",
-		"Laerskool",
-		"LURITS",
-		"Menlyn",
-		"Musofinder",
-		"Nutella",
-		"Ooops",
-		"optimisations",
-		"Platfrom",
-		"Poort",
-		"POSIX",
-		"prerender",
-		"Resumé",
-		"sandboxed",
-		"slef",
-		"Teleric",
-		"Tici",
-		"Tinbo",
-		"trunc",
-		"Tshwane",
-		"TSMA",
-		"UNISA",
-		"USAID",
-		"Voortrekker",
-		"Yara"
-	],
-	"ignoreWords": [],
-	"import": []
-}
+VITE_THEME_MODE=dark_only
+VITE_API_KEY=your_api_key
 
 ```
 
-## File: .vscode/settings.json
-```json
-{
-	"files.exclude": {
-		"**/.git": true,
-		"**/.svn": true,
-		"**/.hg": true,
-		"**/CVS": true,
-		"**/.DS_Store": true,
-		"**/Thumbs.db": true
-	},
-	"hide-files.files": [],
-	"cSpell.words": [
-		"'s",
-		"adrani",
-		"Alexandre",
-		"Anders",
-		"Andrey",
-		"AOSP",
-		"APBCO",
-		"Appium",
-		"Armin",
-		"artboards",
-		"Artboards",
-		"astro",
-		"Attributify",
-		"Audiphy",
-		"Autoencoders",
-		"Azur",
-		"Berners",
-		"Bjarne",
-		"brinant",
-		"Brinant",
-		"BSON",
-		"Carniato",
-		"Catlin",
-		"chatbots",
-		"checksummed",
-		"cinematics",
-		"clhg",
-		"clickjacking",
-		"CNCF",
-		"codebases",
-		"columnstore",
-		"Convolutional",
-		"Cupertino",
-		"DBAL",
-		"developping",
-		"dielines",
-		"dompurify",
-		"Dwida",
-		"Dwidder",
-		"Eich",
-		"EPUB",
-		"EPUBs",
-		"exxaro",
-		"Exxaro",
-		"Fabien",
-		"fastapi",
-		"fastify",
-		"Fastify",
-		"Firestore",
-		"flexbox",
-		"Flexbox",
-		"FNB",
-		"freemium",
-		"Gamification",
-		"gamified",
-		"garous",
-		"geospatial",
-		"Håkon",
-		"Hejlsberg",
-		"Hemphill",
-		"Holovaty",
-		"Holowaychuk",
-		"hoverable",
-		"hyperlog",
-		"iconify",
-		"Idera",
-		"IDML",
-		"imvula",
-		"Imvula",
-		"INDD",
-		"indesign",
-		"infographics",
-		"inlines",
-		"Intelli",
-		"Interpretability",
-		"Ionicons",
-		"ISAM",
-		"jailbreaking",
-		"Joomla",
-		"Kawaguchi",
-		"Keras",
-		"Kohsuke",
-		"laravel",
-		"Laravel",
-		"leaderboards",
-		"Leaderboards",
-		"Lerdorf",
-		"Lightroom",
-		"LINQ",
-		"LSTM",
-		"LUM",
-		"Lumetri",
-		"Mecanim",
-		"MERN",
-		"microframework",
-		"MMORPGs",
-		"multiplatform",
-		"Multiversion",
-		"MVCC",
-		"navbars",
-		"Neuromorphic",
-		"OLTP",
-		"Otwell",
-		"overfit",
-		"overfitting",
-		"pageworks",
-		"Pantone",
-		"photoshop",
-		"Photoshop",
-		"platformers",
-		"pluggability",
-		"PNA",
-		"Potencier",
-		"Preact",
-		"prismjs",
-		"proxying",
-		"rabbitmq",
-		"Rasmus",
-		"Razvan",
-		"RDBMS",
-		"Reinink",
-		"riadh",
-		"Riverpod",
-		"Ronacher",
-		"Rossum",
-		"Rotoscoping",
-		"ruvy",
-		"Ruvy",
-		"sandboxing",
-		"Sanfilippo",
-		"Sanlam",
-		"Schoger",
-		"scikit",
-		"Scrapy",
-		"Scriptable",
-		"Sébastien",
-		"Sensei",
-		"servlet",
-		"sharded",
-		"Sitnik",
-		"Skia",
-		"spriting",
-		"Stoenescu",
-		"Stroustrup",
-		"superintelligence",
-		"sybase",
-		"symfony",
-		"Symfony",
-		"Synthiq",
-		"Sysoev",
-		"templating",
-		"theorient",
-		"Thierclieux",
-		"todos",
-		"toolkits",
-		"toolset",
-		"transcompiles",
-		"transformative",
-		"tribake",
-		"Tribake",
-		"unocss",
-		"Unocss",
-		"VDOM",
-		"veet",
-		"viewmodel",
-		"Vuex",
-		"Wathan",
-		"Wayfinding",
-		"Weizenbaum",
-		"Widenius",
-		"Willison",
-		"Windi",
-		"Wium",
-		"WORA",
-		"Wroddit"
-	]
-}
+## File: sendPushNotification.js
+```js
+// sendPushNotification.js
+const webPush = require('web-push');
+
+// Replace with your actual VAPID keys
+const vapidKeys = {
+  publicKey: 'BHiKKmeGnSYaMiiaaNtNRRZlBzDTEGw66ILt192tu4PRYNIAm-fV5sgk7WQoXvjjxPOim3KEyt9mZUXyOoQRxTk',
+  privateKey: 'wa4h49vnpMlIJNTJ_UBF5lpenHOlpoOmUUo3sCv8VEo'
+};
+// Example subscription object (this should come from your database)
+const subscriptions = []; // Store user subscriptions here
+
+// Configure web-push with your VAPID keys
+webPush.setVapidDetails(
+  'mailto:your-email@example.com',
+  vapidKeys.publicKey,
+  vapidKeys.privateKey
+);
+
+
+// Send a push notification to all subscriptions
+subscriptions.forEach(subscription => {
+  const payload = JSON.stringify({ title: 'Hello', body: 'This is a test notification' });
+
+  webPush.sendNotification(subscription, payload)
+    .then(result => console.log('Notification sent', result))
+    .catch(err => console.error('Error sending notification', err));
+});
+
+```
+
+## File: scripts/cvFetcher.js
+```js
 
 ```
 
@@ -707,7 +506,10 @@ declare module '*.md' {
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%sveltekit.assets%/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="%sveltekit.assets%/app.webmanifest">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="%sveltekit.assets%/icon-192x192.png">
     <script>
         document.documentElement.setAttribute('data-theme', 'dark');
     </script>
@@ -716,9 +518,106 @@ declare module '*.md' {
 
 <body data-sveltekit-preload-data="hover">
     <div style="display: contents">%sveltekit.body%</div>
+    <script type="module">
+        if ('serviceWorker' in navigator) {
+            addEventListener('load', function() {
+                navigator.serviceWorker.register('./service-worker.js', {
+                    type: 'module'
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>
+```
+
+## File: src/service-worker.js
+```js
+/// <reference types="@sveltejs/kit" />
+import {
+    build,
+    files,
+    version
+} from '$service-worker';
+
+// Create a unique cache name for this deployment
+const CACHE = `cache-${version}`;
+
+const ASSETS = [
+    ...build, // the app itself
+    ...files // everything in `static`
+];
+
+self.addEventListener('install', (event) => {
+    // Create a new cache and add all files to it
+    async function addFilesToCache() {
+        const cache = await caches.open(CACHE);
+        await cache.addAll(ASSETS);
+    }
+
+    event.waitUntil(addFilesToCache());
+});
+
+self.addEventListener('activate', (event) => {
+    // Remove previous cached data from disk
+    async function deleteOldCaches() {
+        for (const key of await caches.keys()) {
+            if (key !== CACHE) await caches.delete(key);
+        }
+    }
+
+    event.waitUntil(deleteOldCaches());
+});
+
+self.addEventListener('fetch', (event) => {
+    // ignore POST requests etc
+    if (event.request.method !== 'GET') return;
+
+    async function respond() {
+        const url = new URL(event.request.url);
+        const cache = await caches.open(CACHE);
+
+        // `build`/`files` can always be served from the cache
+        if (ASSETS.includes(url.pathname)) {
+            const response = await cache.match(url.pathname);
+
+            if (response) {
+                return response;
+            }
+        }
+
+        // for everything else, try the network first, but
+        // fall back to the cache if we're offline
+        try {
+            const response = await fetch(event.request);
+
+            // if we're offline, fetch can return a value that is not a Response
+            // instead of throwing - and we can't pass this non-Response to respondWith
+            if (!(response instanceof Response)) {
+                throw new Error('invalid response from fetch');
+            }
+
+            if (response.status === 200) {
+                cache.put(event.request, response.clone());
+            }
+
+            return response;
+        } catch (err) {
+            const response = await cache.match(event.request);
+
+            if (response) {
+                return response;
+            }
+
+            // if there's no cache, then just error out
+            // as there is nothing we can do to respond to this request
+            throw err;
+        }
+    }
+
+    event.respondWith(respond());
+});
 ```
 
 ## File: src/lib/index.scss
@@ -1093,6 +992,61 @@ body {
 
 ```
 
+## File: src/lib/pushNotifications.ts
+```ts
+// src/lib/pushNotifications.ts
+export async function subscribeToPushNotifications() {
+  if ('serviceWorker' in navigator && 'PushManager' in window) {
+    try {
+      // Fetch the VAPID public key from the server
+      const vapidKeyResponse = await fetch('/api/vapid-key');
+      const { vapidKey } = await vapidKeyResponse.json();
+
+      // Convert the VAPID key to Uint8Array
+      const applicationServerKey = urlBase64ToUint8Array(vapidKey);
+
+      // Register the service worker
+      const registration = await navigator.serviceWorker.ready;
+
+      // Subscribe to push notifications
+      const subscription = await registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey
+      });
+
+      // Send the subscription to the server
+      await fetch('/api/push-subscription', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(subscription),
+      });
+
+      console.log('Push notification subscription successful');
+    } catch (error) {
+      console.error('Failed to subscribe to push notifications:', error);
+    }
+  }
+}
+
+function urlBase64ToUint8Array(base64String: string) {
+  const padding = '='.repeat((4 - base64String.length % 4) % 4);
+  const base64 = (base64String + padding)
+    .replace(/\-/g, '+')
+    .replace(/_/g, '/');
+
+  const rawData = window.atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
+
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i);
+  }
+  return outputArray;
+}
+
+```
+
 ## File: src/lib/types.ts
 ```ts
 import type { Color } from './utils/colors';
@@ -1114,7 +1068,8 @@ export enum Platform {
 	Facebook = 'facebook',
 	Youtube = 'youtube',
 	Blog = 'blog',
-	StackShare = 'stackShare'
+	StackShare = 'stackShare',
+	WhatsApp = 'whatsapp'
 }
 
 export type Icon = `i-${string}-${string}`;
@@ -1209,6 +1164,79 @@ export interface Education<S extends string = string> extends Item<S> {
 	</div>
 </div>
 
+```
+
+## File: src/lib/components/InstallPrompt.svelte
+```svelte
+<script lang="ts">
+    import { onMount } from 'svelte';
+    
+    let deferredPrompt: any;
+    let showInstallPrompt = false;
+
+    onMount(() => {
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Prevent Chrome 67 and earlier from automatically showing the prompt
+            e.preventDefault();
+            // Stash the event so it can be triggered later
+            deferredPrompt = e;
+            // Show the install button
+            showInstallPrompt = true;
+        });
+    });
+
+    function installApp() {
+        showInstallPrompt = false;
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult: { outcome: string }) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the install prompt');
+            } else {
+                console.log('User dismissed the install prompt');
+            }
+            deferredPrompt = null;
+        });
+    }
+</script>
+
+{#if showInstallPrompt}
+    <div class="install-prompt">
+        <p>Install "webAlly" for a better experience!</p>
+        <button on:click={installApp}>Add to Home Screen</button>
+    </div>
+{/if}
+
+<style>
+    .install-prompt {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background-color: #000000;
+        border:1px solid #FFF;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    button {
+        background-color: #101110;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+</style>
 ```
 
 ## File: src/lib/components/Markdown.svelte
@@ -1701,7 +1729,7 @@ export interface Education<S extends string = string> extends Item<S> {
 
 	export let name = '';
 	export let logo = '';
-	export let inverted = false;
+	export let inverted = f	alse;
 	export let grayscale = true;
 
 	export let href: string | undefined = undefined;
@@ -1761,24 +1789,32 @@ export interface Education<S extends string = string> extends Item<S> {
 
 ## File: src/lib/components/Chip/Footer/Footer.svelte
 ```svelte
-<!-- src/lib/components/Footer/Footer.svelte -->
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { items } from '@data/navbar';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+	import { slide } from 'svelte/transition';
 
 	const currentYear = new Date().getFullYear();
 	const footerNavItems = items.filter((item) => item.position === 'footer');
 
-	let showLegal = false;
+	let currentRoute = '';
+	let showFooter = false;
+	let isHomePage = false;
+	$: if ($page?.url) {
+		isHomePage = $page.url.pathname === '/';
+	}
 
+	
 	onMount(() => {
 		const handleScroll = () => {
-			const scrollPosition = window.innerHeight + window.scrollY;
-			const documentHeight = document.documentElement.offsetHeight;
-			showLegal = scrollPosition >= documentHeight - 10;
+			if (!isHomePage) {
+				const scrollPosition = window.innerHeight + window.scrollY;
+				const documentHeight = document.documentElement.offsetHeight;
+				showFooter = scrollPosition >= documentHeight - 10;
+			}
 		};
 
 		window.addEventListener('scroll', handleScroll);
@@ -1786,42 +1822,37 @@ export interface Education<S extends string = string> extends Item<S> {
 	});
 </script>
 
-<footer class="fixed bottom-0 left-0 right-0 bg-black text-white">
-	{#if showLegal}
-		<div
-			class="py-1 transition-all duration-300 ease-in-out"
-			class:opacity-0={!showLegal}
-			class:opacity-100={showLegal}
-		>
+{#if !isHomePage && showFooter}
+	<footer transition:slide="{{ duration: 300, axis: 'y' }}" class="fixed bottom-0 left-0 right-0 bg-black text-white">
+		<div class="container mx-auto px-0">
+			<nav class="h-12 flex items-end pb-0">
+				<ul class="flex justify-center items-center w-full list-none">
+					{#each footerNavItems as item}
+						<li class="mx-4">
+							<a
+								href={`${base}${item.to}`}
+								class="flex items-center no-underline text-white group"
+								class:active={$page.url.pathname === item.to}
+							>
+								<UIcon icon={item.icon} classes="mr-2 text-xl" />
+								<span class="group-hover:text-gray-300 transition-colors duration-200 text-xs">
+									{item.title}
+								</span>
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</nav>
+		</div>
+		<div class="py-1">
 			<div class="container mx-auto px-4">
 				<p class="text-center text-xs">
 					&copy; {currentYear} Charl Cronje. All rights reserved.
 				</p>
 			</div>
 		</div>
-	{/if}
-	<div class="container mx-auto px-0">
-		<nav class="h-12 flex items-end pb-0">
-			<!-- Increased height and aligned items to bottom -->
-			<ul class="flex justify-center items-center w-full list-none">
-				{#each footerNavItems as item}
-					<li class="mx-4">
-						<a
-							href={`${base}${item.to}`}
-							class="flex items-center no-underline text-white group"
-							class:active={$page.url.pathname === item.to}
-						>
-							<UIcon icon={item.icon} classes="mr-2 text-xl" />
-							<span class="group-hover:text-gray-300 transition-colors duration-200 text-sm">
-								{item.title}
-							</span>
-						</a>
-					</li>
-				{/each}
-			</ul>
-		</nav>
-	</div>
-</footer>
+	</footer>
+{/if}
 
 <style>
 	footer {
@@ -1831,7 +1862,6 @@ export interface Education<S extends string = string> extends Item<S> {
 		color: theme('colors.gray.300');
 	}
 </style>
-
 ```
 
 ## File: src/lib/components/ExperienceCard/ExperienceCard.svelte
@@ -2033,7 +2063,11 @@ export const viewBox = (icon: Icons) => {
 	import { base } from '$app/paths';
 	import UIcon from '../Icon/UIcon.svelte';
 
-	$: currentRoute = $page.url.pathname;
+	let currentRoute = '';
+
+	$: if ($page?.url) {
+		currentRoute = $page.url.pathname;
+	}
 
 	let expanded = false;
 
@@ -2157,18 +2191,19 @@ export const viewBox = (icon: Icons) => {
 		</div>
 	</div>
 	<div
-		class="vertical-nav hidden md:flex flex-col fixed right--1	 top-1/2 transform -translate-y-1/2"
-	>
-		{#each verticalItems as item}
-			<a
-				href={`${base}${item.to}`}
-				class="nav-menu-item vertical text-xs !text-[var(--secondary-text)] mb-3"
-			>
-				<UIcon icon={item.icon} classes="text-1.3em" />
-				<span class="nav-menu-item-label">{item.title}</span>
-			</a>
-		{/each}
-	</div>
+	class="vertical-nav flex flex-col fixed right--1 top-1/2 transform -translate-y-1/2"
+>
+	{#each verticalItems as item}
+		<a
+			href={`${base}${item.to}`}
+			class="nav-menu-item vertical text-xs !text-[var(--secondary-text)] mb-3"
+			class:active={currentRoute === item.to}
+		>
+			<UIcon icon={item.icon} classes="text-1.3em icon-wrapper" />
+			<span class="nav-menu-item-label">{item.title}</span>
+		</a>
+	{/each}
+</div>
 </div>
 
 <style lang="scss">
@@ -2227,8 +2262,10 @@ export const viewBox = (icon: Icons) => {
 		}
 	}
 
+	
 	.vertical-nav {
 		z-index: 20;
+		display: flex;
 	}
 
 	.nav-menu-item.vertical {
@@ -2238,9 +2275,17 @@ export const viewBox = (icon: Icons) => {
 		background-color: var(--main);
 		border-radius: 10px 0 0 10px;
 		box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+		display: flex;
+		align-items: center;
+		min-height: 120px;
 
 		&:hover {
 			background-color: var(--main-hover);
+		}
+
+		&.active {
+			background-color: var(--accent);
+			color: var(--main);
 		}
 
 		.nav-menu-item-label {
@@ -2517,6 +2562,7 @@ const Assets = {
 	CNN: gh('cnn.png'),
 	Nexus: gh('nexus.svg'),
 	Pageworks: gh('pageworks.png'),
+	WhatsApp: gh('whatsapp.svg')
 };
 
 export default Assets;
@@ -2529,6 +2575,156 @@ export const getAssetURL = (asset: Asset): string => {
 	return typeof asset === 'string' ? asset : currentTheme ? asset.dark : asset.light;
 };
 
+```
+
+## File: src/lib/data/documentation-sites.ts
+```ts
+// src/lib/data/documentation-sites.ts
+
+export const title = 'Documentation Sites';
+
+export const sites = [
+    {
+        name: 'AI Docs',
+        url: 'https://ai.docs.webally.co.za',
+        description: 'Artificial Intelligence tools and docs'
+    },
+    {
+        name: 'Android Docs',
+        url: 'https://android.docs.webally.co.za',
+        description: 'Using Linux tools on your android device'
+    },
+    {
+        name: 'ARM Docs',
+        url: 'https://arm.docs.webally.co.za',
+        description: 'Raspberry Pi Documentation'
+    },
+    {
+        name: 'Backups & Config',
+        url: 'https://backup.docs.webally.co.za',
+        description: 'Incremental Config backups with GIT'
+    },
+    {
+        name: 'Bash',
+        url: 'https://bash.docs.webally.co.za',
+        description: 'Bash Scripting'
+    },
+    {
+        name: 'Crypto & Mining',
+        url: 'https://crypto.docs.webally.co.za',
+        description: 'Crypto, Mining, Decentralization & Web 3.0'
+    },
+    {
+        name: 'Development',
+        url: 'https://dev.docs.webally.co.za',
+        description: 'Web / Terminal / Windows / App Development'
+    },
+    {
+        name: 'DNS, MX Records, CNAME',
+        url: 'https://dns.docs.webally.co.za',
+        description: 'Domain Name System, Mail exchange etc'
+    },
+    {
+        name: 'GitHub Gists',
+        url: 'https://gist.docs.webally.co.za',
+        description: 'GitHub Gists (Code snippets and scripts)'
+    },
+    {
+        name: 'Hacking & Info Gathering',
+        url: 'https://hacking.docs.webally.co.za',
+        description: 'Hacking, Information gathering, Spoofing'
+    },
+    {
+        name: 'HeEPP',
+        url: 'https://heepp.docs.webally.co.za',
+        description: 'HeEPP Model View Controller Framework'
+    },
+    {
+        name: 'JavaScript + (Node.js)',
+        url: 'https://js.docs.webally.co.za',
+        description: 'JavaScript Front and Backend (Node.js)'
+    },
+    {
+        name: 'Kali Linux',
+        url: 'https://kali.docs.webally.co.za',
+        description: 'KALI Linux Docs & Setup'
+    },
+    {
+        name: 'Mongo NoSQL DB',
+        url: 'https://mongo.docs.webally.co.za',
+        description: 'Eloquent model & Query builder for MongoDB'
+    },
+    {
+        name: 'Notes and Links',
+        url: 'https://notes.docs.webally.co.za',
+        description: 'Some things I need to remember with links'
+    },
+    {
+        name: 'Open Source',
+        url: 'https://opensource.docs.webally.co.za',
+        description: 'What is awesome, how you can contribute'
+    },
+    {
+        name: 'Projects',
+        url: 'https://projects.docs.webally.co.za',
+        description: 'Some notes on projects I worked on'
+    },
+    {
+        name: 'PHP Development',
+        url: 'https://php.docs.webally.co.za',
+        description: 'PHP Backend Development'
+    },
+    {
+        name: 'Perl Development',
+        url: 'https://perl.docs.webally.co.za',
+        description: 'Perl Server Side Development'
+    },
+    {
+        name: 'Repositories',
+        url: 'https://repos.docs.webally.co.za',
+        description: 'GitHub Repos worth looking at'
+    },
+    {
+        name: 'Reporting & BI',
+        url: 'https://reports.docs.webally.co.za',
+        description: 'Reporting & BI with Jasper Reports'
+    },
+    {
+        name: 'Software as a Service',
+        url: 'https://saas.docs.webally.co.za',
+        description: 'Services I can recommend or created myself'
+    },
+    {
+        name: 'Server & Software Setup',
+        url: 'https://setup.docs.webally.co.za',
+        description: 'Server & Software Setup'
+    },
+    {
+        name: 'Tips & Productivity',
+        url: 'https://tips.docs.webally.co.za',
+        description: 'Tips on creating Productive workflows'
+    },
+    {
+        name: 'Tools and Self Hosted',
+        url: 'https://tools.docs.webally.co.za',
+        description: 'Terminal and Web-Applications'
+    },
+    {
+        name: 'Trading & Crypto',
+        url: 'https://trading.docs.webally.co.za',
+        description: 'Trading and Crypto Markets'
+    },
+    {
+        name: 'Troubleshooting Docs',
+        url: 'https://troubleshoot.docs.webally.co.za',
+        description: 'Troubleshooting Documentation'
+    },
+    {
+        name: 'Windows Tips',
+        url: 'https://win.docs.webally.co.za',
+        description: 'Windows 10 & 11 Tips and Tricks'
+    }
+];
 ```
 
 ## File: src/lib/data/education.ts
@@ -3184,13 +3380,14 @@ export const name = 'webAlly';
 
 export const lastName = '';
 
-export const description = 'Team Consisting of Senior Full-Stack Web / Mobile / AI / Desktop Developers.  Passionate about creating awesome tools and applications for developers and customers.';
+export const description = 'Senior Full-Stack Web / Mobile / AI / Desktop Developer.  Passionate about creating awesome tools and applications for clients and other developers';
 
 export const links: Array<{ platform: Platform; link: string }> = [
 	{ platform: Platform.GitHub, link: 'https://github.com/charlpcronje' },
 	{ platform: Platform.Linkedin, link: 'https://www.linkedin.com/in/charlpcronje' },
 	{ platform: Platform.Twitter, link: 'https://twitter.com/CPCharlCronje' },
-	{ platform: Platform.Email, link: 'charl@webally.co.za' }
+	{ platform: Platform.Email, link: 'charl@webally.co.za' },
+	{ platform: Platform.WhatsApp, link: 'https://wa.me/27680097995' }
 ];
 
 export const skills = getSkills(
@@ -3295,276 +3492,6 @@ export const footerItems = [
 ] as const;
 ```
 
-## File: src/lib/data/projects.ts
-```ts
-// // src/lib/data/projects.ts
-
-import Assets from './assets';
-import { getSkills } from './skills';
-import type { Project } from '../types';
-
-export const items: Array<Project> = [
-	{
-		slug: "acsa-3d-airport-explore",
-		color: "#0077be",
-		description: "The ACSA 3D Airport Explore project was an innovative and engaging 3D game developed for Airport Company South Africa (ACSA). This interactive experience was designed to revolutionize the way users interact with and understand airport environments.<br><br><b>Key Features:</b><br>• Meticulously crafted virtual airport environment<br>• Gamified exploration of various airport areas<br>• Reward system for completing challenges<br>• Educational content balanced with entertainment value<br><br>The project successfully created a unique tool that served as both an innovative marketing asset for ACSA and an educational resource for travelers, potentially reducing anxiety and improving the overall airport experience for users.",
-		shortDescription: "Interactive 3D airport exploration game for ACSA, designed to familiarize users with airport layouts and enhance engagement through an immersive virtual experience.",
-		links: [{ to: "https://www.airports.co.za/", label: "ACSA Website" }],
-		logo: Assets.ACSA,
-		name: "ACSA 3D Airport Explore",
-		period: {
-			from: new Date(2018, 0, 1),
-			to: new Date(2018, 3, 15)
-		},
-		skills: getSkills('unity', 'csharp', 'js', 'html', 'css'),
-		type: "Interactive 3D Game",
-		company: "Airport Company South Africa"
-	},
-	{
-		slug: "anglo-american-email-marketing",
-		color: "#ff0000",
-		description: "The Anglo American Email Marketing project was a sophisticated digital communication initiative developed for Anglo American, a global leader in the mining industry. This comprehensive system managed and distributed personalized electronic communications to various stakeholders.<br><br><b>Key Components:</b><br>• Suite of responsive email templates<br>• Advanced personalized invitation system<br>• Robust tracking and analytics capabilities<br>• Stringent security measures for data protection<br><br>The result was a powerful, flexible, and secure email marketing solution that significantly enhanced Anglo American's digital communication capabilities, strengthening stakeholder relationships and reinforcing their position as a forward-thinking leader in the mining industry.",
-		shortDescription: "Email marketing and electronic invitation system for Anglo American, featuring responsive templates and personalized communication management for enhanced corporate outreach.",
-		links: [{ to: "https://www.angloamerican.com/", label: "Anglo American Website" }],
-		logo: Assets.AngloAmerican,
-		name: "Anglo American Email Marketing",
-		period: {
-			from: new Date(2017, 0, 1),
-			to: new Date(2017, 2, 17)
-		},
-		skills: getSkills('html', 'css', 'js', 'php'),
-		type: "Email Marketing",
-		company: "Anglo American"
-	},
-	{
-		slug: "apbco-asset-management",
-		color: "#4a90e2",
-		description: "The APBCO Asset Management System was a bespoke software solution developed for APBCO Insurance to revolutionize their approach to managing company assets. This project addressed complex challenges of asset tracking, maintenance scheduling, and comprehensive reporting.<br><br><b>Key Features:</b><br>• Centralized asset database with detailed information<br>• Real-time asset tracking using barcode and RFID technology<br>• Maintenance management module with automated alerts<br>• Comprehensive reporting suite for decision-making<br>• User-friendly interface for easy asset management<br><br>The implementation resulted in significant improvements in APBCO's operational efficiency, including real-time visibility into asset status, streamlined maintenance processes, improved budgeting accuracy, and enhanced resource allocation.",
-		shortDescription: "Asset Management System for APBCO Insurance, designed to streamline tracking and reporting of company assets while significantly enhancing efficiency and resource allocation.",
-		links: [{ to: "https://www.apbco.co.za/", label: "APBCO Website" }],
-		logo: Assets.APBCO,
-		name: "APBCO Asset Management System",
-		period: {
-			from: new Date(2016, 5, 1),
-			to: new Date(2016, 10, 30)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
-		type: "Asset Management Software",
-		company: "APBCO Insurance"
-	},
-	{
-		slug: "brinant-security-management",
-		color: "#2c3e50",
-		description: "The Brinant Security Management System was a comprehensive software solution developed to address the complex operational needs of Brinant Security, a prominent player in the security services industry. This system revolutionized the company's approach to shift management, staff scheduling, and overall operational efficiency.<br><br><b>Key Features:</b><br>• Advanced scheduling module with intelligent algorithms<br>• Time tracking with multiple clock-in methods<br>• Staff allocation based on skills and client preferences<br>• Robust reporting suite for operational insights<br>• Integrated messaging system for quick communication<br>• Mobile app for on-the-go access<br><br>• Mobile app development for staff access<br><br>The implementation resulted in significant improvements, including a reduction in scheduling time, decrease in overtime costs, and improvement in overall staff utilization. The system enhanced both employee and client satisfaction through fair shift distribution and consistent assignment of appropriately skilled personnel.",
-		shortDescription: "Shift and Staff Management System for Brinant Security, designed to optimize scheduling, enhance time tracking accuracy and improve staff allocation, resulting improved service delivery.",
-		links: [{ to: "https://www.brinantsecurity.co.za/", label: "Brinant Security Website" }],
-		logo: Assets.BrinantSecurity,
-		name: "Brinant Security Management System",
-		period: {
-			from: new Date(2015, 1, 1),
-			to: new Date(2015, 7, 12)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
-		type: "Staff Management Software",
-		company: "Brinant Security"
-	},
-	{
-		slug: "cavalier-abattoirs-systems",
-		color: "#8e44ad",
-		description: "The Cavalier Abattoirs Integrated Systems project was an ambitious and comprehensive initiative to revolutionize the operational infrastructure of Cavalier Abattoirs. This large-scale project involved the development and integration of multiple specialized systems, each addressing a critical aspect of the company's operations.<br><br><b>Key Components:</b><br>• Quote and Invoice System<br>• Vehicle Tracking System<br>• Vehicle Maintenance System<br>• Process Management System<br>• Stock Management System<br>• Document Management System<br><br>• Custom API development for system integration<br>• Implementation of message queue for smooth data flow<br><br>The implementation of this integrated system suite resulted in transformative benefits, including an 80% reduction in manual data entry, 60% reduction in processing errors, and significantly improved real-time visibility for agile decision-making. The enhanced tracking and documentation capabilities also strengthened the company's compliance posture and supported its commitment to quality assurance.",
-		shortDescription: "Suite of integrated management systems for Cavalier Abattoirs, quotes and invoices, vehicle tracking and maintenance, process management and documentation",
-		links: [{ to: "https://www.cavalier.co.za/", label: "Cavalier Abattoirs Website" }],
-		logo: Assets.CavalierAbattoirs,
-		name: "Cavalier Abattoirs Integrated Systems",
-		period: {
-			from: new Date(2009, 0, 1),
-			to: new Date(2016, 11, 31)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css', 'laravel'),
-		type: "Integrated Management Software",
-		company: "Cavalier Abattoirs"
-	},
-	{
-		slug: "city-lodge-booking-system",
-		color: "#e74c3c",
-		description: "The City Lodge Online Booking System project was a comprehensive digital transformation initiative for the City Lodge Hotel Group, one of South Africa's leading hotel chains. This project aimed to revolutionize the group's online presence and dramatically improve the customer booking experience.<br><br><b>Key Features:</b><br>• Modern, responsive website design<br>• Sophisticated online booking system<br>• Real-time integration with property management system<br>• Advanced yield management module<br>• User account feature for personalized experience<br>• Secure payment gateway<br><br>• Custom API development for system integration<br>• Implementation of security measures for data protection<br><br>The implementation resulted in significant improvements, including a 35% increase in online bookings within six months, 15% increase in average revenue per available room, and marked improvement in customer satisfaction scores for the booking process. The system not only modernized City Lodge's online presence but also provided a powerful tool for improving operational efficiency and driving revenue growth.",
-		shortDescription: "Website and online booking platform for City Lodge Hotel Group, offering seamless reservation experiences for customers while fully integrating with existing hotel management systems",
-		links: [{ to: "https://www.citylodge.co.za/", label: "City Lodge Website" }],
-		logo: Assets.CityLodge,
-		name: "City Lodge Online Booking System",
-		period: {
-			from: new Date(2016, 6, 1),
-			to: new Date(2017, 1, 30)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css', 'laravel'),
-		type: "Web Development & Booking System",
-		company: "City Lodge Hotel Group"
-	},
-	{
-		slug: "exxaro-systems",
-		color: "#3498db",
-		description: "The Exxaro Internal Systems project was a comprehensive initiative aimed at revolutionizing internal communication, employee engagement, and knowledge management within Exxaro, a leading South African resources company.<br><br><b>Key Components:</b><br>• Internal Communication System<br>• Online Quiz Game<br>• IZone Staff Empowerment System<br><br><b>Features:</b><br>• User-friendly intranet portal<br>• Gamified learning platform<br>• Idea submission and peer recognition system<br>• Annual quiz competition with live event<br><br>• Custom hardware development for live quiz event<br><br>The implementation had a transformative effect on Exxaro's corporate culture, with over 80% of staff actively participating in online quiz games and IZone activities. The systems dramatically improved information flow, boosted morale, and fostered a sense of camaraderie across departments. The IZone system also proved valuable in identifying and nurturing talent within the organization.",
-		shortDescription: "Advanced communication platform, an engaging online quiz game, and an innovative staff empowerment system (IZone), all designed to enhance employee engagement, knowledge sharing, and corporate culture.",
-		links: [{ to: "https://www.exxaro.com/", label: "Exxaro Website" }],
-		logo: Assets.Exxaro,
-		name: "Exxaro Internal Systems",
-		period: {
-			from: new Date(2012, 0, 1),
-			to: new Date(2013, 11, 31)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css', 'csharp', 'unity'),
-		type: "Internal Systems & Gamification",
-		company: "Exxaro"
-	},
-	{
-		slug: "fnb-corporate-identity",
-		color: "#f39c12",
-		description: "The FNB Corporate Identity Development project was a pivotal initiative aimed at revitalizing and standardizing the visual brand identity of First National Bank (FNB), one of South Africa's 'big four' banks.<br><br><b>Key Components:</b><br>• Refinement of FNB's iconic logo<br>• Comprehensive brand guideline document<br>• Custom typeface development<br>• Imagery and photography style guidelines<br>• Digital application of new identity<br>• Print media templates<br>• Environmental design guidelines<br><br>• Digital asset management system<br><br>The impact of the new corporate identity was significant, with brand recognition scores improving by 15% within the first year of implementation. Employee surveys indicated a stronger sense of pride in the FNB brand, while customer feedback highlighted a perception of FNB as more modern and innovative. The cohesive application of the new identity across all touchpoints strengthened FNB's market position and supported its messaging around being a forward-thinking, customer-centric bank.",
-		shortDescription: "Comprehensive corporate identity project for First National Bank (FNB), focusing on creating a cohesive and modern visual language across digital and print media",
-		links: [{ to: "https://www.fnb.co.za/", label: "FNB Website" }],
-		logo: Assets.FNB,
-		name: "FNB Corporate Identity Development",
-		period: {
-			from: new Date(2011, 6, 1),
-			to: new Date(2011, 12, 31)
-		},
-		skills: getSkills('photoshop', 'illustrator', 'indesign'),
-		type: "Corporate Identity Design",
-		company: "First National Bank"
-	},
-	{
-		slug: "imperial-logistics-systems",
-		color: "#27ae60",
-		description: "The Imperial Logistics Management Systems project was a large-scale initiative aimed at modernizing and optimizing two critical aspects of Imperial Logistics' operations: document management and human resources.<br><br><b>Key Components:</b><br>• Document Management System (DMS)<br>• HR Management System (HRMS)<br><br><b>DMS Features:</b><br>• Centralized digital repository<br>• Advanced search functionality<br>• Version control<br>• Role-based access control<br>• Workflow automation<br>• OCR capabilities<br><br><b>HRMS Features:</b><br>• Recruitment and onboarding module<br>• Employee database<br>• Performance management tools<br>• Training and development module<br>• Leave management system<br>• Payroll integration<br>• Employee self-service portal<br><br>• API development for system integration<br><br>The implementation brought significant improvements, including a 70% reduction in document search time, 50% reduction in HR administrative tasks, and improved accuracy of employee data. The systems also enhanced employee satisfaction and supported more informed decision-making in areas such as recruitment and talent development.",
-		shortDescription: "Comprehensive suite of management systems for Imperial Logistics, featuring an advanced Document Management System and a robust HR Management System, designed to streamline information handling, enhance human resource processes, and boost overall operational efficiency across the organization.",
-		links: [{ to: "https://www.imperiallogistics.com/", label: "Imperial Logistics Website" }],
-		logo: Assets.ImperialLogistics,
-		name: "Imperial Logistics Management Systems",
-		period: {
-			from: new Date(2010, 0, 1),
-			to: new Date(2011, 5, 30)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
-		type: "Document & HR Management Software",
-		company: "Imperial Logistics"
-	},
-	{
-		slug: "imvula-icd-server-monitoring",
-		color: "#9b59b6",
-		description: "The Imvula ICD Server Monitoring System was a sophisticated software solution developed to address the critical need for real-time monitoring and management of Imvula ICD's server infrastructure.<br><br><b>Key Features:</b><br>• Real-time Monitoring Dashboard<br>• Customizable Alerting System<br>• Predictive Analytics<br>• Automated Response Scripts<br>• Comprehensive Reporting<br>• Network Topology Mapping<br>• Log Analysis<br>• API Integration<br><br><br>The implementation resulted in significant improvements, including a reduction in server downtime, decrease in mean time to resolve (MTTR) for server issues, and reduction in unnecessary hardware expenditure. The system's comprehensive logging and reporting capabilities also supported Imvula ICD's compliance efforts with various industry regulations.",
-		shortDescription: "Advanced Server Monitoring System for Imvula ICD, providing real-time oversight of server infrastructure, comprehensive alerting capabilities, and detailed reporting functionalities to ensure optimal performance, rapid issue resolution, and proactive IT management across the organization.",
-		links: [{ to: "https://www.imvulaicd.co.za/", label: "Imvula ICD Website" }],
-		logo: Assets.ImvulaICD,
-		name: "Imvula ICD Server Monitoring System",
-		period: {
-			from: new Date(2009, 6, 1),
-			to: new Date(2009, 12, 31)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css', 'python'),
-		type: "Server Monitoring Software",
-		company: "Imvula ICD"
-	},
-	{
-		slug: "legacy-underwriting-portfolio-management",
-		color: "#34495e",
-		description: "The Legacy Underwriting Portfolio Management System was a bespoke software solution developed to revolutionize the underwriting process for Legacy Underwriting Managers, a prominent player in the insurance industry.<br><br><b>Key Features:</b><br>• Advanced risk assessment module<br>• Policy Administration<br>• Risk Scoring and Segmentation<br>• Portfolio Analysis Dashboard<br>• Predictive Modeling<br>• Reinsurance Management<br>• Regulatory Compliance Tracking<br>• Claims Analysis<br>• What-If Scenario Modeling<br>• Automated Underwriting<br><br>• API development for system integration<br>• Implementation of strong security measures<br><br>The implementation brought significant improvements, including a 60% reduction in quote generation time, 90% reduction in errors, 25% reduction in loss ratios, and a 15% improvement in overall portfolio performance. The system not only improved Legacy Underwriting Managers' operational efficiency but also positioned the company for sustained growth and competitiveness in the dynamic insurance market.",
-		shortDescription: "Sophisticated Portfolio Management System for Legacy Underwriting Managers, integrating advanced risk assessment tools, comprehensive reporting capabilities, and streamlined underwriting processes to enhance decision-making, improve portfolio performance, and optimize insurance operations.",
-		links: [{ to: "https://www.lum.co.za/", label: "Legacy Underwriting Managers Website" }],
-		logo: Assets.LegacyUnderwriting,
-		name: "Legacy Underwriting Portfolio Management",
-		period: {
-			from: new Date(2008, 0, 1),
-			to: new Date(2008, 11, 31)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
-		type: "Portfolio Management Software",
-		company: "Legacy Underwriting Managers"
-	},
-	{
-		slug: "pna",
-		color: "#e67e22",
-		description: "The PNA Management and E-Commerce Systems project was an ambitious initiative aimed at digitally transforming PNA, a well-known South African retailer specializing in stationery, books, and art supplies.<br><br><b>Product Management System Features:</b><br>• Centralized Product Catalog<br>• Inventory Tracking<br>• Supplier Management<br>• Barcode and SKU Management<br>• Product Performance Analytics<br>• Category and Attribute Management<br>• Price Management<br>• Integration with Point of Sale (POS) Systems<br><br><b>E-Commerce Platform Features:</b><br>• User-friendly Product Browsing<br>• Personalized User Accounts<br>• Secure Payment Gateway<br>• Order Management System<br>• Customer Service Integration<br>• Responsive Design<br>• Content Management System (CMS)<br>• Integration with Social Media<br>• Analytics and Reporting<br><br>• Implementation of security measures including PCI DSS compliance<br><br>The implementation resulted in significant improvements, including an 80% reduction in stock discrepancies, 50% reduction in inventory-related tasks, and online sales growing to represent 25% of total revenue within the first year. The project not only streamlined operations but also positioned PNA for sustained growth in an increasingly digital retail landscape.",
-		shortDescription: "Comprehensive digital solution for PNA, encompassing an advanced Product Management System and a user-friendly E-Commerce platform, designed to streamline inventory control, enhance online sales capabilities, and significantly expand PNA's market reach in the competitive retail sector.",
-		links: [{ to: "https://www.pna.co.za/", label: "PNA Website" }],
-		logo: Assets.PNA,
-		name: "PNA Management and E-Commerce Systems",
-		period: {
-			from: new Date(2007, 0, 1),
-			to: new Date(2007, 11, 31)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
-		type: "Product Management & E-Commerce",
-		company: "PNA"
-	},
-	{
-		slug: "principal-software",
-		color: "#1abc9c",
-		description: "The Principal Software Version Control System project was an innovative initiative to develop a bespoke version control solution tailored to the unique needs and workflows of Principal Software, a leading software development company.<br><br><b>Key Features:</b><br>• Advanced Branching and Merging<br>• Code Review Integration<br>• CI/CD Support<br>• Project Management Integration<br>• Custom Workflow Enforcement<br>• Intelligent Codebase Analysis<br>• Advanced Search and Navigation<br>• Visual Diff and Merge Tools<br>• Customizable Notifications and Alerts<br>• Audit Trail and Compliance Features<br>• Large File Handling<br>• Integration with Development Tools<br><br>• Strong security measures including encryption and multi-factor authentication<br><br>The implementation brought significant improvements, including a 40% increase in collaboration between team members, 30% reduction in code integration issues, 50% reduction in post-release bugs, and a 25% increase in developer productivity. The system not only improved code management but also boosted overall productivity, code quality, and team collaboration.",
-		shortDescription: "Customized Version Control System for Principal Software, featuring efficient code versioning, advanced branching capabilities, and collaborative tools tailored to the company's specific development workflow, enhancing team productivity and software quality management.",
-		links: [{ to: "https://www.principalsoftware.co.za/", label: "Principal Software Website" }],
-		logo: Assets.PrincipalSoftware,
-		name: "Principal Software (Now D6)",
-		period: {
-			from: new Date(2006, 6, 1),
-			to: new Date(2006, 12, 31)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
-		type: "Version Control Software",
-		company: "Principal Software"
-	},
-	{
-		slug: "the-car-shop-website",
-		color: "#d35400",
-		description: "The Car Shop Website project was a strategic initiative to establish a strong online presence for The Car Shop, a prominent automotive dealership.<br><br><b>Key Features:</b><br>• Advanced Vehicle Inventory System<br>• Detailed Vehicle Pages with 360-degree views<br>• Vehicle Comparison Tool<br>• Financing Calculator<br>• Service Scheduling System<br>• Trade-In Value Estimator<br>• Customer Reviews and Testimonials<br>• Blog and News Section<br>• Integration with Social Media<br>• Mobile Responsiveness<br>• Live Chat Support<br>• Analytics and Reporting<br><br>• Custom Content Management System (CMS)<br>• Implementation of lazy loading and image optimization<br>• HTTPS encryption and security measures<br><br>The launch of the new website brought significant improvements, including a 150% increase in organic search traffic, 75% increase in time spent on the website, 200% increase in online inquiries and test drive requests, and a 25% increase in overall sales. The project not only enhanced The Car Shop's online presence but also significantly contributed to its business growth and customer satisfaction.",
-		shortDescription: "Comprehensive website development project for The Car Shop, featuring an intuitive interface for showcasing vehicle inventory, integrated services information, and advanced customer engagement tools, designed to enhance online presence and streamline the car buying process for potential customers.",
-		links: [{ to: "https://www.thecarshop.co.za/", label: "The Car Shop Website" }],
-		logo: Assets.TheCarShop,
-		name: "The Car Shop Website",
-		period: {
-			from: new Date(2006, 0, 1),
-			to: new Date(2006, 5, 30)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
-		type: "Web Development",
-		company: "The Car Shop"
-	},
-	{
-		slug: "the-orient-hotel-website",
-		color: "#c0392b",
-		description: "The Orient Hotel Website project was an ambitious endeavor to create a digital showcase for The Orient Hotel, a luxury accommodation renowned for its exquisite blend of Eastern and Western aesthetics.<br><br><b>Key Features:</b><br>• Stunning Visual Gallery<br>• Detailed Room Descriptions with virtual tours<br>• Integrated Booking System<br>• Dynamic Pricing Display<br>• Dining and Spa Sections<br>• Events and Weddings Portal<br>• Interactive Map and Location Information<br>• Multilingual Support<br>• Blog and Newsletter<br>• Customer Reviews Integration<br>• Mobile Responsiveness<br>• Virtual Concierge<br><br>• Implementation of strong security measures and PCI DSS compliance<br><br>The launch of the new website resulted in a significant increase in direct bookings, increased in user engagement, improvement in booking conversion rate, and enhanced brand perception as a luxury destination. The project not only improved The Orient Hotel's digital presence but also contributed significantly to its business growth and guest satisfaction.",
-		shortDescription: "Sophisticated website development for The Orient Hotel, featuring elegant design, comprehensive amenity showcases, detailed room information, and an integrated booking system. This online platform enhances the hotel's digital presence, streamlines reservations, and offers an immersive preview of the luxury experience awaiting guests.",
-		links: [{ to: "https://www.theorient.co.za/", label: "The Orient Hotel Website" }],
-		logo: Assets.TheOrientHotel,
-		name: "The Orient Hotel Website",
-		period: {
-			from: new Date(2005, 6, 1),
-			to: new Date(2005, 12, 31)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
-		type: "Web Development",
-		company: "The Orient Hotel"
-	},
-	{
-		slug: "tribake-quote-invoice-system",
-		color: "#27ae60",
-		description: "The Tribake Quote and Invoice System project was a bespoke software development initiative aimed at revolutionizing the financial operations of Tribake, a leading bakery equipment supplier.<br><br><b>Key Features:</b><br>• Customer Relationship Management (CRM) Integration<br>• Dynamic Quote Generator<br>• Quote Versioning and Approval Workflow<br>• Automated Invoice Generation<br>• Flexible Pricing and Discounting<br>• Tax Calculation and Compliance<br>• Payment Tracking and Reminders<br>• Integration with Accounting Software<br>• Reporting and Analytics<br>• Document Management<br>• Multi-Currency Support<br>• Mobile Access<br><br>• API development for integration with existing systems<br>• Implementation of strong security measures<br><br>The implementation brought significant improvements, including a reduction in quote generation time, reduction in errors, reduction in average days sales outstanding (DSO), and the ability to handle a increase in sales volume without expanding administrative staff. The system not only improved Tribake's operational efficiency but also enhanced customer satisfaction and provided valuable business insights.",
-		shortDescription: "Comprehensive Quote and Invoice System for Tribake, integrating advanced customer information management, streamlined quote generation, automated invoicing processes, and robust payment tracking. This tailored solution enhances operational efficiency, improves cash flow management, and elevates the overall customer experience in Tribake's business operations.",
-		links: [{ to: "https://www.tribake.co.za/", label: "Tribake Website" }],
-		logo: Assets.Tribake,
-		name: "Tribake Quote and Invoice System",
-		period: {
-			from: new Date(2005, 0, 1),
-			to: new Date(2005, 5, 30)
-		},
-		skills: getSkills('php', 'mysql', 'js', 'html', 'css'),
-		type: "Quote and Invoice Software",
-		company: "Tribake"
-	}
-];
-
-export const title = 'Projects';
-```
-
 ## File: src/lib/data/resume.ts
 ```ts
 export const data = '';
@@ -3577,611 +3504,6 @@ export const title = 'Resumé';
 ```ts
 export const title = 'Search';
 
-```
-
-## File: src/lib/data/skills.ts
-```ts
-// src/lib/data/skills.ts
-
-import Assets from './assets';
-import type { Skill, SkillCategory } from '../types';
-import { omit, type StringWithAutoComplete } from '@riadh-adrani/utils';
-
-const defineSkillCategory = <S extends string>(data: SkillCategory<S>): SkillCategory<S> => data;
-
-function escapeHtml(unsafe: string): string {
-	return unsafe
-		.replace(/&/g, "&amp;")
-		.replace(/</g, "&lt;")
-		.replace(/>/g, "&gt;")
-		.replace(/"/g, "&quot;")
-		.replace(/'/g, "&#039;")
-		.replace(/&lt;br&gt;/g, "<br/>")
-		.replace(/&lt;b&gt;/g, "<b>")
-		.replace(/&lt;\/b&gt;/g, "</b>");
-}
-
-const categories = [
-	defineSkillCategory({ name: 'Programming Languages', slug: 'pro-lang' }),
-	defineSkillCategory({ name: 'Frameworks', slug: 'framework' }),
-	defineSkillCategory({ name: 'Libraries', slug: 'library' }),
-	defineSkillCategory({ name: 'Languages', slug: 'lang' }),
-	defineSkillCategory({ name: 'Databases', slug: 'db' }),
-	defineSkillCategory({ name: 'ORMs', slug: 'orm' }),
-	defineSkillCategory({ name: 'DevOps', slug: 'devops' }),
-	defineSkillCategory({ name: 'Testing', slug: 'test' }),
-	defineSkillCategory({ name: 'Dev Tools', slug: 'devtools' }),
-	defineSkillCategory({ name: 'Markup & Style', slug: 'markup-style' }),
-	defineSkillCategory({ name: 'Design', slug: 'design' }),
-	defineSkillCategory({ name: 'Soft Skills', slug: 'soft' }),
-	defineSkillCategory({ name: 'Mobile Development', slug: 'mobile' }),
-	defineSkillCategory({ name: 'Game Development', slug: 'game' }),
-	defineSkillCategory({ name: 'AI & Machine Learning', slug: 'ai-ml' })
-] as const;
-
-const defineSkill = <S extends string>(
-	skill: Omit<Skill<S>, 'category'> & {
-		category?: StringWithAutoComplete<(typeof categories)[number]['slug']>;
-	}
-): Skill<S> => {
-	const out: Skill<S> = omit(skill, 'category');
-
-	if (skill.category) {
-		out.category = categories.find((it) => it.slug === skill.category);
-	}
-
-	return out;
-};
-
-export const items = [
-	defineSkill({
-		slug: 'js',
-		color: 'yellow',
-		description: escapeHtml(`<b>JavaScript</b> is a versatile, high-level programming language that has become the backbone of modern web development.<br>
-Originally created by Brendan Eich in 1995, JavaScript has evolved from a simple scripting language for web browsers to a powerful tool for both front-end and back-end development.<br>
-Its ability to run on the client-side allows for dynamic, interactive web pages that can update content without requiring a page reload.<br>
-JavaScript's syntax is influenced by Java, but it uses prototype-based object-orientation, making it more flexible than class-based object-oriented languages.<br>
-With the advent of Node.js, JavaScript has also become a popular choice for server-side programming, enabling developers to use a single language across the entire web stack.<br>
-JavaScript's ecosystem is vast, with numerous libraries and frameworks like React, Angular, and Vue.js enhancing its capabilities for building complex web applications.<br>
-The language continues to evolve through ECMAScript specifications, introducing new features and improvements regularly.<br>
-JavaScript's asynchronous programming model, with features like Promises and async/await, makes it well-suited for handling I/O operations and API calls efficiently.<br>
-Its widespread adoption and the constant innovation in its ecosystem make JavaScript an essential skill for any web developer.<br>`),
-		logo: Assets.JavaScript,
-		name: 'JavaScript',
-		category: 'pro-lang'
-	}),
-	defineSkill({
-		slug: 'tailwind',
-		color: 'blue',
-		description: escapeHtml(`<b>Tailwind CSS</b> is a utility-first CSS framework for rapidly building custom user interfaces.<br><br>
-
-Key features include:<br>
-
-1) <b>Utility-First:</b> Compose designs directly in your markup.<br>
-2) <b>Responsive Design:</b> Built-in responsive modifiers.<br>
-3) <b>Hover and Focus States:</b> Easy styling for interactive elements.<br>
-4) <b>Customization:</b> Highly customizable through configuration.<br>
-5) <b>Dark Mode:</b> Built-in dark mode support.<br>
-6) <b>JIT Mode:</b> Just-in-Time mode for on-demand CSS generation.<br>
-7) <b>Plugins:</b> Extensible through a plugin system.<br><br>
-
-<b>Tailwind CSS</b> is particularly popular for its flexibility and the speed at which it allows developers to create custom designs without writing custom CSS.`),
-		logo: Assets.Tailwind,
-		name: 'Tailwind CSS',
-		category: 'markup-style'
-	}),
-	defineSkill({
-		slug: 'solid',
-		color: 'blue',
-		description: escapeHtml(`Solid is a declarative JavaScript library for creating user interfaces. It stands out for its performance and its unique approach to reactivity.<br><br>
-
-Key features include:<br>
-
-1) Fine-Grained Reactivity: Updates only what needs to be updated.<br>
-2) No Virtual DOM: Compiles templates to real DOM operations.<br>
-3) Small Size: Tiny core library with no dependencies.<br>
-4) JSX: Uses JSX for templating.<br>
-5) Server-Side Rendering: Built-in SSR support.<br>
-6) Suspense: For declarative data fetching.<br>
-7) Stores: Simple but powerful state management.<br><br>
-
-Solid is particularly suited for applications where performance is critical. Its approach to reactivity can lead to extremely efficient updates.`),
-		logo: Assets.Solid,
-		name: 'Solid.js',
-		category: 'framework'
-	})
-] as const;
-
-export const title = 'Skills';
-
-export const getSkills = (
-	...slugs: Array<StringWithAutoComplete<(typeof items)[number]['slug']>>
-): Array<Skill> => items.filter((it) => slugs.includes(it.slug));
-
-export const groupByCategory = (
-	query: string
-): Array<{ category: SkillCategory; items: Array<Skill> }> => {
-	const out: ReturnType<typeof groupByCategory> = [];
-
-	const others: Array<Skill> = [];
-
-	items.forEach((item) => {
-		if (query.trim() && !item.name.toLowerCase().includes(query.trim().toLowerCase())) return;
-
-		// push to others if item does not have a category
-		if (!item.category) {
-			others.push(item);
-			return;
-		}
-
-		// check if category exists
-		let category = out.find((it) => it.category.slug === item.category?.slug);
-
-		if (!category) {
-			category = { items: [], category: item.category };
-
-			out.push(category);
-		}
-
-		category.items.push(item);
-	});
-
-	if (others.length !== 0) {
-		out.push({ category: { name: 'Others', slug: 'others' }, items: others });
-	}
-
-	return out;
-};
-```
-
-## File: src/lib/data/documentation-sites.ts
-```ts
-// src/lib/data/documentation-sites.ts
-
-export const title = 'Documentation Sites';
-
-export const sites = [
-    {
-        name: 'AI Docs',
-        url: 'https://ai.docs.webally.co.za',
-        description: 'Artificial Intelligence tools and docs'
-    },
-    {
-        name: 'Android Docs',
-        url: 'https://android.docs.webally.co.za',
-        description: 'Using Linux tools on your android device'
-    },
-    {
-        name: 'ARM Docs',
-        url: 'https://arm.docs.webally.co.za',
-        description: 'Raspberry Pi Documentation'
-    },
-    {
-        name: 'Backups & Config',
-        url: 'https://backup.docs.webally.co.za',
-        description: 'Incremental Config backups with GIT'
-    },
-    {
-        name: 'Bash',
-        url: 'https://bash.docs.webally.co.za',
-        description: 'Bash Scripting'
-    },
-    {
-        name: 'Crypto & Mining',
-        url: 'https://crypto.docs.webally.co.za',
-        description: 'Crypto, Mining, Decentralization & Web 3.0'
-    },
-    {
-        name: 'Development',
-        url: 'https://dev.docs.webally.co.za',
-        description: 'Web / Terminal / Windows / App Development'
-    },
-    {
-        name: 'DNS, MX Records, CNAME',
-        url: 'https://dns.docs.webally.co.za',
-        description: 'Domain Name System, Mail exchange etc'
-    },
-    {
-        name: 'GitHub Gists',
-        url: 'https://gist.docs.webally.co.za',
-        description: 'GitHub Gists (Code snippets and scripts)'
-    },
-    {
-        name: 'Hacking & Info Gathering',
-        url: 'https://hacking.docs.webally.co.za',
-        description: 'Hacking, Information gathering, Spoofing'
-    },
-    {
-        name: 'HeEPP',
-        url: 'https://heepp.docs.webally.co.za',
-        description: 'HeEPP Model View Controller Framework'
-    },
-    {
-        name: 'JavaScript + (Node.js)',
-        url: 'https://js.docs.webally.co.za',
-        description: 'JavaScript Front and Backend (Node.js)'
-    },
-    {
-        name: 'Kali Linux',
-        url: 'https://kali.docs.webally.co.za',
-        description: 'KALI Linux Docs & Setup'
-    },
-    {
-        name: 'Mongo NoSQL DB',
-        url: 'https://mongo.docs.webally.co.za',
-        description: 'Eloquent model & Query builder for MongoDB'
-    },
-    {
-        name: 'Notes and Links',
-        url: 'https://notes.docs.webally.co.za',
-        description: 'Some things I need to remember with links'
-    },
-    {
-        name: 'Open Source',
-        url: 'https://opensource.docs.webally.co.za',
-        description: 'What is awesome, how you can contribute'
-    },
-    {
-        name: 'Projects',
-        url: 'https://projects.docs.webally.co.za',
-        description: 'Some notes on projects I worked on'
-    },
-    {
-        name: 'PHP Development',
-        url: 'https://php.docs.webally.co.za',
-        description: 'PHP Backend Development'
-    },
-    {
-        name: 'Perl Development',
-        url: 'https://perl.docs.webally.co.za',
-        description: 'Perl Server Side Development'
-    },
-    {
-        name: 'Repositories',
-        url: 'https://repos.docs.webally.co.za',
-        description: 'GitHub Repos worth looking at'
-    },
-    {
-        name: 'Reporting & BI',
-        url: 'https://reports.docs.webally.co.za',
-        description: 'Reporting & BI with Jasper Reports'
-    },
-    {
-        name: 'Software as a Service',
-        url: 'https://saas.docs.webally.co.za',
-        description: 'Services I can recommend or created myself'
-    },
-    {
-        name: 'Server & Software Setup',
-        url: 'https://setup.docs.webally.co.za',
-        description: 'Server & Software Setup'
-    },
-    {
-        name: 'Tips & Productivity',
-        url: 'https://tips.docs.webally.co.za',
-        description: 'Tips on creating Productive workflows'
-    },
-    {
-        name: 'Tools and Self Hosted',
-        url: 'https://tools.docs.webally.co.za',
-        description: 'Terminal and Web-Applications'
-    },
-    {
-        name: 'Trading & Crypto',
-        url: 'https://trading.docs.webally.co.za',
-        description: 'Trading and Crypto Markets'
-    },
-    {
-        name: 'Troubleshooting Docs',
-        url: 'https://troubleshoot.docs.webally.co.za',
-        description: 'Troubleshooting Documentation'
-    },
-    {
-        name: 'Windows Tips',
-        url: 'https://win.docs.webally.co.za',
-        description: 'Windows 10 & 11 Tips and Tricks'
-    }
-];
-```
-
-## File: src/lib/data/tools.ts
-```ts
-// src/lib/data/tools.ts
-
-export const aiToolsTitle = 'AI Tools';
-export const codeToolsTitle = 'Code Tools';
-export const dataToolsTitle = 'Data Tools';
-
-
-export const aiTools = [
-    {
-        name: 'AI Response Parser',
-        description: 'A Python script that parses a markdown file, extracts code blocks, and creates output files based on specified rules and requirements.',
-        github: 'https://github.com/charlpcronje/AI-Response-Parser',
-        details: `
-            The AI Response Parser is a Python script designed to process markdown files containing AI responses. Key features include:
-            - Logging all actions to a file and terminal
-            - Modular script design
-            - Adding relative file paths and version numbers to created files
-            - Storing app settings in a .env file
-            - Providing a list of the last 20 run arguments
-            - Prompting for Input Path and Output Path if a new run is selected
-            - Creating an index.md file with the output of the tree command
-        `,
-        slug: 'ai-response-parser'
-    },
-    {
-        name: 'Project Data Collector',
-        description: 'A Python application designed to scan project directories and collect various pieces of information such as project metadata, dependencies, environment variables, documentation, and more.',
-        github: 'https://github.com/charlpcronje/Project-Scout',
-        details: `
-            The Project Data Collector is a modular Python application with features including:
-            - Modular architecture for easy extension and maintenance
-            - Collection of project information, dependencies, environment variables, documentation, and more
-            - Use of Git to collect commit and contributor information
-            - Support for both Flask endpoints and terminal execution for data collection
-            - Comprehensive logging to both terminal and file
-        `,
-        slug: 'project-data-collector'
-    },
-    {
-        name: 'ChatGPT Chat Manager',
-        description: 'An application consisting of a Flask API and a Chrome extension that work together to provide a seamless chat management experience within ChatGPT.',
-        github: 'https://github.com/charlpcronje/Chrome-Extension-for-LLMs',
-        details: `
-            The ChatGPT Chat Manager application allows users to:
-            - Organize ChatGPT conversations using folders and tags
-            - Manage folders, tags, and chats through a Flask API backend
-            - Interact with the API and integrate with ChatGPT's user interface via a Chrome extension
-        `,
-        slug: "chatgpt-chat-manager"
-    },
-    {
-        name: 'Synthiq - Multi-Embedded AI Smart Storage',
-        description: 'An application that functions like Chat GPT but can be trained on user-specified data.',
-        github: 'https://github.com/charlpcronje/brain.cronje.me',
-        details: `
-            Synthiq offers features such as:
-            - Universal data acceptance (text, images, code snippets, etc.)
-            - Generative AI capabilities
-            - Fast and efficient data access
-            - Secure data control
-            - Compatibility with various file types including text, markdown, PDF, powerpoint, CSV, word, audio, and video
-        `,
-        slug: "synthiq"
-    },
-    {
-        name: 'GPT Crawler',
-        description: 'A tool to crawl a site and generate knowledge files to create custom GPTs from one or multiple URLs.',
-        github: 'https://github.com/charlpcronje/Context-Crawler-GPT',
-        details: `
-            The GPT Crawler offers:
-            - Site crawling to generate knowledge files
-            - Support for creating custom GPTs from multiple URLs
-            - Configuration options for crawl depth and output customization
-            - Integration with OpenAI's custom GPT creation process
-        `,
-        slug: "gpt-crawler"
-    },
-    {
-        name: 'Code Context Parser and Indexer for AI',
-        description: 'An advanced tool designed to analyze and index code from multiple programming languages to facilitate AI-driven code assistance.',
-        github: 'https://github.com/charlpcronje/Code-Context-Parser-and-Indexer-for-AI',
-        details: `
-            This tool offers:
-            - Support for multiple programming languages (Java, JavaScript, HTML, PHP, Python, Rust, C++)
-            - Deep code analysis to extract classes, methods, properties, and other elements
-            - Generation of both human-readable and AI-optimized indexes
-            - Application of a unique numeric referencing system for frequent terms
-            - Modular architecture for easy extension to more programming languages
-        `,
-        slug: "code-context-parser-indexer-for-ai"
-    },
-    {
-        name: 'Add Relative Path to Files',
-        description: 'A Python script that scans through a project directory and adds comments with the relative file path to the first line of each file matching specified file types.',
-        github: 'https://github.com/charlpcronje/Add-Relative-Path-to-Files',
-        details: `
-            This tool provides:
-            - Dynamic commenting based on file type
-            - Support for multiple programming languages
-            - Custom comment placement
-            - Block comment handling
-            - Prevention of duplicate comments
-            - Configurable project types
-            - Directory exclusion
-            - Flexible configuration through JSON files
-            - Comprehensive logging
-        `,
-        slug: "add-relative-path-to-files"
-    },
-    {
-        name: 'Script and CSS Extractor',
-        description: 'A Python script that extracts all JavaScript and CSS links from an HTML file and outputs them in Markdown format.',
-        github: 'https://github.com/charlpcronje/Script-and-CSS-Extract',
-        details: `
-            This tool offers:
-            - Extraction of JavaScript and CSS links from HTML files
-            - Categorization of links found in <head> and <body> tags
-            - Output of extracted information in Markdown format
-        `,
-        slug: "script-and-css-extractor"
-    },
-    {
-        name: 'Combine Project Markdown Docs',
-        description: 'A Python application that recursively scans a specified directory and its sub-directories for Markdown (.md) files and combines them into a single file.',
-        github: 'https://github.com/charlpcronje/Combine-Markdown-Docs',
-        details: `
-            This tool offers:
-            - Recursive file scanning for Markdown files
-            - Exclusion configuration for specific files and folders
-            - Addition of custom headers with relative paths to each Markdown file in the combined output
-        `,
-        slug:"combine-project-markdown-docs"
-    },
-    {
-        name: 'File System Analysis Tool for AI Embeddings',
-        description: 'A Python-based tool designed to analyze file structures and metadata in a manner that is user-friendly and suitable for AI embeddings.',
-        github: 'https://github.com/charlpcronje/File-System-Analysis-Tool-for-AII-Embeddings',
-        details: `
-            This tool provides:
-            - Directory traversal and exploration
-            - Extraction of file metadata (size, creation and modification dates, file hashes)
-            - Content analysis (line, word, and token counting)
-            - Error analysis and reporting
-            - ASCII tree visualization of directory structures
-        `,
-        slug: "file-system-analysis-tool-for-ai-embeddings"
-    },
-    {
-        name: 'Project Code Markdown Generator',
-        description: 'A set of Python scripts designed to generate a Markdown document from a project\'s source code.',
-        github: 'https://github.com/charlpcronje/Project-Code-Markdown-Generator',
-        details: `
-            This tool provides:
-            - Modular script design
-            - Depth calculation and heading assignment in Markdown
-            - Customizable heading levels
-            - Path normalization
-            - Exclusion of specific directories and files
-            - Line, character, and page count for each file
-            - Index generation with file details
-            - Configurable file extensions
-        `,
-        slug: "project-code-markdown-generator"
-    },
-    {
-        name: 'Image Sharpness Categorizer',
-        description: 'A Python script designed to analyze and categorize images in a folder based on their sharpness.',
-        github: 'https://github.com/charlpcronje/mage-Sharpness-Categorizer',
-        details: `
-            The Image Sharpness Categorizer offers:
-            - Automatic sharpness assessment using the Laplacian variance method
-            - Dynamic categorization based on configurable percentage thresholds
-            - Output of categorized images into "best", "better", and "med" folders
-            - Customizable configuration through a JSON file
-        `,
-        slug: "image-sharpness-categorizer"
-    }
-];
-
-export const codeTools = [
-    {
-        name: 'Compare Files VS Code Extension',
-        description: 'A Visual Studio Code extension that allows you to compare two selected files.',
-        github: 'https://github.com/charlpcronje/Compare-Files-VS-Code-Extension',
-        details: `
-            This VS Code extension enables users to:
-            - Select two files from the explorer and compare them using the "Compare Files" command
-            - Access the "Compare Files" command from the context menu of the explorer
-        `,
-        slug: "compare-files-vs-code-extension"
-    },
-    {
-        name: 'File Groups for VS Code',
-        description: 'A Visual Studio Code extension that allows you to create, manage, and manipulate groups of files.',
-        github: 'https://github.com/charlpcronje/File-Groups-for-VSCode',
-        details: `
-            This VS Code extension provides functionalities to:
-            - Create and rename file groups
-            - Add files to groups
-            - Toggle the visibility of files in groups
-            - Duplicate groups
-            - Combine files in a group into a single markdown file
-            - Export and import file groups as JSON
-            - Delete file groups
-        `,
-        slug: "file-groups-for-vs-code"
-    },
-    {
-        name: 'Java Class Component Endpoint Extractor',
-        description: 'A Python script designed to analyze Java source files, especially those used in Spring Framework applications, to extract detailed information about API endpoints.',
-        github: 'https://github.com/charlpcronje/Java-Class-Component-Endpoint-Extractor',
-        details: `
-            This tool provides:
-            - Automatic extraction of endpoint information from Java source files
-            - Support for Spring annotations (GetMapping, PostMapping, PutMapping, DeleteMapping, RequestMapping)
-            - Generation of a well-structured Markdown file summarizing all extracted endpoint information
-        `,
-        slug: "java-class-component-endpoint-extractor"
-    },
-    {
-        name: 'Ignite Builder - App Runner',
-        description: 'A Python application designed to manage and run multiple smaller Python scripts.',
-        github: 'https://github.com/charlpcronje/Ignite-Builder-App-Runner',
-        details: `
-            The Ignite Builder - App Runner includes:
-            - Management of application configurations
-            - Execution of individual Python scripts
-            - Handling of file operations
-            - Configuration through a JSON file
-        `,
-        slug: "ignite-builder-app-runner"
-    }
-]
-
-export const dataTools = [
-    {
-        name: 'Audit Log for MariaDB & MySQL Databases',
-        description: 'A stored procedure designed to automatically create database triggers for INSERT, UPDATE, and DELETE operations across all tables in a specified MariaDB database.',
-        github: 'https://github.com/charlpcronje/Audit-Log-for-MariaDB-MySQL-',
-        details: `
-            This tool provides:
-            - Automatic creation of triggers for all tables in a database
-            - Logging of changes to an audit_logs table in JSON format
-            - Safe rerunning without creating duplicate triggers
-            - Comprehensive auditing across all database tables
-        `,
-        slug:"audit-log-for-mariadb-mysql-databases"
-    },
-    {
-        name: 'WhatsApp Chat Analyzer',
-        description: 'A Python script that processes a WhatsApp chat export file to analyze messages between two specified individuals.',
-        github: 'https://github.com/charlpcronje/WhatsApp-Chat-Analyzer',
-        details: `
-            This tool provides:
-            - Separation of messages between two specified individuals
-            - Exclusion of messages containing specified phrases
-            - Calculation of total word count for each individual
-            - Determination of top 10 active days based on word count
-            - Calculation of average response time for each individual
-            - Output of results in Markdown files
-        `,
-        slug: "whatsapp-chat-analyzer"
-    },
-    {
-        name: 'File Change RSS Feed',
-        description: 'This project generates an RSS feed that tracks changes to files in the /var/www/ directory.',
-        github: 'https://github.com/charlpcronje/File-Change-RSS-Feed',
-        details: `
-            The File Change RSS Feed project offers:
-            - Real-time updates to the RSS feed when files are created, modified, or deleted
-            - Detailed file information including name, path, change event, and timestamp
-            - Easy integration with various RSS readers and aggregators
-            - Customizable number of items in the feed
-            - Lightweight implementation using Bash and standard Unix utilities
-        `,
-        slug: "file-change-rss-feed"
-    },
-    {
-        name: 'DataSingleton',
-        description: 'A Python package that provides a singleton class for managing data and plugins, offering a unified interface to access various functionalities.',
-        github: 'https://github.com/charlpcronje/Python-Data-Singleton',
-        details: `
-            DataSingleton offers features such as:
-            - Configuration management
-            - Request handling
-            - Environment variables management
-            - Logging
-            - Module loading
-            - Database querying
-            - API integration
-            - Data storage
-            - Bitwise operations
-        `,
-        slug: "data-singleton"
-    }
-];
 ```
 
 ## File: src/lib/md/svelte.md
@@ -4451,6 +3773,40 @@ export const convertNamedToHexColor = (name: NamedColor): HexColor => {
 
 ```
 
+## File: src/lib/utils/customMarkdownParser.ts
+```ts
+// src/lib/utils/customMarkdownParser.ts
+import { marked } from 'marked';
+
+export function parseReTypeMarkdown(markdown: string): string {
+    const renderer = new marked.Renderer();
+
+    // Custom rendering for ReType-specific elements
+    renderer.link = (href, title, text) => {
+        const titleAttr = title ? ` title="${title}"` : '';
+        return `<a href="${href}"${titleAttr} target="_blank" rel="noopener noreferrer">${text}</a>`;
+    };
+
+    renderer.image = (href, title, text) => {
+        const titleAttr = title ? ` title="${title}"` : '';
+        return `<img src="${href}" alt="${text}"${titleAttr} class="retype-image">`;
+    };
+
+    // Add more custom renderers as needed for ReType-specific elements
+
+    marked.setOptions({
+        renderer: renderer,
+        gfm: true,
+        breaks: true,
+        sanitize: false,
+        smartypants: false,
+        xhtml: false
+    });
+
+    return marked(markdown);
+}
+```
+
 ## File: src/lib/utils/helpers.ts
 ```ts
 import dayjs from 'dayjs';
@@ -4660,10 +4016,11 @@ export enum Icons {
 	Link = 'M19.83 4.17a4 4 0 00-5.66 0l-2 2A4 4 0 0011 9a4 4 0 00.56 2l-.54.54a4 4 0 00-4.85.63l-2 2a4 4 0 005.66 5.66l2-2A4 4 0 0013 15a4 4 0 00-.56-2l.54-.54a4 4 0 004.85-.63l2-2a4 4 0 000-5.66zM11 15a2 2 0 01-.59 1.41l-2 2a2 2 0 11-3-2.6l.22-.22 2-2A2 2 0 019 13a2.24 2.24 0 01.51.07l-1.22 1.22a1 1 0 000 1.41 1 1 0 001.41 0l1.22-1.22A2.24 2.24 0 0111 15zm7.41-6.59l-2 2A2 2 0 0115 11a2.24 2.24 0 01-.51-.07l1.22-1.22A1 1 0 0016 9a1 1 0 00-.29-.7A1 1 0 0015 8a1 1 0 00-.7.29l-1.23 1.22A2.24 2.24 0 0113 9a2 2 0 01.59-1.41l2-2a2 2 0 013 2.6z',
 	Sun = 'M108.5 24C108.5 27.5902136 105.590214 30.5 102 30.5 98.4097864 30.5 95.5 27.5902136 95.5 24 95.5 20.4097864 98.4097864 17.5 102 17.5 105.590214 17.5 108.5 20.4097864 108.5 24zM107 24C107 21.2382136 104.761786 19 102 19 99.2382136 19 97 21.2382136 97 24 97 26.7617864 99.2382136 29 102 29 104.761786 29 107 26.7617864 107 24zM101 12.75L101 14.75C101 15.1642136 101.335786 15.5 101.75 15.5 102.164214 15.5 102.5 15.1642136 102.5 14.75L102.5 12.75C102.5 12.3357864 102.164214 12 101.75 12 101.335786 12 101 12.3357864 101 12.75zM95.7255165 14.6323616L96.7485165 16.4038616C96.9556573 16.7625614 97.4143618 16.8854243 97.7730616 16.6782835 98.1317614 16.4711427 98.2546243 16.0124382 98.0474835 15.6537384L97.0244835 13.8822384C96.8173427 13.5235386 96.3586382 13.4006757 95.9999384 13.6078165 95.6412386 13.8149573 95.5183757 14.2736618 95.7255165 14.6323616zM91.8822384 19.0244835L93.6537384 20.0474835C94.0124382 20.2546243 94.4711427 20.1317614 94.6782835 19.7730616 94.8854243 19.4143618 94.7625614 18.9556573 94.4038616 18.7485165L92.6323616 17.7255165C92.2736618 17.5183757 91.8149573 17.6412386 91.6078165 17.9999384 91.4006757 18.3586382 91.5235386 18.8173427 91.8822384 19.0244835zM90.75 25L92.75 25C93.1642136 25 93.5 24.6642136 93.5 24.25 93.5 23.8357864 93.1642136 23.5 92.75 23.5L90.75 23.5C90.3357864 23.5 90 23.8357864 90 24.25 90 24.6642136 90.3357864 25 90.75 25zM92.6323616 30.2744835L94.4038616 29.2514835C94.7625614 29.0443427 94.8854243 28.5856382 94.6782835 28.2269384 94.4711427 27.8682386 94.0124382 27.7453757 93.6537384 27.9525165L91.8822384 28.9755165C91.5235386 29.1826573 91.4006757 29.6413618 91.6078165 30.0000616 91.8149573 30.3587614 92.2736618 30.4816243 92.6323616 30.2744835zM97.0244835 34.1177616L98.0474835 32.3462616C98.2546243 31.9875618 98.1317614 31.5288573 97.7730616 31.3217165 97.4143618 31.1145757 96.9556573 31.2374386 96.7485165 31.5961384L95.7255165 33.3676384C95.5183757 33.7263382 95.6412386 34.1850427 95.9999384 34.3921835 96.3586382 34.5993243 96.8173427 34.4764614 97.0244835 34.1177616zM103 35.25L103 33.25C103 32.8357864 102.664214 32.5 102.25 32.5 101.835786 32.5 101.5 32.8357864 101.5 33.25L101.5 35.25C101.5 35.6642136 101.835786 36 102.25 36 102.664214 36 103 35.6642136 103 35.25zM108.274483 33.3676384L107.251483 31.5961384C107.044343 31.2374386 106.585638 31.1145757 106.226938 31.3217165 105.868239 31.5288573 105.745376 31.9875618 105.952517 32.3462616L106.975517 34.1177616C107.182657 34.4764614 107.641362 34.5993243 108.000062 34.3921835 108.358761 34.1850427 108.481624 33.7263382 108.274483 33.3676384zM112.117762 28.9755165L110.346262 27.9525165C109.987562 27.7453757 109.528857 27.8682386 109.321717 28.2269384 109.114576 28.5856382 109.237439 29.0443427 109.596138 29.2514835L111.367638 30.2744835C111.726338 30.4816243 112.185043 30.3587614 112.392183 30.0000616 112.599324 29.6413618 112.476461 29.1826573 112.117762 28.9755165zM113.25 23L111.25 23C110.835786 23 110.5 23.3357864 110.5 23.75 110.5 24.1642136 110.835786 24.5 111.25 24.5L113.25 24.5C113.664214 24.5 114 24.1642136 114 23.75 114 23.3357864 113.664214 23 113.25 23zM111.367638 17.7255165L109.596138 18.7485165C109.237439 18.9556573 109.114576 19.4143618 109.321717 19.7730616 109.528857 20.1317614 109.987562 20.2546243 110.346262 20.0474835L112.117762 19.0244835C112.476461 18.8173427 112.599324 18.3586382 112.392183 17.9999384 112.185043 17.6412386 111.726338 17.5183757 111.367638 17.7255165zM106.975517 13.8822384L105.952517 15.6537384C105.745376 16.0124382 105.868239 16.4711427 106.226938 16.6782835 106.585638 16.8854243 107.044343 16.7625614 107.251483 16.4038616L108.274483 14.6323616C108.481624 14.2736618 108.358761 13.8149573 108.000062 13.6078165 107.641362 13.4006757 107.182657 13.5235386 106.975517 13.8822384z',
 	Moon = 'M102,21 C102,18.1017141 103.307179,15.4198295 105.51735,13.6246624 C106.001939,13.2310647 105.821611,12.4522936 105.21334,12.3117518 C104.322006,12.1058078 103.414758,12 102.5,12 C95.8722864,12 90.5,17.3722864 90.5,24 C90.5,30.6277136 95.8722864,36 102.5,36 C106.090868,36 109.423902,34.4109093 111.690274,31.7128995 C112.091837,31.2348572 111.767653,30.5041211 111.143759,30.4810139 C106.047479,30.2922628 102,26.1097349 102,21 Z M102.5,34.5 C96.7007136,34.5 92,29.7992864 92,24 C92,18.2007136 96.7007136,13.5 102.5,13.5 C102.807386,13.5 103.113925,13.5136793 103.419249,13.5407785 C101.566047,15.5446378 100.5,18.185162 100.5,21 C100.5,26.3198526 104.287549,30.7714322 109.339814,31.7756638 L109.516565,31.8092927 C107.615276,33.5209452 105.138081,34.5 102.5,34.5 Z',
-	Facebook = 'M353.701,0H55.087C24.665,0,0.002,24.662,0.002,55.085v298.616c0,30.423,24.662,55.085,55.085,55.085 h147.275l0.251-146.078h-37.951c-4.932,0-8.935-3.988-8.954-8.92l-0.182-47.087c-0.019-4.959,3.996-8.989,8.955-8.989h37.882 v-45.498c0-52.8,32.247-81.55,79.348-81.55h38.65c4.945,0,8.955,4.009,8.955,8.955v39.704c0,4.944-4.007,8.952-8.95,8.955 l-23.719,0.011c-25.615,0-30.575,12.172-30.575,30.035v39.389h56.285c5.363,0,9.524,4.683,8.892,10.009l-5.581,47.087 c-0.534,4.506-4.355,7.901-8.892,7.901h-50.453l-0.251,146.078h87.631c30.422,0,55.084-24.662,55.084-55.084V55.085 C408.786,24.662,384.124,0,353.701,0z'
+	Facebook = 'M353.701,0H55.087C24.665,0,0.002,24.662,0.002,55.085v298.616c0,30.423,24.662,55.085,55.085,55.085 h147.275l0.251-146.078h-37.951c-4.932,0-8.935-3.988-8.954-8.92l-0.182-47.087c-0.019-4.959,3.996-8.989,8.955-8.989h37.882 v-45.498c0-52.8,32.247-81.55,79.348-81.55h38.65c4.945,0,8.955,4.009,8.955,8.955v39.704c0,4.944-4.007,8.952-8.95,8.955 l-23.719,0.011c-25.615,0-30.575,12.172-30.575,30.035v39.389h56.285c5.363,0,9.524,4.683,8.892,10.009l-5.581,47.087 c-0.534,4.506-4.355,7.901-8.892,7.901h-50.453l-0.251,146.078h87.631c30.422,0,55.084-24.662,55.084-55.084V55.085 C408.786,24.662,384.124,0,353.701,0z',
+	WhatsApp = 'M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z'
 }
 
-export const getPlatfromIcon = (platform: Platform): Icons => {
+export const getPlatformIcon = (platform: Platform): Icons => {
 	switch (platform) {
 		case Platform.GitHub:
 			return Icons.GitHub;
@@ -4679,6 +4036,8 @@ export const getPlatfromIcon = (platform: Platform): Icons => {
 			return Icons.Twitter;
 		case Platform.Youtube:
 			return Icons.Youtube;
+		case Platform.WhatsApp:
+			return Icons.WhatsApp;
 		default:
 			return Icons.Code
 	}
@@ -4750,40 +4109,6 @@ export function parseReTypeMarkdown(markdown: string): string {
 }
 ```
 
-## File: src/lib/utils/customMarkdownParser.ts
-```ts
-// src/lib/utils/customMarkdownParser.ts
-import { marked } from 'marked';
-
-export function parseReTypeMarkdown(markdown: string): string {
-    const renderer = new marked.Renderer();
-
-    // Custom rendering for ReType-specific elements
-    renderer.link = (href, title, text) => {
-        const titleAttr = title ? ` title="${title}"` : '';
-        return `<a href="${href}"${titleAttr} target="_blank" rel="noopener noreferrer">${text}</a>`;
-    };
-
-    renderer.image = (href, title, text) => {
-        const titleAttr = title ? ` title="${title}"` : '';
-        return `<img src="${href}" alt="${text}"${titleAttr} class="retype-image">`;
-    };
-
-    // Add more custom renderers as needed for ReType-specific elements
-
-    marked.setOptions({
-        renderer: renderer,
-        gfm: true,
-        breaks: true,
-        sanitize: false,
-        smartypants: false,
-        xhtml: false
-    });
-
-    return marked(markdown);
-}
-```
-
 ## File: src/routes/+layout.server.ts
 ```ts
 export const prerender = true;
@@ -4800,8 +4125,12 @@ export const trailingSlash = 'always';
 	import '$lib/index.scss';
 	import { onHydrated } from '$lib/stores/theme';
 	import { onMount } from 'svelte';
-
-	onMount(() => onHydrated());
+	import { subscribeToPushNotifications } from '$lib/pushNotifications';
+	import InstallPrompt from '$lib/components/InstallPrompt.svelte';
+	onMount(() => {
+		onHydrated();
+		subscribeToPushNotifications();
+	});
 </script>
 
 <div class="body contents theme-dark flex flex-col min-h-screen">
@@ -4810,6 +4139,7 @@ export const trailingSlash = 'always';
 		<slot />
 	</div>
 	<Footer />
+	<InstallPrompt />
 </div>
 
 <style lang="scss">
@@ -4836,7 +4166,6 @@ export const trailingSlash = 'always';
 		margin: 5px 0px;
 	}
 </style>
-
 ```
 
 ## File: src/routes/+page.svelte
@@ -4850,7 +4179,7 @@ export const trailingSlash = 'always';
 	import { items as skillsItems } from '@data/skills';
 	import { useTitle } from '$lib/utils/helpers';
 	import { isBlank } from '@riadh-adrani/utils';
-	import { getPlatfromIcon } from '$lib/utils';
+	import { getPlatformIcon } from '$lib/utils';
 
 	const isEmail = (email: string): boolean => {
 		const reg =
@@ -4867,7 +4196,10 @@ export const trailingSlash = 'always';
 	class="col self-center flex-1 md:flex-row md:slef-stretch justify-center lg:justify-between items-center p-y-0px p-x-10px"
 >
 	<div class="md:flex-1 gap-10px">
-		<MainTitle classes="md:text-left ">{name} {lastName}</MainTitle>
+		<MainTitle classes="md:text-left flex flex-col items-center md:items-baseline">
+			<span class="text-5xl md:text-6xl">{name}</span>
+			<span class="text-xl md:text-2xl whitespace-nowrap mt-1 md:mt-s">Charl&nbsp;Cronje</span>
+		  </MainTitle>
 		<p class="text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight">
 			{description}
 		</p>
@@ -4879,13 +4211,40 @@ export const trailingSlash = 'always';
 					target="_blank"
 					rel="noreferrer"
 				>
-					<Icon icon={getPlatfromIcon(link.platform)} color={'var(--accent-text)'} size={'20px'} />
+					<Icon icon={getPlatformIcon(link.platform)} color={'var(--accent-text)'} size={'20px'} />
 				</a>
 			{/each}
 		</div>
 	</div>
 	<Carrousel items={skills ?? skillsItems} />
 </div>
+```
+
+## File: src/routes/documentation/+page.svelte
+```svelte
+<!-- src/routes/documentation/+page.svelte -->
+<script lang="ts">
+	import { title, sites } from '$lib/data/documentation-sites';
+	import CommonPage from '$lib/components/CommonPage.svelte';
+	import Card from '$lib/components/Card/Card.svelte';
+	import UIcon from '$lib/components/Icon/UIcon.svelte';
+</script>
+
+<CommonPage {title}>
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+		{#each sites as site}
+			<Card classes={['cursor-pointer']} href={site.url}>
+				<div class="flex flex-col h-full">
+					<h3 class="text-lg font-semibold mb-2">{site.name}</h3>
+					<p class="text-sm flex-grow">{site.description}</p>
+					<div class="flex justify-end mt-4">
+						<UIcon icon="i-carbon-launch" classes="text-xl" />
+					</div>
+				</div>
+			</Card>
+		{/each}
+	</div>
+</CommonPage>
 
 ```
 
@@ -5156,6 +4515,56 @@ export function load({ params }: { params: Record<string, string> }) {
 		return { experience };
 	}
 }
+
+```
+
+## File: src/routes/privacy/+page.svelte
+```svelte
+<!-- src/routes/privacy/+page.svelte -->
+<script lang="ts">
+	import CommonPage from '$lib/components/CommonPage.svelte';
+
+	const title = 'Privacy Policy';
+</script>
+
+<CommonPage {title}>
+	<div class="prose max-w-none">
+		<h1>{title}</h1>
+		<p>Last updated: {new Date().toLocaleDateString()}</p>
+
+		<h2>1. Information We Collect</h2>
+		<p>
+			We collect information you provide directly to us, such as when you create or modify your
+			account, request services, contact customer support, or otherwise communicate with us.
+		</p>
+
+		<h2>2. How We Use Your Information</h2>
+		<p>
+			We use the information we collect to provide, maintain, and improve our services, to develop
+			new ones, and to protect webAlly and our users.
+		</p>
+
+		<h2>3. Information Sharing and Disclosure</h2>
+		<p>
+			We may share the information we collect with third parties for various purposes, including to:
+			provide and improve our services, protect against fraud and abuse, and personalize content.
+		</p>
+
+		<h2>4. Data Retention</h2>
+		<p>
+			We retain the information we collect for as long as necessary to fulfill the purposes outlined
+			in this privacy policy, unless a longer retention period is required or permitted by law.
+		</p>
+
+		<h2>5. Security</h2>
+		<p>
+			We take reasonable measures to help protect your personal information from loss, theft,
+			misuse, unauthorized access, disclosure, alteration, and destruction.
+		</p>
+
+		<!-- Add more sections as needed -->
+	</div>
+</CommonPage>
 
 ```
 
@@ -5759,350 +5168,6 @@ export function load({ params }: { params: Record<string, string> }) {
 
 ```
 
-## File: src/routes/documentation/+page.svelte
-```svelte
-<!-- src/routes/documentation/+page.svelte -->
-<script lang="ts">
-	import { title, sites } from '$lib/data/documentation-sites';
-	import CommonPage from '$lib/components/CommonPage.svelte';
-	import Card from '$lib/components/Card/Card.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-</script>
-
-<CommonPage {title}>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-		{#each sites as site}
-			<Card classes={['cursor-pointer']} href={site.url}>
-				<div class="flex flex-col h-full">
-					<h3 class="text-lg font-semibold mb-2">{site.name}</h3>
-					<p class="text-sm flex-grow">{site.description}</p>
-					<div class="flex justify-end mt-4">
-						<UIcon icon="i-carbon-launch" classes="text-xl" />
-					</div>
-				</div>
-			</Card>
-		{/each}
-	</div>
-</CommonPage>
-
-```
-
-## File: src/routes/tools/+page.svelte
-```svelte
-<!-- src/routes/tools/+page.svelte -->
-<script lang="ts">
-    import { aiToolsTitle, aiTools, codeToolsTitle, codeTools, dataToolsTitle, dataTools } from '$lib/data/tools';
-    import CommonPage from '$lib/components/CommonPage.svelte';
-    import Card from '$lib/components/Card/Card.svelte';
-    import UIcon from '$lib/components/Icon/UIcon.svelte';
-    import { base } from '$app/paths';
-
-    const title = 'Tools';
-</script>
-
-<CommonPage {title}>
-    <h2 class="text-2xl font-semibold mb-4">{aiToolsTitle}</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-        {#each aiTools as tool}
-            <Card
-                classes={['cursor-pointer']}
-                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-            >
-                <div class="flex flex-col h-full">
-                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-                    <p class="text-sm flex-grow">{tool.description}</p>
-                    <div class="flex justify-between items-center mt-4">
-                        <a
-                            href={tool.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-blue-500 hover:text-blue-600"
-                        >
-                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
-                        </a>
-                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-                    </div>
-                </div>
-            </Card>
-        {/each}
-    </div>
-
-    <h2 class="text-2xl font-semibold mb-4">{codeToolsTitle}</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {#each codeTools as tool}
-            <Card
-                classes={['cursor-pointer']}
-                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-            >
-                <div class="flex flex-col h-full">
-                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-                    <p class="text-sm flex-grow">{tool.description}</p>
-                    <div class="flex justify-between items-center mt-4">
-                        <a
-                            href={tool.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-blue-500 hover:text-blue-600"
-                        >
-                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
-                        </a>
-                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-                    </div>
-                </div>
-            </Card>
-        {/each}
-    </div>
-
-    <h2 class="text-2xl font-semibold mb-4">{dataToolsTitle}</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {#each dataTools as tool}
-            <Card
-                classes={['cursor-pointer']}
-                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-            >
-                <div class="flex flex-col h-full">
-                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-                    <p class="text-sm flex-grow">{tool.description}</p>
-                    <div class="flex justify-between items-center mt-4">
-                        <a
-                            href={tool.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-blue-500 hover:text-blue-600"
-                        >
-                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
-                        </a>
-                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-                    </div>
-                </div>
-            </Card>
-        {/each}
-    </div>
-</CommonPage>
-
-```
-
-## File: src/routes/tools/ai/+page.svelte
-```svelte
-<!-- src/routes/ai/tools/+page.svelte -->
-<script lang="ts">
-	import { aiToolsTitle, aiTools } from '$lib/data/tools';
-	import CommonPage from '$lib/components/CommonPage.svelte';
-	import Card from '$lib/components/Card/Card.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import { base } from '$app/paths';
-</script>
-
-<CommonPage title={aiToolsTitle}>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-		{#each aiTools as tool}
-			<Card
-				classes={['cursor-pointer']}
-				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-			>
-				<div class="flex flex-col h-full">
-					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-					<p class="text-sm flex-grow">{tool.description}</p>
-					<div class="flex justify-between items-center mt-4">
-						<a
-							href={tool.github}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="text-blue-500 hover:text-blue-600"
-						>
-							<UIcon icon="i-carbon-logo-github" classes="text-xl" />
-						</a>
-						<UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-					</div>
-				</div>
-			</Card>
-		{/each}
-	</div>
-</CommonPage>
-
-```
-
-## File: src/routes/tools/[slug]/+page.svelte
-```svelte
-<!-- src/routes/tools/[slug]/+page.svelte -->
-<script lang="ts">
-	import { base } from '$app/paths';
-	import { getAssetURL } from '$lib/data/assets';
-	import { aiTools, codeTools, dataTools } from '$lib/data/tools';
-
-	import type { Tool } from '$lib/types';
-
-	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
-	import CardDivider from '$lib/components/Card/CardDivider.svelte';
-	import Markdown from '$lib/components/Markdown.svelte';
-	import TabTitle from '$lib/components/TabTitle.svelte';
-	import Chip from '$lib/components/Chip/Chip.svelte';
-	import Banner from '$lib/components/Banner/Banner.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-
-	export let data: { tool?: Tool };
-
-	// Combine all tools into one array
-	const allTools = [...aiTools, ...codeTools, ...dataTools];
-
-	// Find the tool based on the slug
-	$: tool = allTools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === data.tool?.slug);
-
-	$: computedTitle = tool ? `${tool.name} - Tools` : 'Tool Not Found';
-</script>
-
-<TabTitle title={computedTitle} />
-
-<div class="pb-10 overflow-x-hidden col flex-1">
-	{#if !tool}
-		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
-			<UIcon icon="i-carbon-tool-box" classes="text-3.5em" />
-			<p class="font-300">Tool not found.</p>
-		</div>
-	{:else}
-		<div class="flex flex-col items-center overflow-x-hidden">
-			<Banner img={getAssetURL('Unknown')}>
-				<MainTitle>{tool.name}</MainTitle>
-			</Banner>
-			<div class="pt-3 pb-1 overflow-x-hidden w-full">
-				<div class="px-10px m-y-5">
-					{#if tool.description}
-						<p class="text-lg mb-4">{tool.description}</p>
-					{/if}
-					{#if tool.details}
-						<Markdown content={tool.details} />
-					{:else}
-						<div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">
-							<UIcon icon="i-carbon-text-font" classes="text-3.5em" />
-							<p class="font-300">No detailed description available.</p>
-						</div>
-					{/if}
-				</div>
-			</div>
-			<div class="self-stretch mb-2">
-				<CardDivider />
-			</div>
-			<div class="flex flex-row gap-1 self-stretch flex-wrap">
-				<div class="px-10px">
-					<Chip
-						classes="inline-flex flex-row items-center justify-center"
-						href={tool.github}
-					>
-						<UIcon icon="i-carbon-logo-github" classes="mr-2" />
-						<span class="text-[0.9em]">View on GitHub</span>
-					</Chip>
-				</div>
-			</div>
-		</div>
-	{/if}
-</div>
-```
-
-## File: src/routes/tools/[slug]/+page.ts
-```ts
-// src/routes/tools/[slug]/+page.ts
-import { aiTools, codeTools, dataTools } from '$lib/data/tools';
-import type { Tool } from '$lib/types';
-
-export function load({ params }: { params: Record<string, string> }) {
-    if (params.slug) {
-        const allTools = [...aiTools, ...codeTools, ...dataTools];
-        const tool = allTools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === params.slug);
-
-        if (tool) {
-            return { 
-                tool: {
-                    ...tool,
-                    slug: params.slug // Add the slug to the tool object
-                }
-            };
-        }
-    }
-
-    return { tool: undefined };
-}
-```
-
-## File: src/routes/tools/data/+page.svelte
-```svelte
-<!-- src/routes/ai/tools/+page.svelte -->
-<script lang="ts">
-	import { dataToolsTitle, dataTools } from '$lib/data/tools';
-	import CommonPage from '$lib/components/CommonPage.svelte';
-	import Card from '$lib/components/Card/Card.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import { base } from '$app/paths';
-</script>
-
-<CommonPage title={dataToolsTitle}>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-		{#each dataTools as tool}
-			<Card
-				classes={['cursor-pointer']}
-				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-			>
-				<div class="flex flex-col h-full">
-					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-					<p class="text-sm flex-grow">{tool.description}</p>
-					<div class="flex justify-between items-center mt-4">
-						<a
-							href={tool.github}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="text-blue-500 hover:text-blue-600"
-						>
-							<UIcon icon="i-carbon-logo-github" classes="text-xl" />
-						</a>
-						<UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-					</div>
-				</div>
-			</Card>
-		{/each}
-	</div>
-</CommonPage>
-
-```
-
-## File: src/routes/tools/code/+page.svelte
-```svelte
-<!-- src/routes/ai/tools/+page.svelte -->
-<script lang="ts">
-	import { codeToolsTitle, codeTools } from '$lib/data/tools';
-	import CommonPage from '$lib/components/CommonPage.svelte';
-	import Card from '$lib/components/Card/Card.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import { base } from '$app/paths';
-</script>
-
-<CommonPage title={codeToolsTitle}>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-		{#each codeTools as tool}
-			<Card
-				classes={['cursor-pointer']}
-				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-			>
-				<div class="flex flex-col h-full">
-					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-					<p class="text-sm flex-grow">{tool.description}</p>
-					<div class="flex justify-between items-center mt-4">
-						<a
-							href={tool.github}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="text-blue-500 hover:text-blue-600"
-						>
-							<UIcon icon="i-carbon-logo-github" classes="text-xl" />
-						</a>
-						<UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-					</div>
-				</div>
-			</Card>
-		{/each}
-	</div>
-</CommonPage>
-
-```
-
 ## File: src/routes/team/+page.svelte
 ```svelte
 <script lang="ts">
@@ -6441,173 +5506,667 @@ async function fetchTeamMember(slug: string) {
 
 ```
 
-## File: src/routes/privacy/+page.svelte
+## File: src/routes/tools/+page.svelte
 ```svelte
-<!-- src/routes/privacy/+page.svelte -->
+<!-- src/routes/tools/+page.svelte -->
 <script lang="ts">
-	import CommonPage from '$lib/components/CommonPage.svelte';
+    import { aiToolsTitle, aiTools, codeToolsTitle, codeTools, dataToolsTitle, dataTools } from '$lib/data/tools';
+    import CommonPage from '$lib/components/CommonPage.svelte';
+    import Card from '$lib/components/Card/Card.svelte';
+    import UIcon from '$lib/components/Icon/UIcon.svelte';
+    import { base } from '$app/paths';
 
-	const title = 'Privacy Policy';
+    const title = 'Tools';
 </script>
 
 <CommonPage {title}>
-	<div class="prose max-w-none">
-		<h1>{title}</h1>
-		<p>Last updated: {new Date().toLocaleDateString()}</p>
+    <h2 class="text-2xl font-semibold mb-4">{aiToolsTitle}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        {#each aiTools as tool}
+            <Card
+                classes={['cursor-pointer']}
+                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+            >
+                <div class="flex flex-col h-full">
+                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
+                    <p class="text-sm flex-grow">{tool.description}</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <a
+                            href={tool.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-500 hover:text-blue-600"
+                        >
+                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
+                        </a>
+                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
+                    </div>
+                </div>
+            </Card>
+        {/each}
+    </div>
 
-		<h2>1. Information We Collect</h2>
-		<p>
-			We collect information you provide directly to us, such as when you create or modify your
-			account, request services, contact customer support, or otherwise communicate with us.
-		</p>
+    <h2 class="text-2xl font-semibold mb-4">{codeToolsTitle}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {#each codeTools as tool}
+            <Card
+                classes={['cursor-pointer']}
+                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+            >
+                <div class="flex flex-col h-full">
+                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
+                    <p class="text-sm flex-grow">{tool.description}</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <a
+                            href={tool.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-500 hover:text-blue-600"
+                        >
+                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
+                        </a>
+                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
+                    </div>
+                </div>
+            </Card>
+        {/each}
+    </div>
 
-		<h2>2. How We Use Your Information</h2>
-		<p>
-			We use the information we collect to provide, maintain, and improve our services, to develop
-			new ones, and to protect webAlly and our users.
-		</p>
-
-		<h2>3. Information Sharing and Disclosure</h2>
-		<p>
-			We may share the information we collect with third parties for various purposes, including to:
-			provide and improve our services, protect against fraud and abuse, and personalize content.
-		</p>
-
-		<h2>4. Data Retention</h2>
-		<p>
-			We retain the information we collect for as long as necessary to fulfill the purposes outlined
-			in this privacy policy, unless a longer retention period is required or permitted by law.
-		</p>
-
-		<h2>5. Security</h2>
-		<p>
-			We take reasonable measures to help protect your personal information from loss, theft,
-			misuse, unauthorized access, disclosure, alteration, and destruction.
-		</p>
-
-		<!-- Add more sections as needed -->
-	</div>
+    <h2 class="text-2xl font-semibold mb-4">{dataToolsTitle}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {#each dataTools as tool}
+            <Card
+                classes={['cursor-pointer']}
+                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+            >
+                <div class="flex flex-col h-full">
+                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
+                    <p class="text-sm flex-grow">{tool.description}</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <a
+                            href={tool.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-500 hover:text-blue-600"
+                        >
+                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
+                        </a>
+                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
+                    </div>
+                </div>
+            </Card>
+        {/each}
+    </div>
 </CommonPage>
 
 ```
 
-## File: src/routes/contact/+page.svelte
+## File: src/routes/tools/[slug]/+page.svelte
 ```svelte
+<!-- src/routes/tools/[slug]/+page.svelte -->
 <script lang="ts">
+	import { base } from '$app/paths';
+	import { getAssetURL } from '$lib/data/assets';
+	import { aiTools, codeTools, dataTools } from '$lib/data/tools';
+
+	import type { Tool } from '$lib/types';
+
+	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
+	import CardDivider from '$lib/components/Card/CardDivider.svelte';
+	import Markdown from '$lib/components/Markdown.svelte';
+	import TabTitle from '$lib/components/TabTitle.svelte';
+	import Chip from '$lib/components/Chip/Chip.svelte';
+	import Banner from '$lib/components/Banner/Banner.svelte';
+	import UIcon from '$lib/components/Icon/UIcon.svelte';
+
+	export let data: { tool?: Tool };
+
+	// Combine all tools into one array
+	const allTools = [...aiTools, ...codeTools, ...dataTools];
+
+	// Find the tool based on the slug
+	$: tool = allTools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === data.tool?.slug);
+
+	$: computedTitle = tool ? `${tool.name} - Tools` : 'Tool Not Found';
+</script>
+
+<TabTitle title={computedTitle} />
+
+<div class="pb-10 overflow-x-hidden col flex-1">
+	{#if !tool}
+		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
+			<UIcon icon="i-carbon-tool-box" classes="text-3.5em" />
+			<p class="font-300">Tool not found.</p>
+		</div>
+	{:else}
+		<div class="flex flex-col items-center overflow-x-hidden">
+			<Banner img={getAssetURL('Unknown')}>
+				<MainTitle>{tool.name}</MainTitle>
+			</Banner>
+			<div class="pt-3 pb-1 overflow-x-hidden w-full">
+				<div class="px-10px m-y-5">
+					{#if tool.description}
+						<p class="text-lg mb-4">{tool.description}</p>
+					{/if}
+					{#if tool.details}
+						<Markdown content={tool.details} />
+					{:else}
+						<div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">
+							<UIcon icon="i-carbon-text-font" classes="text-3.5em" />
+							<p class="font-300">No detailed description available.</p>
+						</div>
+					{/if}
+				</div>
+			</div>
+			<div class="self-stretch mb-2">
+				<CardDivider />
+			</div>
+			<div class="flex flex-row gap-1 self-stretch flex-wrap">
+				<div class="px-10px">
+					<Chip
+						classes="inline-flex flex-row items-center justify-center"
+						href={tool.github}
+					>
+						<UIcon icon="i-carbon-logo-github" classes="mr-2" />
+						<span class="text-[0.9em]">View on GitHub</span>
+					</Chip>
+				</div>
+			</div>
+		</div>
+	{/if}
+</div>
+```
+
+## File: src/routes/tools/[slug]/+page.ts
+```ts
+// src/routes/tools/[slug]/+page.ts
+import { aiTools, codeTools, dataTools } from '$lib/data/tools';
+import type { Tool } from '$lib/types';
+
+export function load({ params }: { params: Record<string, string> }) {
+    if (params.slug) {
+        const allTools = [...aiTools, ...codeTools, ...dataTools];
+        const tool = allTools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === params.slug);
+
+        if (tool) {
+            return { 
+                tool: {
+                    ...tool,
+                    slug: params.slug // Add the slug to the tool object
+                }
+            };
+        }
+    }
+
+    return { tool: undefined };
+}
+```
+
+## File: src/routes/tools/ai/+page.svelte
+```svelte
+<!-- src/routes/ai/tools/+page.svelte -->
+<script lang="ts">
+	import { aiToolsTitle, aiTools } from '$lib/data/tools';
 	import CommonPage from '$lib/components/CommonPage.svelte';
 	import Card from '$lib/components/Card/Card.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
-
-	const title = 'Contact Us';
-
-	let fullName = '';
-	let email = '';
-	let message = '';
-	let isRobot = true;
-	let formSubmitted = false;
-	let formError = false;
-
-	const handleSubmit = async () => {
-		// TODO: Implement actual email sending logic
-		const success = Math.random() > 0.5; // Simulating success/failure
-
-		if (success) {
-			formSubmitted = true;
-			fullName = '';
-			email = '';
-			message = '';
-			isRobot = true;
-		} else {
-			formError = true;
-		}
-	};
+	import { base } from '$app/paths';
 </script>
 
-<CommonPage {title}>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-		<div>
-			<iframe
-				title="Google Map"
-				width="100%"
-				height="450"
-				style="border:0"
-				loading="lazy"
-				allowfullscreen
-				src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=163+Garsfontein+Rd,+Pretoria,+Gauteng,+South+Africa&zoom=15&maptype=roadmap&style=element:geometry%7Ccolor:0x212121&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x757575&style=element:labels.text.stroke%7Ccolor:0x212121&style=feature:administrative%7Celement:geometry%7Ccolor:0x757575&style=feature:administrative.country%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.locality%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0x181818&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:poi.park%7Celement:labels.text.stroke%7Ccolor:0x1b1b1b&style=feature:road%7Celement:geometry.fill%7Ccolor:0x2c2c2c&style=feature:road%7Celement:labels.text.fill%7Ccolor:0x8a8a8a&style=feature:road.arterial%7Celement:geometry%7Ccolor:0x373737&style=feature:road.highway%7Celement:geometry%7Ccolor:0x3c3c3c&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0x4e4e4e&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:transit%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:water%7Celement:geometry%7Ccolor:0x000000&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x3d3d3d"
-			></iframe>
-		</div>
-		<div class="space-y-8">
-			<Card>
-				<h3 class="text-lg font-semibold mb-2">John Doe</h3>
-				<p>Senior Developer</p>
-				<p>john.doe@webally.co.za</p>
+<CommonPage title={aiToolsTitle}>
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+		{#each aiTools as tool}
+			<Card
+				classes={['cursor-pointer']}
+				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+			>
+				<div class="flex flex-col h-full">
+					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
+					<p class="text-sm flex-grow">{tool.description}</p>
+					<div class="flex justify-between items-center mt-4">
+						<a
+							href={tool.github}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-blue-500 hover:text-blue-600"
+						>
+							<UIcon icon="i-carbon-logo-github" classes="text-xl" />
+						</a>
+						<UIcon icon="i-carbon-arrow-right" classes="text-xl" />
+					</div>
+				</div>
 			</Card>
-			<Card>
-				<h3 class="text-lg font-semibold mb-2">Jane Smith</h3>
-				<p>Project Manager</p>
-				<p>jane.smith@webally.co.za</p>
-			</Card>
-		</div>
-	</div>
-	<div class="mt-12">
-		<Card>
-			<form on:submit|preventDefault={handleSubmit} class="space-y-4">
-				<div>
-					<label for="fullName" class="block mb-1">Full Name</label>
-					<input
-						id="fullName"
-						type="text"
-						bind:value={fullName}
-						required
-						class="w-full p-2 border rounded"
-					/>
-				</div>
-				<div>
-					<label for="email" class="block mb-1">Email Address</label>
-					<input
-						id="email"
-						type="email"
-						bind:value={email}
-						required
-						class="w-full p-2 border rounded"
-					/>
-				</div>
-				<div>
-					<label for="message" class="block mb-1">Message</label>
-					<textarea
-						id="message"
-						bind:value={message}
-						required
-						class="w-full p-2 border rounded h-32"
-					></textarea>
-				</div>
-				<div>
-					<label class="flex items-center">
-						<input type="checkbox" bind:checked={isRobot} required />
-						<span class="ml-2">I'm not a robot</span>
-					</label>
-				</div>
-				<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded" disabled={isRobot}
-					>Send Message</button
-				>
-			</form>
-			{#if formSubmitted}
-				<p class="mt-4 text-green-500">Message sent successfully!</p>
-			{/if}
-			{#if formError}
-				<p class="mt-4 text-red-500">
-					Failed to send message. Please try again or contact us via phone or WhatsApp.
-				</p>
-			{/if}
-		</Card>
+		{/each}
 	</div>
 </CommonPage>
 
 ```
 
-## File: scripts/cvFetcher.js
-```js
+## File: src/routes/tools/code/+page.svelte
+```svelte
+<!-- src/routes/ai/tools/+page.svelte -->
+<script lang="ts">
+	import { codeToolsTitle, codeTools } from '$lib/data/tools';
+	import CommonPage from '$lib/components/CommonPage.svelte';
+	import Card from '$lib/components/Card/Card.svelte';
+	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import { base } from '$app/paths';
+</script>
 
+<CommonPage title={codeToolsTitle}>
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+		{#each codeTools as tool}
+			<Card
+				classes={['cursor-pointer']}
+				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+			>
+				<div class="flex flex-col h-full">
+					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
+					<p class="text-sm flex-grow">{tool.description}</p>
+					<div class="flex justify-between items-center mt-4">
+						<a
+							href={tool.github}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-blue-500 hover:text-blue-600"
+						>
+							<UIcon icon="i-carbon-logo-github" classes="text-xl" />
+						</a>
+						<UIcon icon="i-carbon-arrow-right" classes="text-xl" />
+					</div>
+				</div>
+			</Card>
+		{/each}
+	</div>
+</CommonPage>
+
+```
+
+## File: src/routes/tools/data/+page.svelte
+```svelte
+<!-- src/routes/ai/tools/+page.svelte -->
+<script lang="ts">
+	import { dataToolsTitle, dataTools } from '$lib/data/tools';
+	import CommonPage from '$lib/components/CommonPage.svelte';
+	import Card from '$lib/components/Card/Card.svelte';
+	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import { base } from '$app/paths';
+</script>
+
+<CommonPage title={dataToolsTitle}>
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+		{#each dataTools as tool}
+			<Card
+				classes={['cursor-pointer']}
+				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+			>
+				<div class="flex flex-col h-full">
+					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
+					<p class="text-sm flex-grow">{tool.description}</p>
+					<div class="flex justify-between items-center mt-4">
+						<a
+							href={tool.github}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-blue-500 hover:text-blue-600"
+						>
+							<UIcon icon="i-carbon-logo-github" classes="text-xl" />
+						</a>
+						<UIcon icon="i-carbon-arrow-right" classes="text-xl" />
+					</div>
+				</div>
+			</Card>
+		{/each}
+	</div>
+</CommonPage>
+
+```
+
+## File: src/routes/api/vapid-key.ts
+```ts
+// src/routes/api/vapid-key.ts
+import type { RequestHandler } from '@sveltejs/kit';
+import { json } from '@sveltejs/kit';
+// Use your public VAPID key (generated earlier)
+const publicVapidKey = 'BHiKKmeGnSYaMiiaaNtNRRZlBzDTEGw66ILt192tu4PRYNIAm-fV5sgk7WQoXvjjxPOim3KEyt9mZUXyOoQRxTk';
+
+export const GET: RequestHandler = async () => {
+    return json({ 
+        status: 200,
+        body: {
+            vapidKey: publicVapidKey
+        } 
+    });
+};
+
+```
+
+## File: src/routes/api/push-subscription/+server.ts
+```ts
+// src/routes/api/push-subscription/+server.ts
+import { json } from '@sveltejs/kit';
+
+// In-memory store for subscriptions (use a database in production)
+let subscriptions = [];
+
+export async function POST({ request }) {
+  const subscription = await request.json();
+
+  // Save the subscription (you should store this in a real database)
+  subscriptions.push(subscription);
+
+  return json({ message: 'Subscription saved successfully' });
+}
+
+```
+
+## File: src/routes/api/vapid-key/+server.ts
+```ts
+
+```
+
+## File: src/content/solutions.md
+```md
+# Solutions
+1. [**Technical Debt**](./solutions/techDebt.md) - Managing Technical Debt, Refactoring, and Legacy Code, and Automated Testing Implementation, and Continuous Integration and Deployment (CI/CD) Pipeline Implementation, and Cloud and DevOps Knowledge, and Artificial Intelligence Integration, and Code Quality and Best Practices, and Web-Ally's Approach to Tackling Tech Debt
+2. **Boost Your Team's Speed with Extra Development Muscle**
+Tackle those delayed projects by adding a fresh set of expert hands. I'll help your team hit
+those critical milestones faster.
+3. **Unfinished Projects? I’ll Help You Cross the Finish Line!**
+Got an app or website stuck in development limbo? I specialize in jumping into existing
+code bases and delivering final results.
+4. **Let Me Handle the Tedious Stuff**
+Let your core team focus on what they do best while I take care of repetitive tasks like bug
+fixing, refactoring, or testing.
+5.** Need an Extra Set of Hands for That New Project?**
+Whether you're kicking off a new build or need assistance planning, I can help from the
+earliest stages, ensuring everything runs smoothly.
+6. **Flexible Freelance Help When You Need It Most**
+Need someone on a flexible basis? I’m available for short-term or ongoing projects,
+adapting to your team’s evolving needs.
+7. Got a Half-Built App? Let’s Finish It Together!
+Don’t leave potential profit on the table with unfinished software. I’ll help complete your
+half-built projects.
+8. **Expert Debugging and Optimization Services**
+Let’s squash those bugs and optimize your code for better performance. You focus on the
+features—I'll handle the fixes.
+9. **Let’s Future-Proof Your Codebase**
+Worried about tech debt? I can refactor your codebase to reduce future issues and ensure
+your systems stay scalable and reliable.
+10. **Scaling Your Projects Without Overloading Your Team**
+If your business is growing faster than your team can handle, I’m here to take on extra work
+without slowing down progress.
+11. **Specialized Support for Complex Integrations**
+Need help with intricate integrations or complex APIs? I have experience in making sure all
+systems communicate smoothly.
+Ready to Get Started?
+Click here to schedule a free consultation where we can discuss your project needs and how I can
+help your team succeed.
+
+```
+
+## File: src/content/solutions/techDebt.md
+```md
+# Tech Debt and the Web-Ally Solution: Empowering Organizations with Expertise
+
+In the fast-paced world of software development, the concept of technical debt has become increasingly significant. As organizations strive to innovate and deliver products quickly, they often accumulate technical debt – a metaphorical concept representing the implied cost of additional rework caused by choosing an easy solution now instead of using a better approach that would take longer. This article explores the nature of tech debt, its impact on organizations, and how Web-Ally, with experienced professionals like Charl Cronje, can help mitigate and manage this challenge.
+
+## Understanding Technical Debt
+
+Technical debt, often shortened to "tech debt," is a concept in software development that reflects the implied cost of additional rework caused by choosing an easy or limited solution now instead of using a better approach that would take longer. It's like taking out a loan – you get benefits quickly, but you'll have to pay interest (in the form of extra work) later.
+
+## Tech debt can manifest in various forms:
+
+1. **Code Debt:** Poorly written, duplicated, or overly complex code that's difficult to maintain and extend.
+2. **Architectural Debt:** Suboptimal system design that makes it challenging to add new features or scale the application.
+3. Testing Debt: Inadequate test coverage, leading to increased risk of bugs and regressions.
+4. **Documentation Debt:** Lack of proper documentation, making it harder for new team members to understand and work with the codebase.
+5. **Dependency Debt:** Reliance on outdated libraries or frameworks that may have security vulnerabilities or lack support.
+
+## The Impact of Tech Debt
+
+While taking on some tech debt can be a strategic decision to meet short-term goals, unmanaged debt can lead to significant problems:
+
+1. **Decreased Productivity:** As debt accumulates, developers spend more time working around limitations or fixing issues, reducing overall productivity.
+2. **Increased Costs:** The longer tech debt remains unaddressed, the more expensive it becomes to fix.
+3. **Reduced Agility:** High levels of tech debt make it harder to adapt to changing market conditions or customer needs.
+4. **Lower Quality:** Accumulated debt often leads to more bugs and a poorer user experience.
+5. **Team Morale:** Working with a debt-laden codebase can be frustrating for developers, potentially leading to higher turnover.
+
+## The Web-Ally Approach to Tech Debt
+
+This is where Web-Ally, with seasoned professionals like Charl Cronje, comes into play. Web-Ally is positioned to help organizations tackle their tech debt effectively through a combination of expertise, experience, and a comprehensive approach to software development.
+
+## Charl Cronje's Expertise
+
+Looking at Charl Cronje's extensive experience and skill set, we can see how professionals like him at Web-Ally are well-equipped to address tech debt:
+
+1. **Diverse Technology Stack:** With 21 years of experience in PHP and JavaScript database services like MySQL, MSSQL, PostgreSQL and more than a decade of experience with Node.js and extensive experience with React, Vue.js, Next, Nuxt, Svelte, SvelteKit with proficiency in various frameworks and libraries, UI and UX libraries and frameworks Charl can navigate complex codebases and identify areas of improvement.
+
+2. **Full-Stack Capabilities:** His experience as a Senior Full-Stack Developer allows him to address tech debt across the entire application stack, from frontend to backend and database systems.
+
+3. **Cloud and DevOps Knowledge:** Familiarity with AWS, Google Cloud, and Azure enables Charl to optimize infrastructure and deployment processes, reducing operational debt.
+
+4. **Artificial Intelligence Integration:** With almost 4 years of AI experience, including work with large language models, embeddings and AI Agents, Charl can leverage AI to automate debt detection and suggest improvements.
+
+5. **Code Quality and Best Practices:** His experience with various programming methodologies, version control systems, and testing frameworks ensures high-quality, maintainable code.
+
+## Web-Ally's Approach to Tackling Tech Debt
+
+Drawing from the expertise of professionals like Charl, Web-Ally can offer a comprehensive approach to managing and reducing tech debt:
+
+### 1. Debt Assessment and Prioritization
+
+The first step in addressing tech debt is to identify and quantify it. Web-Ally can conduct thorough code reviews and architectural assessments to uncover areas of debt. Using tools like static code analyzers and leveraging AI-powered code analysis, they can provide a detailed map of the debt landscape.
+
+Once identified, the debt can be prioritized based on its impact on the business. This might involve:
+- Assessing the cost of delay for each debt item
+- Evaluating the risk associated with each debt
+- Determining which debts are blocking new feature development or scalability
+
+### 2. Refactoring and Modernization
+
+With a clear picture of the debt, Web-Ally can implement a strategic refactoring plan. This might include:
+
+- Rewriting critical sections of code to improve maintainability
+- Updating outdated dependencies to more secure and supported versions
+- Restructuring the application architecture for better scalability
+- Implementing design patterns and best practices to prevent future debt
+
+Charl's experience with various programming languages and frameworks would be invaluable here, allowing for efficient and effective refactoring across different parts of the system.
+
+### 3. Automated Testing Implementation
+
+To prevent future debt and ensure the stability of refactored code, Web-Ally can help implement comprehensive automated testing. This includes:
+
+- Unit tests for individual components
+- Integration tests for system interactions
+- End-to-end tests for critical user flows
+- Performance tests to ensure system efficiency
+
+Charl's experience with testing frameworks and methodologies can ensure robust test coverage and integration into the development workflow.
+
+### 4. Continuous Integration and Deployment (CI/CD) Optimization
+
+Efficient CI/CD pipelines are crucial for managing tech debt. Web-Ally can help:
+
+- Set up or optimize CI/CD pipelines
+- Implement automated code quality checks
+- Ensure consistent deployment processes across environments
+
+With Charl's DevOps experience, Web-Ally can streamline these processes, reducing the chance of new debt being introduced.
+
+### 5. Documentation and Knowledge Transfer
+
+Addressing the often-overlooked documentation debt, Web-Ally can:
+
+- Create or update system architecture documentation
+- Implement code documentation standards
+- Develop runbooks for common operations and troubleshooting
+
+This ensures that the knowledge is not siloed and new team members can quickly get up to speed, reducing the likelihood of debt re-accumulation.
+
+### 6. Training and Best Practices
+
+Web-Ally can also provide training to the existing development team, covering:
+
+- Clean code principles
+- Design patterns and architecture best practices
+- Effective use of version control and code review processes
+
+This empowers the team to maintain high code quality and prevent future debt accumulation.
+
+### 7. Monitoring and Maintenance
+
+Tech debt management is an ongoing process. Web-Ally can help implement monitoring solutions to:
+
+- Track code quality metrics over time
+- Identify potential performance bottlenecks
+- Alert on security vulnerabilities in dependencies
+
+Regular check-ins and maintenance sprints can be scheduled to address any new debt before it becomes problematic.
+
+### 8. Scalability and Future-Proofing
+
+Looking beyond immediate debt, Web-Ally can help organizations prepare for future growth:
+
+- Implementing microservices architecture for better scalability
+- Adopting cloud-native technologies for improved flexibility
+- Exploring serverless options for cost-effective scaling
+
+Charl's experience with cloud services and modern architecture patterns would be particularly valuable in this area.
+
+## Case Study: Transforming Legacy Systems
+
+**To illustrate the impact of Web-Ally's approach, let's consider a hypothetical case study:**
+
+A mid-sized e-commerce company is struggling with an aging monolithic application. The system is slow, prone to crashes during peak times, and difficult to update. New feature development has slowed to a crawl, and the company is losing market share to more agile competitors.
+
+Web-Ally, led by experts like Charl Cronje, steps in with a comprehensive plan:
+
+**1. Assessment:** A thorough code review and architecture assessment reveal significant code duplication, outdated dependencies, and a lack of automated tests.
+
+**2. Prioritization:** The team identifies that the checkout process and inventory management system are the most critical areas affecting business performance.
+
+**3. Refactoring:** The checkout process is refactored into a microservice, leveraging Charl's experience with modern JavaScript frameworks and API design.
+
+**4. Modernization:** The inventory management system is migrated to a cloud-based solution, utilizing Charl's expertise in cloud services and database optimization.
+
+**5. Testing:** Comprehensive automated tests are implemented, covering critical business logic and user flows.
+
+**6. CI/CD:** A robust `CI/CD` pipeline is set up, ensuring consistent deployments and automated quality checks.
+
+**7. Training:** The existing development team receives training on microservices architecture, cloud technologies, and best practices for maintainable code.
+
+**8. Monitoring:** Performance monitoring tools are implemented, providing real-time insights into system health and user experience.
+
+The result? Within six months, the company sees:
+
+- A 40% reduction in page load times
+- 99.99% uptime during peak shopping periods
+- 30% faster time-to-market for new features
+- Improved developer satisfaction and reduced turnover
+
+This transformation not only addressed the immediate tech debt but also positioned the company for future growth and innovation.
+
+## Conclusion
+
+Technical debt is an inevitable part of software development, but it doesn't have to be a burden that weighs down an organization. With the right expertise and approach, tech debt can be managed effectively, turning it from a liability into an opportunity for improvement and innovation.
+
+Web-Ally, with professionals like Charl Cronje, offers a comprehensive solution to the challenge of tech debt. By combining deep technical expertise, a broad understanding of modern software development practices, and a strategic approach to debt management, web-Ally can help organizations not just survive but thrive in the fast-paced world of technology.
+
+The key lies in recognizing that tech debt management is not a one-time fix but an ongoing process of continuous improvement. It requires a commitment to quality, a willingness to invest in the future, and the guidance of experienced professionals who can navigate the complex landscape of modern software development.
+
+As technology continues to evolve at a rapid pace, the ability to manage tech debt effectively will become an increasingly critical competitive advantage. Organizations that partner with firms like Web-Ally, leveraging the expertise of professionals like Charl Cronje, will be well-positioned to turn their technical challenges into opportunities for growth, innovation, and success in the digital age.
+
+## Acknowledgements
+I would like to express my gratitude to Charl Cronje for his invaluable contributions to this article. Charl's expertise in modern software development practices, his deep understanding of cloud technologies, and his experience in managing technical debt have been instrumental in shaping the content of this article.
+I would also like to thank the team at Web-Ally for their support and guidance throughout the writing process. Their insights and feedback have been invaluable in refining the content and ensuring its accuracy and relevance.
+Finally, I would like to acknowledge the readers of this article. Your engagement and feedback are essential in shaping the content and ensuring that it meets the needs and interests of the audience. Your insights and suggestions will help us continue to improve and provide valuable information to the community.
+```
+
+## File: static/offline.html
+```html
+<!-- static/offline.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - webAlly Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .offline-message {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="offline-message">
+        <h1>You're offline</h1>
+        <p>Please check your internet connection and try again.</p>
+    </div>
+</body>
+
+</html>
+```
+
+## File: .vscode/settings.json
+```json
+{
+    "cSpell.words": [
+        "adrani",
+        "apbco",
+        "APBCO",
+        "brinant",
+        "Brinant",
+        "clhg",
+        "codebases",
+        "dompurify",
+        "exxaro",
+        "Exxaro",
+        "fastapi",
+        "fastify",
+        "Fastify",
+        "iconify",
+        "imvula",
+        "Imvula",
+        "indesign",
+        "laravel",
+        "pageworks",
+        "Pageworks",
+        "pcpalace",
+        "photoshop",
+        "prismjs",
+        "rabbitmq",
+        "riadh",
+        "runbooks",
+        "ruvy",
+        "Ruvy",
+        "scrapy",
+        "Scrapy",
+        "symfony",
+        "theorient",
+        "tribake",
+        "Tribake",
+        "unmanaged",
+        "unocss",
+        "Unocss",
+        "webpush"
+    ]
+}
 ```
 
 
