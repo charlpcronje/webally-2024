@@ -3,6 +3,7 @@
 	import { theme, toggleTheme } from '$lib/stores/theme';
 	import { items } from '@data/navbar';
 	import * as HOME from '@data/home';
+	import { onMount } from 'svelte';
 
 	import { base } from '$app/paths';
 	import UIcon from '../Icon/UIcon.svelte';
@@ -10,6 +11,9 @@
 	$: currentRoute = $page.url.pathname;
 
 	let expanded = false;
+	let isScrolling = false;
+	let scrollTimeout: ReturnType<typeof setTimeout>;
+	let navVisible = true;
 
 	const toggleExpanded = (v?: boolean) => {
 		if (typeof v === 'undefined') {
@@ -25,6 +29,30 @@
 
 	$: headerItems = items.filter((item) => item.position === 'header');
 	$: verticalItems = items.filter((item) => item.position === 'sidebar');
+
+	function handleScroll() {
+		isScrolling = true;
+		navVisible = true;
+		clearTimeout(scrollTimeout);
+
+		scrollTimeout = setTimeout(() => {
+			isScrolling = false;
+			if (window.innerWidth <= 768) { // Only hide on mobile
+				navVisible = false;
+			}
+		}, 3000);
+	}
+
+	function showNav() {
+		navVisible = true;
+	}
+
+	onMount(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 </script>
 
 <div class="nav-menu">
@@ -35,7 +63,7 @@
 		>
 			<UIcon icon="i-carbon-code" classes="text-2em" />
 			<span
-				class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis"
+				class="ml-2 mt--2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis"
 				>{HOME.name} {HOME.lastName}</span
 			>
 		</a>
@@ -131,19 +159,30 @@
 		</div>
 	</div>
 	<div
-		class="vertical-nav hidden md:flex flex-col fixed right--1	 top-1/2 transform -translate-y-1/2"
+		class="vertical-nav flex flex-col fixed right-0 top-1/2 transform -translate-y-1/2 transition-transform duration-300 ease-in-out"
+		class:hidden={!navVisible}
 	>
 		{#each verticalItems as item}
 			<a
 				href={`${base}${item.to}`}
 				class="nav-menu-item vertical text-xs !text-[var(--secondary-text)] mb-3"
+				class:active={currentRoute === item.to}
 			>
-				<UIcon icon={item.icon} classes="text-1.3em" />
-				<span class="nav-menu-item-label">{item.title}</span>
+				<UIcon icon={item.icon} classes="text-1.3em icon-wrapper" />
+				<span class="nav-menu-item-label vertival-nav-menu-item-label mr-1" style="margin-left: 5px">{item.title}</span>
 			</a>
 		{/each}
 	</div>
 </div>
+
+{#if !navVisible}
+	<button
+		class="show-nav-button fixed right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-l-sm"
+		on:click={showNav}
+	>
+		<UIcon icon="i-carbon-arrow-left" classes="text-1.5em; " />
+	</button>
+{/if}
 
 <style lang="scss">
 	.nav-menu {
@@ -177,6 +216,7 @@
 			}
 
 			&:hover {
+				opacity: 1.0;
 				background-color: var(--main-hover);
 			}
 		}
@@ -201,24 +241,64 @@
 		}
 	}
 
+	.icon-wrapper {
+		padding: 15px;
+	}
+
 	.vertical-nav {
 		z-index: 20;
+		display: flex;
+		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+		opacity: 0.5;
+
+		&.hidden {
+			transform: translate(100%, -50%);
+		}
+
+		&:hover, &.scrolling {
+			opacity: 1;
+		}
 	}
 
 	.nav-menu-item.vertical {
 		writing-mode: vertical-rl;
 		transform: rotate(180deg);
-		padding: 20px 10px;
+		padding: 5px 5px;
 		background-color: var(--main);
-		border-radius: 10px 0 0 10px;
+		border-radius: 0 0 0 0;
+		border-right: 1px solid #2e2e2e;
+		border-top: 1px solid #2e2e2e;
+		border-bottom: 1px solid #2e2e2e;
 		box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+		display: flex;
+		align-items: center;
+		min-height: 80px;
+		transition: opacity 0.3s ease-in-out;
 
 		&:hover {
 			background-color: var(--main-hover);
+			opacity: 1;
+		}
+
+		&.active {
+			background-color: var(--accent);
+			color: var(--main);
 		}
 
 		.nav-menu-item-label {
 			margin-top: 10px;
+			display: inline-block;
+		}
+	}
+
+	.show-nav-button {
+		z-index: 19;
+		cursor: pointer;
+	}
+
+	@media (max-width: 768px) {
+		.vertical-nav {
+			transition: transform 0.3s ease-in-out;
 		}
 	}
 </style>
