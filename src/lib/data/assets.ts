@@ -118,6 +118,7 @@ const Assets = {
 	CNN: gh('cnn.png'),
 	Nexus: gh('nexus.svg'),
 	Pageworks: gh('pageworks.png'),
+	WhatsApp: gh('whatsapp.svg')
 };
 
 export default Assets;

@@ -9,13 +9,14 @@ export const name = 'webAlly';
 
 export const lastName = '';
 
-export const description = 'Team Consisting of Senior Full-Stack Web / Mobile / AI / Desktop Developers.  Passionate about creating awesome tools and applications for developers and customers.';
+export const description = 'Senior Full-Stack Web / Mobile / AI / Desktop Developer.  Passionate about creating awesome tools and applications for clients and other developers';
 
 export const links: Array<{ platform: Platform; link: string }> = [
 	{ platform: Platform.GitHub, link: 'https://github.com/charlpcronje' },
 	{ platform: Platform.Linkedin, link: 'https://www.linkedin.com/in/charlpcronje' },
 	{ platform: Platform.Twitter, link: 'https://twitter.com/CPCharlCronje' },
-	{ platform: Platform.Email, link: 'charl@webally.co.za' }
+	{ platform: Platform.Email, link: 'charl@webally.co.za' },
+	{ platform: Platform.WhatsApp, link: 'https://wa.me/27680097995' }
 ];
 
 export const skills = getSkills(

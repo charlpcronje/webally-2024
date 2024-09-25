@@ -50,19 +50,19 @@ export const items = [
 	{ 
 		title: 'Data Tools', 
 		to: '/tools/data', 
-		icon: 'i-carbon-machine-learning-model', 
+		icon: 'i-carbon-cube', 
 		position: 'sidebar', 
 		external: false 
 	},
 	{ 
 		title: 'Code Tools', 
 		to: '/tools/code', 
-		icon: 'i-carbon-machine-learning-model', 
+		icon: 'i-carbon-code', 
 		position: 'sidebar', 
 		external: false 
 	},
 	{ 
-		title: 'Terms and Conditions', 
+		title: 'Terms & Conditions', 
 		to: '/terms', 
 		icon: 'i-carbon-document-signed', 
 		position: 'footer', 

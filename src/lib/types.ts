@@ -17,7 +17,8 @@ export enum Platform {
 	Facebook = 'facebook',
 	Youtube = 'youtube',
 	Blog = 'blog',
-	StackShare = 'stackShare'
+	StackShare = 'stackShare',
+	WhatsApp = 'whatsapp'
 }
 
 export type Icon = `i-${string}-${string}`;
