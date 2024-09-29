@@ -11,15 +11,16 @@
         "node_modules",
         "backups",
         ".svelte-kit",
-        "build"
+        "build",
+        ".vscode"
     ],
     "exclude_files": [
         "package-lock.json",
         "combined.md",
         "src/lib/data/skills.ts",
         "src/lib/data/tools.ts",
-        "src/lib/data/projects.ts"
-
+        "src/lib/data/projects.ts",
+        "src/lib/data/experience.ts"
     ],
     "file_types": [
         ".js",

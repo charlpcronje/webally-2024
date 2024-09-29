@@ -32,8 +32,8 @@ My portfolio features several cutting-edge AI tools that I've developed:
 2. **Project Data Collector**: A modular Python application designed to scan project directories and collect various pieces of information.
 3. **ChatGPT Chat Manager**: A Chrome extension and Flask API for managing ChatGPT conversations.
 4. **Synthiq**: A multi-embedded AI smart storage solution, similar to ChatGPT but trainable on custom data.
-5. **GPT Crawler**: A tool to crawl websites and generate knowledge files for custom GPTs.
-6. **Code Context Parser and Indexer for AI**: An advanced tool designed to analyze and index code from multiple programming languages.
+6. **GPT Crawler**: A tool to crawl websites and generate knowledge files for custom GPTs.
+7. **Code Context Parser and Indexer for AI**: An advanced tool designed to analyze and index code from multiple programming languages.
 
 ### Playground
 
