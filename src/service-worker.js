@@ -35,7 +35,7 @@ self.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url);
 
     // Ignore non-HTTP(S) requests (such as chrome-extension requests)
-	if (event.request.method !== 'GET' || (requestURL.protocol !== 'http:' && requestURL.protocol !== 'https:')) return;
+	if (event.request.method !== 'GET' && (event.request.protocol !== 'http:' || event.request.protocol !== 'https:')) return;
     
 
 	async function respond() {
