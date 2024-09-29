@@ -24,6 +24,14 @@ export const items = [
 		row: 1, 
 		external: false 
 	},
+	{ 
+		title: 'Services', 
+		to: '/services', 
+		icon: 'i-carbon-service-desk', 
+		position: 'header', 
+		row: 1, 
+		external: false 
+	},
 	
 	//{ title: 'Team', to: '/team', icon: 'i-carbon-user', position: 'header', row: 1, external: false },
 	{ 

@@ -1,0 +1,45 @@
+---
+layout: projectDetail
+title: Example Content Page
+author: Your Name
+date: 2023-09-29
+relatedPages:
+  - { url: '/services#service1', title: 'Service 1' }
+  - { url: '/services#service2', title: 'Service 2' }
+---
+
+# Example Content
+
+This is an example of various mdsvex components and features.
+
+## YouTube Embed
+
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+## Custom Video Embed
+
+<VideoEmbed src="/path/to/your/video.mp4" />
+
+## Code Block
+
+```javascript
+console.log('Hello, mdsvex!');
+```
+
+## List
+
+- Item 1
+- Item 2
+- Item 3
+
+## Table
+
+| Column 1 | Column 2 |
+|----------|----------|
+| Row 1    | Data 1   |
+| Row 2    | Data 2   |
+
+## Links to Services
+
+- [Service 1](#service1)
+- [Service 2](#service2)

@@ -13,7 +13,7 @@ vite.config.ts.timestamp-*
 **/cspell.json
 combined.md
 logs/*
-**/combine.json
-**/combined.md
+#**/combine.json
+#**/combined.md
 **/error.log
 **/access.log

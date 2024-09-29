@@ -7,8 +7,11 @@
 
 	import { base } from '$app/paths';
 	import UIcon from '../Icon/UIcon.svelte';
-
-	$: currentRoute = $page.url.pathname;
+		
+	let currentRoute = '';
+	$: if ($page) {
+		currentRoute = $page?.url?.pathname;
+	}
 
 	let expanded = false;
 	let isScrolling = false;

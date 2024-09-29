@@ -21,6 +21,25 @@ export enum Platform {
 	WhatsApp = 'whatsapp'
 }
 
+interface MdsvexOptions {
+	extensions: string[];
+	smartypants: boolean | smartypantsOptions;
+	layout: string | { [name: string]: string };
+	remarkPlugins: Array<plugin> | Array<[plugin, plugin_options]>;
+	rehypePlugins: Array<plugin> | Array<[plugin, plugin_options]>;
+	highlight: { highlighter: Function, alias: { [alias]: lang } };
+	frontmatter: { parse: Function; marker: string };
+}
+
+export interface Service {
+    slug: string;
+    color: string;
+    shortDescription: string;
+    image: string;
+    name: string;
+    type: string;
+}
+
 export type Icon = `i-${string}-${string}`;
 
 export enum ContractType {

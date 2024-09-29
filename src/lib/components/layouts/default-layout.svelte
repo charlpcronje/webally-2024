@@ -1,0 +1,20 @@
+<script>
+	export let title = 'Default Title';
+</script>
+
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
+
+<article>
+	<h1>{title}</h1>
+	<slot />
+</article>
+
+<style>
+	article {
+		max-width: 65ch;
+		margin: 0 auto;
+		padding: 1rem;
+	}
+</style>
