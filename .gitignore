@@ -15,3 +15,5 @@ combined.md
 logs/*
 **/combine.json
 **/combined.md
+**/error.log
+**/access.log
