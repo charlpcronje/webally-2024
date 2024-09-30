@@ -2,11 +2,18 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import type { UserConfig } from 'vite';
 import UnoCSS from 'unocss/vite';
+import { VitePWA } from 'vite-plugin-pwa'
 
 const config: UserConfig = {
 	plugins: [
 		UnoCSS(),
-		sveltekit()
+		sveltekit(),
+		VitePWA({ 
+			registerType: 'autoUpdate',
+			devOptions: {
+				enabled: true
+			}
+		})
 	]
 };
 

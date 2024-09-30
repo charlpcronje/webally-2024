@@ -4,189 +4,64 @@ This document contains an analysis of the project files.
 
 | No.   | File                                 | Lines    | Words    | AI Tokens |
 | ----- | ------------------------------------ | -------- | -------- | --------- |
-|  1    | ./README.md                          | 85       | 707      | 998       |
-|  2    | ./combine.json                       | 36       | 42       | 142       |
-|  3    | ./package.json                       | 55       | 130      | 441       |
-|  4    | ./svelte.config.js                   | 52       | 111      | 230       |
-|  5    | ./tsconfig.json                      | 20       | 62       | 117       |
-|  6    | ./uno.config.ts                      | 44       | 90       | 191       |
-|  7    | ./vite.config.ts                     | 13       | 33       | 50        |
-|  8    | ./.env                               | 5        | 20       | 23        |
-|  9    | ./sendPushNotification.js            | 28       | 92       | 151       |
-|  10   | ./scripts/cvFetcher.js               | 1        | 0        | 0         |
-|  11   | ./src/app.d.ts                       | 15       | 49       | 63        |
-|  12   | ./src/app.html                       | 30       | 57       | 184       |
-|  13   | ./src/service-worker.js              | 84       | 291      | 477       |
-|  14   | ./src/lib/index.scss                 | 368      | 599      | 1609      |
-|  15   | ./src/lib/types.ts                   | 96       | 257      | 455       |
-|  16   | ./src/lib/components/CommonPage.svelte | 15       | 37       | 83        |
-|  17   | ./src/lib/components/InstallPrompt.svelte | 69       | 175      | 325       |
-|  18   | ./src/lib/components/Markdown.svelte | 32       | 72       | 145       |
-|  19   | ./src/lib/components/SearchPage.svelte | 59       | 139      | 305       |
-|  20   | ./src/lib/components/TabTitle.svelte | 11       | 25       | 62        |
-|  21   | ./src/lib/components/Banner/Banner.svelte | 28       | 70       | 183       |
-|  22   | ./src/lib/components/Card/Card.svelte | 114      | 324      | 724       |
-|  23   | ./src/lib/components/Card/CardDivider.svelte | 2        | 5        | 17        |
-|  24   | ./src/lib/components/Card/CardLink.svelte | 40       | 78       | 191       |
-|  25   | ./src/lib/components/Card/CardLogo.svelte | 10       | 35       | 74        |
-|  26   | ./src/lib/components/Card/CardTitle.svelte | 6        | 10       | 37        |
-|  27   | ./src/lib/components/Carrousel/Carrousel.svelte | 102      | 258      | 528       |
-|  28   | ./src/lib/components/Chip/Chip.svelte | 35       | 88       | 224       |
-|  29   | ./src/lib/components/Chip/ChipIcon.svelte | 61       | 145      | 312       |
-|  30   | ./src/lib/components/Chip/Footer/Footer.svelte | 78       | 225      | 462       |
-|  31   | ./src/lib/components/ExperienceCard/ExperienceCard.svelte | 84       | 240      | 604       |
-|  32   | ./src/lib/components/Icon/Icon.svelte | 23       | 45       | 101       |
-|  33   | ./src/lib/components/Icon/Icons.ts   | 10       | 47       | 79        |
-|  34   | ./src/lib/components/Icon/UIcon.svelte | 8        | 20       | 54        |
-|  35   | ./src/lib/components/Input/Input.svelte | 28       | 56       | 132       |
-|  36   | ./src/lib/components/MainTitle/MainTitle.svelte | 11       | 29       | 96        |
-|  37   | ./src/lib/components/NavMenu/NavMenu.svelte | 304      | 745      | 1699      |
-|  38   | ./src/lib/components/ProjectCard/ProjectCard.svelte | 74       | 233      | 601       |
-|  39   | ./src/lib/components/Screenshot/Screenshot.svelte | 56       | 136      | 344       |
-|  40   | ./src/lib/data/app.ts                | 2        | 9        | 11        |
-|  41   | ./src/lib/data/assets.ts             | 133      | 302      | 1025      |
-|  42   | ./src/lib/data/documentation-sites.ts | 146      | 397      | 695       |
-|  43   | ./src/lib/data/education.ts          | 32       | 104      | 209       |
-|  44   | ./src/lib/data/home.ts               | 33       | 151      | 303       |
-|  45   | ./src/lib/data/navbar.ts             | 92       | 201      | 425       |
-|  46   | ./src/lib/data/resume.ts             | 4        | 10       | 13        |
-|  47   | ./src/lib/data/search.ts             | 2        | 5        | 7         |
-|  48   | ./src/lib/md/svelte.md               | 41       | 298      | 391       |
-|  49   | ./src/lib/stores/theme.ts            | 48       | 146      | 279       |
-|  50   | ./src/lib/utils/colors.ts            | 166      | 343      | 1101      |
-|  51   | ./src/lib/utils/customMarkdownParser.ts | 30       | 97       | 206       |
-|  52   | ./src/lib/utils/helpers.ts           | 172      | 603      | 1153      |
-|  53   | ./src/lib/utils/index.ts             | 60       | 1242     | 1323      |
-|  54   | ./src/lib/utils/reTypeParser.ts      | 58       | 161      | 512       |
-|  55   | ./src/routes/+layout.server.ts       | 2        | 10       | 13        |
-|  56   | ./src/routes/+layout.svelte          | 47       | 104      | 223       |
-|  57   | ./src/routes/+page.svelte            | 48       | 157      | 499       |
-|  58   | ./src/routes/documentation/+page.svelte | 24       | 65       | 171       |
-|  59   | ./src/routes/education/+page.svelte  | 92       | 246      | 612       |
-|  60   | ./src/routes/experience/+page.svelte | 57       | 169      | 388       |
-|  61   | ./src/routes/experience/[slug]/+page.svelte | 93       | 246      | 637       |
-|  62   | ./src/routes/experience/[slug]/+page.ts | 12       | 37       | 61        |
-|  63   | ./src/routes/privacy/+page.svelte    | 46       | 194      | 327       |
-|  64   | ./src/routes/projects/+page.svelte   | 109      | 286      | 614       |
-|  65   | ./src/routes/projects/[slug]/+page.svelte | 140      | 354      | 903       |
-|  66   | ./src/routes/projects/[slug]/+page.ts | 12       | 37       | 61        |
-|  67   | ./src/routes/resume/+page.svelte     | 31       | 58       | 136       |
-|  68   | ./src/routes/search/+page.svelte     | 97       | 259      | 597       |
-|  69   | ./src/routes/skills/+page.svelte     | 52       | 144      | 405       |
-|  70   | ./src/routes/skills/[slug]/+page.svelte | 115      | 311      | 737       |
-|  71   | ./src/routes/skills/[slug]/+page.ts  | 12       | 37       | 61        |
-|  72   | ./src/routes/team/+page.svelte       | 89       | 211      | 629       |
-|  73   | ./src/routes/team/[slug]/+page.svelte | 151      | 278      | 632       |
-|  74   | ./src/routes/team/[slug]/+page.ts    | 28       | 85       | 122       |
-|  75   | ./src/routes/terms/+page.svelte      | 54       | 264      | 405       |
-|  76   | ./src/routes/tools/+page.svelte      | 91       | 214      | 635       |
-|  77   | ./src/routes/tools/[slug]/+page.svelte | 72       | 219      | 519       |
-|  78   | ./src/routes/tools/[slug]/+page.ts   | 21       | 74       | 129       |
-|  79   | ./src/routes/tools/ai/+page.svelte   | 36       | 88       | 244       |
-|  80   | ./src/routes/tools/code/+page.svelte | 36       | 88       | 244       |
-|  81   | ./src/routes/tools/data/+page.svelte | 36       | 88       | 244       |
-|  82   | ./src/routes/api/vapid-key.ts        | 15       | 47       | 71        |
-|  83   | ./src/routes/api/push-subscription/+server.ts | 15       | 55       | 81        |
-|  84   | ./src/routes/api/vapid-key/+server.ts | 1        | 0        | 0         |
-|  85   | ./src/content/solutions.md           | 36       | 355      | 474       |
-|  86   | ./src/content/solutions/techDebt.md  | 176      | 1789     | 2156      |
-|  87   | ./static/offline.html                | 34       | 62       | 148       |
-|       | Total                                | 5091     | 16477    | 33344     |
+|  1    | ./combine.json                       | 99       | 105      | 414       |
+|  2    | ./package.json                       | 56       | 132      | 449       |
+|  3    | ./svelte.config.js                   | 60       | 130      | 272       |
+|  4    | ./tsconfig.json                      | 20       | 62       | 117       |
+|  5    | ./uno.config.ts                      | 44       | 90       | 191       |
+|  6    | ./vite.config.ts                     | 13       | 33       | 50        |
+|  7    | ./.env                               | 5        | 20       | 23        |
+|  8    | ./mdsvex.config.js                   | 16       | 46       | 100       |
+|  9    | ./mdsvex.d.ts                        | 7        | 23       | 37        |
+|  10   | ./src/app.d.ts                       | 15       | 49       | 63        |
+|  11   | ./src/app.html                       | 30       | 57       | 184       |
+|  12   | ./src/lib/types.ts                   | 115      | 319      | 576       |
+|  13   | ./src/lib/components/CommonPage.svelte | 15       | 37       | 83        |
+|  14   | ./src/lib/components/Markdown.svelte | 32       | 72       | 145       |
+|  15   | ./src/lib/components/SearchPage.svelte | 59       | 139      | 305       |
+|  16   | ./src/lib/components/TabTitle.svelte | 11       | 25       | 62        |
+|  17   | ./src/lib/components/Banner/Banner.svelte | 28       | 70       | 183       |
+|  18   | ./src/lib/components/Card/Card.svelte | 114      | 324      | 724       |
+|  19   | ./src/lib/components/Chip/ChipIcon.svelte | 61       | 145      | 312       |
+|  20   | ./src/lib/components/Chip/Footer/Footer.svelte | 78       | 225      | 462       |
+|  21   | ./src/lib/components/Icon/Icons.ts   | 10       | 47       | 79        |
+|  22   | ./src/lib/components/MainTitle/MainTitle.svelte | 11       | 29       | 96        |
+|  23   | ./src/lib/components/Screenshot/Screenshot.svelte | 56       | 136      | 344       |
+|  24   | ./src/lib/components/ServiceCard/ServiceCard.svelte | 68       | 168      | 409       |
+|  25   | ./src/lib/components/layouts/default-layout.svelte | 12       | 18       | 60        |
+|  26   | ./src/lib/components/layouts/fancy-layout.svelte | 13       | 26       | 79        |
+|  27   | ./src/lib/components/layouts/components-layout.svelte | 19       | 40       | 103       |
+|  28   | ./src/lib/components/layouts/components/breadcrumb.svelte | 18       | 47       | 142       |
+|  29   | ./src/lib/components/layouts/components/quizz.svelte | 49       | 150      | 322       |
+|  30   | ./src/lib/components/layouts/components/types.ts | 4        | 10       | 15        |
+|  31   | ./src/lib/data/app.ts                | 2        | 9        | 11        |
+|  32   | ./src/lib/data/home.ts               | 33       | 151      | 303       |
+|  33   | ./src/lib/data/navbar.ts             | 92       | 201      | 425       |
+|  34   | ./src/lib/data/services.ts           | 87       | 389      | 664       |
+|  35   | ./src/lib/md/svelte.md               | 41       | 298      | 391       |
+|  36   | ./src/lib/stores/theme.ts            | 48       | 146      | 279       |
+|  37   | ./src/lib/layouts/default.svelte     | 11       | 12       | 39        |
+|  38   | ./src/routes/+layout.server.ts       | 2        | 10       | 13        |
+|  39   | ./src/routes/+layout.svelte          | 47       | 104      | 223       |
+|  40   | ./src/routes/+page.svelte            | 48       | 157      | 499       |
+|  41   | ./src/routes/experience/[slug]/+page.ts | 12       | 37       | 61        |
+|  42   | ./src/routes/projects/[slug]/+page.ts | 12       | 37       | 61        |
+|  43   | ./src/routes/search/+page.svelte     | 97       | 259      | 597       |
+|  44   | ./src/routes/skills/[slug]/+page.ts  | 12       | 37       | 61        |
+|  45   | ./src/routes/team/[slug]/+page.ts    | 28       | 85       | 122       |
+|  46   | ./src/routes/tools/[slug]/+page.ts   | 21       | 74       | 129       |
+|  47   | ./src/routes/services/+page.svelte   | 72       | 179      | 385       |
+|  48   | ./src/routes/services/services.md    | 17       | 50       | 115       |
+|  49   | ./src/routes/services/+page.ts       | 7        | 16       | 24        |
+|  50   | ./src/routes/services/[slug]/+page.svelte | 60       | 193      | 462       |
+|  51   | ./src/routes/services/[slug]/+page.ts | 28       | 111      | 189       |
+|       | Total                                | 1915     | 5329     | 11454     |
 
 
 ## Total Counts Across All Files. Tokenizer Used: NLTK's Punkt Tokenizer
-- Total Lines: 5091
-- Total Words: 16477
-- Total AI Tokens: 33344
-
-## File: README.md
-```md
-# Charl Cronje's Portfolio Website
-
-Welcome to the repository of my personal portfolio website. This site showcases my skills, experience, projects, and various tools I've developed throughout my career as a senior full-stack developer.
-
-## Pages
-
-1. **Home**: An introduction to who I am, featuring a brief bio and a carousel of my key skills.
-
-2. **Skills**: A comprehensive list of my technical skills, categorized and visualized for easy understanding.
-
-3. **Projects**: A showcase of my significant projects, complete with descriptions, technologies used, and links to live demos or repositories.
-
-4. **Experience**: A detailed timeline of my professional journey, highlighting key roles and achievements.
-
-5. **Education**: An overview of my educational background and certifications.
-
-6. **Resume**: A downloadable version of my professional resume.
-
-7. **Documentation**: A collection of documentation sites I've created for various technologies and projects.
-
-8. **AI Tools**: A showcase of AI-powered tools I've developed.
-
-9. **Playground**: A collection of experimental and fun projects I've worked on.
-
-## Highlights
-
-### AI Tools
-
-My portfolio features several cutting-edge AI tools that I've developed:
-
-1. **AI Response Parser**: A Python script that parses markdown files containing AI responses and extracts code blocks.
-2. **Project Data Collector**: A modular Python application designed to scan project directories and collect various pieces of information.
-3. **ChatGPT Chat Manager**: A Chrome extension and Flask API for managing ChatGPT conversations.
-4. **Synthiq
-5. **: A multi-embedded AI smart storage solution, similar to ChatGPT but trainable on custom data.
-6. **GPT Crawler**: A tool to crawl websites and generate knowledge files for custom GPTs.
-7. **Code Context Parser and Indexer for AI**: An advanced tool designed to analyze and index code from multiple programming languages.
-
-### Playground
-
-The Playground section features a variety of tools and projects:
-
-1. **Compare Files VS Code Extension**: A Visual Studio Code extension for comparing two selected files.
-2. **File Change RSS Feed**: Generates an RSS feed tracking changes to files in a specified directory.
-3. **Audit Log for MariaDB & MySQL Databases**: A stored procedure for creating database triggers to log changes.
-4. **DataSingleton**: A Python package providing a singleton class for managing data and plugins.
-5. **Image Sharpness Categorizer**: A Python script for analyzing and categorizing images based on sharpness.
-6. **WhatsApp Chat Analyzer**: Processes WhatsApp chat export files to analyze messages between two individuals.
-7. **File Groups for VS Code**: A Visual Studio Code extension for creating and managing file groups.
-8. **Project Code Markdown Generator**: Generates a Markdown document from a project's source code.
-9. **Ignite Builder - App Runner**: A Python application for managing and running multiple smaller Python scripts.
-
-### Experience and Skills
-
-My experience spans over two decades in the tech industry, with expertise in:
-
-- Full-stack web development
-- Mobile app development
-- AI and machine learning
-- Desktop application development
-- Database design and management
-- DevOps and cloud services
-
-Skills include proficiency in languages such as JavaScript, TypeScript, Python, PHP, Java, and more, as well as frameworks like React, Vue.js, Laravel, and Django.
-
-## Roadmap
-
-Future development plans for this portfolio website include:
-
-1. **Interactive Skill Tree**: Implement a visual, interactive representation of my skills.
-2. **Project Showcase Enhancements**: Add video demos and more detailed case studies for key projects.
-3. **Blog Integration**: Incorporate a technical blog to share insights and tutorials.
-4. **Live Demo Integration**: Embed live demos of smaller projects and tools directly into the website.
-5. **AI-Powered Chat Assistant**: Implement a chatbot that can answer questions about my experience and projects.
-6. **Collaborative Section**: Add a section for potential collaborations and open-source contributions.
-7. **Internationalization**: Make the website available in multiple languages.
-8. **Dark/Light Theme Toggle**: Implement a theme switcher for better user experience.
-9. **Performance Optimizations**: Continually improve load times and overall performance.
-10. **Accessibility Improvements**: Ensure the website is fully accessible to all users.
-
-## Conclusion
-
-This portfolio website is a testament to my passion for technology and continuous learning. It showcases not just my professional achievements, but also my commitment to innovation and problem-solving. I'm excited to continue expanding this platform and sharing my journey in the ever-evolving world of technology.
-
-Feel free to explore the code, and don't hesitate to reach out if you have any questions or potential collaboration ideas!
-```
+- Total Lines: 1915
+- Total Words: 5329
+- Total AI Tokens: 11454
 
 ## File: combine.json
 ```json
@@ -204,7 +79,9 @@ Feel free to explore the code, and don't hesitate to reach out if you have any q
         "backups",
         ".svelte-kit",
         "build",
-        ".vscode"
+        ".vscode",
+        "static",
+        "scripts"
     ],
     "exclude_files": [
         "package-lock.json",
@@ -212,7 +89,68 @@ Feel free to explore the code, and don't hesitate to reach out if you have any q
         "src/lib/data/skills.ts",
         "src/lib/data/tools.ts",
         "src/lib/data/projects.ts",
-        "src/lib/data/experience.ts"
+        "src/lib/data/experience.ts",
+        "src/lib/data/education.ts",
+        "src/lib/data/resume.ts",
+        "src/lib/data/search.ts",
+        "src/routes/services/boost-team-speed.md",
+        "src/routes/services/finish-projects.md",
+        "src/routes/services/handle-tedious-stuff.md",
+        "src/routes/services/extra-hands-new-project.md",
+        "src/routes/services/flexible-freelance-help.md",
+        "src/routes/services/finish-half-built-app.md",
+        "src/routes/services/debugging-optimization.md",
+        "src/routes/services/future-proof-codebase.md",
+        "src/routes/services/scale-projects.md",
+        "src/routes/services/complex-integrations.md",
+        "src/content/solutions/techDebt.md",
+        "src/routes/experience/[slug]/+page.svelte",
+        "src/routes/projects/[slug]/+page.svelte",
+        "src/routes/skills/[slug]/+page.svelte",
+        "src/routes/tools/[slug]/+page.svelte",
+        "src/routes/team/[slug]/+page.svelte",
+        "src/lib/components/Card/CardDivider.svelte",
+        "src/lib/components/Card/CardLink.svelte",
+        "src/lib/components/Card/CardLogo.svelte",
+        "src/lib/components/Card/CardTitle.svelte",
+        "src/lib/components/Icon/Icon.svelte",
+        "src/lib/components/Icon/UIcon.svelte",
+        "src/lib/components/Chip/Chip.svelte",
+        "src/lib/components/Input/Input.svelte",
+        "src/lib/utils/colors.ts",
+        "src/lib/utils/customMarkdownParser.ts",
+        "src/lib/utils/reTypeParser.ts",
+        "src/routes/api/vapid-key.ts",
+        "src/routes/api/push-subscription/+server.ts",
+        "src/routes/api/vapid-key/+server.ts",
+        "src/routes/tools/ai/+page.svelte",
+        "src/routes/tools/code/+page.svelte",
+        "src/routes/tools/data/+page.svelte",
+        "src/lib/components/InstallPrompt.svelte",
+        "src/lib/components/VideoEmbed.svelte",
+        "src/lib/components/Carrousel/Carrousel.svelte",
+        "src/lib/components/ExperienceCard/ExperienceCard.svelte",
+        "src/lib/components/ProjectCard/ProjectCard.svelte",
+        "src/routes/documentation/+page.svelte",
+        "src/routes/education/+page.svelte",
+        "src/routes/experience/+page.svelte",
+        "src/routes/privacy/+page.svelte",
+        "src/routes/projects/+page.svelte",
+        "src/routes/resume/+page.svelte",
+        "src/routes/skills/+page.svelte",
+        "src/routes/team/+page.svelte",
+        "src/routes/terms/+page.svelte",
+        "src/routes/tools/+page.svelte",
+        "sendPushNotification.js",
+        "src/service-worker.js",
+        "src/lib/utils/index.ts",
+        "src/lib/data/assets.ts",
+        "src/lib/utils/helpers.ts",
+        "src/lib/data/documentation-sites.ts",
+        "src/content/solutions.md",
+        "src/lib/components/NavMenu/NavMenu.svelte",
+        "src/lib/index.scss",
+        "README.md"
     ],
     "file_types": [
         ".js",
@@ -266,6 +204,7 @@ Feel free to explore the code, and don't hesitate to reach out if you have any q
         "marked": "^5.1.1",
         "marked-gfm-heading-id": "^3.0.4",
         "marked-mangle": "^1.1.0",
+        "mdsvex": "^0.12.3",
         "prettier": "^3.0.3",
         "prettier-plugin-svelte": "^3.0.3",
         "prismjs": "^1.29.0",
@@ -294,13 +233,21 @@ import {
     vitePreprocess
 } from '@sveltejs/kit/vite';
 
+import { mdsvex } from "mdsvex";
+import mdsvexConfig from './mdsvex.config.js';
+
+
 const base = '';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
     // Consult https://kit.svelte.dev/docs/integrations#preprocessors
     // for more information about preprocessors
-    preprocess: vitePreprocess(),
+    extensions: ['.svelte',...mdsvexConfig.extensions],
+    preprocess: [
+        vitePreprocess(),
+        mdsvex({ extensions: ['.svx', '.md'] })
+    ],
     vitePlugin: {
         inspector: {
             showToggleButton: 'always'
@@ -441,41 +388,35 @@ VITE_API_KEY=your_api_key
 
 ```
 
-## File: sendPushNotification.js
+## File: mdsvex.config.js
 ```js
-// sendPushNotification.js
-const webPush = require('web-push');
+import { defineMDSveXConfig as defineConfig } from 'mdsvex';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-// Replace with your actual VAPID keys
-const vapidKeys = {
-  publicKey: 'BHiKKmeGnSYaMiiaaNtNRRZlBzDTEGw66ILt192tu4PRYNIAm-fV5sgk7WQoXvjjxPOim3KEyt9mZUXyOoQRxTk',
-  privateKey: 'wa4h49vnpMlIJNTJ_UBF5lpenHOlpoOmUUo3sCv8VEo'
-};
-// Example subscription object (this should come from your database)
-const subscriptions = [ ]; // Store user subscriptions here
+const dirname = path.resolve(fileURLToPath(import.meta.url), '../');
 
-// Configure web-push with your VAPID keys
-webPush.setVapidDetails(
-  'mailto:your-email@example.com',
-  vapidKeys.publicKey,
-  vapidKeys.privateKey
-);
-
-
-// Send a push notification to all subscriptions
-subscriptions.forEach(subscription => {
-  const payload = JSON.stringify({ title: 'Hello', body: 'This is a test notification' });
-
-  webPush.sendNotification(subscription, payload)
-    .then(result => console.log('Notification sent', result))
-    .catch(err => console.error('Error sending notification', err));
+const config = defineConfig({
+	extensions: ['.md', '.svx'],
+	layout: {
+		default: path.join(dirname, './src/lib/components/layouts/default-layout.svelte'),
+		fancy: path.join(dirname, './src/lib/components/layouts/fancy-layout.svelte'),
+		components: path.join(dirname, './src/lib/components/layouts/components-layout.svelte')
+	}
 });
 
+export default config;
 ```
 
-## File: scripts/cvFetcher.js
-```js
+## File: mdsvex.d.ts
+```ts
+declare module '*.md' {
+    import type { ComponentType } from 'svelte';
 
+    export const metadata: Record<string, unknown>;
+    const component: ComponentType;
+    export default component;
+}
 ```
 
 ## File: src/app.d.ts
@@ -531,466 +472,6 @@ declare module '*.md' {
 </html>
 ```
 
-## File: src/service-worker.js
-```js
-/// <reference types="@sveltejs/kit" />
-import { build, files, version } from '$service-worker';
-
-// Create a unique cache name for this deployment
-const CACHE = `cache-${version}`;
-
-const ASSETS = [
-	...build, // the app itself
-	...files  // everything in `static`
-];
-
-self.addEventListener('install', (event) => {
-	// Create a new cache and add all files to it
-	async function addFilesToCache() {
-		const cache = await caches.open(CACHE);
-		await cache.addAll(ASSETS);
-	}
-
-	event.waitUntil(addFilesToCache());
-});
-
-self.addEventListener('activate', (event) => {
-	// Remove previous cached data from disk
-	async function deleteOldCaches() {
-		for (const key of await caches.keys()) {
-			if (key !== CACHE) await caches.delete(key);
-		}
-	}
-
-	event.waitUntil(deleteOldCaches());
-});
-
-self.addEventListener('fetch', (event) => {
-	// ignore POST requests etc
-    const url = new URL(event.request.url);
-
-    // Ignore non-HTTP(S) requests (such as chrome-extension requests)
-	if (event.request.method !== 'GET' && (event.request.protocol !== 'http:' || event.request.protocol !== 'https:')) return;
-    
-
-	async function respond() {
-		const url = new URL(event.request.url);
-		const cache = await caches.open(CACHE);
-
-		// `build`/`files` can always be served from the cache
-		if (ASSETS.includes(url.pathname)) {
-			const response = await cache.match(url.pathname);
-
-			if (response) {
-				return response;
-			}
-		}
-
-		// for everything else, try the network first, but
-		// fall back to the cache if we're offline
-		try {
-			const response = await fetch(event.request);
-
-			// if we're offline, fetch can return a value that is not a Response
-			// instead of throwing - and we can't pass this non-Response to respondWith
-			if (!(response instanceof Response)) {
-				throw new Error('invalid response from fetch');
-			}
-
-			if (response.status === 200) {
-				cache.put(event.request, response.clone());
-			}
-
-			return response;
-		} catch (err) {
-			const response = await cache.match(event.request);
-
-			if (response) {
-				return response;
-			}
-
-			// if there's no cache, then just error out
-			// as there is nothing we can do to respond to this request
-			throw err;
-		}
-	}
-
-	event.respondWith(respond());
-});
-```
-
-## File: src/lib/index.scss
-```scss
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-:root {
-	--dark-0: #000;
-	--dark-00: #3b3b3b;
-	--dark-1: #1e1e1e;
-	--dark-2: #2e2e2e;
-	--dark-3: #3e3e3e;
-	--dark-4: #4e4e4e;
-	--dark-5: #5e5e5e;
-	--dark-6: #6e6e6e;
-	--dark-7: #7e7e7e;
-	--dark-8: #8e8e8e;
-
-	--light-0: #fff;
-	--light-00: #cacaca;
-	--light-1: #e1e1e1;
-	--light-2: #d1d1d1;
-	--light-3: #c1c1c1;
-	--light-4: #b1b1b1;
-	--light-5: #a1a1a1;
-	--light-6: #919191;
-	--light-7: #818181;
-	--light-8: #717171;
-
-	--code-keyword-light: #bd2864;
-	--code-keyword-dark: #bd2864;
-
-	--code-string-light: #297a3a;
-	--code-string-dark: #62c073;
-
-	--code-function-light: #0068d6;
-	--code-function-dark: #52a8ff;
-
-	--code-constant-dark: #f8c555;
-	--code-constant-light: #f08d49;
-
-	--code-operator-dark: #67cdcc;
-	--code-operator-light: #016464;
-
-	--link-dark: #2563eb;
-	--link-light: #3b82f6;
-
-	--dark-0-60: rgba(0, 0, 0, 0.6);
-	--light-0-60: rgba(255, 255, 255, 0.6);
-
-	// fonts
-	--text-f: 'Inter';
-	--title-f: 'Inter';
-
-	overflow-y: scroll;
-}
-
-body {
-	margin: 0px;
-}
-
-* {
-	transition-duration: 200ms;
-	transition-property: background, border-color, opacity, box-shadow, top, bottom, left, margin,
-		right;
-}
-
-:root[data-theme='dark'] {
-	color-scheme: dark;
-
-	--main: var(--dark-0);
-	--main-close: var(--dark-00);
-	--main-hover: var(--dark-1);
-	--secondary: var(--dark-1);
-	--secondary-hover: var(--dark-2);
-	--tertiary: var(--dark-2);
-	--tertiary-hover: var(--dark-3);
-	--accent: var(--dark-3);
-	--accent-hover: var(--dark-4);
-
-	--main-text: var(--light-0);
-	--main-text-hover: var(--light-1);
-	--secondary-text: var(--light-1);
-	--secondary-text-hover: var(--light-2);
-	--tertiary-text: var(--light-2);
-	--tertiary-text-hover: var(--light-3);
-	--accent-text: var(--light-3);
-	--accent-text-hover: var(--light-4);
-
-	--border: var(--dark-2);
-	--border-hover: var(--light-7);
-
-	--main-60: var(--dark-0-60);
-
-	--code-keyword: var(--code-keyword-dark);
-	--code-string: var(--code-string-dark);
-	--code-function: var(--code-function-dark);
-	--code-constant: var(--code-constant-dark);
-	--code-operator: var(--code-operator-dark);
-	--link: var(--link-light);
-}
-
-:root[data-theme='light'] {
-	color-scheme: light;
-
-	--main: var(--light-0);
-	--main-close: var(--light-00);
-	--main-hover: var(--light-1);
-	--secondary: var(--light-1);
-	--secondary-hover: var(--light-2);
-	--tertiary: var(--light-2);
-	--tertiary-hover: var(--light-3);
-	--accent: var(--light-3);
-	--accent-hover: var(--light-4);
-
-	--main-text: var(--dark-0);
-	--main-text-hover: var(--dark-1);
-	--secondary-text: var(--dark-1);
-	--secondary-text-hover: var(--dark-2);
-	--tertiary-text: var(--dark-2);
-	--tertiary-text-hover: var(--dark-3);
-	--accent-text: var(--dark-3);
-	--accent-text-hover: var(--dark-4);
-
-	--border: var(--light-1);
-	--border-hover: var(--dark-8);
-
-	--main-60: var(--light-0-60);
-
-	--code-keyword: var(--code-keyword-light);
-	--code-string: var(--code-string-light);
-	--code-function: var(--code-function-light);
-	--code-constant: var(--code-constant-light);
-	--code-operator: var(--code-operator-light);
-	--link: var(--link-dark);
-}
-
-.container {
-	max-width: 1200px;
-	min-width: 1200px;
-	margin: 0px auto;
-
-	@media (max-width: 1350px) {
-		& {
-			max-width: 1000px;
-			min-width: 1000px;
-		}
-	}
-
-	@media (max-width: 1075px) {
-		& {
-			max-width: -webkit-fill-available;
-			min-width: -webkit-fill-available;
-			max-width: -moz-available;
-			min-width: -moz-available;
-		}
-	}
-}
-
-.markdown-container {
-	--code-comment: var(--tertiary-text);
-	--code-punctuation: var(--main-text);
-	--code-builtin: var(--secondary-text);
-	--code-number: var(--secondary-text);
-	--code-interpolation: var(--code-keyword);
-	--code-class-name: var(--secondary-text);
-
-	font-family: 'Space Mono', monospace;
-	font-size: 14px;
-
-	color: var(--tertiary-text);
-	overflow-y: auto !important;
-
-	code[class*='language-'],
-	pre[class*='language-'] {
-		overflow-x: auto;
-		min-width: 0px;
-		color: var(--main-text-hover);
-	}
-
-	pre[class*='language-'] {
-		margin-top: 1em;
-		margin-bottom: 1em;
-	}
-
-	& .token.selector,
-	.token.important,
-	.token.atrule,
-	.token.keyword {
-		color: var(--code-keyword);
-	}
-
-	& .token {
-		&.punctuation {
-			color: var(--code-punctuation);
-		}
-
-		&.string {
-			color: var(--code-string);
-		}
-
-		&.function {
-			color: var(--code-function);
-		}
-
-		&.comment {
-			color: var(--code-comment);
-		}
-
-		&.token.builtin {
-			color: var(--code-builtin);
-		}
-
-		&.token.number {
-			color: var(--code-number);
-		}
-
-		&.token.constant {
-			color: var(--code-constant);
-		}
-
-		&.token.operator {
-			color: var(--code-operator);
-		}
-		&.token.interpolation {
-			color: var(--code-interpolation);
-		}
-
-		&.token.class-name {
-			color: var(--code-function);
-		}
-	}
-
-	& h1,
-	& h2,
-	& h3 {
-		color: var(--text);
-		margin-bottom: 0.45em;
-	}
-
-	& h1 {
-		font-size: 2em;
-	}
-
-	& h2 {
-		font-size: 1.8em;
-	}
-
-	& h3 {
-		font-size: 1.6em;
-	}
-
-	& h4 {
-		font-size: 1.45em;
-	}
-
-	& h5 {
-		font-size: 1.3em;
-	}
-
-	& h6 {
-		font-size: 1.2em;
-	}
-
-	& p {
-		line-height: 1.75rem;
-	}
-
-	& ul {
-		margin: 0;
-		padding: 0 20px;
-	}
-
-	& li {
-		padding: 5px 0px;
-		line-height: 1.75rem;
-	}
-
-	& a {
-		color: var(--link);
-	}
-
-	& :is(code):not(pre code) {
-		color: var(--accent-text);
-		// font-size: 0.9em;
-		background-color: var(--tertiary);
-		padding: 1px 6px;
-		border-radius: 0.25em;
-	}
-
-	& :not(pre) > code[class*='language-'],
-	pre[class*='language-'] {
-		background-color: var(--main-hover);
-		border: 1px solid var(--border);
-		border-radius: 0.25em;
-		font-size: 0.9em;
-
-		&:hover {
-			background-color: var(--secondary-hover);
-			border-color: var(--border-hover);
-		}
-	}
-
-	& a :is(code):not(pre code) {
-		color: inherit;
-	}
-
-	& blockquote {
-		padding: 5px 20px;
-		background-color: var(--main-hover);
-		border: 1px solid var(--dividerLight);
-		margin-right: 0px;
-		margin-left: 0px;
-		border-radius: 0.25em;
-
-		strong {
-			font-style: normal;
-		}
-	}
-
-	& hr {
-		// border: none;
-		border-top: 0.5px solid var(--border-low);
-		color: var(--border-low);
-		margin: 30px 0px;
-	}
-}
-
-.nav-bar-mobile-btn {
-	width: 36px;
-	height: 36px;
-
-	&::before,
-	&::after {
-		content: '';
-		display: block;
-		height: 1px;
-		width: 20px;
-		background-color: var(--secondary-text);
-		transition: transform 200ms ease;
-	}
-
-	&:hover {
-		&::before,
-		&::after {
-			background-color: auto;
-		}
-	}
-
-	&::before {
-		transform: translateY(-5px) rotate(0deg);
-	}
-
-	&::after {
-		transform: translateY(4px) rotate(0deg);
-	}
-
-	&-expanded {
-		&::before {
-			transform: translateY(2px) rotate(45deg);
-		}
-
-		&::after {
-			transform: translateY(0) rotate(-45deg);
-		}
-	}
-}
-
-```
-
 ## File: src/lib/types.ts
 ```ts
 import type { Color } from './utils/colors';
@@ -1014,6 +495,25 @@ export enum Platform {
 	Blog = 'blog',
 	StackShare = 'stackShare',
 	WhatsApp = 'whatsapp'
+}
+
+interface MdsvexOptions {
+	extensions: string[];
+	smartypants: boolean | smartypantsOptions;
+	layout: string | { [name: string]: string };
+	remarkPlugins: Array<plugin> | Array<[plugin, plugin_options]>;
+	rehypePlugins: Array<plugin> | Array<[plugin, plugin_options]>;
+	highlight: { highlighter: Function, alias: { [alias]: lang } };
+	frontmatter: { parse: Function; marker: string };
+}
+
+export interface Service {
+    slug: string;
+    color: string;
+    shortDescription: string;
+    image: string;
+    name: string;
+    type: string;
 }
 
 export type Icon = `i-${string}-${string}`;
@@ -1108,79 +608,6 @@ export interface Education<S extends string = string> extends Item<S> {
 	</div>
 </div>
 
-```
-
-## File: src/lib/components/InstallPrompt.svelte
-```svelte
-<script lang="ts">
-    import { onMount } from 'svelte';
-    
-    let deferredPrompt: any;
-    let showInstallPrompt = false;
-
-    onMount(() => {
-        window.addEventListener('beforeinstallprompt', (e) => {
-            // Prevent Chrome 67 and earlier from automatically showing the prompt
-            e.preventDefault();
-            // Stash the event so it can be triggered later
-            deferredPrompt = e;
-            // Show the install button
-            showInstallPrompt = true;
-        });
-    });
-
-    function installApp() {
-        showInstallPrompt = false;
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult: { outcome: string }) => {
-            if (choiceResult.outcome === 'accepted') {
-                console.log('User accepted the install prompt');
-            } else {
-                console.log('User dismissed the install prompt');
-            }
-            deferredPrompt = null;
-        });
-    }
-</script>
-
-{#if showInstallPrompt}
-    <div class="install-prompt">
-        <p>Install "webAlly" for a better experience!</p>
-        <button on:click={installApp}>Add to Home Screen</button>
-    </div>
-{/if}
-
-<style>
-    .install-prompt {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-        background-color: #000000;
-        border:1px solid #FFF;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 1000;
-    }
-
-    button {
-        background-color: #101110;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 4px;
-    }
-</style>
 ```
 
 ## File: src/lib/components/Markdown.svelte
@@ -1447,225 +874,6 @@ export interface Education<S extends string = string> extends Item<S> {
 
 ```
 
-## File: src/lib/components/Card/CardDivider.svelte
-```svelte
-<div class="bg-[var(--border)] h-1px m-y-10px" />
-
-```
-
-## File: src/lib/components/Card/CardLink.svelte
-```svelte
-<script lang="ts">
-	import UIcon from '../Icon/UIcon.svelte';
-
-	export let label: string;
-	export let to: string;
-</script>
-
-<a
-	class="card-link row-center relative m-x-2.5px border-1px border-solid border-[var(--border)] p-5px rounded-10px text-inherit"
-	href={to}
-	title={label}
-	target="_blank"
-	rel="noreferrer"
-	data-help={label}
->
-	<UIcon icon="i-carbon-link" classes="text-[var(--secondary-text)]" />
-</a>
-
-<style lang="scss">
-	.card-link {
-		&:hover {
-			border-color: var(--border-hover);
-
-			&:after {
-				content: attr(data-help);
-				display: inline-block;
-				position: absolute;
-				width: max-content;
-				background-color: var(--secondary);
-				padding: 5px 10px;
-				right: 40%;
-				top: calc(100% + 5px);
-				border: 1px solid var(--border);
-				border-radius: 15px;
-				z-index: 10;
-			}
-		}
-	}
-</style>
-
-```
-
-## File: src/lib/components/Card/CardLogo.svelte
-```svelte
-<script lang="ts">
-	export let src: string;
-	export let alt: string;
-	export let size = 50;
-	export let radius = '15px';
-	export let classes = '';
-</script>
-
-<img class={`rounded-${radius} ${classes} aspect-square`} {src} {alt} height={size} width={size} />
-
-```
-
-## File: src/lib/components/Card/CardTitle.svelte
-```svelte
-<script lang="ts">
-	export let title: string;
-</script>
-
-<h3 class="font-[var(--title-f)] text-1.25em">{title}</h3>
-
-```
-
-## File: src/lib/components/Carrousel/Carrousel.svelte
-```svelte
-<script lang="ts">
-	import { onMount } from 'svelte';
-	import type { Skill } from '$lib/types';
-	import { getAssetURL } from '$lib/data/assets';
-	import UIcon from '../Icon/UIcon.svelte';
-
-	export let items: Array<Skill> = [];
-	const delay = 2000;
-
-	let element: HTMLElement;
-
-	let timeout: unknown;
-	let index = 0;
-	let toRight = true;
-
-	$: {
-		if (element) {
-			element.scroll({
-				left: index * 150,
-				behavior: 'smooth'
-			});
-		}
-	}
-
-	const slide = (right: boolean) => {
-		if (right) {
-			if (index < items.length - 1) {
-				index = index + 1;
-			} else {
-				index = index - 1;
-				toRight = false;
-			}
-		} else {
-			if (index > 0) {
-				index = index - 1;
-			} else {
-				index = index + 1;
-				toRight = true;
-			}
-		}
-	};
-
-	const toggle = (right: boolean) => {
-		clearTimeout(timeout as number);
-
-		timeout = setTimeout(() => {
-			slide(right);
-
-			toggle(toRight);
-		}, delay);
-	};
-
-	const toggleLeft = () => {
-		clearTimeout(timeout as number);
-		toRight = false;
-		slide(false);
-		toggle(toRight);
-	};
-
-	const toggleRight = () => {
-		clearTimeout(timeout as number);
-		toRight = true;
-		slide(true);
-		toggle(toRight);
-	};
-
-	onMount(() => {
-		toggle(true);
-	});
-</script>
-
-<div class="carrousel flex-[0.5] row-center">
-	<button
-		class="row-center font-500 p-5px m-y-0px m-x-10px cursor-pointer border-1px border-solid border-[var(--border)] bg-transparent rounded-[50%] hover:border-[var(--border-hover)]"
-		on:click={toggleLeft}
-		on:keyup
-		on:keydown
-		on:keypress
-	>
-		<UIcon icon="i-carbon-chevron-left" />
-	</button>
-
-	<div bind:this={element} class="row overflow-hidden box-content w-150px">
-		{#each items as item}
-			<div class="box-content w-150px p-15px col-center">
-				<img class="w-120px h-120px aspect-square" src={getAssetURL(item.logo)} alt={item.name} />
-				<span class="text-center m-t-20px">{item.name}</span>
-			</div>
-		{/each}
-	</div>
-
-	<button
-		class="row-center font-500 p-5px m-y-0px m-x-10px cursor-pointer border-1px border-solid border-[var(--border)] bg-transparent rounded-[50%] hover:border-[var(--border-hover)]"
-		on:click={toggleRight}
-		on:keyup
-		on:keydown
-		on:keypress
-	>
-		<UIcon icon="i-carbon-chevron-right" />
-	</button>
-</div>
-
-```
-
-## File: src/lib/components/Chip/Chip.svelte
-```svelte
-<script lang="ts">
-	import { onMount } from 'svelte';
-
-	let el: HTMLElement;
-
-	export let active = false;
-	export let size = 'auto';
-	export let classes = '';
-	export let href = '';
-
-	$: className = `row-center cursor-pointer py-[5px] px-[15px] m-[2.5px] decoration-none inline-block border-[1px] border-solid border-[var(--border)] rounded-[20px] tracking-wider text-[0.9em] text-[var(--tertiary-text)] duration-[150ms] font-light  ${
-		active
-			? 'bg-[var(--accent)] hover:bg-[var(--accent-hover)]'
-			: 'bg-transparent hover:bg-[var(--main-hover)]'
-	} ${classes}`;
-
-	onMount(() => {
-		el.style.setProperty('--size', size);
-	});
-</script>
-
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<svelte:element
-	this={href ? 'a' : 'button'}
-	bind:this={el}
-	{href}
-	class={className}
-	on:click
-	on:keydown
-	on:keypress
-	on:keyup
->
-	<slot />
-</svelte:element>
-
-```
-
 ## File: src/lib/components/Chip/ChipIcon.svelte
 ```svelte
 <script lang="ts">
@@ -1813,121 +1021,6 @@ export interface Education<S extends string = string> extends Item<S> {
 </style>
 ```
 
-## File: src/lib/components/ExperienceCard/ExperienceCard.svelte
-```svelte
-<script lang="ts">
-	import type { Experience } from '$lib/types';
-	import { computeExactDuration, getMonthName, getTimeDiff } from '$lib/utils/helpers';
-	import Card from '../Card/Card.svelte';
-	import CardLogo from '../Card/CardLogo.svelte';
-	import CardTitle from '../Card/CardTitle.svelte';
-	import ChipIcon from '../Chip/ChipIcon.svelte';
-	import { getAssetURL } from '$lib/data/assets';
-	import { base } from '$app/paths';
-	import UIcon from '../Icon/UIcon.svelte';
-	import Chip from '../Chip/Chip.svelte';
-	import CardDivider from '../Card/CardDivider.svelte';
-
-	export let experience: Experience;
-
-	// const months = getTimeDiff(experience.period.from, experience.period.to);
-	const exactDuration = computeExactDuration(experience.period.from, experience.period.to);
-
-	const from = `${getMonthName(
-		experience.period.from.getMonth()
-	)} ${experience.period.from.getFullYear()}`;
-	const to = experience.period.to
-		? `${getMonthName(experience.period.to.getMonth())} ${experience.period.to.getFullYear()}`
-		: 'Present';
-
-	const period = `${from} - ${to}`;
-
-	$: info = [
-		{ label: experience.company, icon: 'i-carbon-building' },
-		{ label: experience.location, icon: 'i-carbon-location' },
-		{ label: experience.contract, icon: 'i-carbon-hourglass' }
-	] as const;
-</script>
-
-<Card
-	margin="0px 0px 20px 0px"
-	tiltDegree={2}
-	href={`${base}/experience/${experience.slug}`}
-	color={experience.color}
->
-	<div class="col md:flex-row items-start gap-5 md:gap-1">
-		<CardLogo src={getAssetURL(experience.logo)} alt={experience.company} size={55} />
-		<div class="col ml-0 md:ml-[20px] gap-3 w-full">
-			<div class="col ">
-				<h3
-					class="flex text-[0.9em] flex-col items-start sm:flex-row sm:items-center justify-between sm:gap-5 md:flex-col md:items-start md:gap-0 lg:flex-row lg:items-center"
-				>
-					<CardTitle title={`${experience.name}`} />
-				</h3>
-				<div class="row flex-wrap items-start m-b-2 gap-1 text-0.9em font-300">
-					{#each info as item}
-						<Chip>
-							<UIcon icon={item.icon} />
-							<span class="m-l-1">{item.label}</span>
-						</Chip>
-					{/each}
-				</div>
-			</div>
-			<div class="text-[var(--text)] text-[0.9em]">
-				<div class="row items-center gap-2">
-					<UIcon icon="i-carbon-calendar" classes="text-1.25em" />
-					{period}
-				</div>
-				<CardDivider />
-				<div class="row items-center gap-2">
-					<UIcon icon="i-carbon-time" classes="text-1.25em" />
-					{exactDuration}
-				</div>
-				<CardDivider />
-			</div>
-			<div class="experience-description text-[0.9em]">{experience.shortDescription}</div>
-			<div class="flex flex-row flex-wrap mt-5">
-				{#each experience.skills as skill}
-					<ChipIcon
-						logo={getAssetURL(skill.logo)}
-						name={skill.name}
-						href={`${base}/skills/${skill.slug}`}
-					/>
-				{/each}
-			</div>
-		</div>
-	</div>
-</Card>
-
-```
-
-## File: src/lib/components/Icon/Icon.svelte
-```svelte
-<script lang="ts">
-	import type { Icons } from '$lib/utils';
-	import { viewBox } from './Icons';
-
-	let el: SVGElement;
-
-	export let size = '30px';
-	export let color = 'var(--main-text)';
-
-	export let icon: Icons;
-</script>
-
-<svg
-	bind:this={el}
-	class="inline-block"
-	viewBox={viewBox(icon)}
-	fill={color}
-	height={size}
-	width={size}
->
-	<path d={icon} />
-</svg>
-
-```
-
 ## File: src/lib/components/Icon/Icons.ts
 ```ts
 import { Icons } from '$lib/utils';
@@ -1939,50 +1032,6 @@ export const viewBox = (icon: Icons) => {
 
 	return [Icons.GitHub, Icons.Search, Icons.Code].includes(icon) ? '0 0 16 16' : '0 0 24 24';
 };
-
-```
-
-## File: src/lib/components/Icon/UIcon.svelte
-```svelte
-<script lang="ts">
-	export let icon: `i-${string}-${string}` | undefined = undefined;
-
-	export let classes = '';
-</script>
-
-<i class={`${icon} ${classes}`} />
-
-```
-
-## File: src/lib/components/Input/Input.svelte
-```svelte
-<script lang="ts">
-	export let value = '';
-	export let placeholder = '';
-    let inputElement: HTMLInputElement;
-
-    function focus() {
-        inputElement.focus();
-    }
-
-    export { focus };
-</script>
-
-<input
-	bind:this={inputElement}
-	bind:value
-	{placeholder}
-	class="text-[inherit] bg-transparent border-[1px] border-solid border-[var(--border)] px-[20px] py-[10px] rounded-[15px] flex-1 text-[1.15em] "
-/>
-
-<style lang="scss">
-	input {
-		&:focus {
-			outline: 1px solid var(--border-hover);
-			background-color: var(--main-hover);
-		}
-	}
-</style>
 
 ```
 
@@ -1998,392 +1047,6 @@ export const viewBox = (icon: Icons) => {
 >
 	<slot />
 </h1>
-
-```
-
-## File: src/lib/components/NavMenu/NavMenu.svelte
-```svelte
-<script lang="ts">
-	import { page } from '$app/stores';
-	import { theme, toggleTheme } from '$lib/stores/theme';
-	import { items } from '@data/navbar';
-	import * as HOME from '@data/home';
-	import { onMount } from 'svelte';
-
-	import { base } from '$app/paths';
-	import UIcon from '../Icon/UIcon.svelte';
-
-	$: currentRoute = $page.url.pathname;
-
-	let expanded = false;
-	let isScrolling = false;
-	let scrollTimeout: ReturnType<typeof setTimeout>;
-	let navVisible = true;
-
-	const toggleExpanded = (v?: boolean) => {
-		if (typeof v === 'undefined') {
-			expanded = !expanded;
-		} else {
-			expanded = v;
-		}
-	};
-
-	function getHref(item:any) {
-		return item.external ? item.to : `${base}${item.to}`;
-	}
-
-	$: headerItems = items.filter((item) => item.position === 'header');
-	$: verticalItems = items.filter((item) => item.position === 'sidebar');
-
-	function handleScroll() {
-		isScrolling = true;
-		navVisible = true;
-		clearTimeout(scrollTimeout);
-
-		scrollTimeout = setTimeout(() => {
-			isScrolling = false;
-			if (window.innerWidth <= 768) { // Only hide on mobile
-				navVisible = false;
-			}
-		}, 3000);
-	}
-
-	function showNav() {
-		navVisible = true;
-	}
-
-	onMount(() => {
-		window.addEventListener('scroll', handleScroll);
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	});
-</script>
-
-<div class="nav-menu">
-	<nav class="container flex flex-row items-center text-sm">
-		<a
-			href={`${base}/`}
-			class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"
-		>
-			<UIcon icon="i-carbon-code" classes="text-2em" />
-			<span
-				class="ml-2 mt--2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis"
-				>{HOME.name} {HOME.lastName}</span
-			>
-		</a>
-		<div class="flex-1 block overflow-hidden md:hidden whitespace-nowrap text-ellipsis text-center">
-			{HOME.name}
-			{HOME.lastName}
-		</div>
-		<div class="flex-row flex-1 self-center h-full justify-center hidden md:flex">
-			{#each headerItems as item (item.title)}
-				<a 
-					href={getHref(item)} 
-					class="nav-menu-item !text-[var(--secondary-text)]"
-					target={item.external ? "_blank" : undefined}
-					rel={item.external ? "noopener noreferrer" : undefined}
-				>
-					<UIcon icon={item.icon} classes="text-1.3em" />
-					<span class="nav-menu-item-label">{item.title}</span>
-				</a>
-			{/each}
-		</div>
-		<div
-			class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"
-		>
-			<div class="row hidden md:flex">
-				<a
-					href={`${base}/search`}
-					class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"
-				>
-					<UIcon icon="i-carbon-search" />
-				</a>
-				<!--
-				<button
-					class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
-					on:click={() => toggleTheme()}
-				>
-					{#if $theme}
-						<UIcon icon="i-carbon-moon" />
-					{:else}
-						<UIcon icon="i-carbon-sun" />
-					{/if}
-				</button>
-				-->
-			</div>
-			<div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer">
-				<!-- svelte-ignore a11y-no-static-element-interactions -->
-				<div
-					class={`nav-bar-mobile-btn col-center ${expanded ? 'nav-bar-mobile-btn-expanded' : ''}`}
-					on:keydown
-					on:keyup
-					on:click={() => toggleExpanded()}
-				/>
-			</div>
-		</div>
-	</nav>
-	<div class={`nav-menu-mobile ${expanded ? 'nav-menu-mobile-open' : ''} md:hidden`}>
-		<div class="flex-col flex-1 self-center h-full justify-center m-t-7">
-			{#each headerItems as item}
-				<a
-					href={getHref(item)}
-					class="nav-menu-item !text-[var(--secondary-text)] gap-5"
-					target={item.external ? "_blank" : undefined}
-					rel={item.external ? "noopener noreferrer" : undefined}
-					on:click={() => toggleExpanded(false)}
-				>	
-					<UIcon icon={item.icon} classes="text-1.3em" />
-					<span class="">{item.title}</span>
-				</a>
-			{/each}
-		</div>
-		<div class="col gap-2 m-t-7">
-			<a
-				href={`${base}/search`}
-				class="text-inherit text-sm decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"
-				on:click={() => toggleExpanded(false)}
-			>
-				<UIcon icon="i-carbon-search" />
-				<span>Search</span>
-			</a>
-			<!--
-			<button
-				class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
-				on:click={() => toggleTheme()}
-			>
-				{#if $theme}
-					<UIcon icon="i-carbon-moon" />
-					<span>Dark Theme</span>
-				{:else}
-					<UIcon icon="i-carbon-sun" />
-					<span>Light Theme</span>
-				{/if}
-			</button>
-			-->
-		</div>
-	</div>
-	<div
-		class="vertical-nav flex flex-col fixed right-0 top-1/2 transform -translate-y-1/2 transition-transform duration-300 ease-in-out"
-		class:hidden={!navVisible}
-	>
-		{#each verticalItems as item}
-			<a
-				href={`${base}${item.to}`}
-				class="nav-menu-item vertical text-xs !text-[var(--secondary-text)] mb-3"
-				class:active={currentRoute === item.to}
-			>
-				<UIcon icon={item.icon} classes="text-1.3em icon-wrapper" />
-				<span class="nav-menu-item-label vertival-nav-menu-item-label mr-1" style="margin-left: 5px">{item.title}</span>
-			</a>
-		{/each}
-	</div>
-</div>
-
-{#if !navVisible}
-	<button
-		class="show-nav-button fixed right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-l-sm"
-		on:click={showNav}
-	>
-		<UIcon icon="i-carbon-arrow-left" classes="text-1.5em; " />
-	</button>
-{/if}
-
-<style lang="scss">
-	.nav-menu {
-		display: flex;
-		justify-content: center;
-		position: sticky;
-		top: 0px;
-		z-index: 10;
-		padding: 0px 10px;
-		height: 50px;
-		border-bottom: 1px solid var(--secondary);
-		background-color: var(--main);
-
-		&-item {
-			text-decoration: none;
-			font-weight: 400;
-			padding: 10px 20px;
-			color: inherit;
-			display: flex;
-			align-items: center;
-			border-bottom: 3px solid transparent;
-
-			&-label {
-				margin-left: 10px;
-
-				@media (max-width: 950px) {
-					& {
-						display: none;
-					}
-				}
-			}
-
-			&:hover {
-				opacity: 1.0;
-				background-color: var(--main-hover);
-			}
-		}
-	}
-
-	.nav-menu-mobile {
-		z-index: -1;
-		max-height: calc(100vh - 50px - 1px);
-		min-height: calc(100vh - 50px - 1px);
-		width: 100%;
-		position: absolute;
-		background-color: var(--main);
-		top: 51px;
-		transform: translateY(-100vh);
-		transition-property: transform opacity;
-		transition: 400ms ease;
-		opacity: 0;
-
-		&-open {
-			opacity: 1;
-			transform: translateY(0vh);
-		}
-	}
-
-	.icon-wrapper {
-		padding: 15px;
-	}
-
-	.vertical-nav {
-		z-index: 20;
-		display: flex;
-		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-		opacity: 0.5;
-
-		&.hidden {
-			transform: translate(100%, -50%);
-		}
-
-		&:hover, &.scrolling {
-			opacity: 1;
-		}
-	}
-
-	.nav-menu-item.vertical {
-		writing-mode: vertical-rl;
-		transform: rotate(180deg);
-		padding: 5px 5px;
-		background-color: var(--main);
-		border-radius: 0 0 0 0;
-		border-right: 1px solid #2e2e2e;
-		border-top: 1px solid #2e2e2e;
-		border-bottom: 1px solid #2e2e2e;
-		box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-		display: flex;
-		align-items: center;
-		min-height: 80px;
-		transition: opacity 0.3s ease-in-out;
-
-		&:hover {
-			background-color: var(--main-hover);
-			opacity: 1;
-		}
-
-		&.active {
-			background-color: var(--accent);
-			color: var(--main);
-		}
-
-		.nav-menu-item-label {
-			margin-top: 10px;
-			display: inline-block;
-		}
-	}
-
-	.show-nav-button {
-		z-index: 19;
-		cursor: pointer;
-	}
-
-	@media (max-width: 768px) {
-		.vertical-nav {
-			transition: transform 0.3s ease-in-out;
-		}
-	}
-</style>
-```
-
-## File: src/lib/components/ProjectCard/ProjectCard.svelte
-```svelte
-<script lang="ts">
-	import { computeExactDuration, countMonths, getMonthName } from '$lib/utils/helpers';
-	import Chip from '../Chip/Chip.svelte';
-	import Card from '../Card/Card.svelte';
-	import CardTitle from '../Card/CardTitle.svelte';
-	import CardLink from '../Card/CardLink.svelte';
-	import CardDivider from '../Card/CardDivider.svelte';
-	import ChipIcon from '../Chip/ChipIcon.svelte';
-	import CardLogo from '../Card/CardLogo.svelte';
-	import type { Project } from '$lib/types';
-	import { getAssetURL } from '$lib/data/assets';
-	import { base } from '$app/paths';
-	import UIcon from '../Icon/UIcon.svelte';
-
-	export let project: Project;
-	$: months = countMonths(project.period.from, project.period.to);
-	// $: period = `${months} month${months > 1 ? 's' : ''}`;
-	// $: period = `${getTimeDiff(
-	// 	project.period.from,
-	// 	project.period.to ?? new Date(Date.now() + 1000 * 60 * 60 * 24)
-	// )}`;
-	$: period = computeExactDuration(project.period.from, project.period.to);
-	$: from = `${getMonthName(project.period.from.getMonth())} ${project.period.from.getFullYear()}`;
-	$: to = project.period.to
-		? `${getMonthName(project.period.to.getMonth())} ${project.period.to.getFullYear()}`
-		: 'now';
-</script>
-
-<Card color={project.color} href={`${base}/projects/${project.slug}`}>
-	<CardLogo alt={project.name} src={getAssetURL(project.logo)} size={40} radius={'0'} />
-	<div class="m-t-20px row justify-between items-center">
-		<CardTitle title={project.name} />
-		<div class="row">
-			{#each project.links as link}
-				<CardLink label={link.label ?? ''} to={link.to} />
-			{/each}
-		</div>
-	</div>
-	<CardDivider />
-	<div class="col m-b-15px justify-between text-[var(--secondary-text)] text-0.85em">
-		<div class="row items-center gap-2">
-			<UIcon icon="i-carbon-assembly-cluster" classes="text-1.25em" />
-			<p>{project.type}</p>
-		</div>
-		<CardDivider />
-		<div class="row items-center gap-2">
-			<UIcon icon="i-carbon-time" classes="text-1.25em" />
-			<p>{period}</p>
-		</div>
-		<CardDivider />
-	</div>
-	<div class="col sm:h-100px md:h-160px">
-		<p class="text-[0.9em] text-[var(--secondary-text)] m-t-20px m-b-40px flex-1 line-clamp-3">
-			{project.shortDescription}
-		</p>
-	</div>
-	<div class="row justify-between text-0.8em font-400">
-		<Chip>{from}</Chip>
-		{#if from !== to}
-			<Chip>{to}</Chip>
-		{/if}
-	</div>
-	<CardDivider />
-	<div class="row flex-wrap">
-		{#each project.skills as tech}
-			<ChipIcon
-				logo={getAssetURL(tech.logo)}
-				name={tech.name}
-				href={`${base}/skills/${tech.slug}`}
-			/>
-		{/each}
-	</div>
-</Card>
 
 ```
 
@@ -2447,332 +1110,220 @@ export const viewBox = (icon: Icons) => {
 
 ```
 
+## File: src/lib/components/ServiceCard/ServiceCard.svelte
+```svelte
+<script lang="ts">
+    import Card from '../Card/Card.svelte';
+    import CardTitle from '../Card/CardTitle.svelte';
+    import CardDivider from '../Card/CardDivider.svelte';
+    import CardLogo from '../Card/CardLogo.svelte';
+    import type { Service } from '$lib/types';
+    import { getAssetURL } from '$lib/data/assets';
+    import { base } from '$app/paths';
+    import UIcon from '../Icon/UIcon.svelte';
+
+    export let service: Service;
+</script>
+
+<Card color={service.color} href={`${base}/services/${service.slug}`}>
+    <div class="card-content">
+        <div class="background-image" style="background-image: url({getAssetURL(service.image)})"></div>
+        <div class="content-overlay">
+            
+            <div class="m-t-20px row justify-between items-center">
+                <CardTitle title={service.name} />
+            </div>
+            <CardDivider />
+            <div class="col m-b-15px justify-between text-[var(--secondary-text)] text-0.85em">
+                <div class="row items-center gap-2">
+                    <UIcon icon="i-carbon-assembly-cluster" classes="text-1.25em" />
+                    <p>{service.type}</p>
+                </div>
+            </div>
+            <div class="col sm:h-100px md:h-160px">
+                <p class="text-[0.9em] text-[var(--secondary-text)] m-t-20px m-b-40px flex-1 line-clamp-3">
+                    {service.shortDescription}
+                </p>
+            </div>
+        </div>
+    </div>
+</Card>
+
+<style lang="scss">
+    .card-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: inherit;
+    }
+
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.05;  // 95% opacity (1 - 0.95)
+        filter: grayscale(100%);
+    }
+
+    .content-overlay {
+        position: relative;
+        z-index: 1;
+        padding: 1rem;  // Adjust padding as needed
+    }
+
+    :global(.card-content .content-overlay *) {
+        color: var(--text-color, #ffffff) !important;
+    }
+</style>
+```
+
+## File: src/lib/components/layouts/default-layout.svelte
+```svelte
+<script lang="ts">
+	export let title = 'Change me';
+</script>
+
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
+
+<main>
+	<h1 class="is-size-3">{title}</h1>
+	<slot />
+</main>
+```
+
+## File: src/lib/components/layouts/fancy-layout.svelte
+```svelte
+<script lang="ts">
+	import './github-markdown-light.css';
+	export let title = 'Change me';
+</script>
+
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
+
+<main class="markdown-body" style="max-width: 60ch; margin: auto; padding-top: 2.5rem;">
+	<h1>{title}</h1>
+	<slot />
+</main>
+```
+
+## File: src/lib/components/layouts/components-layout.svelte
+```svelte
+<script lang="ts">
+	// @ts-nocheck
+
+	import './github-markdown-light.css';
+	import Breadcrumb from './components/breadcrumb.svelte';
+
+	export let title = 'Change me';
+	export let breadcrumb = [];
+</script>
+
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
+
+<Breadcrumb pathChain={breadcrumb} />
+<main class="markdown-body" style="max-width: 60ch; margin: auto; padding-top: 2.5rem;">
+	<h1>{title}</h1>
+	<slot />
+</main>
+```
+
+## File: src/lib/components/layouts/components/breadcrumb.svelte
+```svelte
+<script lang="ts">
+	import type { BreadcrumbItem } from './types';
+
+	export let pathChain: BreadcrumbItem[];
+</script>
+
+<nav class="breadcrumb mt-3 ml-3" aria-label="breadcrumbs">
+	<ul>
+		<li><a href="/about">About</a></li>
+		{#each pathChain as { label, href }, i}
+			{#if i === pathChain.length - 1}
+				<li class="is-active"><a {href} aria-current="page">{label}</a></li>
+			{:else}
+				<li><a {href}>{label}</a></li>
+			{/if}
+		{/each}
+	</ul>
+</nav>
+```
+
+## File: src/lib/components/layouts/components/quizz.svelte
+```svelte
+<script lang="ts">
+	export let question: string;
+	export let options: Array<{ text: string; correct: boolean }>;
+
+	let selected = false;
+	let selectedOption: { text: string; correct: boolean } | null = null;
+
+	const selectOption = (option: { text: string; correct: boolean }): void => {
+		selected = true;
+		selectedOption = option;
+	};
+
+	function shuffleArray(
+		arr: Array<{ text: string; correct: boolean }>
+	): Array<{ text: string; correct: boolean }> {
+		for (let i = arr.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[arr[i], arr[j]] = [arr[j], arr[i]];
+		}
+
+		return arr;
+	}
+
+	const shuffled = shuffleArray(options);
+</script>
+
+<div class="has-background-light mt-6 mb-6 p-3">
+	<p class="mb-0">Question:</p>
+	<p class="is-size-3 has-text-weight-bold">{question}</p>
+	<div class="is-flex is-justify-content-space-evenly">
+		{#each shuffled as option, i (i)}
+			<button
+				class="button"
+				class:is-success={selected && option.correct}
+				class:is-danger={selected && !option.correct && selectedOption === option}
+				on:click={() => selectOption(option)}
+				disabled={selected}
+			>
+				{option.text}
+			</button>
+		{/each}
+	</div>
+</div>
+
+<style>
+	.button:disabled {
+		opacity: 1;
+	}
+</style>
+```
+
+## File: src/lib/components/layouts/components/types.ts
+```ts
+export type BreadcrumbItem = {
+	label: string;
+	href: string;
+};
+```
+
 ## File: src/lib/data/app.ts
 ```ts
 export const titleSuffix = 'Your Ally in Online Efficiency';
-
-```
-
-## File: src/lib/data/assets.ts
-```ts
-import type { Asset } from '$lib/types';
-import { theme } from '$lib/stores/theme';
-import { base } from '$app/paths';
-
-const gh = (file: string) => `${base}/logos/${file}`;
-
-const a = (light: string, dark?: string): Asset =>
-	dark ? { dark: gh(dark), light: gh(light) } : gh(light);
-
-const Assets = {
-	AdonisJs: gh('adonis.png'),
-	AfterEffects: gh('after-effects.svg'),
-	AI: gh('ai.svg'),
-	Android: gh('android.png'),
-	Angular: gh('angular.png'),
-	AWS: gh('aws.svg'),
-	Azure: gh('azure.svg'),
-	Bootstrap: gh('bootstrap.svg'),
-	C: gh('c.svg'),
-	Celery: gh('celery.svg'),
-	CircleCI: gh('circleci.svg'),
-	Cpp: gh('cpp.svg'),
-	CSS: gh('css.svg'),
-	Csharp: gh('csharp.svg'),
-	Dart: gh('dart.png'),
-	Deep: gh('pandas.svg'),
-	Delphi: gh('delphi.png'),
-	DeepLearning: gh('deep-learning.svg'),
-	Deno: gh('deno.png'),
-	Django: gh('django.svg'),
-	Docker: gh('docker.svg'),
-	Electron: gh('electron.png'),
-	ExpressJs: gh('express.png'),
-	FastApi: gh('fastapi.svg'),
-	Fastify: gh('fastify.svg'),
-	Firebase: gh('firebase.png'),
-	Flask: gh('flask.svg'),
-	Flutter: gh('flutter.svg'),
-	GCP: gh('gcp.svg'),
-	Git: gh('git.svg'),
-	Go: gh('go.svg'),
-	HTML: gh('html.svg'),
-	Illustrator: gh('illustrator.svg'),
-	InDesign: gh('indesign.svg'),
-	IOS: gh('ios.svg'),
-	Java: gh('java.png'),
-	JavaScript: gh('js.png'),
-	Jenkins: gh('jenkins.svg'),
-	Jest: gh('jest.png'),
-	Kafka: gh('kafka.svg'),
-	Kotlin: gh('kotlin.png'),
-	Kubernetes: gh('kubernetes.svg'),
-	Laravel: gh('laravel.svg'),
-	MachineLearning: gh('machine-learning.svg'),
-	MongoDB: gh('mongodb.svg'),
-	MSSQL: gh('mssql.svg'),
-	MySQL: gh('mysql.svg'),
-	NestJs: gh('nest.svg'),
-	Neo4j: gh('neo4j.svg'),
-	Nginx: gh('nginx.svg'),
-	NodeJs: gh('node.png'),
-	Nuxt: gh('nuxt.png'),
-	Numpy: gh('numpy.svg'),
-	Oracle: gh('oracle.svg'),
-	PHP: gh('php.svg'),
-	Photoshop: gh('photoshop.svg'),
-	Postcss: gh('postcss.svg'),
-	PostgreSQL: gh('postgres.png'),
-	Premiere: gh('premiere.svg'),
-	Python: gh('python.png'),
-	Quasar: gh('quasar.svg'),
-	RabbitMQ: gh('rabbitmq.svg'),
-	ReactJs: gh('react.svg'),
-	ReactNative: gh('react-native.svg'),
-	Redis: gh('redis.svg'),
-	Ruvy: gh('ruvy.svg'),
-	Rust: gh('rust.svg'),
-	Sass: gh('sass.png'),
-	Scrapy: gh('scrapy.png'),
-	Selenium: gh('selenium.svg'),
-	SolidJs: gh('solid.svg'),
-	Solid: gh('solid.svg'),
-	Svelte: gh('svelte.png'),
-	Symfony: gh('symfony.svg'),
-	Tailwind: gh('tailwind.svg'),
-	Travis: gh('travis.svg'),
-	TypeScript: gh('ts.png'),
-	Unity: gh('unity.svg'),
-	Unknown: gh('unknown.svg'),
-	Unocss: gh('unocss.svg'),
-	Unreal: gh('unreal.svg'),
-	Vite: gh('vite.png'),
-	Vitest: gh('vitest.svg'),
-	VueJs: gh('vue.png'),
-	Xamarin: gh('xamarin.svg'),
-
-	ACSA: gh('acsa.png'),
-	Tribake: gh('tribake.png'),
-	AngloAmerican: gh('angloAmerican.svg'),
-	APBCO: gh('apbco.png'),
-	BrinantSecurity: gh('brinant.png'),
-	CavalierAbattoirs: gh('cavalier.png'),
-	CityLodge: gh('clhg.png'),
-	Exxaro: gh('exxaro.png'),
-	FNB: gh('fnb.png'),
-	TheOrientHotel: gh('theorient.png'),
-	LegacyUnderwriting: gh('legacy.png'),
-	ImvulaICD: gh('imvula.png'),
-	ImperialLogistics: gh('imperial.png'),
-	TheCarShop: gh('carshop.png'),
-	PrincipalSoftware: gh('d6.png'),
-	PNA: gh('pna.png'),
-
-	Webally: gh('webally.svg'),
-	VaneSystems: gh('vane.png'),
-	PCPalace: gh('pcpalace.jpg'),
-	RAM: gh('ram.png'),
-	CNN: gh('cnn.png'),
-	Nexus: gh('nexus.svg'),
-	Pageworks: gh('pageworks.png'),
-	WhatsApp: gh('whatsapp.svg')
-};
-
-export default Assets;
-
-let currentTheme: boolean;
-
-theme.subscribe((v) => (currentTheme = v));
-
-export const getAssetURL = (asset: Asset): string => {
-	return typeof asset === 'string' ? asset : currentTheme ? asset.dark : asset.light;
-};
-
-```
-
-## File: src/lib/data/documentation-sites.ts
-```ts
-// src/lib/data/documentation-sites.ts
-
-export const title = 'Documentation Sites';
-
-export const sites = [
-    {
-        name: 'AI Docs',
-        url: 'https://ai.docs.webally.co.za',
-        description: 'Artificial Intelligence tools and docs'
-    },
-    {
-        name: 'Android Docs',
-        url: 'https://android.docs.webally.co.za',
-        description: 'Using Linux tools on your android device'
-    },
-    {
-        name: 'ARM Docs',
-        url: 'https://arm.docs.webally.co.za',
-        description: 'Raspberry Pi Documentation'
-    },
-    {
-        name: 'Backups & Config',
-        url: 'https://backup.docs.webally.co.za',
-        description: 'Incremental Config backups with GIT'
-    },
-    {
-        name: 'Bash',
-        url: 'https://bash.docs.webally.co.za',
-        description: 'Bash Scripting'
-    },
-    {
-        name: 'Crypto & Mining',
-        url: 'https://crypto.docs.webally.co.za',
-        description: 'Crypto, Mining, Decentralization & Web 3.0'
-    },
-    {
-        name: 'Development',
-        url: 'https://dev.docs.webally.co.za',
-        description: 'Web / Terminal / Windows / App Development'
-    },
-    {
-        name: 'DNS, MX Records, CNAME',
-        url: 'https://dns.docs.webally.co.za',
-        description: 'Domain Name System, Mail exchange etc'
-    },
-    {
-        name: 'GitHub Gists',
-        url: 'https://gist.docs.webally.co.za',
-        description: 'GitHub Gists (Code snippets and scripts)'
-    },
-    {
-        name: 'Hacking & Info Gathering',
-        url: 'https://hacking.docs.webally.co.za',
-        description: 'Hacking, Information gathering, Spoofing'
-    },
-    {
-        name: 'HeEPP',
-        url: 'https://heepp.docs.webally.co.za',
-        description: 'HeEPP Model View Controller Framework'
-    },
-    {
-        name: 'JavaScript + (Node.js)',
-        url: 'https://js.docs.webally.co.za',
-        description: 'JavaScript Front and Backend (Node.js)'
-    },
-    {
-        name: 'Kali Linux',
-        url: 'https://kali.docs.webally.co.za',
-        description: 'KALI Linux Docs & Setup'
-    },
-    {
-        name: 'Mongo NoSQL DB',
-        url: 'https://mongo.docs.webally.co.za',
-        description: 'Eloquent model & Query builder for MongoDB'
-    },
-    {
-        name: 'Notes and Links',
-        url: 'https://notes.docs.webally.co.za',
-        description: 'Some things I need to remember with links'
-    },
-    {
-        name: 'Open Source',
-        url: 'https://opensource.docs.webally.co.za',
-        description: 'What is awesome, how you can contribute'
-    },
-    {
-        name: 'Projects',
-        url: 'https://projects.docs.webally.co.za',
-        description: 'Some notes on projects I worked on'
-    },
-    {
-        name: 'PHP Development',
-        url: 'https://php.docs.webally.co.za',
-        description: 'PHP Backend Development'
-    },
-    {
-        name: 'Perl Development',
-        url: 'https://perl.docs.webally.co.za',
-        description: 'Perl Server Side Development'
-    },
-    {
-        name: 'Repositories',
-        url: 'https://repos.docs.webally.co.za',
-        description: 'GitHub Repos worth looking at'
-    },
-    {
-        name: 'Reporting & BI',
-        url: 'https://reports.docs.webally.co.za',
-        description: 'Reporting & BI with Jasper Reports'
-    },
-    {
-        name: 'Software as a Service',
-        url: 'https://saas.docs.webally.co.za',
-        description: 'Services I can recommend or created myself'
-    },
-    {
-        name: 'Server & Software Setup',
-        url: 'https://setup.docs.webally.co.za',
-        description: 'Server & Software Setup'
-    },
-    {
-        name: 'Tips & Productivity',
-        url: 'https://tips.docs.webally.co.za',
-        description: 'Tips on creating Productive workflows'
-    },
-    {
-        name: 'Tools and Self Hosted',
-        url: 'https://tools.docs.webally.co.za',
-        description: 'Terminal and Web-Applications'
-    },
-    {
-        name: 'Trading & Crypto',
-        url: 'https://trading.docs.webally.co.za',
-        description: 'Trading and Crypto Markets'
-    },
-    {
-        name: 'Troubleshooting Docs',
-        url: 'https://troubleshoot.docs.webally.co.za',
-        description: 'Troubleshooting Documentation'
-    },
-    {
-        name: 'Windows Tips',
-        url: 'https://win.docs.webally.co.za',
-        description: 'Windows 10 & 11 Tips and Tricks'
-    }
-];
-```
-
-## File: src/lib/data/education.ts
-```ts
-import Assets from './assets';
-import type { Education } from '../types';
-
-export const items: Array<Education> = [
-	{
-		degree: 'Bachelor degree of Computer Science',
-		description: '',
-		location: 'Tunisia',
-		logo: Assets.Unknown,
-		name: '',
-		organization: 'ISTIC',
-		period: { from: new Date(2020, 0, 1), to: new Date(2022, 5, 1) },
-		shortDescription: '',
-		slug: 'dummy-education-item',
-		subjects: ['C', 'Algorithm', 'Algebra', 'Python', 'C++', 'Java', 'English']
-	},
-	{
-		degree: 'PhD of Computer Science',
-		description: '',
-		location: 'USA',
-		logo: Assets.Unknown,
-		name: '',
-		organization: 'MIT',
-		period: { from: new Date(2023, 0, 1) },
-		shortDescription: '',
-		slug: 'dummy-education-item-2',
-		subjects: ['Assembly', 'Rust', 'Computer Architecture', 'Algorithms and Data structures']
-	}
-];
-
-export const title = 'Education';
 
 ```
 
@@ -2833,18 +1384,18 @@ export const items = [
 		row: 1, 
 		external: false 
 	},
-	{
-		title: 'Experience', 
-		to: '/experience', 
-		icon: 'i-carbon-development', 
+	{ 
+		title: 'Projects', 
+		to: '/projects', 
+		icon: 'i-carbon-cube', 
 		position: 'header', 
 		row: 1, 
 		external: false 
 	},
 	{ 
-		title: 'Projects', 
-		to: '/projects', 
-		icon: 'i-carbon-cube', 
+		title: 'Services', 
+		to: '/services', 
+		icon: 'i-carbon-service-desk', 
 		position: 'header', 
 		row: 1, 
 		external: false 
@@ -2909,18 +1460,95 @@ export const footerItems = [
 ] as const;
 ```
 
-## File: src/lib/data/resume.ts
+## File: src/lib/data/services.ts
 ```ts
-export const data = '';
+import type { Service } from '$lib/types';
+import Assets from './assets';
 
-export const title = 'Resumé';
+export const items: Array<Service> = [
+    {
+        slug: "boost-team-speed",
+        color: "#4A90E2",
+        shortDescription: "Tackle those delayed projects by adding a fresh set of expert hands. I'll help your team hit those critical milestones faster.",
+        image: Assets.BOOST_TEAM_SPEED,
+        name: "Boost Your Team's Speed",
+        type: "Development Support"
+    },
+    {
+        slug: "finish-projects",
+        color: "#50E3C2",
+        shortDescription: "Got an app or website stuck in development limbo? I specialize in jumping into existing code bases and delivering final results.",
+        image: Assets.FINISH_PROJECTS,
+        name: "Finish Unfinished Projects",
+        type: "Project Completion"
+    },
+    {
+        slug: "handle-tedious-stuff",
+        color: "#F5A623",
+        shortDescription: "Let your core team focus on what they do best while I take care of repetitive tasks like bug fixing, refactoring, or testing.",
+        image: Assets.HANDLE_TEDIOUS_STUFF,
+        name: "Handle the Tedious Stuff",
+        type: "Maintenance & Optimization"
+    },
+    {
+        slug: "extra-hands-new-project",
+        color: "#7ED321",
+        shortDescription: "Whether you're kicking off a new build or need assistance planning, I can help from the earliest stages, ensuring everything runs smoothly.",
+        image: Assets.EXTRA_HANDS_NEW_PROJECT,
+        name: "Extra Hands for New Projects",
+        type: "Project Initiation"
+    },
+    {
+        slug: "flexible-freelance-help",
+        color: "#BD10E0",
+        shortDescription: "Need someone on a flexible basis? I'm available for short-term or ongoing projects, adapting to your team's evolving needs.",
+        image: Assets.FLEXIBLE_FREELANCE_HELP,
+        name: "Flexible Freelance Help",
+        type: "Flexible Support"
+    },
+    {
+        slug: "finish-half-built-app",
+        color: "#9013FE",
+        shortDescription: "Don't leave potential profit on the table with unfinished software. I'll help complete your half-built projects.",
+        image: Assets.FINISH_HALF_BUILT_APP,
+        name: "Finish Half-Built Apps",
+        type: "Project Completion"
+    },
+    {
+        slug: "debugging-optimization",
+        color: "#D0021B",
+        shortDescription: "Let's squash those bugs and optimize your code for better performance. You focus on the features—I'll handle the fixes.",
+        image: Assets.DEBUGGING_OPTIMIZATION,
+        name: "Debugging and Optimization",
+        type: "Performance Enhancement"
+    },
+    {
+        slug: "future-proof-codebase",
+        color: "#4A4A4A",
+        shortDescription: "Worried about tech debt? I can refactor your codebase to reduce future issues and ensure your systems stay scalable and reliable.",
+        image: Assets.FUTURE_PROOF_CODEBASE,
+        name: "Future-Proof Your Codebase",
+        type: "Code Maintenance"
+    },
+    {
+        slug: "scale-projects",
+        color: "#8B572A",
+        shortDescription: "If your business is growing faster than your team can handle, I'm here to take on extra work without slowing down progress.",
+        image: Assets.SCALE_PROJECTS,
+        name: "Scale Your Projects",
+        type: "Growth Support"
+    },
+    {
+        slug: "complex-integrations",
+        color: "#417505",
+        shortDescription: "Need help with intricate integrations or complex APIs? I have experience in making sure all systems communicate smoothly.",
+        image: Assets.COMPLEX_INTEGRATIONS,
+        name: "Complex Integrations",
+        type: "System Integration"
+    }
+];
 
-```
-
-## File: src/lib/data/search.ts
-```ts
-export const title = 'Search';
-
+export const title = 'Services';
 ```
 
 ## File: src/lib/md/svelte.md
@@ -3020,510 +1648,19 @@ export const onHydrated = () => {
 };
 ```
 
-## File: src/lib/utils/colors.ts
-```ts
-export const NAMED_COLORS = {
-	aliceblue: '#F0F8FF',
-	antiquewhite: '#FAEBD7',
-	aqua: '#00FFFF',
-	aquamarine: '#7FFFD4',
-	azure: '#F0FFFF',
-	beige: '#F5F5DC',
-	bisque: '#FFE4C4',
-	black: '#000000',
-	blanchedalmond: '#FFEBCD',
-	blue: '#0000FF',
-	blueviolet: '#8A2BE2',
-	brown: '#A52A2A',
-	burlywood: '#DEB887',
-	cadetblue: '#5F9EA0',
-	chartreuse: '#7FFF00',
-	chocolate: '#D2691E',
-	coral: '#FF7F50',
-	cornflowerblue: '#6495ED',
-	cornsilk: '#FFF8DC',
-	crimson: '#DC143C',
-	cyan: '#00FFFF',
-	darkblue: '#00008B',
-	darkcyan: '#008B8B',
-	darkgoldenrod: '#B8860B',
-	darkgray: '#A9A9A9',
-	darkgreen: '#006400',
-	darkgrey: '#A9A9A9',
-	darkkhaki: '#BDB76B',
-	darkmagenta: '#8B008B',
-	darkolivegreen: '#556B2F',
-	darkorange: '#FF8C00',
-	darkorchid: '#9932CC',
-	darkred: '#8B0000',
-	darksalmon: '#E9967A',
-	darkseagreen: '#8FBC8F',
-	darkslateblue: '#483D8B',
-	darkslategray: '#2F4F4F',
-	darkslategrey: '#2F4F4F',
-	darkturquoise: '#00CED1',
-	darkviolet: '#9400D3',
-	deeppink: '#FF1493',
-	deepskyblue: '#00BFFF',
-	dimgray: '#696969',
-	dimgrey: '#696969',
-	dodgerblue: '#1E90FF',
-	firebrick: '#B22222',
-	floralwhite: '#FFFAF0',
-	forestgreen: '#228B22',
-	fuchsia: '#FF00FF',
-	gainsboro: '#DCDCDC',
-	ghostwhite: '#F8F8FF',
-	gold: '#FFD700',
-	goldenrod: '#DAA520',
-	gray: '#808080',
-	green: '#008000',
-	greenyellow: '#ADFF2F',
-	grey: '#808080',
-	honeydew: '#F0FFF0',
-	hotpink: '#FF69B4',
-	indianred: '#CD5C5C',
-	indigo: '#4B0082',
-	ivory: '#FFFFF0',
-	khaki: '#F0E68C',
-	lavender: '#E6E6FA',
-	lavenderblush: '#FFF0F5',
-	lawngreen: '#7CFC00',
-	lemonchiffon: '#FFFACD',
-	lightblue: '#ADD8E6',
-	lightcoral: '#F08080',
-	lightcyan: '#E0FFFF',
-	lightgoldenrodyellow: '#FAFAD2',
-	lightgray: '#D3D3D3',
-	lightgreen: '#90EE90',
-	lightgrey: '#D3D3D3',
-	lightpink: '#FFB6C1',
-	lightsalmon: '#FFA07A',
-	lightseagreen: '#20B2AA',
-	lightskyblue: '#87CEFA',
-	lightslategray: '#778899',
-	lightslategrey: '#778899',
-	lightsteelblue: '#B0C4DE',
-	lightyellow: '#FFFFE0',
-	lime: '#00FF00',
-	limegreen: '#32CD32',
-	linen: '#FAF0E6',
-	magenta: '#FF00FF',
-	maroon: '#800000',
-	mediumaquamarine: '#66CDAA',
-	mediumblue: '#0000CD',
-	mediumorchid: '#BA55D3',
-	mediumpurple: '#9370DB',
-	mediumseagreen: '#3CB371',
-	mediumslateblue: '#7B68EE',
-	mediumspringgreen: '#00FA9A',
-	mediumturquoise: '#48D1CC',
-	mediumvioletred: '#C71585',
-	midnightblue: '#191970',
-	mintcream: '#F5FFFA',
-	mistyrose: '#FFE4E1',
-	moccasin: '#FFE4B5',
-	navajowhite: '#FFDEAD',
-	navy: '#000080',
-	oldlace: '#FDF5E6',
-	olive: '#808000',
-	olivedrab: '#6B8E23',
-	orange: '#FFA500',
-	orangered: '#FF4500',
-	orchid: '#DA70D6',
-	palegoldenrod: '#EEE8AA',
-	palegreen: '#98FB98',
-	paleturquoise: '#AFEEEE',
-	palevioletred: '#DB7093',
-	papayawhip: '#FFEFD5',
-	peachpuff: '#FFDAB9',
-	peru: '#CD853F',
-	pink: '#FFC0CB',
-	plum: '#DDA0DD',
-	powderblue: '#B0E0E6',
-	purple: '#800080',
-	red: '#FF0000',
-	rosybrown: '#BC8F8F',
-	royalblue: '#4169E1',
-	saddlebrown: '#8B4513',
-	salmon: '#FA8072',
-	sandybrown: '#F4A460',
-	seagreen: '#2E8B57',
-	seashell: '#FFF5EE',
-	sienna: '#A0522D',
-	silver: '#C0C0C0',
-	skyblue: '#87CEEB',
-	slateblue: '#6A5ACD',
-	slategray: '#708090',
-	slategrey: '#708090',
-	snow: '#FFFAFA',
-	springgreen: '#00FF7F',
-	steelblue: '#4682B4',
-	tan: '#D2B48C',
-	teal: '#008080',
-	thistle: '#D8BFD8',
-	tomato: '#FF6347',
-	turquoise: '#40E0D0',
-	violet: '#EE82EE',
-	wheat: '#F5DEB3',
-	white: '#FFFFFF',
-	whitesmoke: '#F5F5F5',
-	yellow: '#FFFF00',
-	yellowgreen: '#9ACD32'
-} as const;
+## File: src/lib/layouts/default.svelte
+```svelte
+<script>
+  export let title;
+</script>
 
-export type NamedColor = keyof typeof NAMED_COLORS;
+<svelte:head>
+  <title>{title}</title>
+</svelte:head>
 
-export type HexColor = `#${string}`;
-
-export type Color = NamedColor | HexColor;
-
-export const convertNamedToHexColor = (name: NamedColor): HexColor => {
-	const color = NAMED_COLORS[name];
-
-	if (!color) {
-		return NAMED_COLORS.white;
-	}
-
-	return color;
-};
-
-```
-
-## File: src/lib/utils/customMarkdownParser.ts
-```ts
-// src/lib/utils/customMarkdownParser.ts
-import { marked } from 'marked';
-
-export function parseReTypeMarkdown(markdown: string): string {
-    const renderer = new marked.Renderer();
-
-    // Custom rendering for ReType-specific elements
-    renderer.link = (href, title, text) => {
-        const titleAttr = title ? ` title="${title}"` : '';
-        return `<a href="${href}"${titleAttr} target="_blank" rel="noopener noreferrer">${text}</a>`;
-    };
-
-    renderer.image = (href, title, text) => {
-        const titleAttr = title ? ` title="${title}"` : '';
-        return `<img src="${href}" alt="${text}"${titleAttr} class="retype-image">`;
-    };
-
-    // Add more custom renderers as needed for ReType-specific elements
-
-    marked.setOptions({
-        renderer: renderer,
-        gfm: true,
-        breaks: true,
-        sanitize: false,
-        smartypants: false,
-        xhtml: false
-    });
-
-    return marked(markdown);
-}
-```
-
-## File: src/lib/utils/helpers.ts
-```ts
-import dayjs from 'dayjs';
-import duration from 'dayjs/plugin/duration';
-import type { Item, Skill } from '$lib/types';
-
-dayjs.extend(duration);
-
-export const countMonths = (from: Date, to: Date = new Date()): number => {
-	let firstYear = 0;
-	let wholeYears = 0;
-	let newYear = 0;
-
-	if (to.getFullYear() !== from.getFullYear()) {
-		newYear = to.getMonth();
-		wholeYears = (to.getFullYear() - from.getFullYear() - 1) * 12;
-		firstYear = 12 - from.getMonth();
-	} else {
-		firstYear = to.getMonth() - from.getMonth();
-	}
-
-	return firstYear + wholeYears + newYear + 1;
-};
-
-export const getMonthName = (index: number): string => {
-	const monthNames = [
-		'January',
-		'February',
-		'March',
-		'April',
-		'May',
-		'June',
-		'July',
-		'August',
-		'September',
-		'October',
-		'November',
-		'December'
-	];
-
-	return monthNames[index];
-};
-
-export const useImage = (url: string, base: string): string => `${base}${url}`;
-
-export const useTitle = (title: string, suffix: string) => `${title} | ${suffix}`;
-
-export function getTimeDiff(date1: Date, date2 = new Date(Date.now() + 1000 * 60 * 60 * 24)) {
-	const d1 = dayjs(date1);
-	const d2 = dayjs(date2);
-
-	const duration = dayjs.duration(d2.diff(d1));
-
-	let n = 0;
-	let u = 'day';
-
-	if (duration.as('days') <= 7) {
-		u = 'day';
-		n = duration.as('days');
-	} else if (duration.as('months') <= 1) {
-		u = 'week';
-		n = duration.as('weeks');
-	} else if (duration.as('years') <= 1) {
-		u = 'month';
-		n = duration.as('months');
-	} else {
-		u = 'year';
-		n = duration.as('years');
-	}
-
-	n = Math.trunc(n);
-
-	return `${Math.trunc(n)} ${u}${n > 1 ? 's' : ''}`;
-}
-
-export type ItemOrSkill = Item | Skill;
-
-export function filterItemsByQuery<T extends ItemOrSkill>(
-	items: Array<T>,
-	query: string
-): Array<T> {
-	const ignoredProperties = ['logo', 'links', 'color', 'screenshots'];
-	query = query.toLowerCase();
-
-	return items.filter((item) => doesQueryExistInItemOrAttributes(item, query, ignoredProperties));
-}
-
-function doesQueryExistInItemOrAttributes(
-	item: any,
-	query: string,
-	ignoredProperties: string[] = []
-): boolean {
-	if (Array.isArray(item)) {
-		return item.some((subItem) => doesQueryExistInItemOrAttributes(subItem, query));
-	} else if (typeof item === 'object' && item !== null) {
-		if (item instanceof Date) {
-			const dateFormats = [
-				item.toString().toLowerCase(), // Full date string
-				item.toLocaleDateString('default', { month: 'long', year: 'numeric' }).toLowerCase(), // "January 2023"
-				item
-					.toLocaleDateString('default', { day: 'numeric', month: 'long', year: 'numeric' })
-					.toLowerCase(), // "15 January 2023"
-				item.toLocaleDateString('en-US').toLowerCase(), // "1/15/2023"
-				item
-					.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-					.toLowerCase() // "Jan 15, 2023"
-			];
-			return dateFormats.some((dateStr) => dateStr.includes(query));
-		} else {
-			return Object.keys(item).some(
-				(key) =>
-					!ignoredProperties.includes(key) && doesQueryExistInItemOrAttributes(item[key], query)
-			);
-		}
-	} else {
-		return item.toString().toLowerCase().includes(query);
-	}
-}
-
-const DAY = 24 * 60 * 60 * 1000;
-const WEEK = 7 * 24 * 60 * 60 * 1000;
-const MONTH = 30 * 24 * 60 * 60 * 1000;
-const YEAR = 365 * 24 * 60 * 60 * 1000;
-
-export function computeExactDuration(from: Date, to: Date = new Date()): string {
-	const fromMs = from.getTime();
-	const toMs = to.getTime();
-
-	const display: Array<string> = [];
-
-	let remaining = toMs - fromMs;
-
-	const years = remaining / YEAR;
-
-	if (years >= 1) {
-		remaining = remaining % YEAR;
-		display.push(`${Math.trunc(years)} year${years >= 2 ? 's' : ''}`);
-	}
-
-	const months = remaining / MONTH;
-	if (months >= 1) {
-		remaining = remaining % MONTH;
-		display.push(`${Math.trunc(months)} month${months >= 2 ? 's' : ''}`);
-	}
-
-	const weeks = remaining / WEEK;
-	if (weeks >= 1) {
-		remaining = remaining % WEEK;
-		display.push(`${Math.trunc(weeks)} week${weeks >= 2 ? 's' : ''}`);
-	}
-
-	const days = remaining / DAY;
-	if (days >= 1) {
-		remaining = remaining % DAY;
-		display.push(`${Math.trunc(days)} day${days >= 2 ? 's' : ''}`);
-	}
-
-	if (display.length === 0) {
-		return '1 day';
-	}
-
-	return display
-		.map((it, index) => {
-			if (display.length === 1 || index === display.length - 1) return it;
-
-			if (index === display.length - 2) {
-				return `${it} and`;
-			}
-
-			return `${it},`;
-		})
-		.join(' ');
-}
-
-```
-
-## File: src/lib/utils/index.ts
-```ts
-import { Platform } from '$lib/types';
-
-export enum EmploymentType {
-	FullTime = 'Full-time',
-	PartTime = 'Part-time',
-	SelfEmployed = 'Self-employed',
-	Freelance = 'Freelance',
-	Contract = 'Contract',
-	Internship = 'Internship'
-}
-
-export enum Icons {
-	Code = 'M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z',
-	Search = 'M14.56 12.44L11.3 9.18a5.51 5.51 0 10-2.12 2.12l3.26 3.26a1.5 1.5 0 102.12-2.12zM3 6.5A3.5 3.5 0 116.5 10 3.5 3.5 0 013 6.5z',
-	Email = 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10h5v-2h-5c-4.34 0-8-3.66-8-8s3.66-8 8-8 8 3.66 8 8v1.43c0 .79-.71 1.57-1.5 1.57s-1.5-.78-1.5-1.57V12c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5c1.38 0 2.64-.56 3.54-1.47.65.89 1.77 1.47 2.96 1.47 1.97 0 3.5-1.6 3.5-3.57V12c0-5.52-4.48-10-10-10zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z',
-	Skills = 'M19 5a3 3 0 00-3-3H5v20l7-6.29L19 22z',
-	GitHub = 'M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z',
-	StackOverflow = 'm17.12 21.857h-14.977v-6.428h-2.143v8.571h19.259v-8.571h-2.139zm-12.616-7.018.442-2.102 10.486 2.21-.442 2.09zm1.379-5.009.898-1.955 9.71 4.54-.898 1.942zm2.692-4.768 1.366-1.647 8.218 6.87-1.366 1.647zm5.313-5.062 6.388 8.585-1.716 1.286-6.386-8.585zm-9.616 19.701v-2.13h10.714v2.13z',
-	LinkedIn = 'M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z',
-	Twitter = 'M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z',
-	Home = 'M23 9v2h-2v7a3 3 0 01-3 3h-4v-6h-4v6H6a3 3 0 01-3-3v-7H1V9l11-7 5 3.18V2h3v5.09z',
-	Projects = 'M3 3h4v4H3zm7 4h4V3h-4zm7-4v4h4V3zM3 14h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4zM3 21h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4z',
-	Job = 'M17 6V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2v4a3 3 0 003 3h14a3 3 0 003-3V6zM9 5a1 1 0 011-1h4a1 1 0 011 1v1H9zm10 9a4 4 0 003-1.38V17a3 3 0 01-3 3H5a3 3 0 01-3-3v-4.38A4 4 0 005 14z',
-	Academic = 'M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z',
-	Resume = 'M3 3v15a3 3 0 003 3h9v-6h6V3zm9 8H6v-1h6zm6-3H6V7h12zm-2 8h5l-5 5z',
-	RightArrow = 'M9.4,18.4l-0.7-0.7l5.6-5.6L8.6,6.4l0.7-0.7l6.4,6.4L9.4,18.4z',
-	LeftArrow = 'M14.6,18.4L8.3,12l6.4-6.4l0.7,0.7L9.7,12l5.6,5.6L14.6,18.4z',
-	Youtube = 'M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728 c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137 C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607 c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z',
-	Link = 'M19.83 4.17a4 4 0 00-5.66 0l-2 2A4 4 0 0011 9a4 4 0 00.56 2l-.54.54a4 4 0 00-4.85.63l-2 2a4 4 0 005.66 5.66l2-2A4 4 0 0013 15a4 4 0 00-.56-2l.54-.54a4 4 0 004.85-.63l2-2a4 4 0 000-5.66zM11 15a2 2 0 01-.59 1.41l-2 2a2 2 0 11-3-2.6l.22-.22 2-2A2 2 0 019 13a2.24 2.24 0 01.51.07l-1.22 1.22a1 1 0 000 1.41 1 1 0 001.41 0l1.22-1.22A2.24 2.24 0 0111 15zm7.41-6.59l-2 2A2 2 0 0115 11a2.24 2.24 0 01-.51-.07l1.22-1.22A1 1 0 0016 9a1 1 0 00-.29-.7A1 1 0 0015 8a1 1 0 00-.7.29l-1.23 1.22A2.24 2.24 0 0113 9a2 2 0 01.59-1.41l2-2a2 2 0 013 2.6z',
-	Sun = 'M108.5 24C108.5 27.5902136 105.590214 30.5 102 30.5 98.4097864 30.5 95.5 27.5902136 95.5 24 95.5 20.4097864 98.4097864 17.5 102 17.5 105.590214 17.5 108.5 20.4097864 108.5 24zM107 24C107 21.2382136 104.761786 19 102 19 99.2382136 19 97 21.2382136 97 24 97 26.7617864 99.2382136 29 102 29 104.761786 29 107 26.7617864 107 24zM101 12.75L101 14.75C101 15.1642136 101.335786 15.5 101.75 15.5 102.164214 15.5 102.5 15.1642136 102.5 14.75L102.5 12.75C102.5 12.3357864 102.164214 12 101.75 12 101.335786 12 101 12.3357864 101 12.75zM95.7255165 14.6323616L96.7485165 16.4038616C96.9556573 16.7625614 97.4143618 16.8854243 97.7730616 16.6782835 98.1317614 16.4711427 98.2546243 16.0124382 98.0474835 15.6537384L97.0244835 13.8822384C96.8173427 13.5235386 96.3586382 13.4006757 95.9999384 13.6078165 95.6412386 13.8149573 95.5183757 14.2736618 95.7255165 14.6323616zM91.8822384 19.0244835L93.6537384 20.0474835C94.0124382 20.2546243 94.4711427 20.1317614 94.6782835 19.7730616 94.8854243 19.4143618 94.7625614 18.9556573 94.4038616 18.7485165L92.6323616 17.7255165C92.2736618 17.5183757 91.8149573 17.6412386 91.6078165 17.9999384 91.4006757 18.3586382 91.5235386 18.8173427 91.8822384 19.0244835zM90.75 25L92.75 25C93.1642136 25 93.5 24.6642136 93.5 24.25 93.5 23.8357864 93.1642136 23.5 92.75 23.5L90.75 23.5C90.3357864 23.5 90 23.8357864 90 24.25 90 24.6642136 90.3357864 25 90.75 25zM92.6323616 30.2744835L94.4038616 29.2514835C94.7625614 29.0443427 94.8854243 28.5856382 94.6782835 28.2269384 94.4711427 27.8682386 94.0124382 27.7453757 93.6537384 27.9525165L91.8822384 28.9755165C91.5235386 29.1826573 91.4006757 29.6413618 91.6078165 30.0000616 91.8149573 30.3587614 92.2736618 30.4816243 92.6323616 30.2744835zM97.0244835 34.1177616L98.0474835 32.3462616C98.2546243 31.9875618 98.1317614 31.5288573 97.7730616 31.3217165 97.4143618 31.1145757 96.9556573 31.2374386 96.7485165 31.5961384L95.7255165 33.3676384C95.5183757 33.7263382 95.6412386 34.1850427 95.9999384 34.3921835 96.3586382 34.5993243 96.8173427 34.4764614 97.0244835 34.1177616zM103 35.25L103 33.25C103 32.8357864 102.664214 32.5 102.25 32.5 101.835786 32.5 101.5 32.8357864 101.5 33.25L101.5 35.25C101.5 35.6642136 101.835786 36 102.25 36 102.664214 36 103 35.6642136 103 35.25zM108.274483 33.3676384L107.251483 31.5961384C107.044343 31.2374386 106.585638 31.1145757 106.226938 31.3217165 105.868239 31.5288573 105.745376 31.9875618 105.952517 32.3462616L106.975517 34.1177616C107.182657 34.4764614 107.641362 34.5993243 108.000062 34.3921835 108.358761 34.1850427 108.481624 33.7263382 108.274483 33.3676384zM112.117762 28.9755165L110.346262 27.9525165C109.987562 27.7453757 109.528857 27.8682386 109.321717 28.2269384 109.114576 28.5856382 109.237439 29.0443427 109.596138 29.2514835L111.367638 30.2744835C111.726338 30.4816243 112.185043 30.3587614 112.392183 30.0000616 112.599324 29.6413618 112.476461 29.1826573 112.117762 28.9755165zM113.25 23L111.25 23C110.835786 23 110.5 23.3357864 110.5 23.75 110.5 24.1642136 110.835786 24.5 111.25 24.5L113.25 24.5C113.664214 24.5 114 24.1642136 114 23.75 114 23.3357864 113.664214 23 113.25 23zM111.367638 17.7255165L109.596138 18.7485165C109.237439 18.9556573 109.114576 19.4143618 109.321717 19.7730616 109.528857 20.1317614 109.987562 20.2546243 110.346262 20.0474835L112.117762 19.0244835C112.476461 18.8173427 112.599324 18.3586382 112.392183 17.9999384 112.185043 17.6412386 111.726338 17.5183757 111.367638 17.7255165zM106.975517 13.8822384L105.952517 15.6537384C105.745376 16.0124382 105.868239 16.4711427 106.226938 16.6782835 106.585638 16.8854243 107.044343 16.7625614 107.251483 16.4038616L108.274483 14.6323616C108.481624 14.2736618 108.358761 13.8149573 108.000062 13.6078165 107.641362 13.4006757 107.182657 13.5235386 106.975517 13.8822384z',
-	Moon = 'M102,21 C102,18.1017141 103.307179,15.4198295 105.51735,13.6246624 C106.001939,13.2310647 105.821611,12.4522936 105.21334,12.3117518 C104.322006,12.1058078 103.414758,12 102.5,12 C95.8722864,12 90.5,17.3722864 90.5,24 C90.5,30.6277136 95.8722864,36 102.5,36 C106.090868,36 109.423902,34.4109093 111.690274,31.7128995 C112.091837,31.2348572 111.767653,30.5041211 111.143759,30.4810139 C106.047479,30.2922628 102,26.1097349 102,21 Z M102.5,34.5 C96.7007136,34.5 92,29.7992864 92,24 C92,18.2007136 96.7007136,13.5 102.5,13.5 C102.807386,13.5 103.113925,13.5136793 103.419249,13.5407785 C101.566047,15.5446378 100.5,18.185162 100.5,21 C100.5,26.3198526 104.287549,30.7714322 109.339814,31.7756638 L109.516565,31.8092927 C107.615276,33.5209452 105.138081,34.5 102.5,34.5 Z',
-	Facebook = 'M353.701,0H55.087C24.665,0,0.002,24.662,0.002,55.085v298.616c0,30.423,24.662,55.085,55.085,55.085 h147.275l0.251-146.078h-37.951c-4.932,0-8.935-3.988-8.954-8.92l-0.182-47.087c-0.019-4.959,3.996-8.989,8.955-8.989h37.882 v-45.498c0-52.8,32.247-81.55,79.348-81.55h38.65c4.945,0,8.955,4.009,8.955,8.955v39.704c0,4.944-4.007,8.952-8.95,8.955 l-23.719,0.011c-25.615,0-30.575,12.172-30.575,30.035v39.389h56.285c5.363,0,9.524,4.683,8.892,10.009l-5.581,47.087 c-0.534,4.506-4.355,7.901-8.892,7.901h-50.453l-0.251,146.078h87.631c30.422,0,55.084-24.662,55.084-55.084V55.085 C408.786,24.662,384.124,0,353.701,0z',
-	WhatsApp = 'M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z'
-}
-
-export const getPlatformIcon = (platform: Platform): Icons => {
-	switch (platform) {
-		case Platform.GitHub:
-			return Icons.GitHub;
-		case Platform.Linkedin:
-			return Icons.LinkedIn;
-		case Platform.StackOverflow:
-			return Icons.StackOverflow;
-		case Platform.Facebook:
-			return Icons.Facebook;
-		case Platform.Email:
-			return Icons.Email;
-		case Platform.Twitter:
-			return Icons.Twitter;
-		case Platform.Youtube:
-			return Icons.Youtube;
-		case Platform.WhatsApp:
-			return Icons.WhatsApp;
-		default:
-			return Icons.Code
-	}
-};
-
-export * from './helpers';
-
-```
-
-## File: src/lib/utils/reTypeParser.ts
-```ts
-// src/lib/utils/reTypeParser.ts
-import { marked } from 'marked';
-
-export function parseReTypeMarkdown(markdown: string): string {
-    const renderer = new marked.Renderer();
-
-    // Custom rendering for ReType-specific elements
-    renderer.link = (href, title, text) => {
-        const titleAttr = title ? ` title="${title}"` : '';
-        return `<a href="${href}"${titleAttr} target="_blank" rel="noopener noreferrer">${text}</a>`;
-    };
-
-    renderer.image = (href, title, text) => {
-        const titleAttr = title ? ` title="${title}"` : '';
-        return `<img src="${href}" alt="${text}"${titleAttr} class="retype-image">`;
-    };
-
-    renderer.heading = (text, level) => {
-        const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
-        return `
-            <h${level} id="${escapedText}">
-                <a class="heading-link" href="#${escapedText}">
-                    <i class="fas fa-link"></i>
-                </a>
-                ${text}
-            </h${level}>`;
-    };
-
-    // Handle ReType-specific syntax
-    const reTypeExtensions = {
-        admonition: /^!!!(info|tip|note|caution|danger)\s+(.+)$/gm,
-        tabs: /^===(.*?)===$/gm,
-        tabItem: /^- (?:title: )(.+)$/gm,
-        expandable: /^\+\+\+(.+)\+\+\+$/gm,
-        badge: /^\[!badge\s+(.*?)\]$/gm,
-        embed: /^\[!embed\s+(.*?)\]$/gm
-    };
-
-    markdown = markdown
-        .replace(reTypeExtensions.admonition, (match, type, content) =>
-            `<div class="admonition ${type.toLowerCase()}">${content}</div>`)
-        .replace(reTypeExtensions.tabs, '<div class="retype-tabs">$1</div>')
-        .replace(reTypeExtensions.tabItem, '<div class="tab-item" data-title="$1">')
-        .replace(reTypeExtensions.expandable, '<details><summary>$1</summary>')
-        .replace(reTypeExtensions.badge, '<span class="badge">$1</span>')
-        .replace(reTypeExtensions.embed, '<div class="embed-container">$1</div>');
-
-    marked.setOptions({
-        renderer: renderer,
-        gfm: true,
-        breaks: true,
-        sanitize: false,
-        smartypants: false,
-        xhtml: false
-    });
-
-    return marked(markdown);
-}
+<main>
+  <slot />
+</main>
 ```
 
 ## File: src/routes/+layout.server.ts
@@ -3635,288 +1772,6 @@ export const trailingSlash = 'always';
 </div>
 ```
 
-## File: src/routes/documentation/+page.svelte
-```svelte
-<!-- src/routes/documentation/+page.svelte -->
-<script lang="ts">
-	import { title, sites } from '$lib/data/documentation-sites';
-	import CommonPage from '$lib/components/CommonPage.svelte';
-	import Card from '$lib/components/Card/Card.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-</script>
-
-<CommonPage {title}>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-		{#each sites as site}
-			<Card classes={['cursor-pointer']} href={site.url}>
-				<div class="flex flex-col h-full">
-					<h3 class="text-lg font-semibold mb-2">{site.name}</h3>
-					<p class="text-sm flex-grow">{site.description}</p>
-					<div class="flex justify-end mt-4">
-						<UIcon icon="i-carbon-launch" classes="text-xl" />
-					</div>
-				</div>
-			</Card>
-		{/each}
-	</div>
-</CommonPage>
-
-```
-
-## File: src/routes/education/+page.svelte
-```svelte
-<script lang="ts">
-	import Card from '$lib/components/Card/Card.svelte';
-	import Chip from '$lib/components/Chip/Chip.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import SearchPage from '$lib/components/SearchPage.svelte';
-	import { getAssetURL } from '$lib/data/assets';
-
-	import { title, items } from '@data/education';
-	import type { Education } from '$lib/types';
-	import { computeExactDuration, getTimeDiff } from '$lib/utils';
-	import CardDivider from '$lib/components/Card/CardDivider.svelte';
-
-	let search = '';
-
-	let result: Array<Education> = items;
-
-	const onSearch = (ev: CustomEvent<{ search: string }>) => {
-		const s = ev.detail.search;
-
-		result = items.filter((it) => {
-			return (
-				it.degree.toLowerCase().includes(s) ||
-				it.description.toLowerCase().includes(s) ||
-				it.location.toLowerCase().includes(s) ||
-				it.name.toLowerCase().includes(s) ||
-				it.organization.toLowerCase().includes(s) ||
-				it.subjects.some((it) => it.toLowerCase().includes(s))
-			);
-		});
-	};
-</script>
-
-<SearchPage {title} {search} on:search={onSearch}>
-	<div class="col items-center relative mt-10 flex-1">
-		{#if result.length === 0}
-			<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">
-				<UIcon icon="i-carbon-development" classes="text-3.5em" />
-				<p class="font-300">Could not find anything...</p>
-			</div>
-		{:else}
-			<div
-				class="w-[0.5px] hidden lg:flex top-0 bottom-0 py-50px bg-[var(--border)] absolute rounded"
-			/>
-			{#each result as education, index (education.slug)}
-				<div
-					class={`flex ${
-						index % 2 !== 0 ? 'flex-row' : 'flex-row-reverse'
-					} relative items-center w-full my-[10px]`}
-				>
-					<div class="flex-1 hidden lg:flex" />
-					<div class="hidden lg:inline p-15px bg-[var(--main)] rounded">
-						<UIcon icon="i-carbon-condition-point" />
-					</div>
-					<div class="col flex-1 items-stretch">
-						<Card>
-							<div class="flex-1 col gap-2 items-stretch">
-								<img
-									src={getAssetURL(education.logo)}
-									alt={education.organization}
-									height="50"
-									width="50"
-									class="mb-5"
-								/>
-								<div class="text-[1.3em]">{education.degree}</div>
-								<div>{education.organization}</div>
-								<div class="col text-[0.9em]">
-									<CardDivider />
-									<div class="row items-center gap-2">
-										<UIcon icon="i-carbon-location" />
-										{education.location}
-									</div>
-									<CardDivider />
-									<div class="row items-center gap-2">
-										<UIcon icon="i-carbon-time" />
-										{computeExactDuration(education.period.from, education.period.to)}
-									</div>
-									<CardDivider />
-								</div>
-								<div class="row flex-wrap gap-1">
-									{#each education.subjects as subject}
-										<Chip>{subject}</Chip>
-									{/each}
-								</div>
-							</div>
-						</Card>
-					</div>
-				</div>
-			{/each}
-		{/if}
-	</div>
-</SearchPage>
-
-```
-
-## File: src/routes/experience/+page.svelte
-```svelte
-<script lang="ts">
-	import ExperienceCard from '$lib/components/ExperienceCard/ExperienceCard.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import SearchPage from '$lib/components/SearchPage.svelte';
-	import { items, title } from '@data/experience';
-	import type { Experience } from '$lib/types';
-	import { isBlank } from '@riadh-adrani/utils';
-
-	let result: Array<Experience> = [...items];
-
-	const onSearch = (e: CustomEvent<{ search: string }>) => {
-		const query = e.detail.search;
-
-		if (isBlank(query)) {
-			result = items;
-			return;
-		}
-
-		result = items.filter(
-			(it) =>
-				it.name.toLowerCase().includes(query) ||
-				it.company.toLowerCase().includes(query) ||
-				it.description.toLowerCase().includes(query)
-		);
-	};
-</script>
-
-<SearchPage {title} on:search={onSearch}>
-	<div class="col items-center relative mt-10 flex-1">
-		{#if result.length === 0}
-			<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">
-				<UIcon icon="i-carbon-development" classes="text-3.5em" />
-				<p class="font-300">Could not find anything...</p>
-			</div>
-		{:else}
-			<div
-				class="w-[0.5px] hidden lg:flex top-0 bottom-0 py-50px bg-[var(--border)] absolute rounded"
-			/>
-			{#each result as job, index (job.slug)}
-				<div
-					class={`flex ${
-						index % 2 !== 0 ? 'flex-row' : 'flex-row-reverse'
-					} relative items-center w-full my-[10px]`}
-				>
-					<div class="flex-1 hidden lg:flex" />
-					<div class="hidden lg:inline p-15px bg-[var(--main)] rounded">
-						<UIcon icon="i-carbon-condition-point" classes="" />
-					</div>
-					<div class="flex-1 col items-stretch">
-						<ExperienceCard experience={job} />
-					</div>
-				</div>
-			{/each}
-		{/if}
-	</div>
-</SearchPage>
-
-```
-
-## File: src/routes/experience/[slug]/+page.svelte
-```svelte
-<script lang="ts">
-	import { base } from '$app/paths';
-	import { getAssetURL } from '$lib/data/assets';
-	import { title } from '@data/experience';
-	import { getTimeDiff } from '$lib/utils';
-
-	import type { Experience } from '$lib/types';
-
-	import CardLogo from '$lib/components/Card/CardLogo.svelte';
-	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
-	import Markdown from '$lib/components/Markdown.svelte';
-	import TabTitle from '$lib/components/TabTitle.svelte';
-	import Chip from '$lib/components/Chip/Chip.svelte';
-	import Banner from '$lib/components/Banner/Banner.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import CardDivider from '$lib/components/Card/CardDivider.svelte';
-
-	export let data: { experience?: Experience };
-
-	$: computedTitle = data.experience ? `${data.experience.name} - ${title}` : title;
-</script>
-
-<TabTitle title={computedTitle} />
-
-<div class="pb-10 overflow-x-hidden col flex-1">
-	{#if data.experience === undefined}
-		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
-			<UIcon icon="i-carbon-cube" classes="text-3.5em" />
-			<p class="font-300">Could not load experience data...</p>
-		</div>
-	{:else}
-		<div class="flex flex-col items-center overflow-x-hidden">
-			<Banner img={getAssetURL(data.experience.logo)}>
-				<div class="col-center p-y-20">
-					<div class="text-0.9em">
-						<MainTitle>{data.experience.name}</MainTitle>
-					</div>
-					<p class="font-300 text-[var(--tertiary-text)] m-y-2 text-center">
-						{data.experience.company} · {data.experience.location} · {data.experience.type}
-					</p>
-					<p class="font-300 text-0.9em text-[var(--tertiary-text)] m-y-2 text-center">
-						{getTimeDiff(data.experience.period.from, data.experience.period.to)}
-					</p>
-					<div class="w-75%">
-						<CardDivider />
-					</div>
-					<div class="row-center flex-wrap text-[0.9em] text-[var(--tertiary-text)] m-b-2">
-						{#each data.experience.links as item}
-							<Chip href={item.to}>
-								<div class="row-center gap-2">
-									<UIcon icon="i-carbon-link" />
-									<span>{item.label}</span>
-								</div>
-							</Chip>
-						{/each}
-					</div>
-					<div class="row-center flex-wrap m-b-2">
-						{#each data.experience.skills as item}
-							<Chip
-								classes="inline-flex flex-row items-center justify-center"
-								href={`${base}/skills/${item.slug}`}
-							>
-								<CardLogo
-									src={getAssetURL(item.logo)}
-									alt={item.name}
-									radius={'0px'}
-									size={15}
-									classes="mr-2"
-								/>
-								<span class="text-[0.9em]">{item.name}</span>
-							</Chip>
-						{/each}
-					</div>
-				</div>
-			</Banner>
-			<div class="pt-3 pb-1 overflow-x-hidden w-full">
-				<div class="px-10px m-y-5">
-					{#if data.experience.description}
-						<Markdown
-							content={data.experience.description ?? 'This place is yet to be filled...'}
-						/>
-					{:else}
-						<div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">
-							<UIcon icon="i-carbon-text-font" classes="text-3.5em" />
-							<p class="font-300">No description...</p>
-						</div>
-					{/if}
-				</div>
-			</div>
-		</div>
-	{/if}
-</div>
-
-```
-
 ## File: src/routes/experience/[slug]/+page.ts
 ```ts
 import { items } from '@data/experience';
@@ -3933,313 +1788,6 @@ export function load({ params }: { params: Record<string, string> }) {
 
 ```
 
-## File: src/routes/privacy/+page.svelte
-```svelte
-<!-- src/routes/privacy/+page.svelte -->
-<script lang="ts">
-	import CommonPage from '$lib/components/CommonPage.svelte';
-
-	const title = 'Privacy Policy';
-</script>
-
-<CommonPage {title}>
-	<div class="prose max-w-none">
-		<h1>{title}</h1>
-		<p>Last updated: {new Date().toLocaleDateString()}</p>
-
-		<h2>1. Information We Collect</h2>
-		<p>
-			We collect information you provide directly to us, such as when you create or modify your
-			account, request services, contact customer support, or otherwise communicate with us.
-		</p>
-
-		<h2>2. How We Use Your Information</h2>
-		<p>
-			We use the information we collect to provide, maintain, and improve our services, to develop
-			new ones, and to protect webAlly and our users.
-		</p>
-
-		<h2>3. Information Sharing and Disclosure</h2>
-		<p>
-			We may share the information we collect with third parties for various purposes, including to:
-			provide and improve our services, protect against fraud and abuse, and personalize content.
-		</p>
-
-		<h2>4. Data Retention</h2>
-		<p>
-			We retain the information we collect for as long as necessary to fulfill the purposes outlined
-			in this privacy policy, unless a longer retention period is required or permitted by law.
-		</p>
-
-		<h2>5. Security</h2>
-		<p>
-			We take reasonable measures to help protect your personal information from loss, theft,
-			misuse, unauthorized access, disclosure, alteration, and destruction.
-		</p>
-
-		<!-- Add more sections as needed -->
-	</div>
-</CommonPage>
-
-```
-
-## File: src/routes/projects/+page.svelte
-```svelte
-<script lang="ts">
-	import { items, title } from '@data/projects';
-	import * as skills from '@data/skills';
-	import { onMount } from 'svelte';
-
-	import type { Project, Skill } from '$lib/types';
-
-	import Chip from '$lib/components/Chip/Chip.svelte';
-	import ProjectCard from '$lib/components/ProjectCard/ProjectCard.svelte';
-	import SearchPage from '$lib/components/SearchPage.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-
-	interface SkillFilter extends Skill {
-		isSelected?: boolean;
-	}
-
-	let filters: Array<SkillFilter> = skills.items.filter((it) => {
-		return items.some((project) => project.skills.some((skill) => skill.slug === it.slug));
-	});
-
-	let search = '';
-	let displayed: Array<Project> = [];
-
-	const isSelected = (slug: string): boolean => {
-		return filters.some((item) => item.slug === slug && item.isSelected);
-	};
-
-	const onSelected = (slug: string) => {
-		filters = filters.map((tech) => {
-			if (tech.slug === slug) {
-				tech.isSelected = !isSelected(slug);
-			}
-
-			return tech;
-		});
-	};
-
-	$: {
-		displayed = items.filter((project) => {
-			const isFiltered =
-				filters.every((item) => !item.isSelected) ||
-				project.skills.some((tech) =>
-					filters.some((filter) => filter.isSelected && filter.slug === tech.slug)
-				);
-
-			const isSearched =
-				search.trim().length === 0 ||
-				project.name.trim().toLowerCase().includes(search.trim().toLowerCase());
-
-			return isFiltered && isSearched;
-		});
-	}
-
-	const onSearch = (e: CustomEvent<{ search: string }>) => {
-		search = e.detail.search;
-	};
-
-	onMount(() => {
-		const query = location.search;
-
-		if (query) {
-			const queryParams = new URLSearchParams(location.search);
-
-			const item = queryParams.get('item');
-
-			if (item) {
-				search = item;
-			}
-		}
-	});
-</script>
-
-<SearchPage {title} on:search={onSearch}>
-	<div class="projects-filters">
-		{#each filters as tech}
-			<Chip active={tech.isSelected} classes={'text-0.8em'} on:click={() => onSelected(tech.slug)}
-				>{tech.name}</Chip
-			>
-		{/each}
-	</div>
-	{#if displayed.length === 0}
-		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">
-			<UIcon icon="i-carbon-cube" classes="text-3.5em" />
-			<p class="font-300">Could not find anything...</p>
-		</div>
-	{:else}
-		<div class="projects-list mt-5" style="margin-bottom:50px">
-			{#each displayed as project}
-				<ProjectCard {project} />
-			{/each}
-		</div>
-	{/if}
-</SearchPage>
-
-<style lang="scss">
-	.projects-list {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 20px;
-
-		@media (max-width: 1350px) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		@media (max-width: 850px) {
-			grid-template-columns: repeat(1, 1fr);
-		}
-	}
-</style>
-
-```
-
-## File: src/routes/projects/[slug]/+page.svelte
-```svelte
-<script lang="ts">
-	import { base } from '$app/paths';
-	import { getAssetURL } from '$lib/data/assets';
-	import { title } from '@data/projects';
-
-	import type { Project } from '$lib/types';
-
-	import CardLogo from '$lib/components/Card/CardLogo.svelte';
-	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
-	import Markdown from '$lib/components/Markdown.svelte';
-	import TabTitle from '$lib/components/TabTitle.svelte';
-	import Chip from '$lib/components/Chip/Chip.svelte';
-	import Banner from '$lib/components/Banner/Banner.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import CardDivider from '$lib/components/Card/CardDivider.svelte';
-	import Screenshot from '$lib/components/Screenshot/Screenshot.svelte';
-
-	export let data: { project?: Project };
-
-	const screenshots = data.project?.screenshots ?? [];
-
-	let screenIndex: number | undefined = undefined;
-
-	$: screenshot =
-		typeof screenIndex !== 'undefined' && screenshots[screenIndex]
-			? screenshots[screenIndex]
-			: undefined;
-
-	$: computedTitle = data.project ? `${data.project.name} - ${title}` : title;
-</script>
-
-<TabTitle title={computedTitle} />
-
-<div class="pb-10 overflow-x-hidden col flex-1" style="margin-bottom:50px">
-	{#if data.project === undefined}
-		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
-			<UIcon icon="i-carbon-cube" classes="text-3.5em" />
-			<p class="font-300">Could not load project data...</p>
-		</div>
-	{:else}
-		<div class="flex flex-col items-center overflow-x-hidden">
-			<Banner img={getAssetURL(data.project.logo)}>
-				<div class="col-center p-y-20">
-					<div class="text-0.9em">
-						<MainTitle>{data.project.name}</MainTitle>
-					</div>
-					<p class="font-300 text-center text-[var(--tertiary-text)] m-y-2">{data.project.type}</p>
-					<div class="w-75%">
-						<CardDivider />
-					</div>
-					<div class="row-center flex-wrap text-[0.9em] text-[var(--tertiary-text)] m-b-2">
-						{#each data.project.links as item}
-							<Chip href={item.to}>
-								<div class="row-center gap-2">
-									<UIcon icon="i-carbon-link" />
-									<span>{item.label}</span>
-								</div>
-							</Chip>
-						{/each}
-					</div>
-					<div class="row-center flex-wrap m-b-2">
-						{#each data.project.skills as item}
-							<Chip
-								classes="inline-flex flex-row items-center justify-center"
-								href={`${base}/skills/${item.slug}`}
-							>
-								<CardLogo
-									src={getAssetURL(item.logo)}
-									alt={item.name}
-									radius={'0px'}
-									size={15}
-									classes="mr-2"
-								/>
-								<span class="text-[0.9em]">{item.name}</span>
-							</Chip>
-						{/each}
-					</div>
-				</div>
-			</Banner>
-			<div class="pt-3 pb-1 overflow-x-hidden w-full">
-				<div class="px-10px m-y-5">
-					{#if data.project.description}
-						<Markdown content={data.project.description} />
-					{:else}
-						<div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">
-							<UIcon icon="i-carbon-text-font" classes="text-3.5em" />
-							<p class="font-300">No description</p>
-						</div>
-					{/if}
-				</div>
-				<div class="w-100% m-t-8">
-					<CardDivider />
-				</div>
-				{#if screenshots.length > 0}
-					<div
-						class="px-10px grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 m-t-10 "
-					>
-						{#each screenshots as item, index}
-							<!-- svelte-ignore a11y-no-static-element-interactions -->
-							<div
-								class="col-center gap-3 overflow-hidden w-100% h-100% rounded-10px"
-								on:click={() => (screenIndex = index)}
-								on:keydown
-								on:keypress
-								on:keyup
-								on:keyup
-							>
-								<div
-									class="screenshot aspect-video bg-contain w-100% cursor-pointer"
-									style={`background-image: url(${item.src});`}
-								/>
-								<p class="text-[var(--tertiary-text)] font-300">{item.label}</p>
-							</div>
-						{/each}
-					</div>
-				{:else}
-					<div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">
-						<UIcon icon="i-carbon-image" classes="text-3.5em" />
-						<p class="font-300">No screenshots</p>
-					</div>
-				{/if}
-			</div>
-		</div>
-	{/if}
-</div>
-<Screenshot {screenshot} onClose={() => (screenIndex = undefined)} />
-
-<style lang="scss">
-	.screenshot {
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 100%;
-		transition: background-size 200ms;
-
-		&:hover {
-			background-size: 120%;
-		}
-	}
-</style>
-
-```
-
 ## File: src/routes/projects/[slug]/+page.ts
 ```ts
 import { items } from '@data/projects';
@@ -4253,41 +1801,6 @@ export function load({ params }: { params: Record<string, string> }) {
 		return { project };
 	}
 }
-
-```
-
-## File: src/routes/resume/+page.svelte
-```svelte
-<script>
-	import { data, title } from '@data/resume';
-
-	import Chip from '$lib/components/Chip/Chip.svelte';
-	import CommonPage from '$lib/components/CommonPage.svelte';
-</script>
-
-<CommonPage {title}>
-	<div class="resume">
-		{#if data}
-			<a href={data} download>
-				<Chip size={'1.25em'}>Download</Chip>
-			</a>
-		{:else}
-			<Chip>Ooops! no CV at the moment.</Chip>
-		{/if}
-	</div>
-</CommonPage>
-
-<style lang="scss">
-	.resume {
-		display: flex;
-		justify-content: center;
-		margin-top: 20px;
-
-		& > a {
-			color: inherit;
-		}
-	}
-</style>
 
 ```
 
@@ -4392,181 +1905,6 @@ export function load({ params }: { params: Record<string, string> }) {
 
 ```
 
-## File: src/routes/skills/+page.svelte
-```svelte
-<script lang="ts">
-	import { base } from '$app/paths';
-	import { title, groupByCategory } from '@data/skills';
-	import { getAssetURL } from '$lib/data/assets';
-
-	import SearchPage from '$lib/components/SearchPage.svelte';
-	import Card from '$lib/components/Card/Card.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-
-	let result = groupByCategory('');
-
-	const onSearch = (e: CustomEvent<{ search: string }>) => {
-		const query = e.detail.search;
-
-		result = groupByCategory(query.trim().toLowerCase());
-	};
-</script>
-
-<SearchPage {title} on:search={onSearch}>
-	{#if result.length === 0}
-		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">
-			<UIcon icon="i-carbon-cube" classes="text-3.5em" />
-			<p class="font-300">Could not find anything...</p>
-		</div>
-	{:else}
-		<div class="col mt-5 gap-7" style="margin-bottom:50px">
-			{#each result as group (group.category.slug)}
-				<div class="col gap-5 mb-7">
-					<div class="row items-center gap-5">
-						<div class="bg-[var(--main-hover)] h-[1px] w-[20px]" />
-						<p class="text-[var(--main-close)]">{group.category.name}</p>
-						<div class="flex-1 bg-[var(--main-hover)] h-[1px]" />
-					</div>
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-5 ">
-						{#each group.items as skill (skill.slug)}
-							<Card
-								classes={['cursor-pointer decoration-none']}
-								tiltDegree={1}
-								href={`${base}/skills/${skill.slug}`}
-								bgImg={getAssetURL(skill.logo)}
-								color={skill.color}
-							>
-								<p class="text-[var(--tertiary-text)]">{skill.name}</p>
-							</Card>
-						{/each}
-					</div>
-				</div>
-			{/each}
-		</div>
-	{/if}
-</SearchPage>
-
-```
-
-## File: src/routes/skills/[slug]/+page.svelte
-```svelte
-<script lang="ts">
-	import { title } from '@data/skills';
-	import * as projects from '@data/projects';
-	import * as experiences from '@data/experience';
-
-	import { base } from '$app/paths';
-	import { getAssetURL } from '$lib/data/assets';
-
-	import type { Skill } from '$lib/types';
-
-	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
-	import CardDivider from '$lib/components/Card/CardDivider.svelte';
-	import CardLogo from '$lib/components/Card/CardLogo.svelte';
-	import Markdown from '$lib/components/Markdown.svelte';
-	import TabTitle from '$lib/components/TabTitle.svelte';
-	import Chip from '$lib/components/Chip/Chip.svelte';
-	import Banner from '$lib/components/Banner/Banner.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-
-	type Related = {
-		display: string;
-		name: string;
-		img: string;
-		type: 'projects' | 'experience';
-		url: string;
-	};
-
-	export let data: { skill?: Skill };
-
-	const getRelatedProjects = (): Array<Related> => {
-		const out: Array<Related> = [];
-
-		const skill = data.skill;
-
-		if (!skill) {
-			return [];
-		}
-
-		projects.items.forEach((item) => {
-			if (item.skills.some((tech) => tech.slug === skill.slug)) {
-				out.push({
-					img: getAssetURL(item.logo),
-					display: `${item.name} (${item.type})`,
-					name: item.name,
-					type: 'projects',
-					url: `/projects/${item.slug}`
-				});
-			}
-		});
-
-		experiences.items.forEach((item) => {
-			if (item.skills.some((tech) => tech.slug === skill.slug)) {
-				out.push({
-					img: getAssetURL(item.logo),
-					display: `${item.name} @ ${item.company}`,
-					name: item.name,
-					type: 'experience',
-					url: `/experience/${item.slug}`
-				});
-			}
-		});
-
-		return out;
-	};
-
-	$: computedTitle = data.skill ? `${data.skill.name} - ${title}` : title;
-
-	$: related = data.skill ? getRelatedProjects() : [];
-</script>
-
-<TabTitle title={computedTitle} />
-
-<div class="pb-10 overflow-x-hidden col flex-1">
-	{#if data.skill === undefined}
-		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
-			<UIcon icon="i-carbon-software-resource-cluster" classes="text-3.5em" />
-			<p class="font-300">Could not load skill data.</p>
-		</div>
-	{:else}
-		<div class="flex flex-col items-center overflow-x-hidden" style="margin-bottom:50px">
-			<Banner img={getAssetURL(data.skill.logo)}>
-				<MainTitle>{data.skill.name}</MainTitle>
-			</Banner>
-			<div class="pt-3 pb-1 overflow-x-hidden w-full">
-				<div class="px-10px m-y-5">
-					{#if data.skill.description}
-						<Markdown content={data.skill.description ?? 'This place is yet to be filled...'} />
-					{:else}
-						<div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">
-							<UIcon icon="i-carbon-text-font" classes="text-3.5em" />
-							<p class="font-300">No description</p>
-						</div>
-					{/if}
-				</div>
-			</div>
-			<div class="self-stretch mb-2">
-				<CardDivider />
-			</div>
-			<div class="flex flex-row gap-1 self-stretch flex-wrap ">
-				<div class="px-10px">
-					{#each related as item}
-						<Chip
-							classes="inline-flex flex-row items-center justify-center"
-							href={`${base}${item.url}`}
-						>
-							<CardLogo src={item.img} alt={item.name} radius={'0px'} size={15} classes="mr-2" />
-							<span class="text-[0.9em]">{item.display}</span>
-						</Chip>
-					{/each}
-				</div>
-			</div>
-		</div>
-	{/if}
-</div>
-
-```
-
 ## File: src/routes/skills/[slug]/+page.ts
 ```ts
 import { items } from '@data/skills';
@@ -4581,254 +1919,6 @@ export function load({ params }: { params: Record<string, string> }) {
 	}
 }
 
-```
-
-## File: src/routes/team/+page.svelte
-```svelte
-<script lang="ts">
-    import { aiToolsTitle, aiTools, codeToolsTitle, codeTools, dataToolsTitle, dataTools } from '$lib/data/tools';
-    import CommonPage from '$lib/components/CommonPage.svelte';
-    import Card from '$lib/components/Card/Card.svelte';
-    import UIcon from '$lib/components/Icon/UIcon.svelte';
-    import { base } from '$app/paths';
-
-    const title = 'Tools';
-</script>
-
-<CommonPage {title}>
-    <h2 class="text-2xl font-semibold mb-4">{aiToolsTitle}</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-        {#each aiTools as tool}
-            <Card
-                classes={['cursor-pointer']}
-                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-            >
-                <div class="flex flex-col h-full">
-                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-                    <p class="text-sm flex-grow">{tool.description}</p>
-                    <div class="flex justify-between items-center mt-4">
-                        <a
-                            href={tool.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-blue-500 hover:text-blue-600"
-                        >
-                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
-                        </a>
-                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-                    </div>
-                </div>
-            </Card>
-        {/each}
-    </div>
-
-    <h2 class="text-2xl font-semibold mb-4">{codeToolsTitle}</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {#each codeTools as tool}
-            <Card
-                classes={['cursor-pointer']}
-                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-            >
-                <div class="flex flex-col h-full">
-                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-                    <p class="text-sm flex-grow">{tool.description}</p>
-                    <div class="flex justify-between items-center mt-4">
-                        <a
-                            href={tool.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-blue-500 hover:text-blue-600"
-                        >
-                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
-                        </a>
-                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-                    </div>
-                </div>
-            </Card>
-        {/each}
-    </div>
-
-    <h2 class="text-2xl font-semibold mb-4">{dataToolsTitle}</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {#each dataTools as tool}
-            <Card
-                classes={['cursor-pointer']}
-                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-            >
-                <div class="flex flex-col h-full">
-                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-                    <p class="text-sm flex-grow">{tool.description}</p>
-                    <div class="flex justify-between items-center mt-4">
-                        <a
-                            href={tool.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-blue-500 hover:text-blue-600"
-                        >
-                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
-                        </a>
-                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-                    </div>
-                </div>
-            </Card>
-        {/each}
-    </div>
-</CommonPage>
-```
-
-## File: src/routes/team/[slug]/+page.svelte
-```svelte
-<script lang="ts">
-    import { onMount } from 'svelte';
-    import { base } from '$app/paths';
-    import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
-    import { parseReTypeMarkdown } from '$lib/utils/reTypeParser';
-    import DOMPurify from 'dompurify';
-
-    export let data;
-
-    let cvContent = '';
-
-    onMount(async () => {
-        const response = await fetch(`${base}/cv-data.md`);
-        cvContent = await response.text();
-    });
-
-    $: parsedCV = DOMPurify.sanitize(parseReTypeMarkdown(cvContent));
-</script>
-
-<MainTitle>{data.teamMember.name}</MainTitle>
-
-<div class="team-member-info">
-    <h2>{data.teamMember.role}</h2>
-    <p>{data.teamMember.bio}</p>
-</div>
-
-<div class="cv-content">
-    {@html parsedCV}
-</div>
-
-<style lang="scss">
-    .team-member-info {
-        margin-bottom: 2rem;
-    }
-
-    :global(.cv-content) {
-        margin-top: 2rem;
-        line-height: 1.6;
-    }
-
-    :global(.cv-content h1),
-    :global(.cv-content h2),
-    :global(.cv-content h3),
-    :global(.cv-content h4),
-    :global(.cv-content h5),
-    :global(.cv-content h6) {
-        margin-top: 1.5em;
-        margin-bottom: 0.5em;
-    }
-
-    :global(.cv-content p) {
-        margin-bottom: 1em;
-    }
-
-    :global(.cv-content ul),
-    :global(.cv-content ol) {
-        margin-bottom: 1em;
-        padding-left: 2em;
-    }
-
-    :global(.cv-content a) {
-        color: var(--link-color);
-        text-decoration: none;
-    }
-
-    :global(.cv-content a:hover) {
-        text-decoration: underline;
-    }
-
-    :global(.cv-content .retype-image) {
-        max-width: 100%;
-        height: auto;
-        margin: 1em 0;
-    }
-
-    :global(.cv-content .admonition) {
-        border-left: 4px solid;
-        padding: 1em;
-        margin: 1em 0;
-        background-color: var(--secondary);
-    }
-
-    :global(.cv-content .admonition.info) {
-        border-color: #3498db;
-    }
-
-    :global(.cv-content .admonition.tip) {
-        border-color: #2ecc71;
-    }
-
-    :global(.cv-content .admonition.note) {
-        border-color: #f1c40f;
-    }
-
-    :global(.cv-content .admonition.caution) {
-        border-color: #e67e22;
-    }
-
-    :global(.cv-content .admonition.danger) {
-        border-color: #e74c3c;
-    }
-
-    :global(.cv-content .retype-tabs) {
-        border: 1px solid var(--border);
-        border-radius: 4px;
-        margin: 1em 0;
-    }
-
-    :global(.cv-content .tab-item) {
-        padding: 1em;
-    }
-
-    :global(.cv-content details) {
-        border: 1px solid var(--border);
-        border-radius: 4px;
-        padding: 1em;
-        margin: 1em 0;
-    }
-
-    :global(.cv-content details summary) {
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    :global(.cv-content .badge) {
-        display: inline-block;
-        padding: 0.25em 0.5em;
-        background-color: var(--accent);
-        color: var(--main-text);
-        border-radius: 4px;
-        font-size: 0.9em;
-    }
-
-    :global(.cv-content .embed-container) {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-    }
-
-    :global(.cv-content .embed-container iframe),
-    :global(.cv-content .embed-container object),
-    :global(.cv-content .embed-container embed) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-</style>
 ```
 
 ## File: src/routes/team/[slug]/+page.ts
@@ -4863,235 +1953,6 @@ async function fetchTeamMember(slug: string) {
 }
 ```
 
-## File: src/routes/terms/+page.svelte
-```svelte
-<!-- src/routes/terms/+page.svelte -->
-<script lang="ts">
-	import CommonPage from '$lib/components/CommonPage.svelte';
-
-	const title = 'Terms and Conditions';
-</script>
-
-<CommonPage {title}>
-	<div class="prose max-w-none">
-		<h1>{title}</h1>
-		<p>Last updated: {new Date().toLocaleDateString()}</p>
-
-		<h2>1. Acceptance of Terms</h2>
-		<p>
-			By accessing and using this website, you accept and agree to be bound by the terms and
-			provision of this agreement.
-		</p>
-
-		<h2>2. Use License</h2>
-		<p>
-			Permission is granted to temporarily download one copy of the materials (information or
-			software) on webAlly's website for personal, non-commercial transitory viewing only.
-		</p>
-
-		<h2>3. Disclaimer</h2>
-		<p>
-			The materials on webAlly's website are provided on an 'as is' basis. webAlly makes no
-			warranties, expressed or implied, and hereby disclaims and negates all other warranties
-			including, without limitation, implied warranties or conditions of merchantability, fitness
-			for a particular purpose, or non-infringement of intellectual property or other violation of
-			rights.
-		</p>
-
-		<h2>4. Limitations</h2>
-		<p>
-			In no event shall webAlly or its suppliers be liable for any damages (including, without
-			limitation, damages for loss of data or profit, or due to business interruption) arising out
-			of the use or inability to use the materials on webAlly's website, even if webAlly or a
-			webAlly authorized representative has been notified orally or in writing of the possibility of
-			such damage.
-		</p>
-
-		<h2>5. Revisions and Errata</h2>
-		<p>
-			The materials appearing on webAlly's website could include technical, typographical, or
-			photographic errors. webAlly does not warrant that any of the materials on its website are
-			accurate, complete or current. webAlly may make changes to the materials contained on its
-			website at any time without notice.
-		</p>
-
-		<!-- Add more sections as needed -->
-	</div>
-</CommonPage>
-
-```
-
-## File: src/routes/tools/+page.svelte
-```svelte
-<!-- src/routes/tools/+page.svelte -->
-<script lang="ts">
-    import { aiToolsTitle, aiTools, codeToolsTitle, codeTools, dataToolsTitle, dataTools } from '$lib/data/tools';
-    import CommonPage from '$lib/components/CommonPage.svelte';
-    import Card from '$lib/components/Card/Card.svelte';
-    import UIcon from '$lib/components/Icon/UIcon.svelte';
-    import { base } from '$app/paths';
-
-    const title = 'Tools';
-</script>
-
-<CommonPage {title}>
-    <h2 class="text-2xl font-semibold mb-4">{aiToolsTitle}</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-        {#each aiTools as tool}
-            <Card
-                classes={['cursor-pointer']}
-                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-            >
-                <div class="flex flex-col h-full">
-                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-                    <p class="text-sm flex-grow">{tool.description}</p>
-                    <div class="flex justify-between items-center mt-4">
-                        <a
-                            href={tool.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-blue-500 hover:text-blue-600"
-                        >
-                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
-                        </a>
-                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-                    </div>
-                </div>
-            </Card>
-        {/each}
-    </div>
-
-    <h2 class="text-2xl font-semibold mb-4">{codeToolsTitle}</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {#each codeTools as tool}
-            <Card
-                classes={['cursor-pointer']}
-                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-            >
-                <div class="flex flex-col h-full">
-                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-                    <p class="text-sm flex-grow">{tool.description}</p>
-                    <div class="flex justify-between items-center mt-4">
-                        <a
-                            href={tool.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-blue-500 hover:text-blue-600"
-                        >
-                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
-                        </a>
-                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-                    </div>
-                </div>
-            </Card>
-        {/each}
-    </div>
-
-    <h2 class="text-2xl font-semibold mb-4">{dataToolsTitle}</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {#each dataTools as tool}
-            <Card
-                classes={['cursor-pointer']}
-                href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-            >
-                <div class="flex flex-col h-full">
-                    <h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-                    <p class="text-sm flex-grow">{tool.description}</p>
-                    <div class="flex justify-between items-center mt-4">
-                        <a
-                            href={tool.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-blue-500 hover:text-blue-600"
-                        >
-                            <UIcon icon="i-carbon-logo-github" classes="text-xl" />
-                        </a>
-                        <UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-                    </div>
-                </div>
-            </Card>
-        {/each}
-    </div>
-</CommonPage>
-
-```
-
-## File: src/routes/tools/[slug]/+page.svelte
-```svelte
-<!-- src/routes/tools/[slug]/+page.svelte -->
-<script lang="ts">
-	import { base } from '$app/paths';
-	import { getAssetURL } from '$lib/data/assets';
-	import { aiTools, codeTools, dataTools } from '$lib/data/tools';
-
-	import type { Tool } from '$lib/types';
-
-	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
-	import CardDivider from '$lib/components/Card/CardDivider.svelte';
-	import Markdown from '$lib/components/Markdown.svelte';
-	import TabTitle from '$lib/components/TabTitle.svelte';
-	import Chip from '$lib/components/Chip/Chip.svelte';
-	import Banner from '$lib/components/Banner/Banner.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-
-	export let data: { tool?: Tool };
-
-	// Combine all tools into one array
-	const allTools = [...aiTools, ...codeTools, ...dataTools];
-
-	// Find the tool based on the slug
-	$: tool = allTools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === data.tool?.slug);
-
-	$: computedTitle = tool ? `${tool.name} - Tools` : 'Tool Not Found';
-</script>
-
-<TabTitle title={computedTitle} />
-
-<div class="pb-10 overflow-x-hidden col flex-1">
-	{#if !tool}
-		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
-			<UIcon icon="i-carbon-tool-box" classes="text-3.5em" />
-			<p class="font-300">Tool not found.</p>
-		</div>
-	{:else}
-		<div class="flex flex-col items-center overflow-x-hidden">
-			<Banner img={getAssetURL('Unknown')}>
-				<MainTitle>{tool.name}</MainTitle>
-			</Banner>
-			<div class="pt-3 pb-1 overflow-x-hidden w-full">
-				<div class="px-10px m-y-5">
-					{#if tool.description}
-						<p class="text-lg mb-4">{tool.description}</p>
-					{/if}
-					{#if tool.details}
-						<Markdown content={tool.details} />
-					{:else}
-						<div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">
-							<UIcon icon="i-carbon-text-font" classes="text-3.5em" />
-							<p class="font-300">No detailed description available.</p>
-						</div>
-					{/if}
-				</div>
-			</div>
-			<div class="self-stretch mb-2">
-				<CardDivider />
-			</div>
-			<div class="flex flex-row gap-1 self-stretch flex-wrap">
-				<div class="px-10px">
-					<Chip
-						classes="inline-flex flex-row items-center justify-center"
-						href={tool.github}
-					>
-						<UIcon icon="i-carbon-logo-github" classes="mr-2" />
-						<span class="text-[0.9em]">View on GitHub</span>
-					</Chip>
-				</div>
-			</div>
-		</div>
-	{/if}
-</div>
-```
-
 ## File: src/routes/tools/[slug]/+page.ts
 ```ts
 // src/routes/tools/[slug]/+page.ts
@@ -5117,425 +1978,208 @@ export function load({ params }: { params: Record<string, string> }) {
 }
 ```
 
-## File: src/routes/tools/ai/+page.svelte
+## File: src/routes/services/+page.svelte
 ```svelte
-<!-- src/routes/ai/tools/+page.svelte -->
-<script lang="ts">
-	import { aiToolsTitle, aiTools } from '$lib/data/tools';
-	import CommonPage from '$lib/components/CommonPage.svelte';
-	import Card from '$lib/components/Card/Card.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import { base } from '$app/paths';
+  <script lang="ts">
+  import { items, title } from '@data/services';
+  import { onMount } from 'svelte';
+
+  import type { Service } from '$lib/types';
+
+  import Chip from '$lib/components/Chip/Chip.svelte';
+  import ServiceCard from '$lib/components/ServiceCard/ServiceCard.svelte';
+  import SearchPage from '$lib/components/SearchPage.svelte';
+  import UIcon from '$lib/components/Icon/UIcon.svelte';
+
+  let search = '';
+  let displayed: Array<Service> = [];
+
+  $: {
+      displayed = items.filter((service) => {
+          const isSearched =
+              search.trim().length === 0 ||
+              service.name.trim().toLowerCase().includes(search.trim().toLowerCase());
+
+          return isSearched;
+      });
+  }
+
+  const onSearch = (e: CustomEvent<{ search: string }>) => {
+      search = e.detail.search;
+  };
+
+  onMount(() => {
+      const query = location.search;
+
+      if (query) {
+          const queryParams = new URLSearchParams(location.search);
+
+          const item = queryParams.get('item');
+
+          if (item) {
+              search = item;
+          }
+      }
+  });
 </script>
 
-<CommonPage title={aiToolsTitle}>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" style="margin-bottom:50px">
-		{#each aiTools as tool}
-			<Card
-				classes={['cursor-pointer']}
-				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-			>
-				<div class="flex flex-col h-full">
-					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-					<p class="text-sm flex-grow">{tool.description}</p>
-					<div class="flex justify-between items-center mt-4">
-						<a
-							href={tool.github}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="text-blue-500 hover:text-blue-600"
-						>
-							<UIcon icon="i-carbon-logo-github" classes="text-xl" />
-						</a>
-						<UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-					</div>
-				</div>
-			</Card>
-		{/each}
-	</div>
-</CommonPage>
+<SearchPage {title} on:search={onSearch}>
+  {#if displayed.length === 0}
+      <div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">
+          <UIcon icon="i-carbon-cube" classes="text-3.5em" />
+          <p class="font-300">Could not find any services...</p>
+      </div>
+  {:else}
+      <div class="services-list mt-5" style="margin-bottom:50px">
+          {#each displayed as service}
+              <ServiceCard {service} />
+          {/each}
+      </div>
+  {/if}
+</SearchPage>
 
+<style lang="scss">
+  .services-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+
+      @media (max-width: 1350px) {
+          grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 850px) {
+          grid-template-columns: repeat(1, 1fr);
+      }
+  }
+</style>
 ```
 
-## File: src/routes/tools/code/+page.svelte
-```svelte
-<!-- src/routes/ai/tools/+page.svelte -->
-<script lang="ts">
-	import { codeToolsTitle, codeTools } from '$lib/data/tools';
-	import CommonPage from '$lib/components/CommonPage.svelte';
-	import Card from '$lib/components/Card/Card.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import { base } from '$app/paths';
-</script>
+## File: src/routes/services/services.md
+```md
+---
+title: Our Services
+layout: default
+---
 
-<CommonPage title={codeToolsTitle}>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" style="margin-bottom:50px">
-		{#each codeTools as tool}
-			<Card
-				classes={['cursor-pointer']}
-				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-			>
-				<div class="flex flex-col h-full">
-					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-					<p class="text-sm flex-grow">{tool.description}</p>
-					<div class="flex justify-between items-center mt-4">
-						<a
-							href={tool.github}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="text-blue-500 hover:text-blue-600"
-						>
-							<UIcon icon="i-carbon-logo-github" classes="text-xl" />
-						</a>
-						<UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-					</div>
-				</div>
-			</Card>
-		{/each}
-	</div>
-</CommonPage>
+# Our Services
 
+1. [Boost Your Team's Speed](/services/boost-team-speed)
+2. [Unfinished Projects](/services/finish-projects)
+3. [Handle Tedious Stuff](/services/handle-tedious-stuff)
+4. [Extra Hands for New Projects](/services/extra-hands-new-project)
+5. [Flexible Freelance Help](/services/flexible-freelance-help)
+6. [Finish Half-Built Apps](/services/finish-half-built-app)
+7. [Debugging and Optimization](/services/debugging-optimization)
+8. [Future-Proof Your Codebase](/services/future-proof-codebase)
+9. [Scaling Projects](/services/scale-projects)
+10. [Complex Integrations](/services/complex-integrations)
 ```
 
-## File: src/routes/tools/data/+page.svelte
-```svelte
-<!-- src/routes/ai/tools/+page.svelte -->
-<script lang="ts">
-	import { dataToolsTitle, dataTools } from '$lib/data/tools';
-	import CommonPage from '$lib/components/CommonPage.svelte';
-	import Card from '$lib/components/Card/Card.svelte';
-	import UIcon from '$lib/components/Icon/UIcon.svelte';
-	import { base } from '$app/paths';
-</script>
-
-<CommonPage title={dataToolsTitle}>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" style="margin-bottom:50px">
-		{#each dataTools as tool}
-			<Card
-				classes={['cursor-pointer']}
-				href={`${base}/tools/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-			>
-				<div class="flex flex-col h-full">
-					<h3 class="text-lg font-semibold mb-2">{tool.name}</h3>
-					<p class="text-sm flex-grow">{tool.description}</p>
-					<div class="flex justify-between items-center mt-4">
-						<a
-							href={tool.github}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="text-blue-500 hover:text-blue-600"
-						>
-							<UIcon icon="i-carbon-logo-github" classes="text-xl" />
-						</a>
-						<UIcon icon="i-carbon-arrow-right" classes="text-xl" />
-					</div>
-				</div>
-			</Card>
-		{/each}
-	</div>
-</CommonPage>
-
-```
-
-## File: src/routes/api/vapid-key.ts
+## File: src/routes/services/+page.ts
 ```ts
-// src/routes/api/vapid-key.ts
-import type { RequestHandler } from '@sveltejs/kit';
-import { json } from '@sveltejs/kit';
-// Use your public VAPID key (generated earlier)
-const publicVapidKey = 'BHiKKmeGnSYaMiiaaNtNRRZlBzDTEGw66ILt192tu4PRYNIAm-fV5sgk7WQoXvjjxPOim3KEyt9mZUXyOoQRxTk';
+import { items } from '@data/services';
 
-export const GET: RequestHandler = async () => {
-    return json({ 
-        status: 200,
-        body: {
-            vapidKey: publicVapidKey
-        } 
-    });
-};
-
-```
-
-## File: src/routes/api/push-subscription/+server.ts
-```ts
-// src/routes/api/push-subscription/+server.ts
-import { json } from '@sveltejs/kit';
-
-// In-memory store for subscriptions (use a database in production)
-let subscriptions = [];
-
-export async function POST({ request }) {
-  const subscription = await request.json();
-
-  // Save the subscription (you should store this in a real database)
-  subscriptions.push(subscription);
-
-  return json({ message: 'Subscription saved successfully' });
+export function load() {
+    return {
+        services: items
+    };
 }
-
 ```
 
-## File: src/routes/api/vapid-key/+server.ts
+## File: src/routes/services/[slug]/+page.svelte
+```svelte
+<script lang="ts">
+      import { base } from '$app/paths';
+    import { getAssetURL } from '$lib/data/assets';
+    import { title } from '@data/services';
+
+    import type { Service } from '$lib/types';
+
+    import CardLogo from '$lib/components/Card/CardLogo.svelte';
+    import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
+    import Markdown from '$lib/components/Markdown.svelte';
+    import TabTitle from '$lib/components/TabTitle.svelte';
+    import Banner from '$lib/components/Banner/Banner.svelte';
+    import UIcon from '$lib/components/Icon/UIcon.svelte';
+    import CardDivider from '$lib/components/Card/CardDivider.svelte';
+
+    export let data: { service?: Service; content: string | null };
+
+    $: computedTitle = data.service ? `${data.service.name} - ${title}` : title;
+    $: markdownContent = typeof data.content === 'string' ? data.content : '';
+    $: console.log('Received data:', data); // Add this for debugging
+    
+</script>
+
+<TabTitle title={computedTitle} />
+
+<div class="pb-10 overflow-x-hidden col flex-1" style="margin-bottom:50px">
+    {#if data.service === undefined}
+        <div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
+            <UIcon icon="i-carbon-cube" classes="text-3.5em" />
+            <p class="font-300">Could not load service data...</p>
+        </div>
+    {:else}
+        <div class="flex flex-col items-center overflow-x-hidden">
+            <Banner img={getAssetURL(data.service.image)}>
+                <div class="col-center p-y-20">
+                    <div class="text-0.9em">
+                        <MainTitle>{data.service.name}</MainTitle>
+                    </div>
+                    <p class="font-300 text-center text-[var(--tertiary-text)] m-y-2">{data.service.type}</p>
+                    <div class="w-75%">
+                        <CardDivider />
+                    </div>
+                </div>
+            </Banner>
+            <div class="pt-3 pb-1 overflow-x-hidden w-full">
+                <div class="px-10px m-y-5">
+                    {#if markdownContent}
+                        <Markdown content={markdownContent} />
+                    {:else}
+                        <div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">
+                            <UIcon icon="i-carbon-text-font" classes="text-3.5em" />
+                            <p class="font-300">No detailed description available</p>
+                        </div>
+                        <p class="text-center mt-4">{data.service.shortDescription}</p>
+                    {/if}
+                </div>
+            </div>
+        </div>
+    {/if}
+</div>
+```
+
+## File: src/routes/services/[slug]/+page.ts
 ```ts
-
-```
-
-## File: src/content/solutions.md
-```md
-# Solutions
-1. [**Technical Debt**](./solutions/techDebt.md) - Managing Technical Debt, Refactoring, and Legacy Code, and Automated Testing Implementation, and Continuous Integration and Deployment (CI/CD) Pipeline Implementation, and Cloud and DevOps Knowledge, and Artificial Intelligence Integration, and Code Quality and Best Practices, and Web-Ally's Approach to Tackling Tech Debt
-2. **Boost Your Team's Speed with Extra Development Muscle**
-Tackle those delayed projects by adding a fresh set of expert hands. I'll help your team hit
-those critical milestones faster.
-3. **Unfinished Projects? I’ll Help You Cross the Finish Line!**
-Got an app or website stuck in development limbo? I specialize in jumping into existing
-code bases and delivering final results.
-4. **Let Me Handle the Tedious Stuff**
-Let your core team focus on what they do best while I take care of repetitive tasks like bug
-fixing, refactoring, or testing.
-5.** Need an Extra Set of Hands for That New Project?**
-Whether you're kicking off a new build or need assistance planning, I can help from the
-earliest stages, ensuring everything runs smoothly.
-6. **Flexible Freelance Help When You Need It Most**
-Need someone on a flexible basis? I’m available for short-term or ongoing projects,
-adapting to your team’s evolving needs.
-7. Got a Half-Built App? Let’s Finish It Together!
-Don’t leave potential profit on the table with unfinished software. I’ll help complete your
-half-built projects.
-8. **Expert Debugging and Optimization Services**
-Let’s squash those bugs and optimize your code for better performance. You focus on the
-features—I'll handle the fixes.
-9. **Let’s Future-Proof Your Codebase**
-Worried about tech debt? I can refactor your codebase to reduce future issues and ensure
-your systems stay scalable and reliable.
-10. **Scaling Your Projects Without Overloading Your Team**
-If your business is growing faster than your team can handle, I’m here to take on extra work
-without slowing down progress.
-11. **Specialized Support for Complex Integrations**
-Need help with intricate integrations or complex APIs? I have experience in making sure all
-systems communicate smoothly.
-Ready to Get Started?
-Click here to schedule a free consultation where we can discuss your project needs and how I can
-help your team succeed.
-
-```
-
-## File: src/content/solutions/techDebt.md
-```md
-# Tech Debt and the Web-Ally Solution: Empowering Organizations with Expertise
-
-In the fast-paced world of software development, the concept of technical debt has become increasingly significant. As organizations strive to innovate and deliver products quickly, they often accumulate technical debt – a metaphorical concept representing the implied cost of additional rework caused by choosing an easy solution now instead of using a better approach that would take longer. This article explores the nature of tech debt, its impact on organizations, and how Web-Ally, with experienced professionals like Charl Cronje, can help mitigate and manage this challenge.
-
-## Understanding Technical Debt
-
-Technical debt, often shortened to "tech debt," is a concept in software development that reflects the implied cost of additional rework caused by choosing an easy or limited solution now instead of using a better approach that would take longer. It's like taking out a loan – you get benefits quickly, but you'll have to pay interest (in the form of extra work) later.
-
-## Tech debt can manifest in various forms:
-
-1. **Code Debt:** Poorly written, duplicated, or overly complex code that's difficult to maintain and extend.
-2. **Architectural Debt:** Suboptimal system design that makes it challenging to add new features or scale the application.
-3. Testing Debt: Inadequate test coverage, leading to increased risk of bugs and regressions.
-4. **Documentation Debt:** Lack of proper documentation, making it harder for new team members to understand and work with the codebase.
-5. **Dependency Debt:** Reliance on outdated libraries or frameworks that may have security vulnerabilities or lack support.
-
-## The Impact of Tech Debt
-
-While taking on some tech debt can be a strategic decision to meet short-term goals, unmanaged debt can lead to significant problems:
-
-1. **Decreased Productivity:** As debt accumulates, developers spend more time working around limitations or fixing issues, reducing overall productivity.
-2. **Increased Costs:** The longer tech debt remains unaddressed, the more expensive it becomes to fix.
-3. **Reduced Agility:** High levels of tech debt make it harder to adapt to changing market conditions or customer needs.
-4. **Lower Quality:** Accumulated debt often leads to more bugs and a poorer user experience.
-5. **Team Morale:** Working with a debt-laden codebase can be frustrating for developers, potentially leading to higher turnover.
-
-## The Web-Ally Approach to Tech Debt
-
-This is where Web-Ally, with seasoned professionals like Charl Cronje, comes into play. Web-Ally is positioned to help organizations tackle their tech debt effectively through a combination of expertise, experience, and a comprehensive approach to software development.
-
-## Charl Cronje's Expertise
-
-Looking at Charl Cronje's extensive experience and skill set, we can see how professionals like him at Web-Ally are well-equipped to address tech debt:
-
-1. **Diverse Technology Stack:** With 21 years of experience in PHP and JavaScript database services like MySQL, MSSQL, PostgreSQL and more than a decade of experience with Node.js and extensive experience with React, Vue.js, Next, Nuxt, Svelte, SvelteKit with proficiency in various frameworks and libraries, UI and UX libraries and frameworks Charl can navigate complex codebases and identify areas of improvement.
-
-2. **Full-Stack Capabilities:** His experience as a Senior Full-Stack Developer allows him to address tech debt across the entire application stack, from frontend to backend and database systems.
-
-3. **Cloud and DevOps Knowledge:** Familiarity with AWS, Google Cloud, and Azure enables Charl to optimize infrastructure and deployment processes, reducing operational debt.
-
-4. **Artificial Intelligence Integration:** With almost 4 years of AI experience, including work with large language models, embeddings and AI Agents, Charl can leverage AI to automate debt detection and suggest improvements.
-
-5. **Code Quality and Best Practices:** His experience with various programming methodologies, version control systems, and testing frameworks ensures high-quality, maintainable code.
-
-## Web-Ally's Approach to Tackling Tech Debt
-
-Drawing from the expertise of professionals like Charl, Web-Ally can offer a comprehensive approach to managing and reducing tech debt:
-
-### 1. Debt Assessment and Prioritization
-
-The first step in addressing tech debt is to identify and quantify it. Web-Ally can conduct thorough code reviews and architectural assessments to uncover areas of debt. Using tools like static code analyzers and leveraging AI-powered code analysis, they can provide a detailed map of the debt landscape.
-
-Once identified, the debt can be prioritized based on its impact on the business. This might involve:
-- Assessing the cost of delay for each debt item
-- Evaluating the risk associated with each debt
-- Determining which debts are blocking new feature development or scalability
-
-### 2. Refactoring and Modernization
-
-With a clear picture of the debt, Web-Ally can implement a strategic refactoring plan. This might include:
-
-- Rewriting critical sections of code to improve maintainability
-- Updating outdated dependencies to more secure and supported versions
-- Restructuring the application architecture for better scalability
-- Implementing design patterns and best practices to prevent future debt
-
-Charl's experience with various programming languages and frameworks would be invaluable here, allowing for efficient and effective refactoring across different parts of the system.
-
-### 3. Automated Testing Implementation
-
-To prevent future debt and ensure the stability of refactored code, Web-Ally can help implement comprehensive automated testing. This includes:
-
-- Unit tests for individual components
-- Integration tests for system interactions
-- End-to-end tests for critical user flows
-- Performance tests to ensure system efficiency
-
-Charl's experience with testing frameworks and methodologies can ensure robust test coverage and integration into the development workflow.
-
-### 4. Continuous Integration and Deployment (CI/CD) Optimization
-
-Efficient CI/CD pipelines are crucial for managing tech debt. Web-Ally can help:
-
-- Set up or optimize CI/CD pipelines
-- Implement automated code quality checks
-- Ensure consistent deployment processes across environments
-
-With Charl's DevOps experience, Web-Ally can streamline these processes, reducing the chance of new debt being introduced.
-
-### 5. Documentation and Knowledge Transfer
-
-Addressing the often-overlooked documentation debt, Web-Ally can:
-
-- Create or update system architecture documentation
-- Implement code documentation standards
-- Develop runbooks for common operations and troubleshooting
-
-This ensures that the knowledge is not siloed and new team members can quickly get up to speed, reducing the likelihood of debt re-accumulation.
-
-### 6. Training and Best Practices
-
-Web-Ally can also provide training to the existing development team, covering:
-
-- Clean code principles
-- Design patterns and architecture best practices
-- Effective use of version control and code review processes
-
-This empowers the team to maintain high code quality and prevent future debt accumulation.
-
-### 7. Monitoring and Maintenance
-
-Tech debt management is an ongoing process. Web-Ally can help implement monitoring solutions to:
-
-- Track code quality metrics over time
-- Identify potential performance bottlenecks
-- Alert on security vulnerabilities in dependencies
-
-Regular check-ins and maintenance sprints can be scheduled to address any new debt before it becomes problematic.
-
-### 8. Scalability and Future-Proofing
-
-Looking beyond immediate debt, Web-Ally can help organizations prepare for future growth:
-
-- Implementing microservices architecture for better scalability
-- Adopting cloud-native technologies for improved flexibility
-- Exploring serverless options for cost-effective scaling
-
-Charl's experience with cloud services and modern architecture patterns would be particularly valuable in this area.
-
-## Case Study: Transforming Legacy Systems
-
-**To illustrate the impact of Web-Ally's approach, let's consider a hypothetical case study:**
-
-A mid-sized e-commerce company is struggling with an aging monolithic application. The system is slow, prone to crashes during peak times, and difficult to update. New feature development has slowed to a crawl, and the company is losing market share to more agile competitors.
-
-Web-Ally, led by experts like Charl Cronje, steps in with a comprehensive plan:
-
-**1. Assessment:** A thorough code review and architecture assessment reveal significant code duplication, outdated dependencies, and a lack of automated tests.
-
-**2. Prioritization:** The team identifies that the checkout process and inventory management system are the most critical areas affecting business performance.
-
-**3. Refactoring:** The checkout process is refactored into a microservice, leveraging Charl's experience with modern JavaScript frameworks and API design.
-
-**4. Modernization:** The inventory management system is migrated to a cloud-based solution, utilizing Charl's expertise in cloud services and database optimization.
-
-**5. Testing:** Comprehensive automated tests are implemented, covering critical business logic and user flows.
-
-**6. CI/CD:** A robust `CI/CD` pipeline is set up, ensuring consistent deployments and automated quality checks.
-
-**7. Training:** The existing development team receives training on microservices architecture, cloud technologies, and best practices for maintainable code.
-
-**8. Monitoring:** Performance monitoring tools are implemented, providing real-time insights into system health and user experience.
-
-The result? Within six months, the company sees:
-
-- A 40% reduction in page load times
-- 99.99% uptime during peak shopping periods
-- 30% faster time-to-market for new features
-- Improved developer satisfaction and reduced turnover
-
-This transformation not only addressed the immediate tech debt but also positioned the company for future growth and innovation.
-
-## Conclusion
-
-Technical debt is an inevitable part of software development, but it doesn't have to be a burden that weighs down an organization. With the right expertise and approach, tech debt can be managed effectively, turning it from a liability into an opportunity for improvement and innovation.
-
-Web-Ally, with professionals like Charl Cronje, offers a comprehensive solution to the challenge of tech debt. By combining deep technical expertise, a broad understanding of modern software development practices, and a strategic approach to debt management, web-Ally can help organizations not just survive but thrive in the fast-paced world of technology.
-
-The key lies in recognizing that tech debt management is not a one-time fix but an ongoing process of continuous improvement. It requires a commitment to quality, a willingness to invest in the future, and the guidance of experienced professionals who can navigate the complex landscape of modern software development.
-
-As technology continues to evolve at a rapid pace, the ability to manage tech debt effectively will become an increasingly critical competitive advantage. Organizations that partner with firms like Web-Ally, leveraging the expertise of professionals like Charl Cronje, will be well-positioned to turn their technical challenges into opportunities for growth, innovation, and success in the digital age.
-
-## Acknowledgements
-I would like to express my gratitude to Charl Cronje for his invaluable contributions to this article. Charl's expertise in modern software development practices, his deep understanding of cloud technologies, and his experience in managing technical debt have been instrumental in shaping the content of this article.
-I would also like to thank the team at Web-Ally for their support and guidance throughout the writing process. Their insights and feedback have been invaluable in refining the content and ensuring its accuracy and relevance.
-Finally, I would like to acknowledge the readers of this article. Your engagement and feedback are essential in shaping the content and ensuring that it meets the needs and interests of the audience. Your insights and suggestions will help us continue to improve and provide valuable information to the community.
-```
-
-## File: static/offline.html
-```html
-<!-- static/offline.html -->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offline - webAlly Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #000000;
-            color: #ffffff;
+import { items } from '$lib/data/services';
+import type { Service } from '$lib/types';
+
+export async function load({ params }: { params: Record<string, string> }) {
+    if (params.slug) {
+        const service = items.find((item) => item.slug === params.slug);
+        
+        if (service) {
+            try {
+                const module = await import(`../${params.slug}.md`);
+                let content = '';
+                if (typeof module.default === 'function') {
+                    const rendered = module.default.render();
+                    content = rendered.html;
+                } else if (typeof module.default === 'string') {
+                    content = module.default;
+                }
+                console.log('Loaded content:', content); // Add this for debugging
+                return { service, content };
+            } catch (e) {
+                console.error(`Could not load markdown for ${params.slug}`, e);
+                return { service, content: null };
+            }
         }
-
-        .offline-message {
-            text-align: center;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="offline-message">
-        <h1>You're offline</h1>
-        <p>Please check your internet connection and try again.</p>
-    </div>
-</body>
-
-</html>
+    }
+    
+    return {};
+}
 ```
 
 

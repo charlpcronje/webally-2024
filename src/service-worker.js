@@ -31,9 +31,6 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-	// ignore POST requests etc
-    const url = new URL(event.request.url);
-
     // Ignore non-HTTP(S) requests (such as chrome-extension requests)
 	if (event.request.method !== 'GET' && (event.request.protocol !== 'http:' || event.request.protocol !== 'https:')) return;
     
