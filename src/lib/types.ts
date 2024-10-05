@@ -23,14 +23,15 @@ export enum Platform {
 
 interface MdsvexOptions {
 	extensions: string[];
-	smartypants: boolean | smartypantsOptions;
+	smartypants: boolean | Record<string, unknown>;
 	layout: string | { [name: string]: string };
+	//@ts-ignore
 	remarkPlugins: Array<plugin> | Array<[plugin, plugin_options]>;
+	//@ts-ignore
 	rehypePlugins: Array<plugin> | Array<[plugin, plugin_options]>;
-	highlight: { highlighter: Function, alias: { [alias]: lang } };
+	highlight: { highlighter: Function, alias: { [alias: string]: string } };
 	frontmatter: { parse: Function; marker: string };
 }
-
 export interface Service {
     slug: string;
     color: string;
@@ -38,6 +39,13 @@ export interface Service {
     image: string;
     name: string;
     type: string;
+}
+
+export interface serviceCategory {
+	slug: string;
+	name: string;
+	shortDescription: string;
+	services: Array<Service>;
 }
 
 export type Icon = `i-${string}-${string}`;

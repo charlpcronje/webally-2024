@@ -11,7 +11,9 @@
 	let container: HTMLDivElement;
 
 	export let content: string;
-
+	marked.setOptions({
+		mangle: false
+	});
 	onMount(() => {
 		marked.use(gfmHeadingId());
 		marked.use(mangle());
@@ -29,3 +31,11 @@
 </script>
 
 <div bind:this={container} class="markdown-container" />
+
+<style>
+.markdown-container {
+	white-space: pre-wrap; /* This forces the code block to wrap */
+	word-wrap: break-word; /* Ensures long words are wrapped properly */
+	overflow-wrap: break-word; /* Handles overflow issues by breaking words */
+}
+</style>

@@ -1,7 +1,7 @@
 ---
 layout: projectDetail
 title: Example Content Page
-author: Your Name
+author: Charl Cronje
 date: 2023-09-29
 relatedPages:
   - { url: '/services#service1', title: 'Service 1' }

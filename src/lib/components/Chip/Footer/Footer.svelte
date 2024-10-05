@@ -15,7 +15,7 @@
 	let isHomePage = false;
 	$: pathname = '';
 	onMount(() => {
-		pathname = $page.url.pathname;
+		pathname = $page?.url?.pathname ?? '';
 	});
 
 	$: isHomePage = pathname === '/';
@@ -36,11 +36,11 @@
 </script>
 
 {#if !isHomePage && showFooter}
-	<footer transition:slide="{{ duration: 300, axis: 'y' }}" class="fixed bottom-0 left-0 right-0 text-white">
+	<footer transition:slide={{ duration: 300, axis: 'y' }} class="fixed bottom-0 left-0 right-0 text-white">
 		<div class="container mx-auto px-0">
 			
-			<nav class="h-8 flex items-end pb-0" style="margin-bottom:-10">
-				<ul class="pl-0 my-0 flex justify-center items-center w-full list-none" >
+			<nav class="h-8 flex items-end pb-0" style="margin-bottom:-10px">
+				<ul class="pl-0 my-2 flex justify-center items-center w-full list-none" >
 					{#each footerNavItems as item}
 						<li class="mx-6">
 							<a
@@ -49,7 +49,7 @@
 								class:active={pathname === item.to}
 							>
 								<!-- <UIcon icon={item.icon} classes="mr-2 text-xl" /> -->
-								<span class="group-hover:text-gray-300 transition-colors duration-200 text-xs">
+								<span class="group-hover:text-gray-300 transition-colors duration-200 text-xs text-gray-400">
 									{item.title}
 								</span>
 							</a>
@@ -61,7 +61,7 @@
 		<div class="py-1">
 			<div class="container mx-auto px-2">
 				<p class="text-center text-xs">
-					Copyright &copy; {currentYear} webAlly | All rights reserved.
+					Copyright © {currentYear} webAlly | All rights reserved.
 				</p>
 			</div>
 		</div>

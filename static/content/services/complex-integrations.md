@@ -1,10 +1,19 @@
 ---
 layout: projectDetail
 title: Specialized Support for Complex Integrations
-author: Your Name
+author: Charl Cronje
 date: 2023-09-29
 relatedPages:
   - { url: '/services', title: 'All Services' }
+  - { url: '/services/boost-team-speed', title: 'Boost Your Speed' }
+  - { url: '/services/complex-integrations', title: 'Complex Integrations' }
+  - { url: '/services/debugging-optimization', title: 'Expert Debugging' } 
+  - { url: '/services/extra-hands-new-project', title: 'Need an Extra Set of Hands?' } 
+  - { url: '/services/finish-half-built-app', title: 'Got a Half-Built App?' } 
+  - { url: '/services/flexible-freelance-help', title: 'Flexible Freelance Help' } 
+  - { url: '/services/future-proof-codebase', title: 'Future-Proof Your Codebase' } 
+  - { url: '/services/handle-tedious-stuff', title: 'Let Me Handle the Tedious Stuff' }     
+  - { url: '/services/scale-projects', title: 'Scaling Your Projects' }   
 ---
 
 # Specialized Support for Complex Integrations
@@ -22,5 +31,3 @@ In today's interconnected digital landscape, the ability to integrate various sy
 - **Scalable Solutions:** Design integrations with scalability in mind, accommodating future growth and changes in technology.
 
 With my specialized support for complex integrations, you can confidently navigate the intricacies of your projects, ensuring that all systems work in harmony. Let's work together to build a cohesive digital ecosystem that drives success for your business!
-
-[Back to Services](/services#service10)

@@ -1,10 +1,19 @@
 ---
 layout: projectDetail
 title: Unfinished Projects? I'll Help You Cross the Finish Line!
-author: Your Name
+author: Charl Cronje
 date: 2023-09-29
 relatedPages:
   - { url: '/services', title: 'All Services' }
+  - { url: '/services/boost-team-speed', title: 'Boost Your Speed' }
+  - { url: '/services/complex-integrations', title: 'Complex Integrations' }
+  - { url: '/services/debugging-optimization', title: 'Expert Debugging' } 
+  - { url: '/services/extra-hands-new-project', title: 'Need an Extra Set of Hands?' } 
+  - { url: '/services/finish-half-built-app', title: 'Got a Half-Built App?' } 
+  - { url: '/services/flexible-freelance-help', title: 'Flexible Freelance Help' } 
+  - { url: '/services/future-proof-codebase', title: 'Future-Proof Your Codebase' } 
+  - { url: '/services/handle-tedious-stuff', title: 'Let Me Handle the Tedious Stuff' }     
+  - { url: '/services/scale-projects', title: 'Scaling Your Projects' }   
 ---
 
 # Unfinished Projects? I'll Help You Cross the Finish Line!
@@ -20,5 +29,3 @@ Sometimes, even the most well-planned development projects can get stuck in limb
 - **Final Feature Implementation:** Complete the remaining features and ensure they integrate smoothly into the overall product.
 - **Testing and Debugging:** Perform comprehensive testing to ensure everything works as intended, fixing bugs and optimizing performance.
 - **Project Completion:** Deliver the project on time, ensuring it meets all requirements and is ready for launch or further development.
-
-[Back to Services](/services#service2)

@@ -9,13 +9,23 @@
     import UIcon from '../Icon/UIcon.svelte';
 
     export let service: Service;
+    export let gradientColor: string; // The hex color for the gradient overlay
+
+    // Function to generate a linear gradient
+    const generateGradient = (color: string) => {
+        return `linear-gradient(45deg, ${color} 0%, transparent 100%)`;
+    };
 </script>
 
 <Card color={service.color} href={`${base}/services/${service.slug}`}>
     <div class="card-content">
-        <div class="background-image" style="background-image: url({getAssetURL(service.image)})"></div>
+        <!-- Background image with gradient overlay -->
+        <div class="background-image" 
+             style="background-image: url({getAssetURL(service.image)});">
+            <!-- Gradient overlay on top of the background image -->
+            <div class="gradient-overlay" style="background: {generateGradient(gradientColor)};"></div>
+        </div>
         <div class="content-overlay">
-            
             <div class="m-t-20px row justify-between items-center">
                 <CardTitle title={service.name} />
             </div>
@@ -52,14 +62,25 @@
         height: 100%;
         background-size: cover;
         background-position: center;
-        opacity: 0.05;  // 95% opacity (1 - 0.95)
-        filter: grayscale(100%);
+        filter: grayscale(100%); /* Apply grayscale to the background image */
+    }
+
+    .gradient-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: none;
+        background-size: cover;
+        z-index: 2;
+        opacity: 0.6; /* Adjust opacity for visibility */
     }
 
     .content-overlay {
         position: relative;
-        z-index: 1;
-        padding: 1rem;  // Adjust padding as needed
+        z-index: 3;
+        padding: 1rem;  /* Adjust padding as needed */
     }
 
     :global(.card-content .content-overlay *) {

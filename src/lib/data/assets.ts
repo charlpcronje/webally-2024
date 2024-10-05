@@ -130,6 +130,22 @@ const Assets = {
     FUTURE_PROOF_CODEBASE: gh('services/future-proof-your-codebase.png'),
     SCALE_PROJECTS: gh('services/scale-your-projects.png'),
     COMPLEX_INTEGRATIONS: gh('services/complex-integrations.png'),
+	
+	CHATBOT_DEVELOPMENT: gh('services/chatbot-development.png'),
+    MACHINE_LEARNING_MODELS: gh('services/machine-learning-models.png'),
+    AI_CONSULTING: gh('services/ai-consulting.png'),
+    COMPUTER_VISION: gh('services/computer-vision.png'),
+    NATURAL_LANGUAGE_PROCESSING: gh('services/natural-language-processing.png'),
+	FULL_STACK_DEV: gh('services/full-stack-dev.png'),
+    MOBILE_DEV: gh('services/mobile-dev.png'),
+    DB_ADMIN: gh('services/db-admin.png'),
+    SERVER_ADMIN: gh('services/server-admin.png'),
+    HOSTING: gh('services/hosting.png'),
+	INTELLIGENT_AUTOMATION: gh('services/intelligent-automation.png'),
+	AI_BUSINESS_INTELLIGENCE: gh('services/ai-business-intelligence.png'),
+	WORKFLOW_OPTIMIZATION: gh('services/workflow-optimization.png'),
+	PREDICTIVE_ANALYTICS: gh('services/predictive-analytics.png'),
+	CUSTOM_AI_SOLUTIONS: gh('services/custom-ai.png')
 };
 
 export default Assets;

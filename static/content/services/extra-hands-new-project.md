@@ -1,10 +1,19 @@
 ---
 layout: projectDetail
 title: Need an Extra Set of Hands for That New Project?
-author: Your Name
+author: Charl Cronje
 date: 2023-09-29
 relatedPages:
   - { url: '/services', title: 'All Services' }
+  - { url: '/services/boost-team-speed', title: 'Boost Your Speed' }
+  - { url: '/services/complex-integrations', title: 'Complex Integrations' }
+  - { url: '/services/debugging-optimization', title: 'Expert Debugging' } 
+  - { url: '/services/extra-hands-new-project', title: 'Need an Extra Set of Hands?' } 
+  - { url: '/services/finish-half-built-app', title: 'Got a Half-Built App?' } 
+  - { url: '/services/flexible-freelance-help', title: 'Flexible Freelance Help' } 
+  - { url: '/services/future-proof-codebase', title: 'Future-Proof Your Codebase' } 
+  - { url: '/services/handle-tedious-stuff', title: 'Let Me Handle the Tedious Stuff' }     
+  - { url: '/services/scale-projects', title: 'Scaling Your Projects' }   
 ---
 
 # Need an Extra Set of Hands for That New Project?
@@ -20,5 +29,3 @@ Starting a new project can be both exciting and overwhelming. From the initial p
 - **Hands-On Development:** Start coding early to meet key milestones, helping your team deliver a Minimum Viable Product (MVP) or meet specific launch goals.
 - **Collaborative Workflows:** Integrate smoothly with your team's workflow, whether it's through Git, task management systems, or Agile methodologies.
 - **Scalability & Performance Planning:** Design and develop with scalability and performance in mind, ensuring that your project grows smoothly as user demand increases.
-
-[Back to Services](/services#service4)

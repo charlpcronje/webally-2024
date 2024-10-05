@@ -1,10 +1,19 @@
 ---
 layout: projectDetail
 title: Let's Future-Proof Your Codebase
-author: Your Name
+author: Charl Cronje
 date: 2023-09-29
 relatedPages:
   - { url: '/services', title: 'All Services' }
+  - { url: '/services/boost-team-speed', title: 'Boost Your Speed' }
+  - { url: '/services/complex-integrations', title: 'Complex Integrations' }
+  - { url: '/services/debugging-optimization', title: 'Expert Debugging' } 
+  - { url: '/services/extra-hands-new-project', title: 'Need an Extra Set of Hands?' } 
+  - { url: '/services/finish-half-built-app', title: 'Got a Half-Built App?' } 
+  - { url: '/services/flexible-freelance-help', title: 'Flexible Freelance Help' } 
+  - { url: '/services/future-proof-codebase', title: 'Future-Proof Your Codebase' } 
+  - { url: '/services/handle-tedious-stuff', title: 'Let Me Handle the Tedious Stuff' }     
+  - { url: '/services/scale-projects', title: 'Scaling Your Projects' }   
 ---
 
 # Let's Future-Proof Your Codebase
@@ -22,5 +31,3 @@ In the ever-evolving landscape of software development, maintaining a clean, eff
 - **Long-Term Support:** Provide ongoing support and recommendations to keep your codebase healthy and adaptable to changing needs.
 
 By partnering with me to future-proof your codebase, you can ensure that your application remains agile, efficient, and ready to embrace new opportunities without the burden of technical debt. Let's work together to build a solid foundation for your software's future!
-
-[Back to Services](/services#service8)

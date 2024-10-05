@@ -1,6 +1,8 @@
 // src/lib/utils/reTypeParser.ts
 import { marked } from 'marked';
-
+marked.setOptions({
+    mangle: false
+});
 export function parseReTypeMarkdown(markdown: string): string {
     const renderer = new marked.Renderer();
 
