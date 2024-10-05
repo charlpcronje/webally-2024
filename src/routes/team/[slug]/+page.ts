@@ -13,7 +13,7 @@ export async function load({ params }) {
         };
     }
 
-    throw error(404, 'Team member not found');
+    error(404, 'Team member not found');
 }
 
 async function fetchTeamMember(slug: string) {

@@ -5,10 +5,17 @@ import UnoCSS from 'unocss/vite';
 import { VitePWA } from 'vite-plugin-pwa'
 
 const config: UserConfig = {
+	css: {
+		preprocessorOptions: {
+			scss: {
+				api: 'modern-compiler' // or "modern"
+			}
+		}
+	},
 	plugins: [
 		UnoCSS(),
 		sveltekit(),
-		VitePWA({ 
+		VitePWA({
 			registerType: 'autoUpdate',
 			devOptions: {
 				enabled: true

@@ -1,4 +1,5 @@
 <script lang="ts">
+	// import { path } from 'node:path';  // Remove this line
 	import { createEventDispatcher, onMount } from 'svelte';
 	import CommonPage from './CommonPage.svelte';
 	import Input from './Input/Input.svelte';
@@ -8,7 +9,7 @@
 
 	export let title = 'Title';
 	export let search = '';
-    let searchInput: Input;
+	let searchInput: Input;
 
 	const dispatch = createEventDispatcher();
 
@@ -24,15 +25,15 @@
 
 			searchParams.set('q', search);
 
-			const url = `${window.location.protocol}//${window.location.host}${
-				window.location.pathname
-			}?${searchParams.toString()}`;
+			const url = `${window.location.protocol}//${window.location.host}${window.location.pathname}?${searchParams.toString()}`;
 
 			const state = window.history.state;
 
 			window.history.replaceState(state, '', url);
 			
-			if ($page.url.pathname.startsWith(`${base}/search`)) {
+			let pathname = $page?.url?.pathname ?? '';
+
+			if (pathname.startsWith(`${base}/search`)) {
 				if (searchInput) {
 					searchInput.focus();
 				}
