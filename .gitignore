@@ -19,3 +19,4 @@ logs/*
 **/access.log
 package-lock.json
 yarn.lock
+lsof.log
