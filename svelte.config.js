@@ -47,7 +47,8 @@ const config = {
                     return;
                 }
                 throw new Error(message);
-            }
+            },
+            handleMissingId: 'ignore'
         },
         files: {
             assets: 'static'
