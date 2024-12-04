@@ -9,6 +9,11 @@ export const name = 'webAlly';
 
 export const lastName = '';
 
+export const homeLinks = [{
+	link:"/", text: "Contact Us"
+	
+}];
+
 export const description = 'Senior Full-Stack Web / Mobile / AI / Desktop Developer.  Passionate about creating awesome tools and applications for clients and other developers';
 
 export const links: Array<{ platform: Platform; link: string }> = [
