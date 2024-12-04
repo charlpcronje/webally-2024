@@ -42,6 +42,4 @@ NLP Solutions use AI and machine learning algorithms to analyze, understand, and
 
 Don't let valuable insights remain hidden in your text data. With webAlly's Natural Language Processing Solutions, you can turn unstructured text into structured, actionable information.
 
-[Explore NLP Solutions](#cta-nlp-consultation) {.cta-button}
-
 Let's unlock the potential of language in your business processes.

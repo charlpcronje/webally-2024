@@ -41,6 +41,4 @@ Machine Learning Model Development involves creating algorithms that can learn f
 
 Don't let valuable insights hide in your data. With webAlly's Machine Learning Model Development service, you can turn your data into a powerful decision-making tool.
 
-[Start Your Machine Learning Journey](#cta-ml-consultation) {.cta-button}
-
 Let's build intelligent models that drive your business forward.

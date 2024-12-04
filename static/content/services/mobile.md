@@ -44,8 +44,6 @@ These tools allow us to create high-performance, native-feeling apps that work s
 
 ## Ready to Go Mobile?
 
-Don't limit your reach. With webAlly's cross-platform mobile app development, you can engage users across all major mobile platforms without compromise.
-
-[Start Your Mobile Journey](#cta-mobile-consultation) {.cta-button}
+Don't limit your reach. With webAlly's cross-platform mobile app development, you can engage users across all major mobile platforms without compromise
 
 Let's create an app that your users will love, regardless of their device.

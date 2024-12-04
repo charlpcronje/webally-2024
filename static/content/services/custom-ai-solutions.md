@@ -39,5 +39,3 @@ A telecommunications provider deployed our NLP-powered chatbot for customer serv
 - 30% decrease in call center volume, allowing human agents to focus on complex issues
 
 Our custom AI solutions are designed to tackle your most pressing business challenges, providing you with a competitive edge in your industry.
-
-[Start Your AI Journey](#contact-us)

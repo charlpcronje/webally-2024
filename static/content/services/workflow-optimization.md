@@ -39,5 +39,3 @@ A large corporation's HR department implemented our workflow optimization strate
 - 50% decrease in administrative tasks, allowing HR to focus on strategic initiatives
 
 Our workflow optimization and automation consulting services help you unlock hidden efficiencies, reduce costs, and position your business for sustainable growth.
-
-[Optimize Your Workflows](#contact-us)

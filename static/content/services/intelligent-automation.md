@@ -39,5 +39,3 @@ A multi-location healthcare provider used our automation system for appointment 
 - 25% increase in patient satisfaction scores
 
 By leveraging our Intelligent Automation solutions, you can free your team from repetitive tasks, minimize errors, and focus on strategic initiatives that drive your business forward.
-
-[Get Started with Intelligent Automation](#contact-us)

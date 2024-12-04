@@ -33,7 +33,7 @@ export async function load({ params }) {
         const modifiedContent = content.replace(/\[Back to Services\]\(\/services#service\d+\)/g, '{{BACK_TO_SERVICES_BUTTON}}');
         
         // Parse the modified Markdown content
-        const parsedContent = marked(modifiedContent);
+        const parsedContent = marked(modifiedContent,{headerIds: false});
 
         return { 
             service, 

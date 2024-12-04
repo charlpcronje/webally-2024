@@ -1,4 +1,4 @@
-    ---
+---
 layout: projectDetail
 title: Predictive Analytics & Forecasting
 author: Charl Cronje
@@ -60,5 +60,3 @@ Our Predictive Analytics and Forecasting solutions empower you to make data-driv
 - Logistics and Supply Chain
 
 Whether you're looking to optimize your inventory, predict customer churn, or forecast market trends, our Predictive Analytics and Forecasting solutions can give you the competitive edge you need in today's data-driven world.
-
-[Predict Your Future Success](#contact-us)

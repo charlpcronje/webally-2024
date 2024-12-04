@@ -41,6 +41,4 @@ AI Strategy Consulting involves assessing your business needs, identifying AI op
 
 Don't let uncertainty hold you back from leveraging AI. With webAlly's AI Strategy Consulting service, you can confidently chart your course in the AI-driven business landscape.
 
-[Start Your AI Strategy Journey](#cta-ai-strategy-consultation) {.cta-button}
-
 Let's shape an AI strategy that propels your business into the future.

@@ -36,6 +36,4 @@ Full stack development encompasses both front-end and back-end technologies, all
 
 Don't let technical limitations hold your project back. With webAlly's senior full stack development services, you're choosing a partner committed to turning your vision into a high-performing, scalable reality.
 
-[Schedule a Consultation](#cta-consultation) {.cta-button}
-
 Let's build something extraordinary together.

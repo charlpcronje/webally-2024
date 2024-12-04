@@ -47,6 +47,4 @@ We provide comprehensive administration for various server environments:
 
 Don't let server issues disrupt your business. With webAlly's server administration services, you can ensure your infrastructure is always running at its best, allowing you to focus on what matters most – growing your business.
 
-[Optimize Your Servers Today](#cta-server-consultation) {.cta-button}
-
 Let's build a robust, efficient, and secure server infrastructure together.

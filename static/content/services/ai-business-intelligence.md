@@ -39,5 +39,3 @@ A leading financial services company used our AI models to improve their risk as
 - $2.5 million saved annually due to improved risk management
 
 By harnessing the power of AI-driven business intelligence, you can uncover hidden patterns, predict market trends, and make decisions that propel your business forward.
-
-[Unlock the Power of Your Data](#contact-us)

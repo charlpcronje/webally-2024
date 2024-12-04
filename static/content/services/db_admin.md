@@ -46,6 +46,4 @@ We provide expert administration for a wide range of database systems, including
 
 Don't let database issues slow down your business. With webAlly's database administration services, you can ensure your data is secure, efficient, and always available when you need it.
 
-[Optimize Your Databases Now](#cta-db-consultation) {.cta-button}
-
 Let's make your data work smarter for your business.

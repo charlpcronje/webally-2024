@@ -42,6 +42,4 @@ Computer Vision Applications use AI and machine learning algorithms to analyze, 
 
 Don't let valuable visual information go unanalyzed. With webAlly's Computer Vision Applications service, you can turn images and videos into actionable insights and innovative solutions.
 
-[Explore Computer Vision Solutions](#cta-cv-consultation) {.cta-button}
-
 Let's bring visual intelligence to your business processes.

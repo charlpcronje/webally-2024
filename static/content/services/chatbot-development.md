@@ -40,7 +40,5 @@ AI Chatbots are intelligent conversational agents powered by natural language pr
 
 Don't let your customers wait. With webAlly's AI Chatbot Development service, you can provide instant, intelligent responses round the clock.
 
-[Start Building Your AI Chatbot](#cta-chatbot-consultation) {.cta-button}
-
 Let's create a chatbot that truly understands and serves your customers.
 

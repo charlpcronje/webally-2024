@@ -47,6 +47,5 @@ We offer a range of hosting options to suit various needs:
 
 Don't let subpar hosting hold your online presence back. With webAlly's hosting services, you're choosing a partner committed to the success of your digital endeavors.
 
-[Secure Your Hosting Now](#cta-hosting-consultation) {.cta-button}
-
 Let's ensure your website has the robust, secure foundation it deserves.
+
