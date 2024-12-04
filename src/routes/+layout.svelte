@@ -1,6 +1,7 @@
 <!-- src/routes/+layout.svelte -->
 <script lang="ts">
 	import Analytics from '$lib/analytics.svelte';
+	import TagManager from '$lib/tag-manager.svelte';
 	import 'uno.css';
 	import NavMenu from '$lib/components/NavMenu/NavMenu.svelte';
 	import Footer from '$lib/components/Chip/Footer/Footer.svelte';
@@ -11,8 +12,15 @@
 	import PageTransition from '$lib/components/PageTransition.svelte';
 	import InstallPrompt from '$lib/components/InstallPrompt.svelte';
 	import { beforeNavigate, afterNavigate } from '$app/navigation';
-	
-	
+	import { page } from '$app/stores';
+	import { setContext } from 'svelte';
+	import { writable } from 'svelte/store';
+
+	const user = writable(null);
+	setContext('user', user);
+	// Set user data when logged in
+	// user.set({ id: 1, email: 'user@example.com', role: 'admin' });
+
 	// Function to show the loader
 	function showLoader() {
 		loading.set(true);
@@ -31,14 +39,27 @@
 	afterNavigate(() => {
 		hideLoader();
 	});
-	
+
 	onMount(() => {
 		onHydrated();
 		setTimeout(() => {
 			hideLoader();
 		}, 1000);
 	});
+
+	function sendPageview() {
+		if (typeof gtag !== 'undefined') {
+			gtag('config', 'G-YPWDPYVBH7', {
+				page_path: $page.url.pathname
+			});
+		}
+	}
+
+	afterNavigate(() => {
+    	sendPageview();
+  	});
 </script>
+<TagManager gtmId="GTM-PN8WG6B2" />
 <Analytics />
 <PageTransition />
 
