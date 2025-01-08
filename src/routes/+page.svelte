@@ -26,7 +26,7 @@
 	<div class="md:flex-1 gap-10px">
 		<MainTitle classes="md:text-left flex flex-col items-center md:items-baseline">
 			<span class="text-5xl md:text-6xl">{name}</span>
-			<span class="text-xl md:text-2xl whitespace-nowrap mt-1 md:mt-s">Charl&nbsp;Cronje</span>
+			<span class="text-xl md:text-2xl whitespace-nowrap mt-1 md:mt-s">Your ally in online efficiency</span>
 		  </MainTitle>
 		<p class="text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight">
 			{description}
